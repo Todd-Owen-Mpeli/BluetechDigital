@@ -1,0 +1,19 @@
+/*===== FONTS =====*/
+@font-face {
+	font-family: Inter;
+	src: url("../fonts/Inter-VariableFont_wght.ttf");
+}
+
+@font-face {
+	font-family: PlusJakartaSans;
+	src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+	font-family: BebasNeue;
+	src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+// Font Stack Properties
+$main: "BebasNeue", sans-serif;
+$body: "PlusJakartaSans", "Inter", sans-serif;

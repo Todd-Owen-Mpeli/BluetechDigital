@@ -1,0 +1,32 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.footer {
+	clip-path: none;
+
+	h3 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+
+	.socialLinks {
+		svg:hover {
+			fill: $yellow;
+
+			g,
+			path {
+				fill: $yellow;
+			}
+			line {
+				fill: $yellow;
+			}
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		clip-path: polygon(66% 6%, 100% 2%, 100% 100%, 0 100%, 0 1%);
+	}
+}

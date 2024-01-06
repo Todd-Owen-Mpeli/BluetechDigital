@@ -1,0 +1,7 @@
+// Imports
+@import "../base//fonts";
+@import "../base/colors";
+
+.maintenance {
+	@apply bg-red-default bg-gradient-to-t from-red-darker;
+}

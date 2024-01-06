@@ -1,0 +1,34 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.ourServices {
+	clip-path: polygon(82% 2%, 100% 1%, 100% 100%, 19% 98%, 0 99%, 0 0, 0 0);
+
+	h2,
+	h4 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+
+	p {
+		a {
+			@apply font-semibold underline text-red-Two hover:text-yellow-Two transition-all ease-in-out duration-500;
+		}
+	}
+
+	.card:hover {
+		transform: scale(1.02);
+
+		.content {
+			height: 100%;
+			background: none;
+		}
+	}
+
+	@media screen and (min-width: 992px) {
+		clip-path: polygon(76% 6%, 100% 3%, 100% 94%, 23% 100%, 0 96%, 0 2%);
+	}
+}

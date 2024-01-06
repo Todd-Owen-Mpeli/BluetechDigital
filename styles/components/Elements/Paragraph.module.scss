@@ -1,0 +1,42 @@
+// Imports
+@import "../../base/fonts";
+@import "../../base/colors";
+
+.paragraph {
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: $body;
+		@apply text-xl font-extrabold py-4;
+	}
+
+	h2 {
+		strong {
+			@apply tracking-tight font-extrabold;
+		}
+	}
+
+	ul,
+	ol {
+		@apply p-4 flex gap-2 sm:px-6 flex flex-col items-baseline justify-center border-l-2 border-red-dark;
+
+		li {
+			@apply px-2 list-disc text-left ml-4;
+
+			&::marker {
+				@apply ml-2;
+			}
+		}
+	}
+
+	p {
+		a {
+			@apply font-semibold underline text-red-Two hover:text-yellow-Two transition-all ease-in-out duration-500;
+		}
+
+		img {
+			@apply object-cover object-center w-full h-full max-h-[350px] sm:max-h-[400px];
+		}
+	}
+}

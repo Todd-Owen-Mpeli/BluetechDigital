@@ -1,0 +1,19 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.individualExecutiveMember {
+	clip-path: polygon(82% 2%, 100% 1%, 100% 100%, 19% 98%, 0 99%, 0 0, 0 0);
+
+	h2,
+	h4 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+
+	@media screen and (min-width: 992px) {
+		clip-path: polygon(0 0, 100% 0, 100% 98%, 83% 93%, 0 100%, 0 100%);
+	}
+}

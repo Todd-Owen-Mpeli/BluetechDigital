@@ -1,0 +1,12 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.twoColumnButtonContent {
+	h3 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+}

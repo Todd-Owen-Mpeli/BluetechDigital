@@ -1,0 +1,15 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.jumboContentSectionCard {
+	h2,
+	h4,
+	h5,
+	h6 {
+		font-family: $body;
+	}
+	h3 {
+		font-family: $main;
+	}
+}

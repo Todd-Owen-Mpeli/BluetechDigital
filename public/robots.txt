@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bluetech-digital.co.uk//api/sitemap.xml

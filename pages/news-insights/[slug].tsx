@@ -13,8 +13,8 @@ import Layout from "@/components/Layout/Layout";
 import BackHoverButton from "@/components/Elements/BackHoverButton";
 import BackToTopButton from "@/components/Elements/BackToTopButton";
 import PageContextProvider from "@/components/Context/PageContextProvider";
+import NewsInsightsThreeCards from "@/components/NewsInsightsThreeCards";
 import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleContent";
-import OperationalInsightsThreeCards from "@/components/NewsInsightsThreeCards";
 
 const dynamicSinglePosts: NextPage<IPageContext> = ({
 	seo,
@@ -29,14 +29,10 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 		>
 			<Layout>
 				<BackToTopButton link={`#`} />
-				<BackHoverButton link={`/operational-insights`} />
+				<BackHoverButton link={`/news-insights`} />
 				<RenderFlexibleContent />
 
-				<OperationalInsightsThreeCards
-					title={``}
-					italic={``}
-					paragraph={`<p></p>`}
-				/>
+				<NewsInsightsThreeCards title={``} italic={``} paragraph={`<p></p>`} />
 			</Layout>
 		</PageContextProvider>
 	);

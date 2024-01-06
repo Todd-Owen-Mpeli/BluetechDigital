@@ -20,7 +20,6 @@ import Maintenance from "../Maintenance";
 import NewsInsights from "../NewsInsights";
 import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
-import FeaturedProjects from "../FeaturedProjects";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import JumboContentSection from "../JumboContentSection";
@@ -144,14 +143,6 @@ const RenderFlexibleContent: FC = () => {
 								/>
 							</>
 						) : item?.fieldGroupName ===
-						  `${FlexibleContent}_FeaturedProjects` ? (
-							<>
-								<FeaturedProjects
-									title={item?.title}
-									subtitle={item?.subtitle}
-								/>
-							</>
-						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_TitleContentImage` ? (
 							<>
 								<TitleContentImage
@@ -186,7 +177,7 @@ const RenderFlexibleContent: FC = () => {
 								/>
 							</>
 						) : item?.fieldGroupName ===
-						  `${FlexibleContent}_newsInsightsGrid` ? (
+						  `${FlexibleContent}_NewsInsightsGrid` ? (
 							<>
 								<NewsInsights
 									title={item?.title}
@@ -195,7 +186,7 @@ const RenderFlexibleContent: FC = () => {
 								/>
 							</>
 						) : item?.fieldGroupName ===
-						  `${FlexibleContent}_newsInsightsThreeCards` ? (
+						  `${FlexibleContent}_NewsInsightsThreeCards` ? (
 							<>
 								<NewsInsightsThreeCards
 									title={item?.title}

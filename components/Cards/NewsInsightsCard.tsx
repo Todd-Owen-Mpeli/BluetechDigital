@@ -35,7 +35,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 				}}
 			>
-				<Link href={uri ? `operational-insights${uri}` : `/`}>
+				<Link href={uri ? `news-insights${uri}` : `/`}>
 					<Image
 						alt={featuredImage?.node?.altText}
 						src={featuredImage?.node?.sourceUrl}
@@ -51,7 +51,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 				viewport={{once: true}}
 				className="flex flex-col items-baseline justify-between px-8 pt-10 pb-4"
 			>
-				<Link href={uri ? `operational-insights${uri}` : `/`}>
+				<Link href={uri ? `news-insights${uri}` : `/`}>
 					<motion.h2
 						initial={initial}
 						whileInView={fadeInUp}
@@ -67,7 +67,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					viewport={{once: true}}
 				>
 					<Paragraph
-						content={paragraph ? paragraph.substring(0, 350) + "..." : ""}
+						content={paragraph ? paragraph.substring(0, 200) + "..." : ""}
 						tailwindStyling="block px-0 text-base text-darkGrey"
 					/>
 				</motion.div>
@@ -75,9 +75,10 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					initial={initialTwo}
 					whileInView={fadeIn}
 					viewport={{once: true}}
+					className="mt-6"
 				>
 					<Link
-						href={uri ? `operational-insights${uri}` : `/`}
+						href={uri ? `news-insights${uri}` : `/`}
 						target=""
 						className={uri ? "block" : "hidden"}
 					>

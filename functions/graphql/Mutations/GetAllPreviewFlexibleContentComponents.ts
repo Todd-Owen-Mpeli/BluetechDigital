@@ -251,11 +251,6 @@ export const getAllPreviewFlexibleContentComponents = async (
 												paragraph
 												displayParagraph
 											}
-											... on ${postTypeFlexibleContent}_FeaturedProjects {
-												fieldGroupName
-												title
-												subtitle
-											}
 											... on ${postTypeFlexibleContent}_OurPartners {
 												fieldGroupName
 												title

@@ -18,7 +18,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				initial={initial}
 				whileInView={stagger}
 				viewport={{once: true}}
-				className="relative z-10 py-16 md:py-10"
+				className="relative py-16 md:py-10"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 					clipPath: `polygon(77% 0, 100% 0, 100% 98%, 21% 89%, 0 98%, 0 0)`,
@@ -31,7 +31,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						viewport={{once: true}}
 						className="max-w-6xl mx-auto text-center font-bold leading-normal text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
 					>
-						<span className="p-2 mr-3 bg-yellow-dark text-white">
+						<span className="p-2 mr-3 bg-blue-light text-white">
 							{highlightText}
 						</span>
 						{title}
@@ -46,7 +46,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						<span
 							className={`font-bold px-6 flex ${
 								displayLinkedinIcon ? "flex-col sm:flex-row" : "flex-row"
-							} justify-center items-center gap-y-2 text-white border-2 border-white p-3 uppercase hover:border-yellow-dark hover:bg-yellow-dark`}
+							} justify-center items-center gap-y-2 text-white border-2 border-white p-3 uppercase hover:border-blue-light hover:bg-blue-light`}
 						>
 							<span className="w-full text-center sm:text-left text-base mx-auto sm:mx-0">
 								{buttonLink?.title}

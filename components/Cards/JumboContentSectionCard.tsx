@@ -131,14 +131,14 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 							className="w-full px-4 mb-12 lg:w-1/2 lg:mb-0"
 						>
 							<div className="flex flex-col justify-center max-w-2xl mx-auto lg:mx-0 items-center lg:items-baseline">
-								<motion.h3
+								<motion.h4
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className={`mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] ${subtitleColor}`}
+									className={`mb-1 text-center lg:text-center text-paragraph ${subtitleColor}`}
 								>
 									{subtitle}
-								</motion.h3>
+								</motion.h4>
 								<motion.h2
 									initial={initial}
 									whileInView={fadeInUp}

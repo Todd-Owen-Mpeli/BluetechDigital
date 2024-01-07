@@ -98,7 +98,7 @@ const FAQ: FC<IFAQ> = ({
 									className={cta?.buttonLink?.url ? "block" : "hidden"}
 								>
 									<Link
-										href={cta?.buttonLink?.url}
+										href={`${cta?.buttonLink?.url}`}
 										target={cta?.buttonLink?.target}
 									>
 										<ButtonBorderSliced

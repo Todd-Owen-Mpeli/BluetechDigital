@@ -21,6 +21,15 @@ export const getThemesOptionsContent = async () => {
 								facebookLink
 								twitterLink
 								linkedinLink
+								textarea
+								awardsCertificationsGallery {
+									altText
+									sourceUrl
+									mediaDetails {
+										height
+										width
+									}
+								}
 								displayNoticeBanner
 								noticeBannerTextarea
 								megaMenuContent {

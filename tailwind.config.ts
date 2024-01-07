@@ -41,20 +41,12 @@ const config: Config = {
 
 			// Main colors
 			blue: {
-				default: "#3978ff",
+				default: "#2563eb",
 				dark: "#09275e",
 				Two: "#3978ff",
 				light: "#3d77f3",
 				darker: "#0d172a",
 				darkerTwo: "#061229",
-			},
-			red: {
-				default: "#cb0007",
-				dark: "#a70107",
-				Two: "#ff0008",
-				light: "#ff242c",
-				darker: "#720004",
-				darkerTwo: "#4e0104",
 			},
 			yellow: {
 				default: "#f6ad37",
@@ -64,10 +56,16 @@ const config: Config = {
 				darker: "#bc7700",
 			},
 			green: {
-				default: "#4d6c13",
+				default: "#86bc08",
 				Two: "#74ae00",
 				Three: "#86bc08",
 				dark: "#57a300",
+				darkTwo: "#376b13",
+			},
+			purple: {
+				default: "#833df4",
+				Two: "#7036db",
+				dark: "#2d2378",
 			},
 		},
 	},

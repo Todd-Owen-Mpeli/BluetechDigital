@@ -23,6 +23,7 @@ import TitleParagraph from "../TitleParagraph";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import JumboContentSection from "../JumboContentSection";
+import FeaturesGridContent from "../FeaturesGridContent";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
 import NewsInsightsThreeCards from "../NewsInsightsThreeCards";
@@ -55,6 +56,16 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_FeaturesGrid` ? (
+							<>
+								<FeaturesGridContent
+									cardOne={item?.cardOne}
+									cardTwo={item?.cardTwo}
+									lastCard={item?.lastCard}
+									cardThree={item?.cardThree}
+									gridContent={item?.gridContent}
 								/>
 							</>
 						) : item?.fieldGroupName ===

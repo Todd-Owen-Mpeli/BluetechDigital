@@ -70,6 +70,54 @@ export const getAllPreviewFlexibleContentComponents = async (
 													sourceUrl
 												}
 											}
+											... on ${postTypeFlexibleContent}_FeaturesGrid {
+                      							fieldGroupName
+                      							cardOne {
+                      							  title
+                      							  subtitle
+                      							  paragraph
+                      							}
+                      							cardTwo {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							cardThree {
+                      							  foreground {
+                      							    title
+                      							    subtitle
+                      							    paragraph
+                      							  }
+                      							  background {
+                      							    title
+                      							    subtitle
+                      							    paragraph
+                      							  }
+                      							}
+                      							lastCard {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							gridContent {
+                      							  card {
+                      							    title
+                      							    subtitle
+                      							    paragraph
+                      							    backgroundColor
+                      							  }
+                      							}
+											}
 											... on ${postTypeFlexibleContent}_TwoColumnButtonContent {
 												fieldGroupName
                   								title

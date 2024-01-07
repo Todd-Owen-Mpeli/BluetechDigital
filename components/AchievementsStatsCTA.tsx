@@ -65,7 +65,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 													? "bg-green-Three"
 													: keys === 1
 													? "bg-green-Three"
-													: "bg-green-default"
+													: "bg-purple-default"
 											}`}
 										>
 											<Image

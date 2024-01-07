@@ -85,7 +85,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 						<ButtonBorderSliced
 							fullWidth={true}
 							title="Read more"
-							tailwindColor="blue-default"
+							tailwindColor="purple-default"
 						/>
 					</Link>
 				</motion.div>

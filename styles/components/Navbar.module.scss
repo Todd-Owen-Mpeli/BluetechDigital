@@ -38,16 +38,16 @@
 		}
 
 		::-webkit-scrollbar-track {
-			background: $darkRed;
+			background: $darkBlue;
 		}
 
 		::-webkit-scrollbar-thumb {
-			background: $red;
+			background: $blue;
 			border-radius: 100px;
 
 			&:hover {
 				transition: all 0.5s;
-				background-color: $lightRed;
+				background-color: $lightBlue;
 			}
 		}
 	}

@@ -34,7 +34,7 @@ const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
 						: "hidden"
 				}
 			>
-				<div className="fixed right-6 z-0 bottom-[2.5rem] flex justify-center">
+				<div className="fixed right-6 z-20 bottom-[2.5rem] flex justify-center">
 					<Link href={`${link}`} className={styles.backToTopButton}>
 						<span className={styles.span}>
 							<svg

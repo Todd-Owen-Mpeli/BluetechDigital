@@ -72,12 +72,6 @@ export type IContactInfo = {
 	title: string;
 	paragraph: string;
 };
-export type IEnquiryRequestForm = {
-	title: string;
-	contentOneOpen: boolean;
-	contentTwoOpen: boolean;
-	contentThreeOpen: boolean;
-};
 export type IOurPartners = {
 	title: string;
 	subtitle: string;
@@ -99,10 +93,6 @@ export type IOurPartners = {
 			};
 		}
 	];
-};
-export type IFeaturedProjects = {
-	title: string;
-	subtitle: string;
 };
 export type IAchievementsStatsCTA = {
 	title: string;
@@ -138,53 +128,6 @@ export type IAchievementsStatsCTA = {
 			};
 		}
 	];
-};
-export type IRequestQuoteFormBlocks = {
-	backgroundImage: {
-		sourceUrl: string;
-	};
-	valuesBlockOne: {
-		title: string;
-		googleMap: string;
-		blockTitle: string;
-		displayImageOrMap: string;
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	valuesBlockTwo: {
-		title: string;
-		googleMap: string;
-		blockTitle: string;
-		displayImageOrMap: string;
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	valuesBlockThree: {
-		title: string;
-		googleMap: string;
-		blockTitle: string;
-		displayImageOrMap: string;
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
 };
 export type IHero = {
 	title: string;
@@ -224,6 +167,52 @@ export type IHeroTwo = {
 	title: string;
 	paragraph: string;
 	backgroundImage: string;
+};
+export type IFeaturesGridContent = {
+	cardOne: {
+		title: string;
+		subtitle: string;
+		paragraph: string;
+	};
+	cardTwo: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+	cardThree: {
+		foreground: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+		background: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+	};
+	gridContent: [
+		{
+			card: {
+				id: string;
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				backgroundColor: string;
+			};
+		}
+	];
+	lastCard: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+};
+export type IEnquiryRequestForm = {
+	title: string;
+	contentOneOpen: boolean;
+	contentTwoOpen: boolean;
+	contentThreeOpen: boolean;
 };
 export type ITwoColumnButtonContent = {
 	title: string;
@@ -476,6 +465,21 @@ export type IBlogsCard = {
 		};
 	};
 };
+export type INewsInsightsCard = {
+	uri: string;
+	title: string;
+	paragraph: string;
+	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
 export type IValuesBlocksTextCard = {
 	title: string;
 	paragraph: string;
@@ -496,32 +500,11 @@ export type IValuesBlocksImageCard = {
 		};
 	};
 };
-export type IValuesBlocksImageOrMapCard = {
-	googleMap: string;
-	displayImageOrMap: string;
-	image: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
-};
-export type INewsInsightsCard = {
-	uri: string;
+export type IFeaturesGridContentCard = {
 	title: string;
+	subtitle: string;
 	paragraph: string;
-	featuredImage: {
-		node: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
+	backgroundColor: string;
 };
 export type IJumboContentSectionCard = {
 	title: string;
@@ -541,6 +524,18 @@ export type IJumboContentSectionCard = {
 		url: string;
 		title: string;
 		target: string;
+	};
+};
+export type IValuesBlocksImageOrMapCard = {
+	googleMap: string;
+	displayImageOrMap: string;
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 

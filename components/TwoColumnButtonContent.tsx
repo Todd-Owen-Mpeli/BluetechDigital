@@ -70,14 +70,14 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						viewport={{once: true}}
 						className="w-full lg:w-[55%] flex flex-col items-center lg:items-baseline justify-center"
 					>
-						<motion.h3
+						<motion.h4
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
+							className="mb-1 text-center lg:text-center text-paragraph text-yellow-Two"
 						>
 							{subtitle}
-						</motion.h3>
+						</motion.h4>
 						<motion.h2
 							initial={initialTwo}
 							whileInView={fadeIn}
@@ -95,7 +95,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								fullWidth={false}
 								title={buttonLink?.title}
 								tailwindColor={
-									backgroundColor === "White" ? "white" : "blue-default"
+									backgroundColor === "White" ? "white" : "purple-default"
 								}
 							/>
 						</Link>

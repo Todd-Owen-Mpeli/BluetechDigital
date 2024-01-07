@@ -10,11 +10,13 @@ import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
-
 import {useGlobalContext} from "@/context/global";
 
 // Styling
 import styles from "@/styles/components/Footer.module.scss";
+
+// Components
+import Paragraph from "../Elements/Paragraph";
 
 const Footer: FC = () => {
 	const globalContext = useGlobalContext();
@@ -23,7 +25,7 @@ const Footer: FC = () => {
 		<footer
 			className={
 				styles.footer +
-				" px-0 overflow-hidden border-t-4 bg-blue-darkerTwo border-yellow-default"
+				" px-0 overflow-hidden border-t-4 bg-lightGreyTwo border-yellow-default"
 			}
 		>
 			<div className="container relative z-50 px-4 mx-auto ">
@@ -35,12 +37,22 @@ const Footer: FC = () => {
 									priority
 									width={500}
 									height={500}
-									alt="Bravo Group"
-									src="/img/logos/bravo-group-logo-white.png"
+									alt="BluetechDigital Logo"
+									src="/img/logos/BlueInventory favicon Two.png"
 									className="object-contain object-center w-full h-[30px]"
 								/>
 							</Link>
 						</div>
+						<motion.div
+							initial={initial}
+							whileInView={fadeInUp}
+							viewport={{once: true}}
+						>
+							<Paragraph
+								content={globalContext?.themesOptionsContent?.textarea}
+								tailwindStyling="block px-0 max-w-full lg:max-w-sm text-base text-pureBlack text-center lg:text-left"
+							/>
+						</motion.div>
 						<div className="flex flex-col items-center justify-between w-auto gap-2 py-6 mb-10 md:items-baseline">
 							<motion.div
 								initial={initialTwo}
@@ -70,7 +82,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-white hover:text-yellow-Two"
+									className="font-medium tracking-wide text-pureBlack hover:text-yellow-Two"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -104,7 +116,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-white hover:text-yellow-Two"
+									className="font-medium tracking-wide text-pureBlack hover:text-yellow-Two"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
@@ -214,8 +226,8 @@ const Footer: FC = () => {
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8 lg:mt-0 items-center justify-center w-full lg:w-[65%] gap-6 xl:items-start xl:justify-end">
 						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase lg:text-left">
-								Company
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
+								Info
 							</h4>
 							<motion.ul
 								initial={initial}
@@ -235,9 +247,12 @@ const Footer: FC = () => {
 															whileInView={fadeInUp}
 															viewport={{once: true}}
 														>
-															<span className="text-white text-base text-center lg:text-left cursor-default">
+															<Link
+																href={`${item?.node?.url}`}
+																className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
+															>
 																{item?.node?.label}
-															</span>
+															</Link>
 														</motion.li>
 													</>
 												) : (
@@ -249,7 +264,7 @@ const Footer: FC = () => {
 													>
 														<Link
 															href={`${item?.node?.url}`}
-															className="text-white text-base text-center lg:text-left hover:text-blue-Two"
+															className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
 														>
 															{item?.node?.label}
 														</Link>
@@ -264,7 +279,7 @@ const Footer: FC = () => {
 							</motion.ul>
 						</div>
 						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase lg:text-left">
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
 								Our Services
 							</h4>
 							<motion.ul
@@ -285,7 +300,7 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-white text-base text-center lg:text-left hover:text-blue-Two"
+														className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
 													>
 														{item?.node?.label}
 													</Link>
@@ -299,86 +314,51 @@ const Footer: FC = () => {
 							</motion.ul>
 						</div>
 						<div className="flex flex-col items-center justify-center lg:justify-between">
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
-								Other Links
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase md:text-left">
+								Our Expertise
 							</h4>
-							<div className="flex flex-col lg:flex-row items-center justify-center gap-4">
-								<Link href="http://www.bravo.co.tz/" target="">
-									<motion.button
-										initial={initial}
-										whileInView={fadeInUp}
-										viewport={{once: true}}
-										className={
-											styles.borderButton +
-											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-blue-Two hover:border-lightGrey transition-all ease-in-out duration-500"
-										}
-									>
-										<span>
-											<Image
-												width={500}
-												height={500}
-												alt="Bravo Logo blue"
-												src="/img/logos/bravo-blue.svg"
-												className="block group-hover:hidden object-contain object-center w-full h-[35px] mb-4"
-											/>
-											<Image
-												width={500}
-												height={500}
-												alt="Bravo Logo White"
-												src="/img/logos/bravo-white.svg"
-												className="hidden group-hover:block object-contain object-center w-full h-[35px] mb-4"
-											/>
-										</span>
-										<span className="text-pureBlack group-hover:text-white">
-											Bravo Logistics
-										</span>
-									</motion.button>
-								</Link>
-								<Link href="https://agricom.co.tz/" target="">
-									<motion.button
-										initial={initial}
-										whileInView={fadeInUp}
-										viewport={{once: true}}
-										className={
-											styles.borderButton +
-											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-pureBlack after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
-										}
-									>
-										<span>
-											<Image
-												width={500}
-												height={500}
-												alt="Agricom Logo Green"
-												src="/img/logos/agricom-logo.png"
-												className="block group-hover:hidden object-contain object-center w-full h-[40px] lg:h-[50px] mb-4"
-											/>
-											<Image
-												width={500}
-												height={500}
-												alt="Agricom Logo White"
-												src="/img/logos/agricom-logo.png"
-												className="hidden group-hover:block object-contain object-center w-full h-[40px] lg:h-[50px] mb-4"
-											/>
-										</span>
-										<span>Agricom</span>
-									</motion.button>
-								</Link>
+							<div className="grid grid-cols-2 items-center justify-center gap-4">
+								{globalContext?.themesOptionsContent
+									?.awardsCertificationsGallery?.length > 0 ? (
+									globalContext?.themesOptionsContent?.awardsCertificationsGallery?.map(
+										(item: any, keys: any) => (
+											<Fragment key={keys}>
+												<motion.div
+													initial={initialTwo}
+													whileInView={fadeIn}
+													viewport={{once: true}}
+												>
+													<Image
+														width={item?.mediaDetails?.width}
+														height={item?.mediaDetails?.height}
+														alt={item?.altText}
+														src={item?.sourceUrl}
+														className="object-contain object-center w-full h-[75px] lg:h-[100px]"
+													/>
+												</motion.div>
+											</Fragment>
+										)
+									)
+								) : (
+									<></>
+								)}
 							</div>
 						</div>
 					</div>
 				</div>
-				<div className="border-b border-white opacity-50" />
+				<div className="border-b border-yellow-darker opacity-50" />
 				<div className="py-6 flex flex-col-reverse items-center justify-between m-0 lg:-m-6 lg:flex-row">
-					<div className="w-auto p-6">
-						<motion.p
-							initial={initialTwo}
-							viewport={{once: true}}
-							whileInView={fadeIn}
-							className="text-white text-tiny"
-						>
-							{globalContext?.themesOptionsContent?.copyrightText}
-						</motion.p>
-					</div>
+					<motion.div
+						initial={initialTwo}
+						viewport={{once: true}}
+						whileInView={fadeIn}
+						className="w-auto p-6"
+					>
+						<Paragraph
+							content={globalContext?.themesOptionsContent?.copyrightText}
+							tailwindStyling="text-pureBlack text-sm text-center lg:text-left"
+						/>
+					</motion.div>
 					<motion.ul
 						initial={initial}
 						viewport={{once: true}}
@@ -395,7 +375,7 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-white transition-all duration-200 ease-in-out text-tiny hover:text-blue-Two"
+											className="text-pureBlack transition-all duration-200 ease-in-out text-tiny hover:text-blue-Two"
 										>
 											{item?.node?.label}
 										</Link>

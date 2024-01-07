@@ -18,9 +18,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 				style={{
 					backgroundImage: `linear-gradient(
 							0deg,
-							rgba(0, 0, 0, 0.50),
-							rgba(0, 0, 0, 0.85),
-							rgba(0, 0, 0, 0.95)
+							rgb(6, 18, 41, 0.50),
+							rgba(6, 18, 41, 0.85),
+							rgba(6, 18, 41, 0.95)
 						),url("${backgroundImage}")`,
 				}}
 			>
@@ -34,11 +34,11 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 						<div className="flex flex-col justify-between gap-4">
 							<Title
 								content={title}
-								tailwindStyling="mb-4 max-w-xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
+								tailwindStyling="mb-4 max-w-3xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
 							/>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-lg text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+								tailwindStyling="max-w-3xl text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
 							/>
 						</div>
 						<Link

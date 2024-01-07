@@ -13,20 +13,20 @@
 	transition: 1s;
 	padding: 10px 20px;
 	align-items: center;
-	background: $darkRed;
+	background: $darkBlue;
 	text-decoration: none;
 	justify-content: center;
-	box-shadow: -3px 6px 0 $darkerRed;
+	box-shadow: -3px 6px 0 $darkerBlue;
 
 	&:focus {
 		outline: none;
-		background: $darkRed;
+		background: $darkBlue;
 	}
 
 	&:hover {
 		transition: 0.5s;
-		background: $darkRed;
-		box-shadow: -10px 10px 0 $red;
+		background: $darkBlue;
+		box-shadow: -10px 10px 0 $blue;
 
 		.span:nth-child(2) {
 			transition: 0.5s;
@@ -81,7 +81,7 @@
 			fill: $white;
 		}
 		50% {
-			fill: $red;
+			fill: $blue;
 		}
 		100% {
 			fill: $white;

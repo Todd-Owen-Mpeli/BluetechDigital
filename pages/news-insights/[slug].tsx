@@ -31,8 +31,6 @@ const dynamicSinglePosts: NextPage<IPageContext> = ({
 				<BackToTopButton link={`#`} />
 				<BackHoverButton link={`/news-insights`} />
 				<RenderFlexibleContent />
-
-				<NewsInsightsThreeCards title={``} italic={``} paragraph={`<p></p>`} />
 			</Layout>
 		</PageContextProvider>
 	);

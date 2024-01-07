@@ -20,7 +20,7 @@ const CTATwo: FC<ICTATwo> = ({
 				initial={initial}
 				whileInView={stagger}
 				viewport={{once: true}}
-				className="flex flex-col lg:flex-row justify-around py-10 px-4 items-center"
+				className="flex flex-col lg:flex-row justify-around py-6 px-4 items-center"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 				}}
@@ -30,10 +30,10 @@ const CTATwo: FC<ICTATwo> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="text-center font-bold leading-loose lg:text-left text-xl lg:text-2xl p-4 pl-0 text-white"
+						className="text-center font-bold leading-[2.35rem] lg:text-left text-xl p-4 pl-0 text-white"
 					>
 						{title}
-						<span className="p-2 ml-3 bg-blue-default text-white">
+						<span className="p-2 ml-3 bg-purple-default text-white rounded-lg">
 							{highlightText}
 						</span>
 					</motion.h2>

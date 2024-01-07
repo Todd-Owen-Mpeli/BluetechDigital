@@ -10,7 +10,7 @@ const BackHoverButton: FC<IBackHoverButton> = ({link}) => {
 	return (
 		<>
 			<div className="absolute items-center justify-center hidden w-full h-full xl:flex">
-				<div className="fixed left-10 z-0 top-[7.5rem] flex justify-center">
+				<div className="fixed left-10 z-10 top-[7.5rem] flex justify-center">
 					<Link href={`${link}`} className={styles.backHoverButton}>
 						<span className={styles.span}>
 							<svg

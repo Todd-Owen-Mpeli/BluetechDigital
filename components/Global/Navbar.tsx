@@ -18,6 +18,22 @@ import SubMegaMenuLinks from "../Elements/SubMegaMenuLinks";
 const Navbar: FC = () => {
 	const globalContext = useGlobalContext();
 
+	// Background color scroll position change
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentPosition = window.scrollY;
+			setScrollPosition(currentPosition);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
+
 	// Display all sublinks & Mobile Links
 	const [menuActive, setMenuActive] = useState(false);
 	const [newsInsightsSublinksOpen, setNewsInsightsSublinksOpen]: any =
@@ -61,7 +77,11 @@ const Navbar: FC = () => {
 			<nav
 				className={
 					styles.navbar +
-					` z-[999] w-full fixed bg-white transition-all ease-in-out duration-500`
+					` z-[999] w-full fixed group bg-transparent hover:bg-white transition-all ease-in-out duration-500 ${
+						scrollPosition > 50 || navBackgroundSublinksOpen
+							? "bg-white"
+							: "bg-transparent"
+					}`
 				}
 			>
 				<div className="container mx-auto flex flex-row items-baseline sm:items-center justify-between py-5 xl:py-6 px-4">
@@ -97,7 +117,13 @@ const Navbar: FC = () => {
 												onClick={displayOurServicesSublinks}
 											>
 												<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-													<span className="text-black hover:text-blue-Two font-semibold text-tiny text-center tracking-[0.05rem] transition-all ease-in-out duration-500">
+													<span
+														className={`${
+															scrollPosition > 50
+																? "text-pureBlack"
+																: "text-white"
+														} group-hover:text-pureBlack group-hover:hover:text-blue-Two  text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+													>
 														Our Services
 													</span>
 													<Image
@@ -124,7 +150,11 @@ const Navbar: FC = () => {
 												<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-black hover:text-blue-Two font-semibold text-tiny text-center tracking-[0.05rem] transition-all ease-in-out duration-500"
+														className={`${
+															scrollPosition > 50
+																? "text-pureBlack"
+																: "text-white"
+														} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
 														{item?.node?.label}
 													</Link>
@@ -166,7 +196,11 @@ const Navbar: FC = () => {
 											<li className="hidden xl:block">
 												<Link
 													href={`${item?.node?.url}`}
-													className="text-black hover:text-blue-Two font-semibold text-tiny text-center tracking-[0.05rem] transition-all ease-in-out duration-500"
+													className={`${
+														scrollPosition > 50
+															? "text-pureBlack"
+															: "text-white"
+													} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 												>
 													{item?.node?.label}
 												</Link>

@@ -76,13 +76,13 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 					initial={initial}
 					viewport={{once: true}}
 					whileInView={fadeInUp}
-					className="flex flex-wrap items-center justify-center mb-5 lg:justify-start"
+					className="flex flex-wrap items-center justify-center lg:justify-start"
 				>
 					<motion.h4
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-1 text-center lg:text-center text-paragraph text-yellow-Two ${subtitleStyling}`}
+						className={`mb-2 text-center lg:text-center text-paragraph text-yellow-Two ${subtitleStyling}`}
 					>
 						{subtitle}
 					</motion.h4>
@@ -91,13 +91,13 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 					initial={initial}
 					viewport={{once: true}}
 					whileInView={fadeInUp}
-					className={`mb-4 text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
+					className={`mb-3 text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
 				>
 					{title}
 				</motion.h3>
 				<Paragraph
 					content={paragraph}
-					tailwindStyling={`mb-10 ${paragraphStyling} text-center lg:text-left`}
+					tailwindStyling={`${paragraphStyling} text-center lg:text-left text-base sm:text-paragraph`}
 				/>
 			</motion.div>
 		</div>

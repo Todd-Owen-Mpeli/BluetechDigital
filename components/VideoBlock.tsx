@@ -19,6 +19,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 	subtitle,
 	paragraph,
 	buttonLink,
+	displayVideo,
 	highlightText,
 	displayYoutubeIcon,
 	videoBackgroundImage,
@@ -29,26 +30,26 @@ const VideoBlock: FC<IVideoBlock> = ({
 				id="VideoBlock"
 				className={styles.videoBlock + " py-12 px-4 bg-lightGreyTwo"}
 			>
-				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-16">
+				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
 						className={
 							title && highlightText && paragraph
-								? "max-w-2xl mx-auto text-center lg:max-w-5xl w-full lg:w-[35%]"
+								? "max-w-2xl mx-auto text-center lg:max-w-5xl w-full lg:w-[50%] xl:w-[35%]"
 								: "hidden"
 						}
 					>
 						<div className="max-w-2xl mx-auto">
-							<motion.h3
+							<motion.h4
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="uppercase text-center lg:text-left text-lg tracking-[0.15rem] text-yellow-Two"
+								className="text-center lg:text-left text-paragraph text-yellow-Two"
 							>
 								{subtitle}
-							</motion.h3>
+							</motion.h4>
 							<motion.h2
 								initial={initial}
 								whileInView={stagger}
@@ -56,7 +57,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								className="text-center lg:text-left font-bold leading-normal text-4xl lg:text-5xl p-4 pl-0 text-black"
 							>
 								{title}
-								<span className="p-2 ml-3 bg-blue-Two text-white">
+								<span className="p-2 ml-3 bg-blue-Two text-white rounded-lg">
 									{highlightText}
 								</span>
 							</motion.h2>
@@ -85,14 +86,16 @@ const VideoBlock: FC<IVideoBlock> = ({
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="h-fit bg-center bg-no-repeat bg-cover w-full lg:w-[65%]"
+						className={`${
+							displayVideo ? "h-fit" : "h-[500px]"
+						} bg-center bg-no-repeat bg-cover w-full lg:w-[50%] xl:w-[65%]`}
 						style={{
 							backgroundImage: `url("${
-								video ? "none" : videoBackgroundImage
+								displayVideo ? "none" : videoBackgroundImage
 							}")`,
 						}}
 					>
-						<VideoWrapper>{video}</VideoWrapper>
+						{displayVideo ? <VideoWrapper>{video}</VideoWrapper> : <></>}
 					</motion.div>
 				</div>
 			</div>

@@ -40,14 +40,17 @@ const RenderFlexibleContent: FC = () => {
 						{item?.fieldGroupName === `${FlexibleContent}_Hero` ? (
 							<>
 								<Hero
-									title={item?.title}
+									video={item?.video}
+									titleEnd={item?.titleEnd}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
+									titleStart={item?.titleStart}
+									titleMiddle={item?.titleMiddle}
 									displayVideo={item?.displayVideo}
-									buttonLinkTwo={item?.buttonLinkTwo}
-									servicesLinks={item?.servicesLinks}
-									backgroundVideoUrl={item?.backgroundVideoUrl}
-									backgroundImage={item?.backgroundImage?.sourceUrl}
+									smallImageOne={item?.smallImageOne}
+									smallImageTwo={item?.smallImageTwo}
+									rightsideImage={item?.rightsideImage}
+									videoBackgroundImage={item?.videoBackgroundImage?.sourceUrl}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_HeroTwo` ? (
@@ -173,6 +176,7 @@ const RenderFlexibleContent: FC = () => {
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
+									displayVideo={item?.displayVideo}
 									highlightText={item?.highlightText}
 									displayYoutubeIcon={item?.displayYoutubeIcon}
 									videoBackgroundImage={item?.videoBackgroundImage?.sourceUrl}

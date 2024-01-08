@@ -9,27 +9,6 @@ export type ICTA = {
 		target: string;
 	};
 };
-export type ICTATwo = {
-	title: string;
-	highlightText: string;
-	backgroundColor: string;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-};
-export type ILinkedInCta = {
-	title: string;
-	highlightText: string;
-	backgroundColor: string;
-	displayLinkedinIcon: Boolean;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-};
 export type IFAQ = {
 	title: string;
 	subtitle: string;
@@ -68,6 +47,102 @@ export type IFAQ = {
 		}
 	];
 };
+export type IHero = {
+	video: string;
+	titleEnd: string;
+	paragraph: string;
+	titleStart: string;
+	titleMiddle: string;
+	displayVideo: boolean;
+	videoBackgroundImage: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	rightsideImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	smallImageOne: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	smallImageTwo: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+};
+export type ICTATwo = {
+	title: string;
+	highlightText: string;
+	backgroundColor: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
+export type IHeroTwo = {
+	title: string;
+	paragraph: string;
+	backgroundImage: string;
+};
+export type IGallery = {
+	title: string;
+	highlightText: string;
+	paragraph: string;
+	gallery: [
+		{
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		}
+	];
+};
+export type IVideoBlock = {
+	title: string;
+	video: string;
+	subtitle: string;
+	paragraph: string;
+	displayVideo: boolean;
+	highlightText: string;
+	displayYoutubeIcon: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	videoBackgroundImage: {
+		sourceUrl: string;
+	};
+};
+export type ILinkedInCta = {
+	title: string;
+	highlightText: string;
+	backgroundColor: string;
+	displayLinkedinIcon: Boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IContactInfo = {
 	title: string;
 	paragraph: string;
@@ -94,143 +169,18 @@ export type IOurPartners = {
 		}
 	];
 };
-export type IAchievementsStatsCTA = {
+export type IMaintenance = {
 	title: string;
 	paragraph: string;
-	backgroundImage: string;
-	displayAchievementsContent: boolean;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	achievements: [
-		{
-			card: {
-				title: string;
-				paragraph: string;
-				icon: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-				image: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-			};
-		}
-	];
-};
-export type IHero = {
-	title: string;
-	paragraph: string;
-	displayVideo: boolean;
-	backgroundImage: string;
 	backgroundVideoUrl: string;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	buttonLinkTwo: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	servicesLinks: [
-		{
-			icon: {
-				altText: string;
-				sourceUrl: string;
-				mediaDetails: {
-					width: number;
-					height: number;
-				};
-			};
-			buttonLink: {
-				url: string;
-				title: string;
-				target: string;
-			};
-		}
-	];
-};
-export type IHeroTwo = {
-	title: string;
-	paragraph: string;
-	backgroundImage: string;
-};
-export type IFeaturesGridContent = {
-	cardOne: {
-		title: string;
-		subtitle: string;
-		paragraph: string;
-	};
-	cardTwo: {
-		backgroundImage: {
-			sourceUrl: string;
+	backgroundImageOrVideo: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
 		};
-	};
-	cardThree: {
-		foreground: {
-			title: string;
-			subtitle: string;
-			paragraph: string;
-		};
-		background: {
-			title: string;
-			subtitle: string;
-			paragraph: string;
-		};
-	};
-	gridContent: [
-		{
-			card: {
-				id: string;
-				title: string;
-				subtitle: string;
-				paragraph: string;
-				backgroundColor: string;
-			};
-		}
-	];
-	lastCard: {
-		backgroundImage: {
-			sourceUrl: string;
-		};
-	};
-};
-export type IEnquiryRequestForm = {
-	title: string;
-	contentOneOpen: boolean;
-	contentTwoOpen: boolean;
-	contentThreeOpen: boolean;
-};
-export type ITwoColumnButtonContent = {
-	title: string;
-	subtitle: string;
-	paragraph: string;
-	backgroundColor: string;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	columnTwoContent: {
-		buttonText: string;
-		buttonTextTwo: string;
-		buttonTextThree: string;
-		paragraph: string;
-		paragraphTwo: string;
-		paragraphThree: string;
 	};
 };
 export type IOurServices = {
@@ -275,50 +225,15 @@ export type IOurServices = {
 		}
 	];
 };
-export type ITitleContentImage = {
+export type INewsInsights = {
 	title: string;
-	subtitle: string;
+	italic: string;
 	paragraph: string;
-	imageLocation: string;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	image: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			height: number;
-			width: number;
-		};
-	};
 };
-export type IJumboContentSection = {
-	jumboContentSection: [
-		{
-			content: {
-				title: string;
-				subtitle: string;
-				paragraph: string;
-				imageLocation: string;
-				backgroundDisplay: string;
-				image: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						height: number;
-						width: number;
-					};
-				};
-				buttonLink: {
-					url: string;
-					title: string;
-					target: string;
-				};
-			};
-		}
-	];
+export type ITitleParagraph = {
+	title: string;
+	paragraph: string;
+	displayParagraph: boolean;
 };
 export type IJumboContentImage = {
 	title: string;
@@ -372,59 +287,149 @@ export type IJumboContentImage = {
 		displayButtonOrImage: string;
 	};
 };
-export type IMaintenance = {
+export type ITitleContentImage = {
 	title: string;
-	paragraph: string;
-	backgroundVideoUrl: string;
-	backgroundImageOrVideo: string;
-	backgroundImage: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
-};
-export type ITitleParagraph = {
-	title: string;
-	paragraph: string;
-	displayParagraph: boolean;
-};
-export type IGallery = {
-	title: string;
-	highlightText: string;
-	paragraph: string;
-	gallery: [
-		{
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		}
-	];
-};
-export type INewsInsights = {
-	title: string;
-	italic: string;
-	paragraph: string;
-};
-export type IVideoBlock = {
-	title: string;
-	video: string;
 	subtitle: string;
 	paragraph: string;
-	highlightText: string;
-	displayYoutubeIcon: boolean;
+	imageLocation: string;
 	buttonLink: {
 		url: string;
 		title: string;
 		target: string;
 	};
-	videoBackgroundImage: {
+	image: {
+		altText: string;
 		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+};
+export type IEnquiryRequestForm = {
+	title: string;
+	contentOneOpen: boolean;
+	contentTwoOpen: boolean;
+	contentThreeOpen: boolean;
+};
+export type IFeaturesGridContent = {
+	cardOne: {
+		title: string;
+		subtitle: string;
+		paragraph: string;
+	};
+	cardTwo: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+	cardThree: {
+		foreground: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+		background: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+	};
+	gridContent: [
+		{
+			card: {
+				id: string;
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				backgroundColor: string;
+			};
+		}
+	];
+	lastCard: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+};
+export type IJumboContentSection = {
+	jumboContentSection: [
+		{
+			content: {
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				imageLocation: string;
+				backgroundDisplay: string;
+				image: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						height: number;
+						width: number;
+					};
+				};
+				buttonLink: {
+					url: string;
+					title: string;
+					target: string;
+				};
+			};
+		}
+	];
+};
+export type IAchievementsStatsCTA = {
+	title: string;
+	paragraph: string;
+	backgroundImage: string;
+	displayAchievementsContent: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	achievements: [
+		{
+			card: {
+				title: string;
+				paragraph: string;
+				icon: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+				image: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		}
+	];
+};
+export type ITwoColumnButtonContent = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	backgroundColor: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	columnTwoContent: {
+		buttonText: string;
+		buttonTextTwo: string;
+		buttonTextThree: string;
+		paragraph: string;
+		paragraphTwo: string;
+		paragraphThree: string;
 	};
 };
 

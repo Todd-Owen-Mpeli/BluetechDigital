@@ -38,13 +38,13 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 							viewport={{once: true}}
 							className="h-full p-10 rounded-sm bg-lightGrey"
 						>
-							<div className="flex flex-wrap items-center justify-center mb-5 lg:justify-start">
+							<div className="flex flex-wrap items-center justify-center lg:justify-start">
 								<div className="w-auto p-2">
 									<motion.h4
 										initial={initial}
 										whileInView={fadeInUp}
 										viewport={{once: true}}
-										className="mb-1 text-center lg:text-center text-paragraph text-yellow-Two"
+										className="mb-2 text-center lg:text-center text-paragraph text-yellow-Two"
 									>
 										{cardOne?.subtitle}
 									</motion.h4>
@@ -54,13 +54,13 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="mb-4 text-3xl font-semibold text-center lg:text-left"
+								className="mb-3 text-3xl font-semibold text-center lg:text-left"
 							>
 								{cardOne?.title}
 							</motion.h3>
 							<Paragraph
 								content={cardOne?.paragraph}
-								tailwindStyling="mb-10  text-pureBlack text-center lg:text-left"
+								tailwindStyling="text-pureBlack text-center lg:text-left text-base sm:text-paragraph"
 							/>
 						</motion.div>
 					</div>

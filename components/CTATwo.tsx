@@ -40,7 +40,7 @@ const CTATwo: FC<ICTATwo> = ({
 				</div>
 				<div className="text-box-two">
 					<Link
-						href={buttonLink?.url}
+						href={`${buttonLink?.url}`}
 						target={buttonLink?.target}
 						className={buttonLink?.url ? "block" : "hidden"}
 					>

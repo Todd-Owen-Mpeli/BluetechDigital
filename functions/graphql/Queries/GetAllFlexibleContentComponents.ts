@@ -21,41 +21,42 @@ export const getAllFlexibleContentComponents = async (
 										flexibleContent {
 											... on ${postTypeFlexibleContent}_Hero {
 												fieldGroupName
-												title
+												video
+												titleEnd
 												paragraph
+												titleStart
+												titleMiddle
 												displayVideo
-												backgroundVideoUrl
 												buttonLink {
 													url
 													title
 													target
 												}
-												buttonLinkTwo {
-													url
-													title
-													target
-												}
-												buttonLinkTwo {
-													url
-													title
-													target
-												}
-												backgroundImage {
+												videoBackgroundImage {
 													sourceUrl
 												}
-												servicesLinks {
-													icon {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
+												smallImageOne {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
 													}
-													buttonLink {
-														url
-														title
-														target
+												}
+												smallImageTwo {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
+												rightsideImage {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
 													}
 												}
 											}
@@ -343,6 +344,7 @@ export const getAllFlexibleContentComponents = async (
 												video
 												subtitle
 												paragraph
+												displayVideo
 												highlightText
 												displayYoutubeIcon
 												buttonLink {

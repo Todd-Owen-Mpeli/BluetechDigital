@@ -1,10 +1,8 @@
 // Imports
 import "@/styles/globals.scss";
 import {motion} from "framer-motion";
-import {useRouter} from "next/router";
 import type {AppProps} from "next/app";
 import {client} from "@/config/apollo";
-import {useState, useEffect} from "react";
 import {ApolloProvider} from "@apollo/client";
 
 // Styling
@@ -79,9 +77,7 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		newsInsights,
 		newsInsightsThreeCards,
 	]: // caseStudiesContent,
-	//
 	// testimonials,
-	//
 	any = await Promise.all([
 		getMobileLinks(),
 		getCopyrightLinks(),

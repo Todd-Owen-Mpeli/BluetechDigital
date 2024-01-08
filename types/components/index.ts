@@ -60,6 +60,11 @@ export type IHero = {
 		title: string;
 		target: string;
 	};
+	buttonLinkTwo: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	rightsideImage: {
 		altText: string;
 		sourceUrl: string;

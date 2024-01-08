@@ -28,6 +28,7 @@ const Hero: FC<IHero> = ({
 	buttonLink,
 	displayVideo,
 	smallImageOne,
+	buttonLinkTwo,
 	smallImageTwo,
 	rightsideImage,
 	videoBackgroundImage,
@@ -83,66 +84,136 @@ const Hero: FC<IHero> = ({
 									content={paragraph}
 									tailwindStyling="text-white text-center lg:text-left text-base sm:text-paragraph xl:text-lg"
 								/>
-								<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
-									<motion.button
-										initial={initialTwo}
-										whileInView={fadeIn}
-										viewport={{once: true}}
-										className={
-											buttonLink?.title
-												? `flex items-center justify-center mx-auto lg:mx-0 group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-white hover:bg-white hover:border-white transition-all ease-in-out duration-500 text-white hover:text-black before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-white`
-												: `hidden`
-										}
+								<div className="mt-3 gap-2 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
+									<Link
+										href={`${buttonLink?.url}`}
+										target={buttonLink?.target}
+										className={buttonLink?.url ? "block" : "hidden"}
 									>
-										<span>{buttonLink?.title}</span>
-										<span className="hidden group-hover:block">
-											<svg
-												height="35"
-												width="30.237"
-												viewBox="0 0 30.237 35"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<g transform="translate(-4906.763 143)">
-													<path
-														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
-														transform="translate(4870 -143)"
-														fill="#e4a002"
-													></path>
-													<g transform="translate(4890.311 -1111.861)">
+										<motion.button
+											initial={initialTwo}
+											whileInView={fadeIn}
+											viewport={{once: true}}
+											className={
+												buttonLink?.title
+													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-white hover:bg-white hover:border-white transition-all ease-in-out duration-500 text-white hover:text-black before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-white`
+													: `hidden`
+											}
+										>
+											<span>{buttonLink?.title}</span>
+											<span className="hidden group-hover:block">
+												<svg
+													height="35"
+													width="30.237"
+													viewBox="0 0 30.237 35"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g transform="translate(-4906.763 143)">
 														<path
-															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
-															transform="translate(0 0)"
-															fill="#000"
+															d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+															transform="translate(4870 -143)"
+															fill="#e4a002"
 														></path>
+														<g transform="translate(4890.311 -1111.861)">
+															<path
+																d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																transform="translate(0 0)"
+																fill="#000"
+															></path>
+														</g>
 													</g>
-												</g>
-											</svg>
-										</span>
-										<span className="block group-hover:hidden">
-											<svg
-												height="35"
-												width="30.237"
-												viewBox="0 0 30.237 35"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<g transform="translate(-4906.763 143)">
-													<path
-														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
-														transform="translate(4870 -143)"
-														fill="#ffffff"
-													></path>
-													<g transform="translate(4890.311 -1111.861)">
+												</svg>
+											</span>
+											<span className="block group-hover:hidden">
+												<svg
+													height="35"
+													width="30.237"
+													viewBox="0 0 30.237 35"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g transform="translate(-4906.763 143)">
 														<path
-															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
-															transform="translate(0 0)"
+															d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+															transform="translate(4870 -143)"
 															fill="#ffffff"
 														></path>
+														<g transform="translate(4890.311 -1111.861)">
+															<path
+																d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																transform="translate(0 0)"
+																fill="#ffffff"
+															></path>
+														</g>
 													</g>
-												</g>
-											</svg>
-										</span>
-									</motion.button>
-								</Link>
+												</svg>
+											</span>
+										</motion.button>
+									</Link>
+									<Link
+										href={`${buttonLinkTwo?.url}`}
+										target={buttonLinkTwo?.target}
+										className={buttonLinkTwo?.url ? "block" : "hidden"}
+									>
+										<motion.button
+											initial={initialTwo}
+											whileInView={fadeIn}
+											viewport={{once: true}}
+											className={
+												buttonLinkTwo?.title
+													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-purple-Two hover:bg-purple-Two hover:border-purple-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-Two hover:before:bg-purple-Two after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-purple-Two`
+													: `hidden`
+											}
+										>
+											<span>{buttonLinkTwo?.title}</span>
+											<span className="hidden group-hover:block">
+												<svg
+													height="35"
+													width="30.237"
+													viewBox="0 0 30.237 35"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g transform="translate(-4906.763 143)">
+														<path
+															d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+															transform="translate(4870 -143)"
+															fill="#e4a002"
+														></path>
+														<g transform="translate(4890.311 -1111.861)">
+															<path
+																d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																transform="translate(0 0)"
+																fill="#ffffff"
+															></path>
+														</g>
+													</g>
+												</svg>
+											</span>
+											<span className="block group-hover:hidden">
+												<svg
+													height="35"
+													width="30.237"
+													viewBox="0 0 30.237 35"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<g transform="translate(-4906.763 143)">
+														<path
+															d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+															transform="translate(4870 -143)"
+															fill="#ffffff"
+														></path>
+														<g transform="translate(4890.311 -1111.861)">
+															<path
+																d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																transform="translate(0 0)"
+																fill="#ffffff"
+															></path>
+														</g>
+													</g>
+												</svg>
+											</span>
+										</motion.button>
+									</Link>
+								</div>
 							</div>
 						</div>
 					</div>

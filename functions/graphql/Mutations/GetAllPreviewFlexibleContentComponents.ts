@@ -35,6 +35,11 @@ export const getAllPreviewFlexibleContentComponents = async (
 													title
 													target
 												}
+												buttonLinkTwo {
+													url
+													title
+													target
+												}
 												videoBackgroundImage {
 													sourceUrl
 												}
@@ -138,47 +143,6 @@ export const getAllPreviewFlexibleContentComponents = async (
                   									buttonTextThree
                   									buttonTextTwo
                   								}
-											}
-											... on ${postTypeFlexibleContent}_OurServices {
-												fieldGroupName
-												title
-												subtitle
-												paragraph
-												servicesGrid {
-													card {
-														title
-														paragraph
-														link {
-															url
-															title
-															target
-														}
-														icon {
-															altText
-															sourceUrl
-															mediaDetails {
-																height
-																width
-															}
-														}
-														hoverIcon {
-															altText
-															sourceUrl
-															mediaDetails {
-																height
-																width
-															}
-														}
-														image {
-															altText
-															sourceUrl
-															mediaDetails {
-																height
-																width
-															}
-														}
-													}
-												}
 											}
 											... on ${postTypeFlexibleContent}_JumboContentSection {
 												fieldGroupName

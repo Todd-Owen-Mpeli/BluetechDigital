@@ -1,4 +1,4 @@
-"use Client";
+// "use Client";
 
 // Imports
 import {FC} from "react";
@@ -47,6 +47,7 @@ const RenderFlexibleContent: FC = () => {
 									titleStart={item?.titleStart}
 									titleMiddle={item?.titleMiddle}
 									displayVideo={item?.displayVideo}
+									buttonLinkTwo={item?.buttonLinkTwo}
 									smallImageOne={item?.smallImageOne}
 									smallImageTwo={item?.smallImageTwo}
 									rightsideImage={item?.rightsideImage}

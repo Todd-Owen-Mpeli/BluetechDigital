@@ -43,10 +43,10 @@ const SubMegaMenuLinks: FC = () => {
 								globalContext?.ourServicesLinks?.map((item: any, keys: any) => (
 									<Fragment key={keys}>
 										<Link href={`${item?.node?.url}`}>
-											<li className="w-full group hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default">
+											<li className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default">
 												<Link
 													href={`${item?.node?.url}`}
-													className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
+													className="block p-4 text-base font-semibold text-pureBlack group-scoped:hover:text-white"
 												>
 													{item?.node?.label}
 												</Link>

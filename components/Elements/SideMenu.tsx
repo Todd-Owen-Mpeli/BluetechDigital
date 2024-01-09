@@ -52,7 +52,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 							<Image
 								width={500}
 								height={500}
-								alt="Bravo Group"
+								alt="BluetechDigital"
 								src="/img/logos/bravo-group-logo-white.png"
 								className="object-contain object-center w-full h-[25px]"
 							/>
@@ -73,9 +73,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
 											>
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<span className="text-white text-base font-semibold text-center tracking-[0.05rem]  hover:text-yellow-Two transition-all ease-in-out duration-500">
-														Our Services
-													</span>
+													<Link
+														href={item?.node?.url}
+														className="text-white text-base font-semibold text-center tracking-[0.05rem]  hover:text-yellow-Two transition-all ease-in-out duration-500"
+													>
+														{item?.node?.label}
+													</Link>
 													<Image
 														width={550}
 														height={550}

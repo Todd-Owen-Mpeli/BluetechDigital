@@ -17,7 +17,6 @@ import styles from "../styles/components/Hero.module.scss";
 // Components
 import Paragraph from "./Elements/Paragraph";
 import VideoWrapper from "./Elements/VideoWrapper";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
 const Hero: FC<IHero> = ({
 	video,

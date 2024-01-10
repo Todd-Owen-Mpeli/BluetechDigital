@@ -192,39 +192,24 @@ export type IOurServices = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	servicesGrid: [
 		{
 			card: {
 				title: string;
+				subtitle: string;
 				paragraph: string;
-				Link: {
+				buttonLinks: {
 					url: string;
 					title: string;
 					target: string;
 				};
-				icon: {
-					altText: string;
+				backgroundImage: {
 					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-				hoverIcon: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-				image: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
 				};
 			};
 		}

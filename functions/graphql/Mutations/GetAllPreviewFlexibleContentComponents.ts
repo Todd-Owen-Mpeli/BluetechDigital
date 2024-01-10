@@ -285,6 +285,32 @@ export const getAllPreviewFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_OurServices {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
+												servicesGrid {
+													card {
+														title
+														subtitle
+														paragraph
+														buttonLinks {
+															url
+															title
+															target
+														}
+														backgroundImage {
+															sourceUrl
+														}
+													}
+												}
+											}
 											... on ${postTypeFlexibleContent}_TitleContentImage {
 												fieldGroupName
 												title

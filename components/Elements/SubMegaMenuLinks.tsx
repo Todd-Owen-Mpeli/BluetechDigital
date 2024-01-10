@@ -141,9 +141,9 @@ const SubMegaMenuLinks: FC = () => {
 						style={{
 							backgroundImage: `linear-gradient(
 							    	0deg,
-							    	rgba(0, 0, 4, 0.85),
-							    	rgba(0, 0, 4, 0.85),
-							    	rgba(0, 0, 4, 0.85)
+							    	rgba(45, 35, 120, 0.85),
+							    	rgba(45, 35, 120, 0.85),
+							    	rgba(45, 35, 120, 0.85)
 							    ),url("${globalContext?.themesOptionsContent?.megaMenuContent?.backgroundImage?.sourceUrl}")`,
 						}}
 					>
@@ -186,7 +186,7 @@ const SubMegaMenuLinks: FC = () => {
 								}
 							>
 								<ButtonBorderSliced
-									fullWidth={true}
+									fullWidth={false}
 									tailwindColor="white"
 									title={
 										globalContext?.themesOptionsContent?.megaMenuContent

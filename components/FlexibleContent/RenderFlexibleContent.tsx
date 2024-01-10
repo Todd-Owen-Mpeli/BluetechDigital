@@ -84,15 +84,6 @@ const RenderFlexibleContent: FC = () => {
 									columnTwoContent={item?.columnTwoContent}
 								/>
 							</>
-						) : item?.fieldGroupName === `${FlexibleContent}_OurServices` ? (
-							<>
-								<OurServices
-									title={item?.title}
-									subtitle={item?.subtitle}
-									paragraph={item?.paragraph}
-									servicesGrid={item?.servicesGrid}
-								/>
-							</>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_JumboContentSection` ? (
 							<>
@@ -141,6 +132,16 @@ const RenderFlexibleContent: FC = () => {
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									imageGrid={item?.imageGrid}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_OurServices` ? (
+							<>
+								<OurServices
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+									servicesGrid={item?.servicesGrid}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (

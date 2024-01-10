@@ -24,8 +24,8 @@ export const initialTwo: InitialTwo | any = {
 export const fadeIn: FadeIn | any = {
 	opacity: 1,
 	transition: {
-		duration: 1,
 		delay: 0.5,
+		duration: 0.75,
 		ease: "easeOut",
 	},
 };
@@ -43,7 +43,7 @@ export const fadeInUp: FadeInUp = {
 	opacity: 1,
 	transition: {
 		delay: 0.5,
-		duration: 0.5,
+		duration: 0.75,
 		ease: "easeInOut",
 	},
 };
@@ -51,8 +51,8 @@ export const stagger: Stagger = {
 	y: 0,
 	opacity: 1,
 	transition: {
-		delay: 0.25,
-		duration: 0.5,
+		delay: 0.5,
+		duration: 0.75,
 		ease: "easeInOut",
 		staggerChildren: 0.5,
 		delayChildren: 0.3,
@@ -75,8 +75,8 @@ export const slideInRightFinish: SlideInRightFinish = {
 	x: 0,
 	opacity: 1,
 	transition: {
-		delay: 0.25,
-		duration: 0.5,
+		delay: 0.5,
+		duration: 0.75,
 		ease: "easeInOut",
 		staggerChildren: 0.1,
 	},

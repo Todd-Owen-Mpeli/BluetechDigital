@@ -3,7 +3,14 @@ import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {IVideoBlock} from "@/types/components";
-import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
+import {
+	fadeIn,
+	initial,
+	initialTwo,
+	slideInRightFinish,
+	slideInRightInitial,
+	stagger,
+} from "@/animations/animations";
 
 // Styling
 import styles from "../styles/components/VideoBlock.module.scss";
@@ -54,7 +61,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								initial={initial}
 								whileInView={stagger}
 								viewport={{once: true}}
-								className="text-center lg:text-left font-bold leading-normal text-4xl lg:text-5xl p-4 pl-0 text-black"
+								className="text-center lg:text-left font-bold leading-[3.5rem] text-4xl lg:text-5xl p-4 pl-0 text-black"
 							>
 								{title}
 								<span className="p-2 ml-3 bg-blue-Two text-white rounded-lg">
@@ -83,9 +90,9 @@ const VideoBlock: FC<IVideoBlock> = ({
 						</Link>
 					</motion.div>
 					<motion.div
-						initial={initial}
-						whileInView={stagger}
 						viewport={{once: true}}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className={`${
 							displayVideo ? "h-fit" : "h-[500px]"
 						} bg-center bg-no-repeat bg-cover w-full lg:w-[50%] xl:w-[65%]`}

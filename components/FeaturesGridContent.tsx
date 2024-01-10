@@ -5,6 +5,9 @@ import {
 	fadeInUp,
 	fadeInTwo,
 	initialTwo,
+	slideInRightFinish,
+	slideInLeftInitial,
+	slideInRightInitial,
 } from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
@@ -66,9 +69,9 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 					</div>
 					{/* Card Two */}
 					<motion.div
-						initial={initialTwo}
 						viewport={{once: true}}
-						whileInView={fadeInTwo}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className={
 							cardTwo?.backgroundImage?.sourceUrl
 								? `w-full p-3 md:w-1/2 min-h-[450px]`
@@ -84,7 +87,12 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 						/>
 					</motion.div>
 					{/* Card Three */}
-					<div className="w-full p-3 md:w-1/2">
+					<motion.div
+						viewport={{once: true}}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
+						className="w-full p-3 md:w-1/2"
+					>
 						<div
 							className="h-full px-8 py-8 bg-center bg-no-repeat bg-cover rounded-sm lg:p-16 bg-darkBlue"
 							style={{
@@ -159,7 +167,7 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 								</motion.div>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 					{/* Remaining Cards */}
 					{gridContent?.length > 0 ? (
 						gridContent?.map((item, keys) => (
@@ -177,9 +185,9 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 					)}
 					{/* Last Card */}
 					<motion.div
-						initial={initialTwo}
 						viewport={{once: true}}
-						whileInView={fadeInTwo}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className={
 							lastCard?.backgroundImage?.sourceUrl
 								? `w-full p-3 md:w-1/2 min-h-[450px]`

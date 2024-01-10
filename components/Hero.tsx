@@ -8,6 +8,9 @@ import fadeInUp, {
 	fadeIn,
 	initial,
 	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
 	stagger,
 } from "../animations/animations";
 
@@ -45,38 +48,46 @@ const Hero: FC<IHero> = ({
 					<div className="container mx-auto px-4 gap-8">
 						<div className="flex flex-wrap -mx-4 mb-16">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<motion.h1
-									initial={initial}
-									whileInView={stagger}
-									viewport={{once: true}}
-									className="text-center text-white lg:text-left lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-4xl lg:text-7xl xl:text-8xl tracking-tighter"
-								>
+								<h1 className="text-center text-white lg:text-left lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-4xl lg:text-7xl xl:text-8xl tracking-tighter">
 									{titleStart}
-									<Image
-										decoding="async"
-										alt={smallImageOne?.altText}
-										src={smallImageOne?.sourceUrl}
-										width={smallImageOne?.mediaDetails?.width}
-										height={smallImageOne?.mediaDetails?.height}
-										className="inline my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
-										style={{
-											clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
-										}}
-									/>
+									<motion.span
+										initial={initialTwo}
+										whileInView={fadeIn}
+										viewport={{once: true}}
+									>
+										<Image
+											decoding="async"
+											alt={smallImageOne?.altText}
+											src={smallImageOne?.sourceUrl}
+											width={smallImageOne?.mediaDetails?.width}
+											height={smallImageOne?.mediaDetails?.height}
+											className="inline my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
+											style={{
+												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
+											}}
+										/>
+									</motion.span>
 									{titleMiddle}
-									<Image
-										decoding="async"
-										alt={smallImageTwo?.altText}
-										src={smallImageTwo?.sourceUrl}
-										width={smallImageTwo?.mediaDetails?.width}
-										height={smallImageTwo?.mediaDetails?.height}
-										className="inline w-[150px] lg:w-[175px] my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
-										style={{
-											clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
-										}}
-									/>
+									<motion.span
+										initial={initialTwo}
+										whileInView={fadeIn}
+										viewport={{once: true}}
+									>
+										<Image
+											decoding="async"
+											alt={smallImageTwo?.altText}
+											src={smallImageTwo?.sourceUrl}
+											width={smallImageTwo?.mediaDetails?.width}
+											height={smallImageTwo?.mediaDetails?.height}
+											className="inline w-[150px] lg:w-[175px] my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
+											style={{
+												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
+											}}
+										/>
+									</motion.span>
+
 									{titleEnd}
-								</motion.h1>
+								</h1>
 							</div>
 							<div className="w-full lg:w-[35%] px-4">
 								<Paragraph
@@ -218,12 +229,12 @@ const Hero: FC<IHero> = ({
 					</div>
 				</div>
 				<div
-					className={`relative z-50 mb-8 mt-[-100px] lg:mt-[-200px] container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row -mx-4`}
+					className={`relative z-50 mt-[-100px] lg:mt-[-200px] container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row -mx-4`}
 				>
 					<motion.div
-						initial={initial}
 						viewport={{once: true}}
-						whileInView={fadeInUp}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
 						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center w-full ${
 							displayVideo ? `h-fit` : `h-[400px]`
 						}`}
@@ -236,9 +247,9 @@ const Hero: FC<IHero> = ({
 						{displayVideo ? <VideoWrapper>{video}</VideoWrapper> : <></>}
 					</motion.div>
 					<motion.div
-						initial={initial}
 						viewport={{once: true}}
-						whileInView={fadeInUp}
+						initial={slideInRightInitial}
+						whileInView={slideInRightFinish}
 						className="hidden lg:block w-full lg:w-1/3 px-4"
 					>
 						<Image

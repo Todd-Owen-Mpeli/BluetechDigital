@@ -148,15 +148,12 @@ const RenderFlexibleContent: FC = () => {
 						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (
 							<>
 								<FAQ
-									cta={item?.cta}
 									title={item?.title}
+									image={item?.image}
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
 									faqContent={item?.faqContent}
-									displayCtaBlock={item?.displayCtaBlock}
-									downloadLinksTitle={item?.downloadLinksTitle}
-									downloadButtonLinks={item?.downloadButtonLinks}
-									displayDownloadButtonLinks={item?.displayDownloadButtonLinks}
 								/>
 							</>
 						) : item?.fieldGroupName ===

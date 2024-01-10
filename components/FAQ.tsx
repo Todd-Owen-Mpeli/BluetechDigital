@@ -3,211 +3,154 @@ import {
 	fadeIn,
 	initial,
 	stagger,
-	fadeInUp,
 	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
 } from "../animations/animations";
 import Link from "next/link";
+import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IFAQ} from "@/types/components/index";
-import {useGlobalContext} from "@/context/global";
 
 // Components
 import FAQCard from "./Cards/FAQCard";
 import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
-import DownloadButtonLinks from "./Elements/DownloadButtonLinks";
 
 const FAQ: FC<IFAQ> = ({
-	cta,
 	title,
+	image,
 	subtitle,
 	paragraph,
 	faqContent,
-	displayCtaBlock,
-	downloadLinksTitle,
-	downloadButtonLinks,
-	displayDownloadButtonLinks,
+	buttonLink,
 }) => {
-	const globalContext = useGlobalContext();
-
 	return (
 		<>
 			<div className="py-16 px-4 lg:px-0 bg-white">
 				<div className="container px-0 mx-auto">
-					<motion.h3
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
-						className="my-2 uppercase font-semibold text-center lg:text-center text-lg tracking-[0.10rem] text-yellow-Two"
-					>
-						{subtitle}
-					</motion.h3>
-					<motion.h2
-						initial={initialTwo}
-						whileInView={fadeIn}
-						viewport={{once: true}}
-						className="my-2 text-center font-semibold leading-tight text-4xl lg:text-5xl text-black"
-					>
-						{title}
-					</motion.h2>
-					<Paragraph
-						content={paragraph}
-						tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
-					/>
-					<div className="flex flex-col-reverse xl:flex-row items-start justify-between gap-8 mt-10 py-12">
-						<motion.div
-							initial={initial}
-							whileInView={stagger}
+					<div className="mb-10">
+						<motion.h4
+							initial={initialTwo}
+							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="w-full xl:w-[30%] flex flex-col gap-4"
+							className="text-center text-paragraph text-yellow-Two"
 						>
-							<div
-								className={
-									displayCtaBlock
-										? "p-10 flex flex-col items-center justify-between bg-cover bg-center bg-no-repeat"
-										: "hidden"
-								}
-								style={{
-									backgroundImage: `linear-gradient(
-                                        0deg,
-                                        rgba(114, 0, 4, 0.85),
-                                        rgba(114, 0, 4, 0.85),
-                                        rgba(114, 0, 4, 0.85)
-                                    ),url("${cta?.backgroundImage?.sourceUrl}")`,
-								}}
+							{subtitle}
+						</motion.h4>
+						<motion.h2
+							initial={initialTwo}
+							whileInView={fadeIn}
+							viewport={{once: true}}
+							className="text-center font-bold leading-[3.5rem] text-4xl lg:text-5xl p-4 pl-0 text-black"
+						>
+							{title}
+						</motion.h2>
+						<Paragraph
+							content={paragraph}
+							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
+						/>
+					</div>
+
+					<div className="flex flex-col-reverse lg:flex-row gap-4 xl:gap-10">
+						<div className={image?.sourceUrl ? "w-full lg:w-1/2" : `hidden`}>
+							<motion.div
+								viewport={{once: true}}
+								initial={slideInLeftInitial}
+								whileInView={slideInRightFinish}
+								className="relative"
 							>
-								<div className="flex flex-col gap-4">
-									<motion.h3
+								<Image
+									alt={image?.altText}
+									src={image?.sourceUrl}
+									width={image?.mediaDetails?.width}
+									height={image?.mediaDetails?.height}
+									className={
+										image?.sourceUrl
+											? `block object-cover object-center w-full h-[350px] sm:h-[400px]`
+											: `hidden`
+									}
+									style={{
+										clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
+									}}
+								/>
+								<Link
+									href={`${buttonLink?.url}`}
+									target={buttonLink?.target}
+									className={
+										buttonLink?.url
+											? "block absolute bottom-0 left-0"
+											: "hidden"
+									}
+								>
+									<motion.button
 										initial={initialTwo}
 										whileInView={fadeIn}
 										viewport={{once: true}}
-										className="mb-1 text-center font-bold lg:text-left text-lg tracking-[0.10rem] text-white"
+										className={
+											buttonLink?.title
+												? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid bg-purple-Two border-purple-Two hover:bg-purple-dark hover:border-purple-dark transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-Two hover:before:bg-purple-dark after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-purple-dark`
+												: `hidden`
+										}
 									>
-										{cta?.title}
-									</motion.h3>
-									<Paragraph
-										content={cta?.paragraph}
-										tailwindStyling="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base text-center lg:text-left"
-									/>
-								</div>
-								<motion.div
-									initial={initial}
-									whileInView={fadeInUp}
-									viewport={{once: true}}
-									className={cta?.buttonLink?.url ? "block" : "hidden"}
-								>
-									<Link
-										href={`${cta?.buttonLink?.url}`}
-										target={cta?.buttonLink?.target}
-									>
-										<ButtonBorderSliced
-											fullWidth={true}
-											tailwindColor="white"
-											title="Schedule An Appointment"
-										/>
-									</Link>
-								</motion.div>
-							</div>
-							<div
-								className={
-									displayDownloadButtonLinks
-										? "p-10 flex flex-col items-center justify-between gap-4 bg-cover bg-center bg-no-repeat"
-										: "hidden"
-								}
-								style={{
-									backgroundImage: `url("/svg/background/blob-scene-haikei-blue-darkblue.svg")`,
-								}}
-							>
-								<motion.h3
-									initial={initialTwo}
-									whileInView={fadeIn}
-									viewport={{once: true}}
-									className="mb-2 text-center font-bold lg:text-left text-lg tracking-[0.10rem] text-white"
-								>
-									Our Business Services
-								</motion.h3>
-								<motion.div
-									initial={initial}
-									whileInView={fadeInUp}
-									viewport={{once: true}}
-									className={cta?.buttonLink?.url ? "block" : "hidden"}
-								>
-									{globalContext?.ourServicesLinks?.length > 0 ? (
-										globalContext?.ourServicesLinks?.map(
-											(item: any, keys: any) => (
-												<Fragment key={keys}>
-													<Link
-														href={`${item?.node?.url}`}
-														target={item?.node?.target}
-													>
-														<motion.button
-															initial={initial}
-															whileInView={fadeInUp}
-															viewport={{once: true}}
-															className={
-																item?.node?.url
-																	? `flex items-center justify-center text-left group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base text-white w-full sm:mx-0 border-2 border-solid border-white hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500  hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-blue-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-blue-default`
-																	: `hidden`
-															}
-														>
-															{item?.node?.label}
-														</motion.button>
-													</Link>
-												</Fragment>
-											)
-										)
-									) : (
-										<></>
-									)}
-								</motion.div>
-							</div>
-							<div
-								className={
-									displayDownloadButtonLinks
-										? "p-10 flex flex-col items-center justify-between bg-lightGrey gap-4"
-										: "hidden"
-								}
-							>
-								<motion.h3
-									initial={initialTwo}
-									whileInView={fadeIn}
-									viewport={{once: true}}
-									className="mb-2 text-center font-bold lg:text-left text-lg tracking-[0.10rem] text-black"
-								>
-									{downloadLinksTitle}
-								</motion.h3>
-								<motion.div
-									initial={initial}
-									whileInView={fadeInUp}
-									viewport={{once: true}}
-									className={cta?.buttonLink?.url ? "block" : "hidden"}
-								>
-									{downloadButtonLinks?.length > 0 ? (
-										downloadButtonLinks?.map((item: any, keys: any) => (
-											<Fragment key={keys}>
-												<Link
-													href={item?.buttonLink?.url}
-													target={item?.buttonLink?.target}
-												>
-													<DownloadButtonLinks
-														pdfLink={item?.pdfLink}
-														title={item?.buttonLink?.title}
-													/>
-												</Link>
-											</Fragment>
-										))
-									) : (
-										<></>
-									)}
-								</motion.div>
-							</div>
-						</motion.div>
+										<span>{buttonLink?.title}</span>
+										<span className="hidden group-hover:block">
+											<svg
+												height="35"
+												width="30.237"
+												viewBox="0 0 30.237 35"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g transform="translate(-4906.763 143)">
+													<path
+														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+														transform="translate(4870 -143)"
+														fill="#e4a002"
+													></path>
+													<g transform="translate(4890.311 -1111.861)">
+														<path
+															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+															transform="translate(0 0)"
+															fill="#ffffff"
+														></path>
+													</g>
+												</g>
+											</svg>
+										</span>
+										<span className="block group-hover:hidden">
+											<svg
+												height="35"
+												width="30.237"
+												viewBox="0 0 30.237 35"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<g transform="translate(-4906.763 143)">
+													<path
+														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+														transform="translate(4870 -143)"
+														fill="#ffffff"
+													></path>
+													<g transform="translate(4890.311 -1111.861)">
+														<path
+															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+															transform="translate(0 0)"
+															fill="#ffffff"
+														></path>
+													</g>
+												</g>
+											</svg>
+										</span>
+									</motion.button>
+								</Link>
+							</motion.div>
+						</div>
 						<motion.div
 							initial={initial}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="w-full xl:w-[70%] flex flex-col items-center justify-center gap-4"
+							className={`w-full flex flex-col items-center justify-center gap-4 ${
+								image?.sourceUrl ? "lg:w-1/2" : `w-full`
+							}`}
 						>
 							{faqContent?.length > 0 ? (
 								faqContent.map((item: any, keys: any) => (

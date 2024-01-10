@@ -388,33 +388,23 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
-												displayCtaBlock
+												buttonLink {
+													url
+													title
+													target
+												}
+												image {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
 												faqContent {
 													card {
 														title
 														paragraph
-													}
-												}
-												cta {
-													title
-													paragraph
-													buttonLink {
-														url
-														title
-														target
-													}
-													backgroundImage {
-														sourceUrl
-													}
-												}
-												downloadLinksTitle
-												displayDownloadButtonLinks
-												downloadButtonLinks {
-													pdfLink
-													buttonLink {
-														url
-														title
-														target
 													}
 												}
 											}

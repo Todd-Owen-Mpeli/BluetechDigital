@@ -1,18 +1,16 @@
 // Imports
+import {
+	fadeIn,
+	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
+} from "../animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IHero} from "@/types/components/index";
-import fadeInUp, {
-	fadeIn,
-	initial,
-	initialTwo,
-	slideInLeftInitial,
-	slideInRightFinish,
-	slideInRightInitial,
-	stagger,
-} from "../animations/animations";
 
 // Styling
 import styles from "../styles/components/Hero.module.scss";
@@ -94,7 +92,7 @@ const Hero: FC<IHero> = ({
 									content={paragraph}
 									tailwindStyling="text-white text-center lg:text-left text-base sm:text-paragraph xl:text-lg"
 								/>
-								<div className="mt-3 gap-2 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
+								<div className="mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
 									<Link
 										href={`${buttonLink?.url}`}
 										target={buttonLink?.target}
@@ -170,7 +168,7 @@ const Hero: FC<IHero> = ({
 											viewport={{once: true}}
 											className={
 												buttonLinkTwo?.title
-													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-purple-Two hover:bg-purple-Two hover:border-purple-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-Two hover:before:bg-purple-Two after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-purple-Two`
+													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid bg-purple-Two border-purple-Two hover:bg-purple-dark hover:border-purple-dark transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-Two hover:before:bg-purple-dark after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] $after:bg-white hover:after:bg-purple-dark`
 													: `hidden`
 											}
 										>
@@ -236,7 +234,7 @@ const Hero: FC<IHero> = ({
 						initial={slideInLeftInitial}
 						whileInView={slideInRightFinish}
 						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center ${
-							displayVideo ? `h-fit` : `h-[400px]`
+							displayVideo ? `lg:h-[400px] xl:h-[500px]` : `h-[400px]`
 						}`}
 						style={{
 							backgroundImage: `url("${

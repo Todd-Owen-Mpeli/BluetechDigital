@@ -13,18 +13,17 @@ export type IFAQ = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
-	displayCtaBlock: boolean;
-	displayDownloadButtonLinks: boolean;
-	cta: {
+	buttonLink: {
+		url: string;
 		title: string;
-		paragraph: string;
-		backgroundImage: {
-			sourceUrl: string;
-		};
-		buttonLink: {
-			url: string;
-			title: string;
-			target: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
 		};
 	};
 	faqContent: [
@@ -32,17 +31,6 @@ export type IFAQ = {
 			card: {
 				title: string;
 				paragraph: string;
-			};
-		}
-	];
-	downloadLinksTitle: string;
-	downloadButtonLinks: [
-		{
-			pdfLink: boolean;
-			buttonLink: {
-				url: string;
-				title: string;
-				target: string;
 			};
 		}
 	];

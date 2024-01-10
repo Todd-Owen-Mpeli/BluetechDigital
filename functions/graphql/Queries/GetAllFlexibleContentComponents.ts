@@ -134,11 +134,11 @@ export const getAllFlexibleContentComponents = async (
 												}
                   								columnTwoContent {
                   									paragraph
-                  									paragraphThree
                   									paragraphTwo
+                  									paragraphThree
                   									buttonText
-                  									buttonTextThree
                   									buttonTextTwo
+                  									buttonTextThree
                   								}
 											}
 											... on ${postTypeFlexibleContent}_JumboContentSection {
@@ -183,20 +183,20 @@ export const getAllFlexibleContentComponents = async (
 													altText
 													sourceUrl
 													mediaDetails {
-													height
-													width
+														height
+														width
 													}
 												}
 												contentBox {
 													text
 													subtext
 													icon {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
 													}
 												}
 												bottomContent {
@@ -385,33 +385,23 @@ export const getAllFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
-												displayCtaBlock
+												buttonLink {
+													url
+													title
+													target
+												}
+												image {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
 												faqContent {
 													card {
 														title
 														paragraph
-													}
-												}
-												cta {
-													title
-													paragraph
-													buttonLink {
-														url
-														title
-														target
-													}
-													backgroundImage {
-														sourceUrl
-													}
-												}
-												downloadLinksTitle
-												displayDownloadButtonLinks
-												downloadButtonLinks {
-													pdfLink
-													buttonLink {
-														url
-														title
-														target
 													}
 												}
 											}
@@ -461,9 +451,9 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 												buttonLink {
-												url
-												title
-												target
+													url
+													title
+													target
 												}
 												backgroundImage {
 												sourceUrl

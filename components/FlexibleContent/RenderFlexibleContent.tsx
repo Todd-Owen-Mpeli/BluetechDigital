@@ -138,6 +138,7 @@ const RenderFlexibleContent: FC = () => {
 							<>
 								<OurServices
 									title={item?.title}
+									image={item?.image}
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}

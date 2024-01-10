@@ -295,6 +295,14 @@ export const getAllPreviewFlexibleContentComponents = async (
 													title
 													target
 												}
+												image {
+													altText
+													sourceUrl
+													mediaDetails {
+													height
+													width
+													}
+												}
 												servicesGrid {
 													card {
 														title

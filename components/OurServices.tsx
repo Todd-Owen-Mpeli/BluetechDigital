@@ -14,6 +14,7 @@ import Paragraph from "./Elements/Paragraph";
 
 const OurServices: FC<IOurServices> = ({
 	title,
+	image,
 	subtitle,
 	paragraph,
 	buttonLink,
@@ -32,26 +33,6 @@ const OurServices: FC<IOurServices> = ({
 			>
 				<div className="container mx-auto flex flex-col items-center">
 					<div className="flex flex-col py-8 items-center gap-2">
-						{/* <motion.h4
-							initial={initialTwo}
-							whileInView={fadeIn}
-							viewport={{once: true}}
-							className="text-center lg:text-left text-paragraph text-yellow-Two"
-						>
-							{subtitle}
-						</motion.h4>
-						<motion.h2
-							initial={initialTwo}
-							whileInView={fadeIn}
-							viewport={{once: true}}
-							className="my-2 lg:max-w-3xl text-center font-semibold leading-tight text-4xl lg:text-5xl text-white"
-						>
-							{title}
-						</motion.h2>
-						<Paragraph
-							content={paragraph}
-							tailwindStyling="lg:max-w-3xl text-white leading-[1.75rem] text-base sm:text-paragraph text-center"
-						/> */}
 						<div className="flex flex-wrap -mx-4">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
 								<motion.h4
@@ -150,14 +131,14 @@ const OurServices: FC<IOurServices> = ({
 									<>
 										<div
 											className="p-9 bg-center bg-blue-darkerTwo bg-no-repeat bg-cover min-h-[350px] flex flex-col gap-2 items-center lg:items-start justify-between"
-											// style={{
-											// 	backgroundImage: `linear-gradient(
-											// 		0deg,
-											// 		rgba(6, 18, 41, 0.50),
-											// 		rgba(6, 18, 41, 0.85),
-											// 		rgba(6, 18, 41, 0.95)
-											// 	),url("${item?.card?.backgroundImage?.sourceUrl}")`,
-											// }}
+											style={{
+												backgroundImage: `linear-gradient(
+													0deg,
+													rgba(6, 18, 41, 0.50),
+													rgba(6, 18, 41, 0.85),
+													rgba(6, 18, 41, 0.95)
+												),url("${item?.card?.backgroundImage?.sourceUrl}")`,
+											}}
 										>
 											<div>
 												<motion.h4
@@ -197,11 +178,15 @@ const OurServices: FC<IOurServices> = ({
 							className="relative"
 						>
 							<Image
-								alt={``}
-								src={`/img/Home-Bravo-Group-Official-Website - Mockup - Mobile Two.png`}
-								width={500}
-								height={500}
-								className="absolute top-[-255px] right-[-75px] object-cover object-center w-full h-[535px]"
+								alt={image?.altText}
+								src={image?.sourceUrl}
+								width={image?.mediaDetails?.width}
+								height={image?.mediaDetails?.height}
+								className={
+									image?.sourceUrl
+										? `absolute top-0 lg:top-[-255px] right-[-75px] object-contain object-center w-full h-full min-h-[500px]`
+										: `hidden`
+								}
 							/>
 						</motion.div>
 					</div>

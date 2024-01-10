@@ -292,6 +292,14 @@ export const getAllFlexibleContentComponents = async (
 													title
 													target
 												}
+												image {
+													altText
+													sourceUrl
+													mediaDetails {
+													height
+													width
+													}
+												}
 												servicesGrid {
 													card {
 														title

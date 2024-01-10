@@ -229,13 +229,13 @@ const Hero: FC<IHero> = ({
 					</div>
 				</div>
 				<div
-					className={`relative z-50 mt-[-100px] lg:mt-[-200px] container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row -mx-4`}
+					className={`relative z-50 mt-[-100px] lg:mt-[-200px] container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row`}
 				>
 					<motion.div
 						viewport={{once: true}}
 						initial={slideInLeftInitial}
 						whileInView={slideInRightFinish}
-						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center w-full ${
+						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center ${
 							displayVideo ? `h-fit` : `h-[400px]`
 						}`}
 						style={{
@@ -260,7 +260,7 @@ const Hero: FC<IHero> = ({
 							className={
 								rightsideImage?.sourceUrl
 									? `block object-cover object-center w-full h-[350px] ${
-											displayVideo ? `sm:h-[500px]` : `sm:h-[400px]`
+											displayVideo ? `lg:h-[400px] xl:h-[500px]` : `h-[400px]`
 									  }`
 									: `hidden`
 							}

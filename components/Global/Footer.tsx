@@ -224,8 +224,8 @@ const Footer: FC = () => {
 							</motion.div>
 						</motion.div>
 					</div>
-					<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8 lg:mt-0 items-center justify-center w-full lg:w-[65%] gap-6 xl:items-start xl:justify-end">
-						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
+					<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8 lg:mt-0 w-full lg:w-[65%] gap-6">
+						<div className="flex flex-col px-0">
 							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
 								Info
 							</h4>
@@ -278,7 +278,7 @@ const Footer: FC = () => {
 								)}
 							</motion.ul>
 						</div>
-						<div className="flex flex-col items-center justify-center lg:items-baseline px-0">
+						<div className="flex flex-col px-0">
 							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
 								Our Services
 							</h4>
@@ -313,11 +313,11 @@ const Footer: FC = () => {
 								)}
 							</motion.ul>
 						</div>
-						<div className="flex flex-col items-center justify-center lg:justify-between">
+						<div className="flex flex-col items-center">
 							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase md:text-left">
 								Our Expertise
 							</h4>
-							<div className="grid grid-cols-2 items-center justify-center gap-4">
+							<div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-y-6 sm:gap-4">
 								{globalContext?.themesOptionsContent
 									?.awardsCertificationsGallery?.length > 0 ? (
 									globalContext?.themesOptionsContent?.awardsCertificationsGallery?.map(

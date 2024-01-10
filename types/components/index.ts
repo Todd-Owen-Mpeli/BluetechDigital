@@ -197,6 +197,14 @@ export type IOurServices = {
 		title: string;
 		target: string;
 	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 	servicesGrid: [
 		{
 			card: {

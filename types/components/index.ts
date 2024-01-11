@@ -82,6 +82,7 @@ export type ICTATwo = {
 	title: string;
 	highlightText: string;
 	backgroundColor: string;
+	highlightTextColor: string;
 	buttonLink: {
 		url: string;
 		title: string;
@@ -129,6 +130,7 @@ export type ILinkedInCta = {
 	title: string;
 	highlightText: string;
 	backgroundColor: string;
+	highlightTextColor: string;
 	displayLinkedinIcon: Boolean;
 	buttonLink: {
 		url: string;
@@ -220,6 +222,34 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
+};
+export type IFeaturesGridTwo = {
+	cardOne: {
+		title: string;
+		subtitle: string;
+		paragraph: string;
+	};
+	cardTwo: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+	gridContent: [
+		{
+			card: {
+				id: string;
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				backgroundColor: string;
+			};
+		}
+	];
+	lastCard: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
 };
 export type IJumboContentImage = {
 	title: string;
@@ -565,5 +595,3 @@ export type IDownloadButtonLinks = {
 	title: string;
 	pdfLink: boolean;
 };
-
-// TEST COMPONENTS

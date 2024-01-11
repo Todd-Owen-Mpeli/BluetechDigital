@@ -121,6 +121,42 @@ export const getAllFlexibleContentComponents = async (
                       							  }
                       							}
 											}
+											... on ${postTypeFlexibleContent}_FeaturesGridTwo {
+                      							fieldGroupName
+                      							cardOne {
+                      							  title
+                      							  subtitle
+                      							  paragraph
+                      							}
+                      							cardTwo {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							lastCard {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							gridContent {
+                      							  card {
+                      							    title
+                      							    subtitle
+                      							    paragraph
+                      							    backgroundColor
+                      							  }
+                      							}
+											}
 											... on ${postTypeFlexibleContent}_TwoColumnButtonContent {
 												fieldGroupName
                   								title
@@ -423,6 +459,7 @@ export const getAllFlexibleContentComponents = async (
 												title
 												highlightText
 												backgroundColor
+												highlightTextColor
 												buttonLink {
 													url
 													title
@@ -434,6 +471,7 @@ export const getAllFlexibleContentComponents = async (
 												title
 												highlightText
 												backgroundColor
+												highlightTextColor
 												displayLinkedinIcon
 												buttonLink {
 													url

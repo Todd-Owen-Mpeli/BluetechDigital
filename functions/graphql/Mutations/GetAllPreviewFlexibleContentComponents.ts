@@ -124,6 +124,42 @@ export const getAllPreviewFlexibleContentComponents = async (
                       							  }
                       							}
 											}
+											... on ${postTypeFlexibleContent}_FeaturesGridTwo {
+                      							fieldGroupName
+                      							cardOne {
+                      							  title
+                      							  subtitle
+                      							  paragraph
+                      							}
+                      							cardTwo {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							lastCard {
+                      							  backgroundImage {
+                      							    altText
+                      							    sourceUrl
+                      							    mediaDetails {
+                      							      height
+                      							      width
+                      							    }
+                      							  }
+                      							}
+                      							gridContent {
+                      							  card {
+                      							    title
+                      							    subtitle
+                      							    paragraph
+                      							    backgroundColor
+                      							  }
+                      							}
+											}
 											... on ${postTypeFlexibleContent}_TwoColumnButtonContent {
 												fieldGroupName
                   								title
@@ -137,11 +173,11 @@ export const getAllPreviewFlexibleContentComponents = async (
 												}
                   								columnTwoContent {
                   									paragraph
-                  									paragraphThree
                   									paragraphTwo
+                  									paragraphThree
                   									buttonText
-                  									buttonTextThree
                   									buttonTextTwo
+                  									buttonTextThree
                   								}
 											}
 											... on ${postTypeFlexibleContent}_JumboContentSection {
@@ -186,20 +222,20 @@ export const getAllPreviewFlexibleContentComponents = async (
 													altText
 													sourceUrl
 													mediaDetails {
-													height
-													width
+														height
+														width
 													}
 												}
 												contentBox {
 													text
 													subtext
 													icon {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
 													}
 												}
 												bottomContent {
@@ -288,8 +324,8 @@ export const getAllPreviewFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_OurServices {
 												fieldGroupName
 												title
-												subtitle
 												paragraph
+												subtitle
 												buttonLink {
 													url
 													title
@@ -426,6 +462,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												highlightText
 												backgroundColor
+												highlightTextColor
 												buttonLink {
 													url
 													title
@@ -437,6 +474,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												highlightText
 												backgroundColor
+												highlightTextColor
 												displayLinkedinIcon
 												buttonLink {
 													url
@@ -454,9 +492,9 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												paragraph
 												buttonLink {
-												url
-												title
-												target
+													url
+													title
+													target
 												}
 												backgroundImage {
 												sourceUrl

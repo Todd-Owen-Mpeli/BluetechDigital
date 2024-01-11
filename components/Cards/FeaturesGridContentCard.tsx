@@ -33,7 +33,7 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			subtitleStyling = "text-yellow-Two";
 			paragraphStyling = "text-pureBlack";
 			backgroundWaveStyling = "none";
-			backgroundColorStyling = "bg-lightGrey";
+			backgroundColorStyling = "bg-lightGreyTwo";
 			break;
 		case "BlueWave":
 			titleStyling = "text-white";

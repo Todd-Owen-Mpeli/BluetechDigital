@@ -117,21 +117,37 @@ const Navbar: FC = () => {
 												onClick={displayOurServicesSublinks}
 											>
 												<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-													<span
+													<Link
+														href={`${item?.node?.url}`}
 														className={`${
 															scrollPosition > 50
 																? "text-pureBlack"
 																: "text-white"
-														} group-hover:text-pureBlack group-hover:hover:text-blue-Two  text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+														} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
-														Our Services
-													</span>
+														{item?.node?.label}
+													</Link>
 													<Image
 														width={550}
 														height={550}
 														alt="White Arrow Icon"
-														src="/img/navigation-menu-dropdown-arrow-white.png"
-														className=" cursor-pointer w-[25px] h-[25px] object-contain object-center"
+														src="/svg/navigation-menu-dropdown-arrow-white.svg"
+														className={`${
+															scrollPosition > 50 || navBackgroundSublinksOpen
+																? "hidden"
+																: "block"
+														} group-hover:hidden cursor-pointer w-[22px] h-[22px] object-contain object-center`}
+													/>
+													<Image
+														width={550}
+														height={550}
+														alt="Black Arrow Icon"
+														src="/svg/navigation-menu-dropdown-arrow-black.svg"
+														className={`${
+															scrollPosition > 50 || navBackgroundSublinksOpen
+																? "block"
+																: "hidden"
+														} group-hover:block cursor-pointer w-[22px] h-[22px] object-contain object-center`}
 													/>
 												</div>
 												{ourServicesSublinksOpen ? (
@@ -163,8 +179,24 @@ const Navbar: FC = () => {
 														height={550}
 														alt="White Arrow Icon"
 														onClick={displayNewsInsightsSublinks}
-														src="/img/navigation-menu-dropdown-arrow-white.png"
-														className="w-[25px] h-[25px] object-contain object-center"
+														src="/svg/navigation-menu-dropdown-arrow-white.svg"
+														className={`${
+															scrollPosition > 50 || navBackgroundSublinksOpen
+																? "hidden"
+																: "block"
+														} group-hover:hidden cursor-pointer w-[22px] h-[22px] object-contain object-center`}
+													/>
+													<Image
+														width={550}
+														height={550}
+														alt="Black Arrow Icon"
+														onClick={displayNewsInsightsSublinks}
+														src="/svg/navigation-menu-dropdown-arrow-black.svg"
+														className={`${
+															scrollPosition > 50 || navBackgroundSublinksOpen
+																? "block"
+																: "hidden"
+														} group-hover:block cursor-pointer w-[22px] h-[22px] object-contain object-center`}
 													/>
 												</span>
 												<div
@@ -179,10 +211,14 @@ const Navbar: FC = () => {
 																	" p-0 w-full flex flex-col z-[999]"
 																}
 															>
-																<li className="w-full group hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default">
+																<li className="w-full hover:bg-blue-default">
 																	<Link
 																		href="/case-studies"
-																		className="block p-4 text-base font-semibold text-pureBlack group-hover:text-white"
+																		className={` ${
+																			newsInsightsSublinksOpen
+																				? "text-black hover:text-white"
+																				: "text-black"
+																		} block p-4 text-tiny`}
 																	>
 																		Case Studies
 																	</Link>

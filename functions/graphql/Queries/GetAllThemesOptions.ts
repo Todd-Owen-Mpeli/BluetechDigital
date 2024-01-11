@@ -32,7 +32,23 @@ export const getThemesOptionsContent = async () => {
 								}
 								displayNoticeBanner
 								noticeBannerTextarea
-								megaMenuContent {
+								menuColumnTwo {
+									title
+									image {
+										altText
+										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
+									}
+									buttonLink {
+										url
+										title
+										target
+									}
+								}
+								menuColumnThree {
 									title
 									paragraph
 									buttonLink {

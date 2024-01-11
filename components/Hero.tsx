@@ -227,14 +227,16 @@ const Hero: FC<IHero> = ({
 					</div>
 				</div>
 				<div
-					className={`relative z-50 mt-[-100px] lg:mt-[-200px] container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row`}
+					className={`relative z-50 mt-[-195px] sm:mt-[-125px] lg:mt-[-200px] container mx-auto px-4 gap-8 md:gap-12 xl:gap-16 lg:px-0 flex flex-col lg:flex-row`}
 				>
 					<motion.div
 						viewport={{once: true}}
 						initial={slideInLeftInitial}
 						whileInView={slideInRightFinish}
 						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center ${
-							displayVideo ? `lg:h-[400px] xl:h-[500px]` : `h-[400px]`
+							displayVideo
+								? `h-[375px] sm:h-[445px] lg:h-[450px] xl:h-[500px]`
+								: `h-[300px] lg:h-[400px] xl:h-[450px]`
 						}`}
 						style={{
 							backgroundImage: `url("${
@@ -248,7 +250,7 @@ const Hero: FC<IHero> = ({
 						viewport={{once: true}}
 						initial={slideInRightInitial}
 						whileInView={slideInRightFinish}
-						className="hidden lg:block w-full lg:w-1/3 px-4"
+						className="w-full lg:w-1/3 px-0 pb-10 lg:pb-0"
 					>
 						<Image
 							alt={rightsideImage?.altText}
@@ -257,8 +259,10 @@ const Hero: FC<IHero> = ({
 							height={rightsideImage?.mediaDetails?.height}
 							className={
 								rightsideImage?.sourceUrl
-									? `block object-cover object-center w-full h-[350px] ${
-											displayVideo ? `lg:h-[400px] xl:h-[500px]` : `h-[400px]`
+									? `block object-cover object-center w-full ${
+											displayVideo
+												? `h-[300px] lg:h-[400px] xl:h-[450px]`
+												: `h-[350px] lg:h-[400px]`
 									  }`
 									: `hidden`
 							}

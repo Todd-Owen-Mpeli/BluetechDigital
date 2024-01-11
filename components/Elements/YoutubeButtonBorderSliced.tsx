@@ -52,7 +52,7 @@ const YoutubeButtonBorderSliced: FC<IYoutubeButtonBorderSliced> = ({
 									fill={sgvYoutubeColorHover}
 								/>
 								<g transform="translate(160.404 23)">
-									<g transform="translate(0 0)" clip-path="url(#a)">
+									<g transform="translate(0 0)" clipPath="url(#a)">
 										<path
 											d="M20.981,2.342A2.684,2.684,0,0,0,19.086.448C17.415,0,10.714,0,10.714,0s-6.7,0-8.372.448A2.684,2.684,0,0,0,.448,2.342,27.893,27.893,0,0,0,0,7.5a27.891,27.891,0,0,0,.448,5.158,2.684,2.684,0,0,0,1.895,1.895C4.013,15,10.714,15,10.714,15s6.7,0,8.372-.448a2.684,2.684,0,0,0,1.895-1.895A27.88,27.88,0,0,0,21.429,7.5a27.882,27.882,0,0,0-.448-5.158"
 											transform="translate(0 0)"
@@ -146,7 +146,7 @@ const YoutubeButtonBorderSliced: FC<IYoutubeButtonBorderSliced> = ({
 									fill={sgvYoutubeColor}
 								/>
 								<g transform="translate(160.404 23)">
-									<g transform="translate(0 0)" clip-path="url(#a)">
+									<g transform="translate(0 0)" clipPath="url(#a)">
 										<path
 											d="M20.981,2.342A2.684,2.684,0,0,0,19.086.448C17.415,0,10.714,0,10.714,0s-6.7,0-8.372.448A2.684,2.684,0,0,0,.448,2.342,27.893,27.893,0,0,0,0,7.5a27.891,27.891,0,0,0,.448,5.158,2.684,2.684,0,0,0,1.895,1.895C4.013,15,10.714,15,10.714,15s6.7,0,8.372-.448a2.684,2.684,0,0,0,1.895-1.895A27.88,27.88,0,0,0,21.429,7.5a27.882,27.882,0,0,0-.448-5.158"
 											transform="translate(0 0)"

@@ -61,7 +61,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								initial={initial}
 								whileInView={stagger}
 								viewport={{once: true}}
-								className="text-center lg:text-left font-bold leading-[3.5rem] text-4xl lg:text-5xl p-4 pl-0 text-black"
+								className="leading-[3.5rem] my-2 max-w-2xl mx-auto mb-6 text-center lg:text-left font-semibold text-4xl lg:text-5xl"
 							>
 								{title}
 								<span className="p-2 ml-3 bg-blue-Two text-white rounded-lg">

@@ -25,7 +25,8 @@
     "react-dom": "^18",
     "react-google-recaptcha": "^3.1.0",
     "sass": "^1.69.7",
-    "styled-components": "^6.1.6"
+    "styled-components": "^6.1.6",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "@types/cookie": "^0.6.0",
@@ -40,7 +41,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "^14.0.4",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^10.18.0",
     "postcss": "^8",
     "sitemap": "^7.1.1",
     "tailwindcss": "^3.3.0",

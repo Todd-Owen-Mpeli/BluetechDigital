@@ -25,7 +25,7 @@ const CookiePolicyCard: FC = () => {
 			<div
 				className={
 					showCookiePolicyCard
-						? `fixed bottom-0 right-0 max-w-6xl px-4 md:max-w-md z-[999]`
+						? `fixed bottom-0 right-0 max-w-6xl px-0 md:max-w-xl z-[999]`
 						: `hidden`
 				}
 			>
@@ -33,25 +33,28 @@ const CookiePolicyCard: FC = () => {
 					initial={initial}
 					whileInView={stagger}
 					viewport={{once: true}}
-					className="px-6 py-4 mb-8 text-white bg-blue-dark"
+					className="px-6 py-4 mb-3 bg-white border-solid border-l-[5px] border-b-[5px] border-lightGrey"
+					style={{
+						boxShadow: "0px 30px 2px -25px rgba(0,0,0,0.1)",
+					}}
 				>
 					<motion.h3
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="font-bold text-lg tracking-wide"
+						className="font-bold text-lg tracking-wide text-pureBlack"
 					>
 						Cookie Policy
 					</motion.h3>
 					<Paragraph
-						content={`<p>To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behaviour or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</p>`}
-						tailwindStyling="mt-3 mb-6 text-sm text-left"
+						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this Cookie Policy.</p>`}
+						tailwindStyling="mt-1 mb-2 text-tiny text-left text-pureBlack"
 					/>
 					<motion.div
 						initial={initial}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="flex items-center justify-center gap-4"
+						className="flex items-center justify-start gap-4"
 					>
 						<motion.button
 							onClick={acceptCookies}
@@ -67,7 +70,7 @@ const CookiePolicyCard: FC = () => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="inline-block px-6 py-3 text-xs leading-none text-white bg-blue-darker hover:bg-blue-darkerTwo"
+							className="inline-block px-6 py-3 text-xs leading-none text-white bg-blue-dark hover:bg-blue-darkerTwo"
 						>
 							Refuse Cookies
 						</motion.button>

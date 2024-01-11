@@ -171,16 +171,32 @@ export type IThemesOptionsContent = {
 	];
 	displayNoticeBanner: boolean;
 	noticeBannerTextarea: string;
-	megaMenuContent: {
+	menuColumnTwo: {
 		title: string;
-		paragraph: string;
-		backgroundImage: {
-			sourceUrl: string;
-		};
 		buttonLink: {
 			url: string;
 			title: string;
 			target: string;
+		};
+		image: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+	menuColumnThree: {
+		title: string;
+		paragraph: string;
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+		backgroundImage: {
+			sourceUrl: string;
 		};
 	};
 };

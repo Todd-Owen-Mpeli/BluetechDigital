@@ -175,7 +175,7 @@ const OurServices: FC<IOurServices> = ({
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="relative w-[660px] h-fit hidden 2xl:block"
+							className="relative w-[660px] h-fit block sm:hidden 2xl:block"
 						>
 							<Image
 								alt={image?.altText}
@@ -184,7 +184,7 @@ const OurServices: FC<IOurServices> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `absolute rotate-[-6deg] top-0 lg:top-[-285px] right-[0px] object-cover object-center w-[750px] h-[750px]`
+										? `sm:absolute rotate-[6deg] sm:rotate-[-6deg] top-0 lg:top-[-285px] ml-[-75px] sm:right-[0px] object-cover object-center w-[700px] h-[700px] sm:w-[750px] sm:h-[750px]`
 										: `hidden`
 								}
 							/>

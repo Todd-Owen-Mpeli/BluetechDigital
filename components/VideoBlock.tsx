@@ -78,7 +78,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 							target={buttonLink?.target}
 							className={
 								buttonLink?.url
-									? "flex items-center justify-center lg:justify-start"
+									? "flex mt-6 lg:mt-0 items-center justify-center lg:justify-start"
 									: "hidden"
 							}
 						>
@@ -94,8 +94,8 @@ const VideoBlock: FC<IVideoBlock> = ({
 						initial={slideInRightInitial}
 						whileInView={slideInRightFinish}
 						className={`${
-							displayVideo ? "h-fit" : "h-[500px]"
-						} bg-center bg-no-repeat bg-cover w-full lg:w-[50%] xl:w-[65%]`}
+							displayVideo ? "h-fit" : "h-[300px] lg:h-[500px]"
+						} bg-center bg-no-repeat bg-cover mt-6 lg:mt-0 w-full lg:w-[50%] xl:w-[65%]`}
 						style={{
 							backgroundImage: `url("${
 								displayVideo ? "none" : videoBackgroundImage

@@ -10,9 +10,10 @@ import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
 const CTATwo: FC<ICTATwo> = ({
 	title,
-	highlightText,
 	buttonLink,
+	highlightText,
 	backgroundColor,
+	highlightTextColor,
 }) => {
 	return (
 		<>
@@ -33,7 +34,12 @@ const CTATwo: FC<ICTATwo> = ({
 						className="text-center font-bold leading-[2.35rem] lg:text-left text-xl p-4 pl-0 text-white"
 					>
 						{title}
-						<span className="p-2 ml-3 bg-purple-default text-white rounded-lg">
+						<span
+							className="p-2 ml-3 text-white rounded-lg"
+							style={{
+								backgroundColor: `${highlightTextColor}`,
+							}}
+						>
 							{highlightText}
 						</span>
 					</motion.h2>

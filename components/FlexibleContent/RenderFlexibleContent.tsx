@@ -20,6 +20,7 @@ import Maintenance from "../Maintenance";
 import NewsInsights from "../NewsInsights";
 import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
+import FeaturesGridTwo from "../FeaturesGridTwo";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import JumboContentSection from "../JumboContentSection";
@@ -69,6 +70,16 @@ const RenderFlexibleContent: FC = () => {
 									cardTwo={item?.cardTwo}
 									lastCard={item?.lastCard}
 									cardThree={item?.cardThree}
+									gridContent={item?.gridContent}
+								/>
+							</>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_FeaturesGridTwo` ? (
+							<>
+								<FeaturesGridTwo
+									cardOne={item?.cardOne}
+									cardTwo={item?.cardTwo}
+									lastCard={item?.lastCard}
 									gridContent={item?.gridContent}
 								/>
 							</>
@@ -225,6 +236,7 @@ const RenderFlexibleContent: FC = () => {
 									buttonLink={item?.buttonLink}
 									highlightText={item?.highlightText}
 									backgroundColor={item?.backgroundColor}
+									highlightTextColor={item?.highlightTextColor}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_LinkedinCta` ? (
@@ -234,6 +246,7 @@ const RenderFlexibleContent: FC = () => {
 									buttonLink={item?.buttonLink}
 									highlightText={item?.highlightText}
 									backgroundColor={item?.backgroundColor}
+									highlightTextColor={item?.highlightTextColor}
 									displayLinkedinIcon={item?.displayLinkedinIcon}
 								/>
 							</>

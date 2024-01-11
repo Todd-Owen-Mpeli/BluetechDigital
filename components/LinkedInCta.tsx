@@ -10,6 +10,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 	buttonLink,
 	highlightText,
 	backgroundColor,
+	highlightTextColor,
 	displayLinkedinIcon,
 }) => {
 	return (
@@ -31,7 +32,12 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						viewport={{once: true}}
 						className="max-w-6xl mx-auto text-center font-bold leading-normal text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
 					>
-						<span className="p-2 mr-3 bg-blue-light text-white">
+						<span
+							className="p-2 mr-3 text-white"
+							style={{
+								backgroundColor: `${highlightTextColor}`,
+							}}
+						>
 							{highlightText}
 						</span>
 						{title}

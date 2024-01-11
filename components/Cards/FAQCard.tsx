@@ -10,7 +10,7 @@ import {fadeIn, initialTwo} from "../../animations/animations";
 // Components
 import Paragraph from "../Elements/Paragraph";
 
-const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
+const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
 	// Displays Accordion Content
 	const [iconOpen, setIconOpen]: any = useState(true);
 	const [accordionOpen, setAccordionOpen]: any = useState(false);
@@ -22,14 +22,13 @@ const FAQCard: FC<IFAQCard> = ({index, title, paragraph}) => {
 
 	return (
 		<>
-			<div className="flex flex-col w-full">
-				<div
-					className={`w-full p-6 border-solid transition-all duration-200 ease-in-out ${
-						accordionOpen
-							? "border-[2px] border-blue-default"
-							: "border-[2px] border-grey"
-					} flex flex-wrap`}
-				>
+			<div
+				className="flex flex-col w-full border-solid border-[5px] border-lightGrey"
+				style={{
+					boxShadow: "0px 30px 2px -25px rgba(0,0,0,0.1)",
+				}}
+			>
+				<div className="w-full p-6 border-solid transition-all duration-200 ease-in-out flex flex-wrap">
 					<div className="flex-1">
 						<button
 							className="w-full flex items-center justify-between"

@@ -42,7 +42,7 @@ const FAQ: FC<IFAQ> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-center font-bold leading-[3.5rem] text-4xl lg:text-5xl p-4 pl-0 text-black"
+							className="my-2 max-w-2xl mx-auto mb-6 text-center font-semibold leading-tight text-4xl lg:text-5xl"
 						>
 							{title}
 						</motion.h2>

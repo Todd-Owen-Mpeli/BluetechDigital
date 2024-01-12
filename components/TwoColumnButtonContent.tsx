@@ -23,7 +23,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	columnTwoContent,
 }) => {
 	const columnTwoContentTailwindStyling =
-		"text-darkGrey leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left";
+		"text-darkGrey leading-[1.75rem] text-paragraph text-center lg:text-left";
 	const [contentOneOpen, setContentOneOpen]: any = useState(true);
 	const [contentTwoOpen, setContentTwoOpen]: any = useState(false);
 	const [contentThreeOpen, setContentThreeOpen]: any = useState(false);
@@ -88,7 +88,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
 						/>
 						<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
 							<ButtonBorderSliced

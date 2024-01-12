@@ -38,7 +38,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							/>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-3xl text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+								tailwindStyling="max-w-3xl text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
 							/>
 						</div>
 						<Link

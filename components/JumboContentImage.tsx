@@ -70,7 +70,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							<div className="flex flex-col w-full lg:w-[65%]">
 								<Paragraph
 									content={paragraph}
-									tailwindStyling="lg:max-w-lg text-black leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+									tailwindStyling="lg:max-w-lg text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
 								/>
 								<div
 									className={
@@ -230,7 +230,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							</motion.h4>
 							<Paragraph
 								content={contentBox?.subtext}
-								tailwindStyling="max-w-xl text-white text-base sm:text-paragraph text-center lg:text-left"
+								tailwindStyling="max-w-xl text-white text-paragraph text-center lg:text-left"
 							/>
 						</div>
 					</motion.div>

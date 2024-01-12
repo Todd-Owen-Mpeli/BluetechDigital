@@ -55,7 +55,7 @@ const OurServices: FC<IOurServices> = ({
 							<div className="w-full lg:w-[35%] px-4">
 								<Paragraph
 									content={paragraph}
-									tailwindStyling="mb-6 text-white text-center lg:text-left text-base sm:text-paragraph xl:text-lg"
+									tailwindStyling="mb-6 text-white text-center lg:text-left text-paragraph xl:text-lg"
 								/>
 								<Link
 									href={`${buttonLink?.url}`}
@@ -138,6 +138,7 @@ const OurServices: FC<IOurServices> = ({
 													rgba(6, 18, 41, 0.85),
 													rgba(6, 18, 41, 0.95)
 												),url("${item?.card?.backgroundImage?.sourceUrl}")`,
+												boxShadow: "0px 35px 2px -25px rgba(0,0,0,0.5)",
 											}}
 										>
 											<div>
@@ -152,7 +153,7 @@ const OurServices: FC<IOurServices> = ({
 
 												<Paragraph
 													content={item?.card?.paragraph}
-													tailwindStyling="lg:max-w-3xl mb-4 text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+													tailwindStyling="lg:max-w-3xl mb-4 text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
 												/>
 											</div>
 											<div>
@@ -184,7 +185,7 @@ const OurServices: FC<IOurServices> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `sm:absolute rotate-[6deg] sm:rotate-[-6deg] top-0 lg:top-[-285px] ml-[-75px] sm:right-[0px] object-cover object-center w-[700px] h-[700px] sm:w-[750px] sm:h-[750px]`
+										? `sm:absolute rotate-[6deg] sm:rotate-[-6deg] top-0 lg:top-[-285px] ml-[-100px] sm:right-[0px] object-cover object-center w-[700px] h-[700px] sm:w-[750px] sm:h-[750px]`
 										: `hidden`
 								}
 							/>

@@ -28,7 +28,7 @@ const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 				</motion.h2>
 				<Paragraph
 					content={paragraph}
-					tailwindStyling="text-darkGrey leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left"
+					tailwindStyling="text-darkGrey leading-[1.75rem] text-paragraph text-center lg:text-left"
 				/>
 			</div>
 			<Link

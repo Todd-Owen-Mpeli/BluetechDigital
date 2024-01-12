@@ -137,7 +137,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 											achievements?.length >= 2
 												? "max-w-none lg:max-w-sm 2xl:max-w-lg"
 												: "max-w-none lg:max-w-6xl"
-										} text-white leading-[1.75rem] text-base sm:text-paragraph text-center lg:text-left`}
+										} text-white leading-[1.75rem] text-paragraph text-center lg:text-left`}
 									/>
 								</div>
 								<Link

@@ -45,7 +45,7 @@ const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="max-w-3xl mx-auto text-black text-base sm:text-paragraph"
+						tailwindStyling="max-w-3xl mx-auto text-black text-paragraph"
 					/>
 				</motion.div>
 				<motion.div

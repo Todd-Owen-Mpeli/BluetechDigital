@@ -1,17 +1,11 @@
 // Imports
-import {
-	fadeIn,
-	initial,
-	stagger,
-	fadeInUp,
-	initialTwo,
-} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {ISideMenu} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
+import {fadeIn, initial, stagger, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "@/styles/components/Navbar.module.scss";
@@ -45,15 +39,14 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 						: `hidden ${styles.nav}`
 				}
 			>
-				<div className="fixed inset-0 opacity-[65%] bg-pureBlack"></div>
-				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-pureBlack">
+				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white">
 					<div className="flex flex-col items-center mb-8">
 						<Link className="mr-auto text-3xl font-bold leading-none" href="/">
 							<Image
 								width={500}
 								height={500}
-								alt="BluetechDigital"
-								src="/img/logos/bravo-group-logo-white.png"
+								alt="BluetechDigital Logo"
+								src="/img/logos/BlueInventory favicon Two.png"
 								className="object-contain object-center w-full h-[25px]"
 							/>
 						</Link>
@@ -75,15 +68,15 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
 													<Link
 														href={item?.node?.url}
-														className="text-white text-base font-semibold text-center tracking-[0.05rem]  hover:text-yellow-Two transition-all ease-in-out duration-500"
+														className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
 													>
 														{item?.node?.label}
 													</Link>
 													<Image
 														width={550}
 														height={550}
-														alt="White Arrow Icon"
-														src="/img/navigation-menu-dropdown-arrow-white.png"
+														alt="Black Arrow Icon"
+														src="/svg/navigation-menu-dropdown-arrow-black.svg"
 														className="w-[25px] h-[25px] object-contain object-center"
 													/>
 												</div>
@@ -109,7 +102,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 																						keys < 1
 																							? "border-t-[1px] border-darkGrey border-opacity-50"
 																							: "border-t-[0px]"
-																					} hover:border-lightGreyTwo hover:bg-lightGreyTwo border-b-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack`}
+																					} hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-pureBlack hover:text-white`}
 																				>
 																					<Link
 																						href={`${item?.node?.url}`}
@@ -135,10 +128,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
 											>
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<span className="text-white text-base font-semibold text-center tracking-[0.05rem]hover:text-blue-Two transition-all ease-in-out duration-500">
+													<span className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem]hover:text-blue-Two transition-all ease-in-out duration-500">
 														<Link
 															href="/career"
-															className="text-white text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
+															className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
 														>
 															{item?.node?.label}
 														</Link>
@@ -146,8 +139,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 													<Image
 														width={550}
 														height={550}
-														alt="White Arrow Icon"
-														src="/img/navigation-menu-dropdown-arrow-white.png"
+														alt="Black Arrow Icon"
+														src="/svg/navigation-menu-dropdown-arrow-black.svg"
 														className="w-[25px] h-[25px] object-contain object-center"
 													/>
 												</div>
@@ -159,7 +152,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 																" py-4 w-full flex flex-col z-[999]"
 															}
 														>
-															<li className="hover:border-lightGreyTwo hover:bg-lightGreyTwo border-y-[1px] border-darkGrey border-opacity-50 text-white hover:text-pureBlack">
+															<li className="hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-pureBlack hover:text-white">
 																<Link
 																	href="/case-studies"
 																	className="block p-4 text-base font-semibold"
@@ -175,7 +168,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 											<li className="border-b-[1px] border-yellow-dark border-opacity-50">
 												<Link
 													href={`${item?.node?.url}`}
-													className="block py-4 text-base font-semibold text-white hover:text-blue-Two"
+													className="block py-4 text-base font-semibold text-pureBlack hover:text-blue-Two"
 												>
 													{item?.node?.label}
 												</Link>
@@ -195,7 +188,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 							whileInView={stagger}
 							className="flex flex-col items-center justify-between gap-4"
 						>
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
+							<h4 className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-pureBlack">
 								Contact Links
 							</h4>
 							<div className="flex items-center justify-center gap-4 text-center">
@@ -301,7 +294,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium tracking-wide text-white hover:text-yellow-Two"
+										className="font-medium text-base tracking-wide text-pureBlack hover:text-yellow-Two"
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									>
 										{globalContext?.themesOptionsContent?.email}
@@ -335,84 +328,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium tracking-wide text-white hover:text-yellow-Two"
+										className="font-medium text-base tracking-wide text-pureBlack hover:text-yellow-Two"
 										href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									>
 										{globalContext?.themesOptionsContent?.emailTwo}
 									</Link>
 								</motion.div>
-							</div>
-						</motion.div>
-						<motion.div
-							initial={initial}
-							viewport={{once: true}}
-							whileInView={stagger}
-							className="flex flex-col items-center justify-center"
-						>
-							<h4 className="mb-5 text-lg font-semibold tracking-normal text-center text-white uppercase md:text-left">
-								Other Links
-							</h4>
-							<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-								<Link href="http://www.bravo.co.tz/" target="">
-									<motion.button
-										initial={initial}
-										whileInView={fadeInUp}
-										viewport={{once: true}}
-										className={
-											styles.borderButton +
-											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 bg-lightGrey hover:bg-blue-Two hover:border-lightGrey transition-all ease-in-out duration-500"
-										}
-									>
-										<span>
-											<Image
-												width={500}
-												height={500}
-												alt="Bravo Logo blue"
-												src="/img/logos/bravo-blue.svg"
-												className="block group-hover:hidden object-contain object-center w-full h-[35px] mb-4"
-											/>
-											<Image
-												width={500}
-												height={500}
-												alt="Bravo Logo White"
-												src="/img/logos/bravo-white.svg"
-												className="hidden group-hover:block object-contain object-center w-full h-[35px] mb-4"
-											/>
-										</span>
-										<span className="text-pureBlack group-hover:text-white">
-											Bravo Logistics
-										</span>
-									</motion.button>
-								</Link>
-								<Link href="https://agricom.co.tz/" target="">
-									<motion.button
-										initial={initial}
-										whileInView={fadeInUp}
-										viewport={{once: true}}
-										className={
-											styles.borderButton +
-											" block group w-full h-full min-w-[200px] min-h-[150px] mt-3 relative px-6 py-3 font-semibold tracking-widest text-base sm:mx-0 border-2 border-solid border-lightGrey hover:bg-green-Two hover:border-green-Two transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] hover:before:bg-green-Two before:bg-pureBlack after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-pureBlack hover:after:bg-green-Two"
-										}
-									>
-										<span>
-											<Image
-												width={500}
-												height={500}
-												alt="Agricom Logo Green"
-												src="/img/logos/agricom-logo.png"
-												className="block group-hover:hidden object-contain object-center w-full h-[40px] lg:h-[50px] mb-4"
-											/>
-											<Image
-												width={500}
-												height={500}
-												alt="Agricom Logo White"
-												src="/img/logos/agricom-logo.png"
-												className="hidden group-hover:block object-contain object-center w-full h-[40px] lg:h-[50px] mb-4"
-											/>
-										</span>
-										<span>Agricom</span>
-									</motion.button>
-								</Link>
 							</div>
 						</motion.div>
 					</div>

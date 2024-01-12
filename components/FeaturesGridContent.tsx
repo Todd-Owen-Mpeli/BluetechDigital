@@ -63,7 +63,7 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 							</motion.h3>
 							<Paragraph
 								content={cardOne?.paragraph}
-								tailwindStyling="text-pureBlack text-center lg:text-left text-base sm:text-paragraph"
+								tailwindStyling="text-pureBlack text-center lg:text-left text-paragraph"
 							/>
 						</motion.div>
 					</div>
@@ -125,13 +125,13 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 font-bold text-pureBlack"
+												className="mb-3 text-paragraph font-bold text-pureBlack"
 											>
 												{cardThree?.foreground?.title}
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.foreground?.paragraph}
-												tailwindStyling="text-tiny text-pureBlack"
+												tailwindStyling="text-base text-pureBlack"
 											/>
 										</motion.div>
 									</div>
@@ -154,13 +154,13 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 font-bold text-pureBlack"
+												className="mb-3 text-paragraph font-bold text-pureBlack"
 											>
 												{cardThree?.background?.title}
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.background?.paragraph}
-												tailwindStyling="text-tiny text-pureBlack"
+												tailwindStyling="text-base text-pureBlack"
 											/>
 										</motion.div>
 									</div>

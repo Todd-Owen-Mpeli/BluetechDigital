@@ -71,7 +71,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 						</div>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="text-center lg:text-left text-black text-base sm:text-paragraph"
+							tailwindStyling="text-center lg:text-left text-black text-paragraph"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}

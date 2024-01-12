@@ -63,16 +63,20 @@
 		position: fixed;
 		z-index: 999;
 		right: 25px;
-		top: 2.5px;
+		top: 6.5px;
 		padding: 0px;
-		width: 55px;
-		height: 55px;
+		width: 50px;
+		height: 45px;
 		border: none;
 		line-height: 0.6;
-		border-radius: 100%;
 		text-align: center;
-		background: $pureBlack;
+		background: $blue;
 		transition: all 1s ease-in-out;
+
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			background: $yellow;
+		}
 
 		span {
 			// the second divider
@@ -96,13 +100,13 @@
 			}
 			&:before {
 				top: -11px;
-				left: 3px;
-				width: 28px;
+				left: 0px;
+				width: 34px;
 			}
 			&:after {
 				top: 11px;
-				left: 6px;
-				width: 22px;
+				left: 0px;
+				width: 34px;
 			}
 		}
 
@@ -128,9 +132,8 @@
 		height: 45px;
 		border: none;
 		line-height: 0.6;
-		border-radius: 100%;
 		text-align: center;
-		background: $yellow;
+		background: $blue;
 		transition: all 1s ease-in-out;
 
 		span {
@@ -138,9 +141,9 @@
 			width: 27px;
 			position: relative;
 			border-radius: 1px;
-			vertical-align: middle;
-			display: inline-block;
 			background: $white;
+			display: inline-block;
+			vertical-align: middle;
 
 			&:after,
 			&:before {
@@ -162,8 +165,8 @@
 				transform: rotate(-45deg);
 			}
 			&:before {
-				top: -1px;
-				left: 0px;
+				top: -1.5px;
+				left: 0.5px;
 				transform: rotate(45deg);
 			}
 		}

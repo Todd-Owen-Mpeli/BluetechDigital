@@ -40,7 +40,7 @@ const OurPartners: FC<IOurPartners> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base sm:text-paragraph text-center"
+							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-paragraph text-center"
 						/>
 					</div>
 					<div className="max-w-6xl mx-auto">

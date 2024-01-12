@@ -97,7 +97,7 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 				</motion.h3>
 				<Paragraph
 					content={paragraph}
-					tailwindStyling={`${paragraphStyling} text-center lg:text-left text-base sm:text-paragraph`}
+					tailwindStyling={`${paragraphStyling} text-center lg:text-left text-paragraph`}
 				/>
 			</motion.div>
 		</div>

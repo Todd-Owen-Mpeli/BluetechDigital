@@ -42,13 +42,13 @@ const CookiePolicyCard: FC = () => {
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="font-bold text-lg tracking-wide text-pureBlack"
+						className="font-bold text-base tracking-wide text-pureBlack"
 					>
 						Cookie Policy
 					</motion.h3>
 					<Paragraph
 						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this Cookie Policy.</p>`}
-						tailwindStyling="mt-1 mb-2 text-tiny text-left text-pureBlack"
+						tailwindStyling="mt-1 mb-2 text-sm text-left text-pureBlack"
 					/>
 					<motion.div
 						initial={initial}

@@ -52,13 +52,13 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			paragraphColor = "text-black";
 			backgroundImage = `none`;
 			break;
-		case "blue":
+		case "Blue":
 			titleColor = "text-white";
 			subtitleColor = "text-yellow-Two";
 			buttonColor = "white";
 			paragraphColor = "text-white";
 			backgroundColor = "bg-blue-darkerTwo";
-			backgroundImage = `/svg/background/blob-scene-haikei-blue-darkblue-two.svg`;
+			backgroundImage = `/svg/background/stacked-waves-haikei-blue-darkblue.svg`;
 			break;
 		case "GoldYellow":
 			titleColor = "text-white";

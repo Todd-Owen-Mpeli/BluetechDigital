@@ -43,7 +43,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						{title}
 					</motion.h2>
 					<Link
-						href={buttonLink?.url}
+						href={`${buttonLink?.url}`}
 						target={buttonLink?.target}
 						className={
 							buttonLink?.url ? "block w-full mx-auto max-w-[275px]" : "hidden"

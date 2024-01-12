@@ -46,7 +46,7 @@ const SubMegaMenuLinks: FC = () => {
 											<li className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default">
 												<Link
 													href={`${item?.node?.url}`}
-													className="block p-4 text-tiny text-pureBlack group-scoped:hover:text-white"
+													className="block p-4 text-tiny text-pureBlack hover:text-white"
 												>
 													{item?.node?.label}
 												</Link>

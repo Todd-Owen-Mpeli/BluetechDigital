@@ -68,7 +68,9 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						initial={initialTwo}
 						whileInView={stagger}
 						viewport={{once: true}}
-						className="w-full lg:w-[55%] flex flex-col items-center lg:items-baseline justify-center"
+						className={`${
+							columnTwoContent?.buttonText ? "lg:w-[55%]" : "lg:w-full mx-auto"
+						} w-full flex flex-col items-center lg:items-baseline justify-center`}
 					>
 						<motion.h4
 							initial={initialTwo}
@@ -112,13 +114,15 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentOne}
-								className={`py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
-									contentOneOpen ? "border-blue-default" : "border-black"
+								className={`${
+									columnTwoContent?.buttonText ? "block" : "hidden"
+								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+									contentOneOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>
 								<span
 									className={
-										contentOneOpen ? "text-blue-default" : "text-black"
+										contentOneOpen ? "text-yellow-default" : "text-black"
 									}
 								>
 									{columnTwoContent?.buttonText}
@@ -129,13 +133,15 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentTwo}
-								className={`py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
-									contentTwoOpen ? "border-blue-default" : "border-black"
+								className={`${
+									columnTwoContent?.buttonText ? "block" : "hidden"
+								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+									contentTwoOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>
 								<span
 									className={
-										contentTwoOpen ? "text-blue-default" : "text-black"
+										contentTwoOpen ? "text-yellow-default" : "text-black"
 									}
 								>
 									{columnTwoContent?.buttonTextTwo}
@@ -146,13 +152,15 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								whileInView={fadeIn}
 								viewport={{once: true}}
 								onClick={displayContentThree}
-								className={`py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
-									contentThreeOpen ? "border-blue-default" : "border-black"
+								className={`${
+									columnTwoContent?.buttonText ? "block" : "hidden"
+								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+									contentThreeOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>
 								<span
 									className={
-										contentThreeOpen ? "text-blue-default" : "text-black"
+										contentThreeOpen ? "text-yellow-default" : "text-black"
 									}
 								>
 									{columnTwoContent?.buttonTextThree}

@@ -84,7 +84,7 @@ const Navbar: FC = () => {
 					}`
 				}
 			>
-				<div className="container mx-auto flex flex-row items-baseline sm:items-center justify-between py-5 xl:py-6 px-4">
+				<div className="container mx-auto flex flex-row items-baseline sm:items-center justify-between py-3 px-4">
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
@@ -96,8 +96,20 @@ const Navbar: FC = () => {
 								width={500}
 								height={500}
 								alt="BluetechDigital Logo"
-								src="/img/logos/BlueInventory favicon Two.png"
-								className="object-contain object-center w-full h-[20px] sm:h-[25px] lg:h-[30px]"
+								src="/svg/logo/BluetechDigital-Logo-color.svg"
+								className={`${
+									scrollPosition > 50 ? "block" : "hidden group-hover:block"
+								} object-contain object-center w-full h-[50px]`}
+							/>
+							<Image
+								priority
+								width={500}
+								height={500}
+								alt="BluetechDigital Logo White"
+								src="/svg/logo/BluetechDigital-Logo-white.svg"
+								className={`${
+									scrollPosition > 50 ? "hidden" : "block group-hover:hidden"
+								} object-contain object-center w-full h-[50px]`}
 							/>
 						</Link>
 					</motion.div>

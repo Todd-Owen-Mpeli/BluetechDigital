@@ -10,7 +10,7 @@ const MetaTag = () => {
 			{/* <!-- Website Title --> */}
 			<title key="title">{`${pageContext?.seo?.title} | Official Website`}</title>
 			<meta name="description" content={pageContext?.seo?.metaDesc} />
-			<link rel="icon" href="/img/logos/BlueInventory favicon Two.png" />
+			<link rel="icon" href="/svg/logo/BluetechDigital-Logo-color.svg" />
 			<meta
 				name="robots"
 				content={`${pageContext?.seo?.metaRobotsNoindex} , ${pageContext?.seo?.metaRobotsNofollow}`}

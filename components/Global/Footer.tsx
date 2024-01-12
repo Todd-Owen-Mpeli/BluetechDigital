@@ -38,8 +38,8 @@ const Footer: FC = () => {
 									width={500}
 									height={500}
 									alt="BluetechDigital Logo"
-									src="/img/logos/BlueInventory favicon Two.png"
-									className="object-contain object-center w-full h-[30px]"
+									src="/svg/logo/BluetechDigital-Logo-color.svg"
+									className="object-contain object-center w-full h-[75px]"
 								/>
 							</Link>
 						</div>

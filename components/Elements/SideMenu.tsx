@@ -46,12 +46,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 								width={500}
 								height={500}
 								alt="BluetechDigital Logo"
-								src="/img/logos/BlueInventory favicon Two.png"
-								className="object-contain object-center w-full h-[25px]"
+								src="/svg/logo/BluetechDigital-Logo-color.svg"
+								className="object-contain object-center w-full h-[50px]"
 							/>
 						</Link>
 					</div>
-					<div className="flex flex-col px-4 mt-12">
+					<div className="flex flex-col px-4 mt-4">
 						<motion.ul
 							initial={initial}
 							whileInView={stagger}

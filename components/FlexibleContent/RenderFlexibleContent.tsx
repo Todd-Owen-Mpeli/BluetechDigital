@@ -1,5 +1,3 @@
-// "use Client";
-
 // Imports
 import {FC} from "react";
 import {usePageContext} from "@/context/pages";

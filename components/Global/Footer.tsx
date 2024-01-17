@@ -38,8 +38,8 @@ const Footer: FC = () => {
 									width={500}
 									height={500}
 									alt="BluetechDigital Logo"
-									src="/img/logos/BlueInventory favicon Two.png"
-									className="object-contain object-center w-full h-[30px]"
+									src="/svg/logo/BluetechDigital-Logo-color.svg"
+									className="object-contain object-center w-full h-[75px]"
 								/>
 							</Link>
 						</div>
@@ -363,7 +363,7 @@ const Footer: FC = () => {
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={stagger}
-						className="flex flex-col sm:flex-row -m-6 w-auto gap-6 p-6"
+						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
 						{globalContext?.copyrightLinks?.length > 0 ? (
 							globalContext?.copyrightLinks?.map((item: any, keys: any) => (
@@ -375,7 +375,7 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-pureBlack transition-all duration-200 ease-in-out text-tiny hover:text-blue-Two"
+											className="text-pureBlack transition-all duration-200 ease-in-out text-sm hover:text-blue-Two"
 										>
 											{item?.node?.label}
 										</Link>

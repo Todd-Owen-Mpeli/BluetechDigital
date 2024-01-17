@@ -25,7 +25,7 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			subtitleStyling = "text-yellow-Two";
 			paragraphStyling = "text-white";
 			backgroundWaveStyling = "none";
-			backgroundColorStyling = "bg-purple-dark";
+			backgroundColorStyling = "bg-purple-Two";
 
 			break;
 		case "Grey":

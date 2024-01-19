@@ -42,8 +42,8 @@ const config: Config = {
 			// Main colors
 			blue: {
 				default: "#2563eb",
-				dark: "#09275e",
 				Two: "#3978ff",
+				dark: "#09275e",
 				light: "#3d77f3",
 				darker: "#0d172a",
 				darkerTwo: "#061229",

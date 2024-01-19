@@ -167,8 +167,6 @@ export type IOurPartners = {
 export type IMaintenance = {
 	title: string;
 	paragraph: string;
-	backgroundVideoUrl: string;
-	backgroundImageOrVideo: string;
 	backgroundImage: {
 		altText: string;
 		sourceUrl: string;

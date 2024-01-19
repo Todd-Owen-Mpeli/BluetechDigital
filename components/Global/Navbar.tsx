@@ -89,6 +89,7 @@ const Navbar: FC = () => {
 						initial={initialTwo}
 						whileInView={fadeIn}
 						viewport={{once: true}}
+						className="flex flex-col justify-start"
 					>
 						<Link href="/">
 							<Image

@@ -258,8 +258,6 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									backgroundImage={item?.backgroundImage}
-									backgroundVideoUrl={item?.backgroundVideoUrl}
-									backgroundImageOrVideo={item?.backgroundImageOrVideo}
 								/>
 							</>
 						) : item?.fieldGroupName ===

@@ -484,6 +484,19 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_Maintenance {
+												fieldGroupName
+												title
+												paragraph
+												backgroundImage {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
+											}
 											... on ${postTypeFlexibleContent}_ErrorPageContent {
 												fieldGroupName
 												title

@@ -3,13 +3,13 @@ import {FC} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {IMaintenance} from "@/types/components/index";
-import {fadeIn, initial, initialTwo, stagger} from "../animations/animations";
+import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
-import styles from "../styles/components/Maintenance.module.scss";
+import styles from "../../styles/components/Maintenance.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "../Elements/Paragraph";
 
 const Maintenance: FC<IMaintenance> = ({title, paragraph, backgroundImage}) => {
 	return (

@@ -84,7 +84,7 @@ const Navbar: FC = () => {
 					}`
 				}
 			>
-				<div className="container mx-auto flex flex-row items-baseline sm:items-center justify-between py-3 px-4">
+				<div className="container mx-auto flex flex-col sm:flex-row items-baseline sm:items-center justify-between py-3 px-4">
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}
@@ -128,7 +128,7 @@ const Navbar: FC = () => {
 												className="relative"
 												onClick={displayOurServicesSublinks}
 											>
-												<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+												<div className="flex justify-center items-center gap-2 cursor-pointer">
 													<Link
 														href={`${item?.node?.url}`}
 														className={`${
@@ -175,7 +175,7 @@ const Navbar: FC = () => {
 											</li>
 										) : item?.node?.url === "/news-insights" ? (
 											<li className="relative">
-												<span className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+												<span className="flex justify-center items-center gap-2 cursor-pointer">
 													<Link
 														href={`${item?.node?.url}`}
 														className={`${

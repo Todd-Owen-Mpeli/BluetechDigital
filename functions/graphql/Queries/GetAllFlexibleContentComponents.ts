@@ -352,6 +352,23 @@ export const getAllFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_Testimonials {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+											}
+											... on ${postTypeFlexibleContent}_TestimonialsTwo {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
 											... on ${postTypeFlexibleContent}_TitleContentImage {
 												fieldGroupName
 												title

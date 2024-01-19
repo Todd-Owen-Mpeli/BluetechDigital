@@ -43,8 +43,8 @@ const config: Config = {
 			blue: {
 				default: "#2563eb",
 				Two: "#3978ff",
-				dark: "#09275e",
 				light: "#3d77f3",
+				dark: "#09275e",
 				darker: "#0d172a",
 				darkerTwo: "#061229",
 			},

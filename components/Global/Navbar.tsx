@@ -114,12 +114,12 @@ const Navbar: FC = () => {
 							/>
 						</Link>
 					</motion.div>
-					<div className="flex items-center gap-8">
+					<div className="hidden xl:flex items-center gap-8">
 						<motion.ul
 							initial={initial}
 							whileInView={stagger}
 							viewport={{once: true}}
-							className="hidden xl:flex lg:items-center lg:gap-x-6"
+							className="flex lg:items-center lg:gap-x-6"
 						>
 							{globalContext?.navbarMenuLinks?.length > 0 ? (
 								globalContext?.navbarMenuLinks?.map((item: any, keys: any) => (
@@ -262,7 +262,8 @@ const Navbar: FC = () => {
 							)}
 						</motion.ul>
 					</div>
-					<motion.div className="block xl:hidden">
+					<div className="opacity-0 xl:hidden" />
+					<motion.div className="flex flex-col xl:hidden">
 						<button
 							type="button"
 							onClick={toggleMenu}

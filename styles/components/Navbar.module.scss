@@ -69,13 +69,14 @@
 		height: 45px;
 		border: none;
 		line-height: 0.6;
+		border-radius: 5px;
 		text-align: center;
 		background: $blue;
 		transition: all 1s ease-in-out;
 
 		&:hover {
 			transition: all 0.2s ease-in-out;
-			background: $yellow;
+			background: $purple;
 		}
 
 		span {
@@ -131,6 +132,7 @@
 		width: 45px;
 		height: 45px;
 		border: none;
+		border-radius: 5px;
 		line-height: 0.6;
 		text-align: center;
 		background: $blue;
@@ -169,6 +171,11 @@
 				left: 0.5px;
 				transform: rotate(45deg);
 			}
+		}
+
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			background: $purple;
 		}
 	}
 }

@@ -154,6 +154,11 @@ const RenderFlexibleContent: FC = () => {
 									servicesGrid={item?.servicesGrid}
 								/>
 							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_Testimonials` ? (
+							<></>
+						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_TestimonialsTwo` ? (
+							<></>
 						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (
 							<>
 								<FAQ

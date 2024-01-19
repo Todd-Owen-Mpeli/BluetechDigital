@@ -211,6 +211,11 @@ export type IOurServices = {
 		}
 	];
 };
+export type ITestimonials = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+};
 export type INewsInsights = {
 	title: string;
 	italic: string;
@@ -247,6 +252,16 @@ export type IFeaturesGridTwo = {
 		backgroundImage: {
 			sourceUrl: string;
 		};
+	};
+};
+export type ITestimonialsTwo = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
 	};
 };
 export type IJumboContentImage = {
@@ -489,6 +504,21 @@ export type INewsInsightsCard = {
 	title: string;
 	paragraph: string;
 	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
+export type ITestimonialsTwoCard = {
+	name: string;
+	jobTitle: string;
+	paragraph: string;
+	image: {
 		node: {
 			altText: string;
 			sourceUrl: string;

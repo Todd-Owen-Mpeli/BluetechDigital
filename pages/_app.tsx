@@ -76,8 +76,8 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		themesOptionsContent,
 		newsInsights,
 		newsInsightsThreeCards,
+		testimonials,
 	]: // caseStudiesContent,
-	// testimonials,
 	any = await Promise.all([
 		getMobileLinks(),
 		getCopyrightLinks(),
@@ -87,13 +87,13 @@ App.getInitialProps = async ({Component, ctx}: any) => {
 		getThemesOptionsContent(),
 		getAllNewsInsightsContent(),
 		getThreeNewsInsightsContent(),
+		getAllTestimonialsContent(),
 		// getAllCaseStudiesContent(),
-		// getAllTestimonialsContent(),
 	]);
 
 	const globalProps: IGlobalProps = {
 		mobileLinks: mobileLinks,
-		// testimonials: testimonials,
+		testimonials: testimonials,
 		newsInsights: newsInsights,
 		copyrightLinks: copyrightLinks,
 		navbarMenuLinks: navbarMenuLinks,

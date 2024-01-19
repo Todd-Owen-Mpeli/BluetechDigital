@@ -209,7 +209,7 @@ export type IPageContext = {
 };
 export type IGlobalProps = {
 	mobileLinks: IMobileLinks;
-	// testimonials: ITestimonials;
+	testimonials: ITestimonials;
 	newsInsights: INewsInsights;
 	copyrightLinks: ICopyrightLinks;
 	// caseStudiesContent: ICaseStudies;
@@ -221,7 +221,7 @@ export type IGlobalProps = {
 };
 export type IGlobalContext = {
 	mobileLinks: IMobileLinks;
-	// testimonials: ITestimonials;
+	testimonials: ITestimonials;
 	newsInsights: INewsInsights;
 	copyrightLinks: ICopyrightLinks;
 	// caseStudiesContent: ICaseStudies;

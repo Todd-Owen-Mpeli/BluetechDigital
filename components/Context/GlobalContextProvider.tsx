@@ -11,7 +11,7 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 		<GlobalContext.Provider
 			value={{
 				mobileLinks: globalProps?.mobileLinks,
-				// testimonials: globalProps?.testimonials,
+				testimonials: globalProps?.testimonials,
 				newsInsights: globalProps?.newsInsights,
 				copyrightLinks: globalProps?.copyrightLinks,
 				navbarMenuLinks: globalProps?.navbarMenuLinks,

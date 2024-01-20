@@ -519,13 +519,11 @@ export type ITestimonialsTwoCard = {
 	jobTitle: string;
 	paragraph: string;
 	image: {
-		node: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
 		};
 	};
 };

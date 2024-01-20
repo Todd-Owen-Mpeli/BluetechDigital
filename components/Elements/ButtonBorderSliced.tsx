@@ -85,7 +85,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 			beforeBackgroundColorHover = "hover:before:bg-yellow-default";
 			break;
 		case "purple-default":
-			sgvOneColor = "#f6ad37";
+			sgvOneColor = "#833df4";
 			sgvTwoColor = "#f6ad37";
 			sgvOneColorHover = "#ffffff";
 			sgvTwoColorHover = "#ffffff";

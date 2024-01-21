@@ -67,7 +67,7 @@ const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
 									src="/svg/circle-arrow-right.svg"
 									alt="White arrow in a black circle"
 									className={`transition-opacity duration-200 ease-in-out w-full h-[30px] hover:opacity-70 ${
-										accordionOpen ? "rotate-90" : "rotate-[270deg]"
+										accordionOpen ? "rotate-[270deg]" : "rotate-90"
 									}`}
 								/>
 							</div>

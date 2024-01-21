@@ -49,6 +49,13 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			backgroundColorStyling = "bg-transparent";
 			backgroundWaveStyling = "stacked-waves-haikei-orange-yellow";
 			break;
+		case "PurpleWave":
+			titleStyling = "text-white";
+			subtitleStyling = "text-white";
+			paragraphStyling = "text-white";
+			backgroundColorStyling = "bg-transparent";
+			backgroundWaveStyling = "stacked-waves-haikei-purple";
+			break;
 		default:
 			titleStyling = "text-pureBlack";
 			subtitleStyling = "text-yellow-Two";

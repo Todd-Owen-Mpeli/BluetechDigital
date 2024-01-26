@@ -55,6 +55,7 @@ const config: Config = {
 				Four: "#de8b27",
 				Five: "#d8781d",
 				Six: "#d16415",
+				light: "#fbbc57",
 				dark: "#e4a002",
 				darker: "#bc7700",
 			},

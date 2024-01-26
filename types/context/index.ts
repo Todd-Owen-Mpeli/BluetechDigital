@@ -73,13 +73,12 @@ export type ICaseStudies = [
 export type ITestimonials = [
 	{
 		node: {
-			id: string;
-			uri: string;
-			date: string;
-			title: string;
-			excerpt: string;
-			featuredImage: {
-				node: {
+			testimonialReview: {
+				name: string;
+				jobTitle: string;
+				starRating: number;
+				paragraph: string;
+				image: {
 					altText: string;
 					sourceUrl: string;
 					mediaDetails: {

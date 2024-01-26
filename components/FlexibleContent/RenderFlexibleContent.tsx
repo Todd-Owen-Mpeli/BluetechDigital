@@ -18,6 +18,7 @@ import NewsInsights from "../NewsInsights";
 import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
+import TestimonialsTwo from "../TestimonialsTwo";
 import FeaturesGridTwo from "../FeaturesGridTwo";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
@@ -158,7 +159,14 @@ const RenderFlexibleContent: FC = () => {
 							<></>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_TestimonialsTwo` ? (
-							<></>
+							<>
+								<TestimonialsTwo
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
+								/>
+							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Faq` ? (
 							<>
 								<FAQ

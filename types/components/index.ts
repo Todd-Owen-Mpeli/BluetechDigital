@@ -398,6 +398,14 @@ export type IJumboContentSection = {
 						width: number;
 					};
 				};
+				smallImage: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						height: number;
+						width: number;
+					};
+				};
 				buttonLink: {
 					url: string;
 					title: string;
@@ -560,6 +568,14 @@ export type IJumboContentSectionCard = {
 	imageLocation: string;
 	backgroundDisplay: string;
 	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	smallImage: {
 		altText: string;
 		sourceUrl: string;
 		mediaDetails: {

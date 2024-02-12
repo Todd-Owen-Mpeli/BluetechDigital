@@ -8,10 +8,10 @@ import {
 	slideInRightFinish,
 	slideInRightInitial,
 } from "../../animations/animations";
-import {FC, useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
+import {FC, useEffect, useState} from "react";
 import {IJumboContentSectionCard} from "@/types/components/index";
 
 // Styling

@@ -17,9 +17,9 @@ const JumboContentSection: FC<IJumboContentSection> = ({
 							<JumboContentSectionCard
 								title={item?.content?.title}
 								image={item?.content?.image}
-								smallImage={item?.content?.image}
 								subtitle={item?.content?.subtitle}
 								paragraph={item?.content?.paragraph}
+								smallImage={item?.content?.smallImage}
 								buttonLink={item?.content?.buttonLink}
 								imageLocation={item?.content?.imageLocation}
 								backgroundDisplay={item?.content?.backgroundDisplay}

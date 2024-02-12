@@ -199,6 +199,14 @@ export const getAllFlexibleContentComponents = async (
 																width
 															}
 														}
+														smallImage {
+															altText
+															sourceUrl
+															mediaDetails {
+																height
+																width
+															}
+														}
 													}
 												}
 											}

@@ -17,7 +17,8 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 		<>
 			<motion.div
 				initial={initial}
-				whileInView={stagger}
+				variants={stagger}
+				whileInView="animate"
 				viewport={{once: true}}
 				className="relative py-16 md:py-10"
 				style={{
@@ -28,7 +29,8 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				<div className="container mx-auto">
 					<motion.h2
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="max-w-6xl mx-auto text-center font-bold leading-normal text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
 					>

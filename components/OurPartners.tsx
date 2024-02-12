@@ -46,7 +46,8 @@ const OurPartners: FC<IOurPartners> = ({
 					<div className="max-w-6xl mx-auto">
 						<motion.div
 							initial={initial}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 							className={`grid items-center justify-center grid-cols-2 gap-4 ${
 								imageGrid?.length <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-6"

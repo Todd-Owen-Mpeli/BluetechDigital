@@ -117,7 +117,8 @@ const Navbar: FC = () => {
 					<div className="hidden xl:flex items-center gap-8">
 						<motion.ul
 							initial={initial}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 							className="flex lg:items-center lg:gap-x-6"
 						>

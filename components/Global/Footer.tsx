@@ -131,7 +131,8 @@ const Footer: FC = () => {
 						<motion.div
 							initial={initial}
 							viewport={{once: true}}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							className={
 								styles.socialLinks +
 								" flex items-center justify-start gap-6 text-center"
@@ -236,7 +237,8 @@ const Footer: FC = () => {
 							</h4>
 							<motion.ul
 								initial={initial}
-								whileInView={stagger}
+								variants={stagger}
+								whileInView="animate"
 								viewport={{once: true}}
 								className="flex flex-col items-center justify-center gap-2 py-6 lg:items-baseline"
 							>
@@ -289,7 +291,8 @@ const Footer: FC = () => {
 							</h4>
 							<motion.ul
 								initial={initial}
-								whileInView={stagger}
+								variants={stagger}
+								whileInView="animate"
 								viewport={{once: true}}
 								className="flex flex-col items-center justify-center gap-2 py-6 lg:items-baseline"
 							>
@@ -367,7 +370,8 @@ const Footer: FC = () => {
 					<motion.ul
 						initial={initial}
 						viewport={{once: true}}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
 						{globalContext?.copyrightLinks?.length > 0 ? (

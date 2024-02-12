@@ -42,14 +42,34 @@ export type FadeInUp = {
 };
 
 export type Stagger = {
-	y: number;
-	opacity: number;
-	transition: {
-		delay: number;
-		duration: number;
-		ease: string;
-		staggerChildren: number;
-		delayChildren: number;
+	initial: {
+		opacity: number;
+		y: number;
+	};
+	animate: {
+		opacity: number;
+		y: number;
+		transition: {
+			delay: number;
+			duration: number;
+			ease: string;
+		};
+	};
+};
+
+export type ArrayLoopStaggerChildren = {
+	initial: {
+		opacity: number;
+		y: number;
+	};
+	animate: (keys: number) => {
+		opacity: number;
+		y: number;
+		transition: {
+			delay: number;
+			duration: number;
+			ease: string;
+		};
 	};
 };
 

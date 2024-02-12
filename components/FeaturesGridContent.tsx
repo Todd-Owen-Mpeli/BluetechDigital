@@ -29,7 +29,8 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 			<div className="container px-4 mx-auto pt-28 pb-36">
 				<motion.div
 					initial={initial}
-					whileInView={stagger}
+					variants={stagger}
+					whileInView="animate"
 					viewport={{once: true}}
 					className="relative z-50 flex flex-wrap -m-3"
 				>
@@ -37,7 +38,8 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 					<div className="w-full p-3 md:w-1/2">
 						<motion.div
 							initial={initial}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 							className="h-full p-10 rounded-sm bg-lightGrey"
 						>
@@ -102,14 +104,16 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 							<div className="flex flex-wrap items-center justify-center h-full">
 								<motion.div
 									initial={initial}
-									whileInView={stagger}
+									variants={stagger}
+									whileInView="animate"
 									viewport={{once: true}}
 									className="w-full group"
 								>
 									<div className="relative z-10 transition duration-500 ease-in-out transform group-hover:-translate-y-6 group-hover:-translate-x-6 pr-7">
 										<motion.div
 											initial={initial}
-											whileInView={stagger}
+											variants={stagger}
+											whileInView="animate"
 											viewport={{once: true}}
 											className="relative z-10 p-5 text-center bg-white rounded-10 shadow-3xl"
 										>
@@ -138,7 +142,8 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 									<div className="mt-2 transition-all duration-500 ease-in-out transform group-hover:translate-y-6 group-hover:translate-x-6 pl-7">
 										<motion.div
 											initial={initial}
-											whileInView={stagger}
+											variants={stagger}
+											whileInView="animate"
 											viewport={{once: true}}
 											className="p-5 text-center bg-white opacity-30 rounded-10 shadow-3xl"
 										>

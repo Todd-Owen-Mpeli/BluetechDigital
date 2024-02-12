@@ -41,7 +41,8 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 				<div className="container m-auto flex flex-col lg:flex-row gap-16 lg:gap-x-24">
 					<motion.div
 						initial={initialTwo}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="w-full lg:w-[65%] flex flex-col items-center lg:items-baseline justify-center"
 					>
@@ -63,7 +64,8 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 						</motion.h2>
 						<motion.div
 							initial={initialTwo}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 							className="flex flex-col lg:flex-row items lg:items-start justify-between mt-8 gap-12 lg:gap-8"
 						>

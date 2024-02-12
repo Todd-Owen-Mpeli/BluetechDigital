@@ -69,7 +69,8 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			<motion.div
 				initial={initial}
 				viewport={{once: true}}
-				whileInView={stagger}
+				variants={stagger}
+				whileInView="animate"
 				className={`h-full p-10 rounded-sm bg-cover bg-no-repeat bg-center ${backgroundColorStyling}`}
 				style={{
 					backgroundImage: `url(${

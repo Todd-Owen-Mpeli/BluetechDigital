@@ -31,7 +31,8 @@ const ErrorPage: FC<IErrorPage> = ({
 				<div className="container p-0 mx-auto">
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="container relative flex flex-col items-baseline justify-center px-4 m-auto"
 					>

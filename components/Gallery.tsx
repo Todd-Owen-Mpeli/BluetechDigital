@@ -14,7 +14,8 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 			<div className="py-16 bg-white container px-4 mx-auto">
 				<motion.div
 					initial={initial}
-					whileInView={stagger}
+					variants={stagger}
+					whileInView="animate"
 					viewport={{once: true}}
 					className={
 						title && highlightText
@@ -24,7 +25,8 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 				>
 					<motion.h2
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="max-w-2xl mx-auto text-center font-bold leading-normal text-4xl lg:text-5xl p-4 pl-0 text-black"
 					>
@@ -40,7 +42,8 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 				</motion.div>
 				<motion.div
 					initial={initial}
-					whileInView={stagger}
+					variants={stagger}
+					whileInView="animate"
 					viewport={{once: true}}
 					className="grid gap-4 grid-cols-2 lg:grid-cols-4"
 				>

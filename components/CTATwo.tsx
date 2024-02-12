@@ -19,7 +19,8 @@ const CTATwo: FC<ICTATwo> = ({
 		<>
 			<motion.div
 				initial={initial}
-				whileInView={stagger}
+				variants={stagger}
+				whileInView="animate"
 				viewport={{once: true}}
 				className="flex flex-col lg:flex-row justify-around py-6 px-4 items-center"
 				style={{
@@ -29,7 +30,8 @@ const CTATwo: FC<ICTATwo> = ({
 				<div className="max-w-2xl text-left">
 					<motion.h2
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="text-center font-bold leading-[2.35rem] lg:text-left text-xl p-4 pl-0 text-white"
 					>

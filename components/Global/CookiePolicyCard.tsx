@@ -31,7 +31,8 @@ const CookiePolicyCard: FC = () => {
 			>
 				<motion.div
 					initial={initial}
-					whileInView={stagger}
+					variants={stagger}
+					whileInView="animate"
 					viewport={{once: true}}
 					className="px-6 py-4 mb-3 mr-3 bg-white border-solid border-l-[5px] border-b-[5px] border-lightGrey"
 					style={{
@@ -52,7 +53,8 @@ const CookiePolicyCard: FC = () => {
 					/>
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="flex items-center justify-start gap-4"
 					>

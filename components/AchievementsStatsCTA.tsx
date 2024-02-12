@@ -34,7 +34,8 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 				>
 					<motion.div
 						initial={initialTwo}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className={`${
 							achievements?.length >= 2
@@ -116,7 +117,8 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						<div className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row">
 							<motion.div
 								initial={initialTwo}
-								whileInView={stagger}
+								variants={stagger}
+								whileInView="animate"
 								viewport={{once: true}}
 								className={`w-full flex flex-col items-center justify-between gap-4 ${
 									displayAchievementsContent && achievements?.length >= 2

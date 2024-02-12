@@ -66,7 +66,8 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 				<div className="container m-auto xl:px-16 flex flex-col lg:flex-row gap-16 lg:gap-x-16">
 					<motion.div
 						initial={initialTwo}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className={`${
 							columnTwoContent?.buttonText ? "lg:w-[55%]" : "lg:w-full mx-auto"
@@ -104,7 +105,8 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 					</motion.div>
 					<motion.div
 						initial={initialTwo}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="w-full flex flex-col lg:flex-row gap-12 lg:gap-0 pt-0 lg:pt-10"
 					>

@@ -37,7 +37,8 @@ const BlogsCard: FC<IBlogsCard> = ({
 				</div>
 				<motion.div
 					initial={initial}
-					whileInView={stagger}
+					variants={stagger}
+					whileInView="animate"
 					viewport={{once: true}}
 					className="flex flex-col items-baseline justify-between px-4 py-10"
 				>

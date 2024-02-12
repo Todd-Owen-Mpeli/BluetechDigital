@@ -40,7 +40,8 @@ const VideoBlock: FC<IVideoBlock> = ({
 				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className={
 							title && highlightText && paragraph
@@ -59,7 +60,8 @@ const VideoBlock: FC<IVideoBlock> = ({
 							</motion.h4>
 							<motion.h2
 								initial={initial}
-								whileInView={stagger}
+								variants={stagger}
+								whileInView="animate"
 								viewport={{once: true}}
 								className="leading-[3.5rem] my-2 max-w-2xl mx-auto mb-6 text-center lg:text-left font-semibold text-4xl lg:text-5xl"
 							>

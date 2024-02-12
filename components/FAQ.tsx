@@ -146,7 +146,8 @@ const FAQ: FC<IFAQ> = ({
 						</div>
 						<motion.div
 							initial={initial}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 							className={`w-full flex flex-col items-center justify-center gap-4 ${
 								image?.sourceUrl ? "lg:w-1/2" : `w-full`

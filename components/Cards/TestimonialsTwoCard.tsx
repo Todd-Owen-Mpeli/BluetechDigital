@@ -18,7 +18,8 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 		<>
 			<motion.div
 				initial={initial}
-				whileInView={stagger}
+				variants={stagger}
+				whileInView="animate"
 				viewport={{once: true}}
 				className="overflow-hidden p-3 max-w-md mx-auto"
 			>

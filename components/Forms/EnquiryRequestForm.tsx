@@ -195,7 +195,8 @@ const EnquiryRequestForm: FC<IEnquiryRequestForm> = ({
 
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="flex flex-col gap-4"
 					>

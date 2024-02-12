@@ -20,7 +20,8 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 				<div className="mx-auto max-w-7xl pt-28 pb-36">
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="flex flex-wrap -m-3"
 					>
@@ -28,7 +29,8 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 						<div className="w-full p-3 md:w-1/2">
 							<motion.div
 								initial={initial}
-								whileInView={stagger}
+								variants={stagger}
+								whileInView="animate"
 								viewport={{once: true}}
 								className="h-full p-10 rounded-sm bg-lightGrey"
 							>

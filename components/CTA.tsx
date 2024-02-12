@@ -27,7 +27,8 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 				<div className="container p-0 mx-auto">
 					<motion.div
 						initial={initial}
-						whileInView={stagger}
+						variants={stagger}
+						whileInView="animate"
 						viewport={{once: true}}
 						className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row"
 					>

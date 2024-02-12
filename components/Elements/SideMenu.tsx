@@ -54,7 +54,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 					<div className="flex flex-col px-4 mt-4">
 						<motion.ul
 							initial={initial}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							viewport={{once: true}}
 						>
 							{globalContext?.mobileLinks.length > 0 ? (
@@ -84,7 +85,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 													<>
 														<motion.ul
 															initial={initialTwo}
-															whileInView={stagger}
+															variants={stagger}
+															whileInView="animate"
 															viewport={{once: true}}
 															className={
 																styles.ourServicesLinks +
@@ -185,7 +187,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 						<motion.div
 							initial={initial}
 							viewport={{once: true}}
-							whileInView={stagger}
+							variants={stagger}
+							whileInView="animate"
 							className="flex flex-col items-center justify-between gap-4"
 						>
 							<h4 className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-pureBlack">

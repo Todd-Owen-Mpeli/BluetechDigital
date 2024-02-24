@@ -12,9 +12,6 @@ import {
 	stagger,
 } from "@/animations/animations";
 
-// Styling
-import styles from "../styles/components/VideoBlock.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 import VideoWrapper from "./Elements/VideoWrapper";
@@ -33,10 +30,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 }) => {
 	return (
 		<>
-			<div
-				id="VideoBlock"
-				className={styles.videoBlock + " py-12 px-4 bg-lightGreyTwo"}
-			>
+			<div id="VideoBlock" className="py-10 px-4 bg-lightGreyTwo">
 				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
 						initial={initial}
@@ -63,10 +57,10 @@ const VideoBlock: FC<IVideoBlock> = ({
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="leading-[3.5rem] my-2 max-w-2xl mx-auto mb-6 text-center lg:text-left font-semibold text-4xl lg:text-5xl"
+								className="leading-[3.5rem] my-2 max-w-2xl mx-auto mb-6 text-center lg:text-left font-semibold text-lg lg:text-3xl"
 							>
 								{title}
-								<span className="p-2 ml-3 bg-blue-Two text-white rounded-lg">
+								<span className="p-2 ml-3 bg-blue-Two text-white">
 									{highlightText}
 								</span>
 							</motion.h2>

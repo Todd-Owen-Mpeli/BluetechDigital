@@ -1,12 +1,18 @@
 "use client";
 
 // Imports
+import {
+	fadeIn,
+	initial,
+	stagger,
+	initialTwo,
+	arrayLoopStaggerChildren,
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {useState, FC, Fragment, useEffect} from "react";
-import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
 import styles from "./../../styles/components/Navbar.module.scss";
@@ -126,18 +132,21 @@ const Navbar: FC = () => {
 								globalContext?.navbarMenuLinks?.map((item: any, keys: any) => (
 									<Fragment key={keys}>
 										{item?.node?.label === "Our Services" ? (
-											<li
+											<motion.li
 												className="relative"
 												onClick={displayOurServicesSublinks}
+												custom={keys}
+												initial={initial}
+												whileInView="animate"
+												viewport={{once: true}}
+												variants={arrayLoopStaggerChildren}
 											>
 												<div className="flex justify-center items-center gap-2 cursor-pointer">
 													<Link
 														href={`${item?.node?.url}`}
 														className={`${
-															scrollPosition > 50
-																? "text-pureBlack"
-																: "text-white"
-														} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+															scrollPosition > 50 ? "text-black" : "text-white"
+														} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
 														{item?.node?.label}
 													</Link>
@@ -174,17 +183,22 @@ const Navbar: FC = () => {
 														</div>
 													</>
 												) : null}
-											</li>
+											</motion.li>
 										) : item?.node?.url === "/news-insights" ? (
-											<li className="relative">
+											<motion.li
+												className="relative"
+												custom={keys}
+												initial={initial}
+												whileInView="animate"
+												viewport={{once: true}}
+												variants={arrayLoopStaggerChildren}
+											>
 												<span className="flex justify-center items-center gap-2 cursor-pointer">
 													<Link
 														href={`${item?.node?.url}`}
 														className={`${
-															scrollPosition > 50
-																? "text-pureBlack"
-																: "text-white"
-														} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+															scrollPosition > 50 ? "text-black" : "text-white"
+														} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
 														{item?.node?.label}
 													</Link>
@@ -225,7 +239,14 @@ const Navbar: FC = () => {
 																	" p-0 w-full flex flex-col z-[999]"
 																}
 															>
-																<li className="w-full hover:bg-blue-default">
+																<motion.li
+																	className="w-full hover:bg-blue-default"
+																	custom={keys}
+																	initial={initial}
+																	whileInView="animate"
+																	viewport={{once: true}}
+																	variants={arrayLoopStaggerChildren}
+																>
 																	<Link
 																		href="/case-studies"
 																		className={` ${
@@ -236,25 +257,30 @@ const Navbar: FC = () => {
 																	>
 																		Case Studies
 																	</Link>
-																</li>
+																</motion.li>
 															</ul>
 														</>
 													) : null}
 												</div>
-											</li>
+											</motion.li>
 										) : (
-											<li className="hidden xl:block">
+											<motion.li
+												className="hidden xl:block"
+												custom={keys}
+												initial={initial}
+												whileInView="animate"
+												viewport={{once: true}}
+												variants={arrayLoopStaggerChildren}
+											>
 												<Link
 													href={`${item?.node?.url}`}
 													className={`${
-														scrollPosition > 50
-															? "text-pureBlack"
-															: "text-white"
-													} group-hover:text-pureBlack group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+														scrollPosition > 50 ? "text-black" : "text-white"
+													} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 												>
 													{item?.node?.label}
 												</Link>
-											</li>
+											</motion.li>
 										)}
 									</Fragment>
 								))

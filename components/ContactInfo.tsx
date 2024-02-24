@@ -20,13 +20,13 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 
 	return (
 		<>
-			<div className="py-20 bg-white lg:px-4 container px-0 mx-auto gap-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
+			<div className="py-10 bg-white lg:px-4 container px-0 mx-auto gap-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
 				<div className="w-full px-4 lg:mb-0 lg:w-1/2">
 					<motion.h2
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="lg:max-w-lg mb-6 text-center lg:text-left font-semibold leading-tight text-4xl lg:text-5xl text-black"
+						className="lg:max-w-lg mb-6 text-center lg:text-left font-semibold leading-tight text-lg lg:text-3xl text-black"
 					>
 						{title}
 					</motion.h2>
@@ -48,14 +48,14 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 						variants={stagger}
 						whileInView="animate"
 					>
-						<motion.h3
+						<motion.h2
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="mb-6 text-2xl font-semibold text-center lg:text-left"
 						>
 							Address
-						</motion.h3>
+						</motion.h2>
 						<motion.div
 							initial={initialTwo}
 							whileInView={fadeIn}
@@ -86,14 +86,14 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 						variants={stagger}
 						whileInView="animate"
 					>
-						<motion.h3
+						<motion.h2
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="mb-6 text-2xl font-semibold text-center lg:text-left"
 						>
 							Contacts
-						</motion.h3>
+						</motion.h2>
 						<motion.div
 							initial={initial}
 							variants={stagger}

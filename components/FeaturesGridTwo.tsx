@@ -17,7 +17,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 	return (
 		<div className="overflow-hidden bg-white lg:px-4">
 			<div className="container px-4 mx-auto">
-				<div className="mx-auto max-w-7xl pt-28 pb-36">
+				<div className="mx-auto max-w-7xl py-10">
 					<motion.div
 						initial={initial}
 						variants={stagger}
@@ -40,23 +40,23 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 											initial={initial}
 											whileInView={fadeInUp}
 											viewport={{once: true}}
-											className="mb-2 text-center lg:text-center text-paragraph text-yellow-Two"
+											className="mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-Two"
 										>
 											{cardOne?.subtitle}
 										</motion.h4>
 									</div>
 								</div>
-								<motion.h3
+								<motion.h2
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
 									className="mb-3 text-3xl font-semibold text-center lg:text-left"
 								>
 									{cardOne?.title}
-								</motion.h3>
+								</motion.h2>
 								<Paragraph
 									content={cardOne?.paragraph}
-									tailwindStyling="text-pureBlack text-center lg:text-left text-paragraph"
+									tailwindStyling="text-black text-center lg:text-left text-paragraph"
 								/>
 							</motion.div>
 						</div>

@@ -41,7 +41,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 							achievements?.length >= 2
 								? "grid grid-cols-1 md:grid-cols-2 lg:w-[55%] 2xl:w-[60%]"
 								: "flex lg:w-[35%] 2xl:w-[40%]"
-						} px-4 py-16 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
+						} px-4 py-10 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
 					>
 						{achievements?.length > 0 ? (
 							achievements?.map((item: any, keys: any) => (
@@ -131,7 +131,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 								<div>
 									<Title
 										content={title}
-										tailwindStyling="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
+										tailwindStyling="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
 									/>
 									<Paragraph
 										content={paragraph}

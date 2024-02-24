@@ -1,10 +1,16 @@
 // Imports
+import {
+	fadeIn,
+	initial,
+	stagger,
+	initialTwo,
+	arrayLoopStaggerChildren,
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Styling
 import styles from "./../../styles/components/Navbar.module.scss";
@@ -25,7 +31,7 @@ const SubMegaMenuLinks: FC = () => {
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-pureBlack"
+							className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-black"
 						>
 							Our Services
 						</motion.h4>
@@ -43,16 +49,21 @@ const SubMegaMenuLinks: FC = () => {
 							{globalContext?.ourServicesLinks?.length > 0 ? (
 								globalContext?.ourServicesLinks?.map((item: any, keys: any) => (
 									<Fragment key={keys}>
-										<Link href={`${item?.node?.url}`}>
-											<li className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default">
-												<Link
-													href={`${item?.node?.url}`}
-													className="block p-4 text-tiny text-pureBlack hover:text-white"
-												>
-													{item?.node?.label}
-												</Link>
-											</li>
-										</Link>
+										<motion.li
+											custom={keys}
+											initial={initial}
+											whileInView="animate"
+											viewport={{once: true}}
+											variants={arrayLoopStaggerChildren}
+											className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default"
+										>
+											<Link
+												href={`${item?.node?.url}`}
+												className="block p-4 text-tiny text-black hover:text-white"
+											>
+												{item?.node?.label}
+											</Link>
+										</motion.li>
 									</Fragment>
 								))
 							) : (
@@ -71,7 +82,7 @@ const SubMegaMenuLinks: FC = () => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="mb-5 text-base font-semibold tracking-normal text-center text-pureBlack uppercase"
+								className="mb-5 text-base font-semibold tracking-normal text-center text-black uppercase"
 							>
 								{globalContext?.themesOptionsContent?.menuColumnTwo?.title}
 							</motion.h4>
@@ -120,7 +131,7 @@ const SubMegaMenuLinks: FC = () => {
 									className={
 										globalContext?.themesOptionsContent?.menuColumnTwo
 											?.buttonLink?.title
-											? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-pureBlack hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500 text-pureBlack hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-blue-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-blue-default`
+											? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-pureBlack hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500 text-black hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-blue-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-blue-default`
 											: `hidden`
 									}
 								>

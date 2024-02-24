@@ -29,9 +29,9 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 
 			break;
 		case "Grey":
-			titleStyling = "text-pureBlack";
+			titleStyling = "text-black";
 			subtitleStyling = "text-yellow-Two";
-			paragraphStyling = "text-pureBlack";
+			paragraphStyling = "text-black";
 			backgroundWaveStyling = "none";
 			backgroundColorStyling = "bg-lightGreyTwo";
 			break;
@@ -57,9 +57,9 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			backgroundWaveStyling = "stacked-waves-haikei-purple";
 			break;
 		default:
-			titleStyling = "text-pureBlack";
+			titleStyling = "text-black";
 			subtitleStyling = "text-yellow-Two";
-			paragraphStyling = "text-pureBlack";
+			paragraphStyling = "text-black";
 			backgroundWaveStyling = "none";
 			backgroundColorStyling = "bg-lightGrey";
 	}
@@ -90,19 +90,19 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-2 text-center lg:text-center text-paragraph text-yellow-Two ${subtitleStyling}`}
+						className={`mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-Two ${subtitleStyling}`}
 					>
 						{subtitle}
 					</motion.h4>
 				</motion.div>
-				<motion.h3
+				<motion.h2
 					initial={initial}
 					viewport={{once: true}}
 					whileInView={fadeInUp}
 					className={`mb-3 text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
 				>
 					{title}
-				</motion.h3>
+				</motion.h2>
 				<Paragraph
 					content={paragraph}
 					tailwindStyling={`${paragraphStyling} text-center lg:text-left text-paragraph`}

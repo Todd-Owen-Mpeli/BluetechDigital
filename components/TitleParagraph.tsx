@@ -26,7 +26,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 					viewport={{once: true}}
 					className={
 						title
-							? "mb-10 text-center font-semibold leading-tight text-4xl lg:text-5xl text-black"
+							? "mb-10 text-center font-semibold leading-tight text-lg lg:text-3xl text-black"
 							: "hidden"
 					}
 				>

@@ -160,7 +160,7 @@ const OurServices: FC<IOurServices> = ({
 												<Link
 													href={`${item?.card?.buttonLinks?.url}`}
 													target={item?.card?.buttonLinks?.target}
-													className="group inline-flex py-3 px-6 items-center justify-center text-bse font-medium text-white hover:text-pureBlack bg-transparent hover:bg-white border-2 border-white transition duration-200"
+													className="group inline-flex py-3 px-6 items-center justify-center text-bse font-medium text-white hover:text-black bg-transparent hover:bg-white border-2 border-white transition duration-200"
 												>
 													{item?.card?.buttonLinks?.title}
 												</Link>

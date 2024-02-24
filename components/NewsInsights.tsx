@@ -14,20 +14,20 @@ const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 
 	return (
 		<>
-			<div className="py-24 bg-white container px-4 mx-auto">
+			<div className="py-10 pb-16 bg-white container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="max-w-2xl mx-auto mb-24 text-center lg:max-w-5xl"
+					className="max-w-2xl mx-auto mb-20 text-center lg:max-w-5xl"
 				>
 					<motion.h2
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="my-2 mb-6 max-w-2xl mx-auto text-center font-semibold leading-tight text-4xl lg:text-5xl"
+						className="my-2 max-w-xl mx-auto text-black text-center font-bold text-lg lg:text-3xl"
 					>
 						<motion.span
 							initial={initial}

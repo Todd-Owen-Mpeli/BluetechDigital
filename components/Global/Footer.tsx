@@ -5,6 +5,7 @@ import {
 	initial,
 	fadeInUp,
 	initialTwo,
+	arrayLoopStaggerChildren,
 } from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,7 +56,7 @@ const Footer: FC = () => {
 						>
 							<Paragraph
 								content={globalContext?.themesOptionsContent?.textarea}
-								tailwindStyling="block px-0 max-w-full lg:max-w-sm text-base text-pureBlack text-center lg:text-left"
+								tailwindStyling="block px-0 max-w-full lg:max-w-sm text-base text-black text-center lg:text-left"
 							/>
 						</motion.div>
 						<div className="flex flex-col items-center justify-between w-auto gap-2 py-6 mb-10 md:items-baseline">
@@ -87,7 +88,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-pureBlack hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-Two"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -121,7 +122,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-pureBlack hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-Two"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
@@ -232,7 +233,7 @@ const Footer: FC = () => {
 					</div>
 					<div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-8 lg:mt-0 w-full lg:w-[65%] gap-6">
 						<div className="flex flex-col px-0">
-							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-black uppercase lg:text-left">
 								Info
 							</h4>
 							<motion.ul
@@ -250,13 +251,15 @@ const Footer: FC = () => {
 													<>
 														<motion.li
 															className="px-0"
+															custom={keys}
 															initial={initial}
-															whileInView={fadeInUp}
+															whileInView="animate"
 															viewport={{once: true}}
+															variants={arrayLoopStaggerChildren}
 														>
 															<Link
 																href={`${item?.node?.url}`}
-																className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
+																className="text-black text-base text-center lg:text-left hover:text-blue-Two"
 															>
 																{item?.node?.label}
 															</Link>
@@ -265,13 +268,15 @@ const Footer: FC = () => {
 												) : (
 													<motion.li
 														className="px-0"
+														custom={keys}
 														initial={initial}
-														whileInView={fadeInUp}
+														whileInView="animate"
 														viewport={{once: true}}
+														variants={arrayLoopStaggerChildren}
 													>
 														<Link
 															href={`${item?.node?.url}`}
-															className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
+															className="text-black text-base text-center lg:text-left hover:text-blue-Two"
 														>
 															{item?.node?.label}
 														</Link>
@@ -286,7 +291,7 @@ const Footer: FC = () => {
 							</motion.ul>
 						</div>
 						<div className="flex flex-col px-0">
-							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase lg:text-left">
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-black uppercase lg:text-left">
 								Our Services
 							</h4>
 							<motion.ul
@@ -302,13 +307,15 @@ const Footer: FC = () => {
 											<Fragment key={keys}>
 												<motion.li
 													className="px-0"
+													custom={keys}
 													initial={initial}
-													whileInView={fadeInUp}
+													whileInView="animate"
 													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
 												>
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-pureBlack text-base text-center lg:text-left hover:text-blue-Two"
+														className="text-black text-base text-center lg:text-left hover:text-blue-Two"
 													>
 														{item?.node?.label}
 													</Link>
@@ -322,7 +329,7 @@ const Footer: FC = () => {
 							</motion.ul>
 						</div>
 						<div className="flex flex-col items-center">
-							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-pureBlack uppercase md:text-left">
+							<h4 className="mb-5 text-paragraph font-semibold tracking-normal text-center text-black uppercase md:text-left">
 								Our Expertise
 							</h4>
 							<div className="grid grid-cols-1 sm:grid-cols-2 items-center justify-center gap-y-6 sm:gap-4">
@@ -332,9 +339,11 @@ const Footer: FC = () => {
 										(item: any, keys: any) => (
 											<Fragment key={keys}>
 												<motion.div
-													initial={initialTwo}
-													whileInView={fadeIn}
+													custom={keys}
+													initial={initial}
+													whileInView="animate"
 													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
 												>
 													<Image
 														width={item?.mediaDetails?.width}
@@ -364,7 +373,7 @@ const Footer: FC = () => {
 					>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}
-							tailwindStyling="text-pureBlack text-sm text-center lg:text-left"
+							tailwindStyling="text-black text-sm text-center lg:text-left"
 						/>
 					</motion.div>
 					<motion.ul
@@ -378,13 +387,15 @@ const Footer: FC = () => {
 							globalContext?.copyrightLinks?.map((item: any, keys: any) => (
 								<Fragment key={keys}>
 									<motion.li
-										initial={initialTwo}
-										whileInView={fadeIn}
+										custom={keys}
+										initial={initial}
+										whileInView="animate"
 										viewport={{once: true}}
+										variants={arrayLoopStaggerChildren}
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-pureBlack transition-all duration-200 ease-in-out text-sm hover:text-blue-Two"
+											className="text-black transition-all duration-200 ease-in-out text-sm hover:text-blue-Two"
 										>
 											{item?.node?.label}
 										</Link>

@@ -7,9 +7,6 @@ import {motion} from "framer-motion";
 import {ITwoColumnButtonContent} from "@/types/components/index";
 import {fadeIn, stagger, initialTwo} from "../animations/animations";
 
-// Styling
-import styles from "../styles/components/TwoColumnButtonContent.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
@@ -58,11 +55,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 
 	return (
 		<>
-			<div
-				className={
-					styles.twoColumnButtonContent + ` py-10 px-4 ${backgroundColor}`
-				}
-			>
+			<div className={` py-10 px-4 ${backgroundColor}`}>
 				<div className="container m-auto xl:px-16 flex flex-col lg:flex-row gap-16 lg:gap-x-16">
 					<motion.div
 						initial={initialTwo}
@@ -77,7 +70,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 text-center lg:text-center text-paragraph text-yellow-Two"
+							className="mb-1 text-center lg:text-center text-tiny lg:text-base text-yellow-Two"
 						>
 							{subtitle}
 						</motion.h4>
@@ -85,7 +78,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
+							className="my-2 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-black"
 						>
 							{title}
 						</motion.h2>

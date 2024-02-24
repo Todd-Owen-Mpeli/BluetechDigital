@@ -57,7 +57,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="mb-2 text-lg font-semibold text-pureBlack transition-all ease-in-out duration-200 hover:text-blue-default"
+						className="mb-2 text-lg font-semibold text-black transition-all ease-in-out duration-200 hover:text-blue-default"
 					>
 						{title}
 					</motion.h2>

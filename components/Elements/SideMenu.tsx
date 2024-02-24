@@ -69,7 +69,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
 													<Link
 														href={item?.node?.url}
-														className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
+														className="text-black text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
 													>
 														{item?.node?.label}
 													</Link>
@@ -104,7 +104,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 																						keys < 1
 																							? "border-t-[1px] border-darkGrey border-opacity-50"
 																							: "border-t-[0px]"
-																					} hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-pureBlack hover:text-white`}
+																					} hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white`}
 																				>
 																					<Link
 																						href={`${item?.node?.url}`}
@@ -130,10 +130,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
 											>
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<span className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem]hover:text-blue-Two transition-all ease-in-out duration-500">
+													<span className="text-black text-base font-semibold text-center tracking-[0.05rem]hover:text-blue-Two transition-all ease-in-out duration-500">
 														<Link
 															href="/career"
-															className="text-pureBlack text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
+															className="text-black text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-Two transition-all ease-in-out duration-500"
 														>
 															{item?.node?.label}
 														</Link>
@@ -154,7 +154,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 																" py-4 w-full flex flex-col z-[999]"
 															}
 														>
-															<li className="hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-pureBlack hover:text-white">
+															<li className="hover:border-blue-Two hover:bg-blue-Two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white">
 																<Link
 																	href="/case-studies"
 																	className="block p-4 text-base font-semibold"
@@ -170,7 +170,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 											<li className="border-b-[1px] border-yellow-dark border-opacity-50">
 												<Link
 													href={`${item?.node?.url}`}
-													className="block py-4 text-base font-semibold text-pureBlack hover:text-blue-Two"
+													className="block py-4 text-base font-semibold text-black hover:text-blue-Two"
 												>
 													{item?.node?.label}
 												</Link>
@@ -191,7 +191,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 							whileInView="animate"
 							className="flex flex-col items-center justify-between gap-4"
 						>
-							<h4 className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-pureBlack">
+							<h4 className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-black">
 								Contact Links
 							</h4>
 							<div className="flex items-center justify-center gap-4 text-center">
@@ -297,7 +297,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium text-base tracking-wide text-pureBlack hover:text-yellow-Two"
+										className="font-medium text-base tracking-wide text-black hover:text-yellow-Two"
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									>
 										{globalContext?.themesOptionsContent?.email}
@@ -331,7 +331,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium text-base tracking-wide text-pureBlack hover:text-yellow-Two"
+										className="font-medium text-base tracking-wide text-black hover:text-yellow-Two"
 										href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									>
 										{globalContext?.themesOptionsContent?.emailTwo}

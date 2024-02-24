@@ -14,7 +14,7 @@ const config: Config = {
 			tiny: ".9rem",
 			base: "1rem",
 			medium: "1.15rem",
-			paragraph: "1.10rem",
+			paragraph: "1.05rem",
 			lg: "1.25rem",
 			xl: "1.5rem",
 			"2xl": "1.75rem",

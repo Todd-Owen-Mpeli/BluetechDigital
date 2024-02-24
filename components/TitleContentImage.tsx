@@ -12,9 +12,6 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import {ITitleContentImage} from "@/types/components";
 
-// Styling
-import styles from "../styles/components/TitleContentImage.module.scss";
-
 // Components
 import Paragraph from "./Elements/Paragraph";
 import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
@@ -29,9 +26,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 }) => {
 	return (
 		<>
-			<div
-				className={styles.titleContentImage + " py-10 bg-white overflow-hidden"}
-			>
+			<div className="py-10 bg-white overflow-hidden">
 				<div className="container relative px-0 mx-auto lg:px-4">
 					<div
 						className={
@@ -88,13 +83,13 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mt-2 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black lg:pr-8"
+									className="mt-2 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-black lg:pr-8"
 								>
 									{title}
 								</motion.h2>
 								<Paragraph
 									content={paragraph}
-									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-6 text-pureBlack text-center lg:text-left text-paragraph`}
+									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-6 text-black text-center lg:text-left text-paragraph`}
 								/>
 								<div className={buttonLink?.url ? "mx-auto lg:mx-0" : "hidden"}>
 									<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>

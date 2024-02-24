@@ -11,7 +11,7 @@ import Paragraph from "./Elements/Paragraph";
 const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 	return (
 		<>
-			<div className="py-16 bg-white container px-4 mx-auto">
+			<div className="py-10 bg-white container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}
@@ -28,7 +28,7 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="max-w-2xl mx-auto text-center font-bold leading-normal text-4xl lg:text-5xl p-4 pl-0 text-black"
+						className="max-w-2xl mx-auto text-center font-bold leading-normal text-lg lg:text-3xl p-4 pl-0 text-black"
 					>
 						{title}
 						<span className="p-2 ml-3 bg-blue-default text-white">

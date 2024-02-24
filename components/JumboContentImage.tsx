@@ -58,7 +58,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 max-w-3xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-black"
+							className="my-2 max-w-3xl text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-black"
 						>
 							{title}
 						</motion.h2>

@@ -3,7 +3,7 @@ import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {ICTA} from "@/types/components/index";
-import {initial, stagger} from "../animations/animations";
+import {fadeIn, initial, initialTwo, stagger} from "../animations/animations";
 
 // Components
 import Title from "./Elements/Title";
@@ -14,7 +14,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (
 		<>
 			<div
-				className="px-4 py-10 bg-center bg-no-repeat bg-cover lg:px-0"
+				className="px-4 py-6 bg-center bg-no-repeat bg-cover lg:px-0"
 				style={{
 					backgroundImage: `linear-gradient(
 							0deg,
@@ -33,10 +33,14 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 						className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row"
 					>
 						<div className="flex flex-col justify-between gap-4">
-							<Title
-								content={title}
-								tailwindStyling="mb-4 max-w-3xl text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl text-white"
-							/>
+							<motion.h2
+								initial={initialTwo}
+								whileInView={fadeIn}
+								viewport={{once: true}}
+								className="max-w-3xl text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
+							>
+								{title}
+							</motion.h2>
 							<Paragraph
 								content={paragraph}
 								tailwindStyling="max-w-3xl text-white leading-[1.75rem] text-paragraph text-center lg:text-left"

@@ -4,7 +4,12 @@ import Link from "next/link";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {ITestimonialsTwo} from "@/types/components/index";
-import {fadeIn, initial, initialTwo, stagger} from "../animations/animations";
+import {
+	fadeIn,
+	initial,
+	initialTwo,
+	arrayLoopStaggerChildren,
+} from "../animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
@@ -21,7 +26,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 	return (
 		<>
 			<div
-				className="py-8 bg-blue-default overflow-hidden bg-cover bg-no-repeat bg-center"
+				className="py-4 bg-blue-default overflow-hidden bg-cover bg-no-repeat bg-center"
 				style={{
 					backgroundImage: `url("/svg/background/stacked-waves-haikei-orange-yellow.svg")`,
 				}}
@@ -32,7 +37,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className=" text-center xl:text-left text-paragraph text-white"
+							className=" text-center xl:text-left text-tiny lg:text-base text-white"
 						>
 							{subtitle}
 						</motion.h4>
@@ -40,13 +45,13 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 max-w-2xl mx-auto xl:mx-0 mb-6 text-white text-center xl:text-left font-semibold leading-tight text-4xl lg:text-5xl"
+							className="my-2 max-w-2xl mx-auto xl:mx-0 mb-6 text-white text-center xl:text-left font-semibold leading-tight text-lg lg:text-3xl"
 						>
 							{title}
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="mb-6 lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-paragraph text-center xl:text-left"
+							tailwindStyling="mb-6 lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center xl:text-left"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}
@@ -122,7 +127,14 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 											.slice(0, 2)
 											.map((item: any, keys: any) => (
 												<Fragment key={keys}>
-													<div>
+													<motion.div
+														custom={keys}
+														initial={initial}
+														whileInView="animate"
+														viewport={{once: true}}
+														variants={arrayLoopStaggerChildren}
+														className="w-full"
+													>
 														<TestimonialsTwoCard
 															name={item?.node?.testimonialReview?.name}
 															image={item?.node?.testimonialReview?.image}
@@ -131,7 +143,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 																item?.node?.testimonialReview?.paragraph
 															}
 														/>
-													</div>
+													</motion.div>
 												</Fragment>
 											))
 									) : (
@@ -146,7 +158,14 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 											.slice(2, 4)
 											.map((item: any, keys: any) => (
 												<Fragment key={keys}>
-													<div>
+													<motion.div
+														custom={keys}
+														initial={initial}
+														whileInView="animate"
+														viewport={{once: true}}
+														variants={arrayLoopStaggerChildren}
+														className="w-full"
+													>
 														<TestimonialsTwoCard
 															name={item?.node?.testimonialReview?.name}
 															image={item?.node?.testimonialReview?.image}
@@ -155,7 +174,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 																item?.node?.testimonialReview?.paragraph
 															}
 														/>
-													</div>
+													</motion.div>
 												</Fragment>
 											))
 									) : (
@@ -170,7 +189,14 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 											.slice(4, 6)
 											.map((item: any, keys: any) => (
 												<Fragment key={keys}>
-													<div>
+													<motion.div
+														custom={keys}
+														initial={initial}
+														whileInView="animate"
+														viewport={{once: true}}
+														variants={arrayLoopStaggerChildren}
+														className="w-full"
+													>
 														<TestimonialsTwoCard
 															name={item?.node?.testimonialReview?.name}
 															image={item?.node?.testimonialReview?.image}
@@ -179,7 +205,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 																item?.node?.testimonialReview?.paragraph
 															}
 														/>
-													</div>
+													</motion.div>
 												</Fragment>
 											))
 									) : (

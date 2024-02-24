@@ -20,7 +20,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				variants={stagger}
 				whileInView="animate"
 				viewport={{once: true}}
-				className="relative py-16 md:py-10"
+				className="relative pb-12 pt-2 lg:pb-10"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 					clipPath: `polygon(77% 0, 100% 0, 100% 98%, 21% 89%, 0 98%, 0 0)`,
@@ -32,7 +32,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="max-w-6xl mx-auto text-center font-bold leading-normal text-xl lg:text-2xl mb-4 p-4 pl-0 text-white"
+						className="max-w-6xl mx-auto text-center font-bold leading-normal text-lg lg:text-xl p-4 pl-0 text-white"
 					>
 						<span
 							className="p-2 mr-3 text-white"

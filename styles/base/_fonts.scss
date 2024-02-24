@@ -1,19 +1,24 @@
 /*===== FONTS =====*/
 @font-face {
 	font-family: Inter;
-	src: url("../fonts/Inter-VariableFont_wght.ttf");
+	src: url("../fonts/Inter.woff");
 }
 
 @font-face {
 	font-family: PlusJakartaSans;
-	src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf");
+	src: url("../fonts/PlusJakartaSans.woff");
 }
 
 @font-face {
-	font-family: BebasNeue;
-	src: url("../fonts/BebasNeue-Regular.ttf");
+	font-family: RooftopBold;
+	src: url("../fonts/Rooftop-Bold.woff");
+}
+
+@font-face {
+	font-family: ParamountBold;
+	src: url("../fonts/ParamountBold.woff");
 }
 
 // Font Stack Properties
-$main: "BebasNeue", sans-serif;
-$body: "PlusJakartaSans", "Inter", sans-serif;
+$main: "RooftopBold";
+$body: "PlusJakartaSans", "Inter";

@@ -1,9 +1,14 @@
 // Imports
+import {
+	initial,
+	stagger,
+	fadeInUp,
+	arrayLoopStaggerChildren,
+} from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {INewsInsights} from "@/types/components";
-import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
@@ -19,7 +24,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 
 	return (
 		<>
-			<div className="py-16 bg-white container px-4 mx-auto">
+			<div className="py-10 bg-white container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}
@@ -36,7 +41,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="my-2 max-w-2xl mx-auto mb-6 text-center font-semibold leading-tight text-4xl lg:text-5xl"
+						className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-lg lg:text-3xl"
 					>
 						<motion.span
 							initial={initial}
@@ -70,12 +75,21 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 						globalContext?.newsInsightsThreeCards?.map(
 							(item: any, keys: any) => (
 								<Fragment key={keys}>
-									<NewsInsightsCard
-										uri={item?.node?.uri}
-										title={item?.node?.title}
-										paragraph={item?.node?.excerpt}
-										featuredImage={item?.node?.featuredImage}
-									/>
+									<motion.div
+										custom={keys}
+										initial={initial}
+										whileInView="animate"
+										viewport={{once: true}}
+										variants={arrayLoopStaggerChildren}
+										className="w-full"
+									>
+										<NewsInsightsCard
+											uri={item?.node?.uri}
+											title={item?.node?.title}
+											paragraph={item?.node?.excerpt}
+											featuredImage={item?.node?.featuredImage}
+										/>
+									</motion.div>
 								</Fragment>
 							)
 						)

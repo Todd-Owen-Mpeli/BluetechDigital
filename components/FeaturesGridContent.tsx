@@ -26,7 +26,7 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 }) => {
 	return (
 		<div className="overflow-hidden bg-white lg:px-4">
-			<div className="container px-4 mx-auto pt-28 pb-36">
+			<div className="container px-4 mx-auto py-10">
 				<motion.div
 					initial={initial}
 					variants={stagger}
@@ -49,23 +49,23 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 										initial={initial}
 										whileInView={fadeInUp}
 										viewport={{once: true}}
-										className="mb-2 text-center lg:text-center text-paragraph text-yellow-Two"
+										className="mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-Two"
 									>
 										{cardOne?.subtitle}
 									</motion.h4>
 								</div>
 							</div>
-							<motion.h3
+							<motion.h2
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
 								className="mb-3 text-3xl font-semibold text-center lg:text-left"
 							>
 								{cardOne?.title}
-							</motion.h3>
+							</motion.h2>
 							<Paragraph
 								content={cardOne?.paragraph}
-								tailwindStyling="text-pureBlack text-center lg:text-left text-paragraph"
+								tailwindStyling="text-black text-center lg:text-left text-paragraph"
 							/>
 						</motion.div>
 					</div>
@@ -117,25 +117,25 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 											viewport={{once: true}}
 											className="relative z-10 p-5 text-center bg-white rounded-10 shadow-3xl"
 										>
-											<motion.h4
+											<motion.h2
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 text-3xl font-bold text-pureBlack"
+												className="mb-3 text-3xl font-bold text-black"
 											>
 												{cardThree?.foreground?.subtitle}
-											</motion.h4>
+											</motion.h2>
 											<motion.h4
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 text-paragraph font-bold text-pureBlack"
+												className="mb-3 text-paragraph font-bold text-black"
 											>
 												{cardThree?.foreground?.title}
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.foreground?.paragraph}
-												tailwindStyling="text-base text-pureBlack"
+												tailwindStyling="text-base text-black"
 											/>
 										</motion.div>
 									</div>
@@ -147,25 +147,25 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 											viewport={{once: true}}
 											className="p-5 text-center bg-white opacity-30 rounded-10 shadow-3xl"
 										>
-											<motion.h4
+											<motion.h2
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 text-3xl font-bold text-pureBlack"
+												className="mb-3 text-3xl font-bold text-black"
 											>
 												{cardThree?.background?.subtitle}
-											</motion.h4>
+											</motion.h2>
 											<motion.h4
 												initial={initialTwo}
 												whileInView={fadeInTwo}
 												viewport={{once: true}}
-												className="mb-3 text-paragraph font-bold text-pureBlack"
+												className="mb-3 text-paragraph font-bold text-black"
 											>
 												{cardThree?.background?.title}
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.background?.paragraph}
-												tailwindStyling="text-base text-pureBlack"
+												tailwindStyling="text-base text-black"
 											/>
 										</motion.div>
 									</div>

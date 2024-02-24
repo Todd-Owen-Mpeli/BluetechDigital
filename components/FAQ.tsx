@@ -1,11 +1,12 @@
 // Imports
-import {
+import fadeInUp, {
 	fadeIn,
 	initial,
 	stagger,
 	initialTwo,
-	slideInLeftInitial,
 	slideInRightFinish,
+	slideInRightInitial,
+	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,36 +28,74 @@ const FAQ: FC<IFAQ> = ({
 }) => {
 	return (
 		<>
-			<div className="py-16 px-4 lg:px-0 bg-white">
+			<div className="py-6 px-4 lg:px-0 bg-white">
 				<div className="container px-0 mx-auto">
-					<div className="mb-10">
+					<motion.div
+						initial={initial}
+						variants={stagger}
+						whileInView="animate"
+						viewport={{once: true}}
+						className="flex flex-col items-center mb-10"
+					>
 						<motion.h4
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center text-paragraph text-yellow-Two"
+							className="text-center text-tiny lg:text-base text-yellow-Two"
 						>
 							{subtitle}
 						</motion.h4>
 						<motion.h2
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="my-2 max-w-2xl mx-auto mb-6 text-center font-semibold leading-tight text-4xl lg:text-5xl"
+							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-lg lg:text-3xl"
 						>
 							{title}
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-paragraph text-center"
+							tailwindStyling="lg:max-w-3xl mx-auto text-black text-base lg:text-paragraph text-center"
 						/>
-					</div>
+					</motion.div>
 
-					<div className="flex flex-col-reverse lg:flex-row gap-4 xl:gap-10">
+					<div className="flex flex-col lg:flex-row gap-4 xl:gap-10">
+						<motion.div
+							initial={initial}
+							variants={stagger}
+							whileInView="animate"
+							viewport={{once: true}}
+							className={`w-full flex flex-col items-center justify-center gap-4 ${
+								image?.sourceUrl ? "lg:w-1/2" : `w-full`
+							}`}
+						>
+							{faqContent?.length > 0 ? (
+								faqContent.map((item: any, keys: number) => (
+									<Fragment key={keys}>
+										<motion.div
+											custom={keys}
+											initial={initial}
+											whileInView="animate"
+											viewport={{once: true}}
+											variants={arrayLoopStaggerChildren}
+											className="w-full"
+										>
+											<FAQCard
+												index={keys}
+												title={item?.card?.title}
+												paragraph={item?.card?.paragraph}
+											/>
+										</motion.div>
+									</Fragment>
+								))
+							) : (
+								<></>
+							)}
+						</motion.div>
 						<div className={image?.sourceUrl ? "w-full lg:w-1/2" : `hidden`}>
 							<motion.div
 								viewport={{once: true}}
-								initial={slideInLeftInitial}
+								initial={slideInRightInitial}
 								whileInView={slideInRightFinish}
 								className="relative"
 							>
@@ -67,7 +106,7 @@ const FAQ: FC<IFAQ> = ({
 									height={image?.mediaDetails?.height}
 									className={
 										image?.sourceUrl
-											? `block object-cover object-center w-full h-[350px] sm:h-[400px]`
+											? `block object-cover object-center w-full h-[225px] sm:h-[400px]`
 											: `hidden`
 									}
 									style={{
@@ -89,7 +128,7 @@ const FAQ: FC<IFAQ> = ({
 										viewport={{once: true}}
 										className={
 											buttonLink?.title
-												? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid bg-purple-Two border-purple-Two hover:bg-purple-dark hover:border-purple-dark transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-Two hover:before:bg-purple-dark after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-purple-Two hover:after:bg-purple-dark`
+												? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit bg-blue-default hover:bg-yellow-default transition-all ease-in-out duration-500 text-white`
 												: `hidden`
 										}
 									>
@@ -105,7 +144,7 @@ const FAQ: FC<IFAQ> = ({
 													<path
 														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
 														transform="translate(4870 -143)"
-														fill="#e4a002"
+														fill="#ffffff"
 													></path>
 													<g transform="translate(4890.311 -1111.861)">
 														<path
@@ -144,29 +183,6 @@ const FAQ: FC<IFAQ> = ({
 								</Link>
 							</motion.div>
 						</div>
-						<motion.div
-							initial={initial}
-							variants={stagger}
-							whileInView="animate"
-							viewport={{once: true}}
-							className={`w-full flex flex-col items-center justify-center gap-4 ${
-								image?.sourceUrl ? "lg:w-1/2" : `w-full`
-							}`}
-						>
-							{faqContent?.length > 0 ? (
-								faqContent.map((item: any, keys: any) => (
-									<Fragment key={keys}>
-										<FAQCard
-											index={keys}
-											title={item?.card?.title}
-											paragraph={item?.card?.paragraph}
-										/>
-									</Fragment>
-								))
-							) : (
-								<></>
-							)}
-						</motion.div>
 					</div>
 				</div>
 			</div>

@@ -24,7 +24,7 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 				className="overflow-hidden p-3 max-w-md mx-auto"
 			>
 				<div
-					className="p-6 bg-white border-solid border-[5px] border-lightGrey"
+					className="p-6 bg-white min-h-[250px] sm:min-h-[325px] xl:min-h-[325px] 2xl:min-h-[250px] border-solid border-[5px] border-lightGrey"
 					style={{
 						boxShadow: "0px 30px 2px -25px rgba(0,0,0,0.1)",
 					}}
@@ -76,7 +76,7 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 								? paragraph
 								: paragraph.substring(0, 175) + "..."
 						}
-						tailwindStyling="tracking-tight text-black text-base text-left"
+						tailwindStyling="tracking-tight text-black text-tiny text-left"
 					/>
 				</div>
 			</motion.div>

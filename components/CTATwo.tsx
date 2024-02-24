@@ -28,7 +28,7 @@ const CTATwo: FC<ICTATwo> = ({
 				}}
 			>
 				<div className="max-w-2xl text-left">
-					<motion.h2
+					<motion.h3
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
@@ -44,7 +44,7 @@ const CTATwo: FC<ICTATwo> = ({
 						>
 							{highlightText}
 						</span>
-					</motion.h2>
+					</motion.h3>
 				</div>
 				<div className="text-box-two">
 					<Link

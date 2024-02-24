@@ -49,6 +49,11 @@ p {
 	@apply py-2;
 }
 
+h1,
+h2 {
+	font-family: $main;
+}
+
 /* SQUARE BOX CUBES
 PAGE LOADING ANIMATION */
 .spinner-wrapper {

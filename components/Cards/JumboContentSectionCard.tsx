@@ -14,9 +14,6 @@ import {motion} from "framer-motion";
 import {FC, useEffect, useState} from "react";
 import {IJumboContentSectionCard} from "@/types/components/index";
 
-// Styling
-import styles from "../../styles/components/JumboContentSection.module.scss";
-
 // Components
 import Paragraph from "../Elements/Paragraph";
 import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
@@ -102,10 +99,9 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	return (
 		<>
 			<div
-				className={
-					styles.jumboContentSectionCard +
-					` relative pb-28 pt-10 lg:pb-32 lg:py-100 overflow-hidden bg-center bg-no-repeat bg-cover ${backgroundColor}`
-				}
+				className={` relative pb-28 ${
+					smallImage ? "lg:pb-28" : "lg:pb-10"
+				} lg:py-10 overflow-hidden bg-center bg-no-repeat bg-cover ${backgroundColor}`}
 				style={{
 					backgroundImage: `url("${backgroundImage}")`,
 					clipPath: `${
@@ -190,7 +186,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className={`mt-2 text-center font-semibold leading-tight lg:text-left text-4xl lg:text-5xl ${titleColor} lg:pr-8`}
+									className={`mt-2 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl ${titleColor} lg:pr-8`}
 								>
 									{title}
 								</motion.h2>

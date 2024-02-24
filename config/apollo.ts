@@ -42,6 +42,6 @@ const cache = new InMemoryCache({
 });
 
 export const client: any = new ApolloClient({
-	uri: `${process.env.WORDPRESS_API_URL}`,
+	uri: `${process.env.CMS_API_URL}`,
 	cache: cache,
 });

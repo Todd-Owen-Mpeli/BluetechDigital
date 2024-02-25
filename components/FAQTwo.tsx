@@ -1,8 +1,9 @@
 // Imports
-import fadeInUp, {
+import {
 	fadeIn,
 	initial,
 	stagger,
+	fadeInUp,
 	initialTwo,
 	slideInRightFinish,
 	slideInRightInitial,

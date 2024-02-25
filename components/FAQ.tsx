@@ -1,7 +1,8 @@
 // Imports
-import fadeInUp, {
+import {
 	initial,
 	stagger,
+	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import {motion} from "framer-motion";

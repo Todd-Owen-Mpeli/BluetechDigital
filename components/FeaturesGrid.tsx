@@ -11,13 +11,13 @@ import {
 } from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
-import {IFeaturesGridContent} from "@/types/components";
+import {IFeaturesGrid} from "@/types/components";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import FeaturesGridContentCard from "./Cards/FeaturesGridContentCard";
+import FeaturesGridCard from "./Cards/FeaturesGridCard";
 
-const FeaturesGridContent: FC<IFeaturesGridContent> = ({
+const FeaturesGrid: FC<IFeaturesGrid> = ({
 	cardOne,
 	cardTwo,
 	lastCard,
@@ -177,7 +177,7 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 					{gridContent?.length > 0 ? (
 						gridContent?.map((item: any, keys: number) => (
 							<Fragment key={keys}>
-								<FeaturesGridContentCard
+								<FeaturesGridCard
 									title={item?.card?.title}
 									subtitle={item?.card?.subtitle}
 									paragraph={item?.card?.paragraph}
@@ -213,4 +213,4 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 	);
 };
 
-export default FeaturesGridContent;
+export default FeaturesGrid;

@@ -366,6 +366,9 @@ export const getAllFlexibleContentComponents = async (
 												subtitle
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_TestimonialsSlider {
+												fieldGroupName
+											}
 											... on ${postTypeFlexibleContent}_TestimonialsTwo {
 												fieldGroupName
 												title
@@ -488,7 +491,12 @@ export const getAllFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_CtaTwo {

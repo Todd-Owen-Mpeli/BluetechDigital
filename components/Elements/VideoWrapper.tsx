@@ -29,6 +29,30 @@ const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
 			margin: 0 auto;
 			max-height: 1080px;
 		}
+
+		@media screen and (min-width: 1024px) {
+			iframe,
+			object,
+			embed {
+				min-height: 375px;
+			}
+		}
+
+		@media screen and (min-width: 1280px) {
+			iframe,
+			object,
+			embed {
+				min-height: 450px;
+			}
+		}
+
+		@media screen and (min-width: 1440px) {
+			iframe,
+			object,
+			embed {
+				min-height: 500px;
+			}
+		}
 	`;
 
 	return (

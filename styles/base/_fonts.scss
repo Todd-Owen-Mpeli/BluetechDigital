@@ -10,15 +10,10 @@
 }
 
 @font-face {
-	font-family: RooftopBold;
-	src: url("../fonts/Rooftop-Bold.woff");
-}
-
-@font-face {
 	font-family: TelkaRegular;
 	src: url("../fonts/TelkaRegular.woff");
 }
 
 // Font Stack Properties
-$main: "TelkaRegular";
+$main: "TelkaRegular", "PlusJakartaSans";
 $body: "PlusJakartaSans", "Inter";

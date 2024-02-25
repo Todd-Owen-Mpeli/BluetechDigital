@@ -1,9 +1,7 @@
 // Imports
 import Image from "next/image";
-import {motion} from "framer-motion";
 import React, {FC, Fragment} from "react";
 import {useGlobalContext} from "@/context/global";
-import {initial, fadeInUp} from "../animations/animations";
 
 // Swiper.js Slider
 import "swiper/css";
@@ -25,7 +23,7 @@ const TestimonialsSlider: FC = () => {
 			<div
 				className={
 					styles.testimonialsSlider +
-					` px-0 py-4 overflow-x-hidden bg-white border-t-[15px] border-solid border-blue-default`
+					` px-0 py-4 overflow-x-hidden bg-white border-t-[15px] border-solid border-lightGreyTwo`
 				}
 			>
 				<div className="container px-4 mx-auto">
@@ -146,7 +144,11 @@ const TestimonialsSlider: FC = () => {
 												>
 													<Paragraph
 														content={item?.node?.testimonialReview?.paragraph}
-														tailwindStyling="max-w-md xl:max-w-xl mx-auto lg:mx-0 text-base text-darkGrey leading-relaxed text-center lg:text-left"
+														tailwindStyling={`max-w-md xl:max-w-xl mx-auto lg:mx-0 ${
+															item?.node?.testimonialReview?.image?.sourceUrl
+																? "mb-28"
+																: "mb-0"
+														} sm:mb-0 text-base text-darkGrey leading-relaxed text-center lg:text-left`}
 													/>
 												</div>
 											</div>

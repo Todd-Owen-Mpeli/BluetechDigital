@@ -32,7 +32,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="max-w-6xl mx-auto text-center font-bold text-medium lg:text-lg p-4 pl-0 text-white"
+						className="max-w-4xl mx-auto text-center font-normal text-medium lg:text-lg p-4 pl-0 text-white"
 					>
 						<span
 							className="p-2 mr-3 text-white"
@@ -52,7 +52,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 						}
 					>
 						<span
-							className={`font-bold px-6 flex ${
+							className={`font-semibold tracking-wider px-6 flex ${
 								displayLinkedinIcon ? "flex-col sm:flex-row" : "flex-row"
 							} justify-center items-center gap-y-2 text-white border-2 border-white p-3 uppercase hover:border-blue-light hover:bg-blue-light`}
 						>

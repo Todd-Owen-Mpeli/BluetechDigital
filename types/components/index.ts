@@ -2,11 +2,18 @@
 export type ICTA = {
 	title: string;
 	paragraph: string;
-	backgroundImage: string;
 	buttonLink: {
 		url: string;
 		title: string;
 		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
 	};
 };
 export type IFAQ = {
@@ -224,10 +231,45 @@ export type IOurServices = {
 		}
 	];
 };
-export type ITestimonials = {
-	title: string;
-	subtitle: string;
-	paragraph: string;
+export type IFeaturesGrid = {
+	cardOne: {
+		title: string;
+		subtitle: string;
+		paragraph: string;
+	};
+	cardTwo: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
+	cardThree: {
+		foreground: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+		background: {
+			title: string;
+			subtitle: string;
+			paragraph: string;
+		};
+	};
+	gridContent: [
+		{
+			card: {
+				id: string;
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				backgroundColor: string;
+			};
+		}
+	];
+	lastCard: {
+		backgroundImage: {
+			sourceUrl: string;
+		};
+	};
 };
 export type INewsInsights = {
 	title: string;
@@ -276,6 +318,11 @@ export type ITestimonialsTwo = {
 		title: string;
 		target: string;
 	};
+};
+export type ITestimonialsGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
 };
 export type IJumboContentImage = {
 	title: string;
@@ -345,52 +392,6 @@ export type ITitleContentImage = {
 		mediaDetails: {
 			height: number;
 			width: number;
-		};
-	};
-};
-export type IEnquiryRequestForm = {
-	title: string;
-	contentOneOpen: boolean;
-	contentTwoOpen: boolean;
-	contentThreeOpen: boolean;
-};
-export type IFeaturesGridContent = {
-	cardOne: {
-		title: string;
-		subtitle: string;
-		paragraph: string;
-	};
-	cardTwo: {
-		backgroundImage: {
-			sourceUrl: string;
-		};
-	};
-	cardThree: {
-		foreground: {
-			title: string;
-			subtitle: string;
-			paragraph: string;
-		};
-		background: {
-			title: string;
-			subtitle: string;
-			paragraph: string;
-		};
-	};
-	gridContent: [
-		{
-			card: {
-				id: string;
-				title: string;
-				subtitle: string;
-				paragraph: string;
-				backgroundColor: string;
-			};
-		}
-	];
-	lastCard: {
-		backgroundImage: {
-			sourceUrl: string;
 		};
 	};
 };
@@ -497,6 +498,12 @@ export type IErrorPage = {
 		target: string;
 	};
 };
+export type IPagination = {
+	contentArray: any;
+	contentType: string;
+	tailwindStyling: string;
+	numberOfItemsRenderedPerPage: number;
+};
 
 // Cards
 export type IFAQCard = {
@@ -517,6 +524,25 @@ export type IBlogsCard = {
 				width: number;
 				height: number;
 			};
+		};
+	};
+};
+export type IFeaturesGridCard = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	backgroundColor: string;
+};
+export type ITestimonialsCard = {
+	name: string;
+	position: string;
+	paragraph: string;
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
 		};
 	};
 };
@@ -568,12 +594,7 @@ export type IValuesBlocksImageCard = {
 		};
 	};
 };
-export type IFeaturesGridContentCard = {
-	title: string;
-	subtitle: string;
-	paragraph: string;
-	backgroundColor: string;
-};
+
 export type IJumboContentSectionCard = {
 	title: string;
 	subtitle: string;

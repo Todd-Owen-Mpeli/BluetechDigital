@@ -25,7 +25,7 @@ import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import TestimonialsSlider from "../TestimonialsSlider";
 import JumboContentSection from "../JumboContentSection";
-import FeaturesGridContent from "../FeaturesGridContent";
+import FeaturesGrid from "../FeaturesGrid";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
 import NewsInsightsThreeCards from "../NewsInsightsThreeCards";
@@ -66,7 +66,7 @@ const RenderFlexibleContent: FC = () => {
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_FeaturesGrid` ? (
 							<>
-								<FeaturesGridContent
+								<FeaturesGrid
 									cardOne={item?.cardOne}
 									cardTwo={item?.cardTwo}
 									lastCard={item?.lastCard}
@@ -253,7 +253,7 @@ const RenderFlexibleContent: FC = () => {
 									title={item?.title}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
-									backgroundImage={item?.backgroundImage?.sourceUrl}
+									backgroundImage={item?.backgroundImage}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_CtaTwo` ? (

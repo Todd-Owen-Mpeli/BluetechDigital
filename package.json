@@ -25,7 +25,8 @@
 		"react-dom": "^18",
 		"react-google-recaptcha": "^3.1.0",
 		"sass": "^1.70.0",
-		"styled-components": "^6.1.8"
+		"styled-components": "^6.1.8",
+		"swiper": "^11.0.6"
 	},
 	"devDependencies": {
 		"@types/cookie": "^0.6.0",

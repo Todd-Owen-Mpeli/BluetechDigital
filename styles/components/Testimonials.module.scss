@@ -1,0 +1,11 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.testimonials {
+	p {
+		a {
+			@apply font-semibold underline text-purple-two hover:text-purple-two transition-all ease-in-out duration-500;
+		}
+	}
+}

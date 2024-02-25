@@ -54,6 +54,53 @@ h2 {
 	font-family: $main;
 }
 
+/* Testimonials Swiper.js Slider */
+.swiper {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: flex;
+	margin: auto 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	@apply mt-64 lg:mt-0 w-16 h-16 p-8 border-2 border-blue-darker hover:border-blue-darker text-blue-darker hover:text-blue-darker;
+
+	top: 85% !important;
+
+	@media screen and (min-width: 1024px) {
+		top: 50% !important;
+	}
+}
+
+.swiper-button-prev::after {
+	content: "next";
+	width: 15px !important;
+	height: 15px !important;
+	font-size: 15px !important;
+	font-weight: 900 !important;
+	color: $darkBlue !important;
+}
+
+.swiper-button-next::after {
+	content: "next";
+	width: 15px !important;
+	height: 15px !important;
+	font-size: 15px !important;
+	font-weight: 900 !important;
+	color: $darkBlue !important;
+}
+
 /* SQUARE BOX CUBES
 PAGE LOADING ANIMATION */
 .spinner-wrapper {

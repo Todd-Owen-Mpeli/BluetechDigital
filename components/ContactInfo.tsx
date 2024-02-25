@@ -62,7 +62,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 							viewport={{once: true}}
 							className="flex items-center justify-center lg:justify-start gap-2"
 						>
-							<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-Two sm:mr-3">
+							<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
 								<svg
 									fill="#ffffff"
 									width="800px"
@@ -111,7 +111,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 										: "hidden"
 								}
 							>
-								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-Two sm:mr-3">
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
 									<svg
 										width="20"
 										height="20"
@@ -129,7 +129,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-black hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -145,7 +145,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 										: "hidden"
 								}
 							>
-								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-Two sm:mr-3">
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
 									<svg
 										width="20"
 										height="20"
@@ -163,7 +163,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-black hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}

@@ -39,7 +39,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	switch (backgroundDisplay) {
 		case "White":
 			titleColor = "text-black";
-			subtitleColor = "text-yellow-Two";
+			subtitleColor = "text-yellow-two";
 			buttonColor = "blue-default";
 			backgroundColor = "bg-white";
 			paragraphColor = "text-black";
@@ -48,7 +48,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			break;
 		case "lightGrey":
 			titleColor = "text-black";
-			subtitleColor = "text-blue-Two";
+			subtitleColor = "text-blue-two";
 			buttonColor = "lightGrey";
 			backgroundColor = "bg-lightGreyTwo";
 			paragraphColor = "text-black";
@@ -57,7 +57,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 			break;
 		case "Blue":
 			titleColor = "text-white";
-			subtitleColor = "text-yellow-Two";
+			subtitleColor = "text-yellow-two";
 			buttonColor = "white";
 			paragraphColor = "text-white";
 			backgroundColor = "bg-blue-darkerTwo";

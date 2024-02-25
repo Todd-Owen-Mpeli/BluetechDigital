@@ -70,7 +70,7 @@ const Footer: FC = () => {
 										: "hidden"
 								}
 							>
-								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-Two sm:mr-3">
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
 									<svg
 										width="20"
 										height="20"
@@ -88,7 +88,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-black hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -104,7 +104,7 @@ const Footer: FC = () => {
 										: "hidden"
 								}
 							>
-								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-Two sm:mr-3">
+								<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
 									<svg
 										width="20"
 										height="20"
@@ -122,7 +122,7 @@ const Footer: FC = () => {
 									</svg>
 								</div>
 								<Link
-									className="font-medium tracking-wide text-black hover:text-yellow-Two"
+									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
@@ -259,7 +259,7 @@ const Footer: FC = () => {
 														>
 															<Link
 																href={`${item?.node?.url}`}
-																className="text-black text-base text-center lg:text-left hover:text-blue-Two"
+																className="text-black text-base text-center lg:text-left hover:text-blue-two"
 															>
 																{item?.node?.label}
 															</Link>
@@ -276,7 +276,7 @@ const Footer: FC = () => {
 													>
 														<Link
 															href={`${item?.node?.url}`}
-															className="text-black text-base text-center lg:text-left hover:text-blue-Two"
+															className="text-black text-base text-center lg:text-left hover:text-blue-two"
 														>
 															{item?.node?.label}
 														</Link>
@@ -315,7 +315,7 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-black text-base text-center lg:text-left hover:text-blue-Two"
+														className="text-black text-base text-center lg:text-left hover:text-blue-two"
 													>
 														{item?.node?.label}
 													</Link>
@@ -395,7 +395,7 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-black transition-all duration-200 ease-in-out text-sm hover:text-blue-Two"
+											className="text-black transition-all duration-200 ease-in-out text-sm hover:text-blue-two"
 										>
 											{item?.node?.label}
 										</Link>

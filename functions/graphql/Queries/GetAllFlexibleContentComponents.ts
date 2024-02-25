@@ -446,6 +446,18 @@ export const getAllFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
+												faqGrid {
+													card {
+														title
+														paragraph
+													}
+												}
+											}
+											... on ${postTypeFlexibleContent}_FaqTwo {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
 												buttonLink {
 													url
 													title
@@ -459,7 +471,7 @@ export const getAllFlexibleContentComponents = async (
 														width
 													}
 												}
-												faqContent {
+												faqGrid {
 													card {
 														title
 														paragraph

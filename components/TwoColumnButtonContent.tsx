@@ -70,7 +70,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 text-center lg:text-center text-tiny lg:text-base text-yellow-Two"
+							className="mb-1 text-center lg:text-center text-tiny lg:text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>

@@ -48,7 +48,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="text-center lg:text-left text-paragraph text-yellow-Two"
+								className="text-center lg:text-left text-paragraph text-yellow-two"
 							>
 								{subtitle}
 							</motion.h4>
@@ -60,7 +60,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								className="leading-[3.5rem] my-2 max-w-2xl mx-auto mb-6 text-center lg:text-left font-semibold text-lg lg:text-3xl"
 							>
 								{title}
-								<span className="p-2 ml-3 bg-blue-Two text-white">
+								<span className="p-2 ml-3 bg-blue-two text-white">
 									{highlightText}
 								</span>
 							</motion.h2>

@@ -82,7 +82,7 @@ const BlogsCard: FC<IBlogsCard> = ({
 					>
 						<Link
 							href={uri ? `blogs${uri}` : `/`}
-							className="text-sm font-bold text-black uppercase transition duration-200 lg:text-blue hover:text-blue-Two hover:underline"
+							className="text-sm font-bold text-black uppercase transition duration-200 lg:text-blue hover:text-blue-two hover:underline"
 						>
 							<span>Read more</span>
 							<span className="inline-block ml-2">

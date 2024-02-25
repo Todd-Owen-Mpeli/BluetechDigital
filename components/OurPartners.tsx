@@ -1,8 +1,4 @@
 // Imports
-import Image from "next/image";
-import {FC, Fragment} from "react";
-import {motion} from "framer-motion";
-import {IOurPartners} from "@/types/components/index";
 import {
 	fadeIn,
 	initial,
@@ -10,6 +6,10 @@ import {
 	initialTwo,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
+import Image from "next/image";
+import {FC, Fragment} from "react";
+import {motion} from "framer-motion";
+import {IOurPartners} from "@/types/components/index";
 
 // Styling
 import styles from "../styles/components/OurPartners.module.scss";

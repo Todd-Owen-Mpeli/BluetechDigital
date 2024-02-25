@@ -1,13 +1,13 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IFeaturesGridContentCard} from "@/types/components";
+import {IFeaturesGridCard} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "../Elements/Paragraph";
 
-const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
+const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 	title,
 	subtitle,
 	paragraph,
@@ -112,4 +112,4 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 	);
 };
 
-export default FeaturesGridContentCard;
+export default FeaturesGridCard;

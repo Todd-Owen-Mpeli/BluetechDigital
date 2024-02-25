@@ -6,7 +6,7 @@ import fadeInUp, {initial, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import FeaturesGridContentCard from "./Cards/FeaturesGridContentCard";
+import FeaturesGridCard from "./Cards/FeaturesGridCard";
 
 const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 	cardOne,
@@ -80,7 +80,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 						{gridContent?.length > 0 ? (
 							gridContent?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
-									<FeaturesGridContentCard
+									<FeaturesGridCard
 										key={keys}
 										title={item?.card?.title}
 										subtitle={item?.card?.subtitle}

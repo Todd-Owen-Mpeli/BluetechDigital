@@ -49,7 +49,7 @@ const FeaturesGridContent: FC<IFeaturesGridContent> = ({
 										initial={initial}
 										whileInView={fadeInUp}
 										viewport={{once: true}}
-										className="mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-Two"
+										className="mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-two"
 									>
 										{cardOne?.subtitle}
 									</motion.h4>

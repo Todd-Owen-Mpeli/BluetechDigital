@@ -63,9 +63,9 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 										<div
 											className={`p-6 w-[80%] sm:w-[40%] md:w-[60%] lg:w-full xl:shadow-2xl xl:w-[55%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
 												keys === 0
-													? "bg-green-Three"
+													? "bg-green-three"
 													: keys === 1
-													? "bg-green-Three"
+													? "bg-green-three"
 													: "bg-purple-default"
 											}`}
 										>

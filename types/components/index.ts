@@ -13,20 +13,7 @@ export type IFAQ = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	image: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			height: number;
-			width: number;
-		};
-	};
-	faqContent: [
+	faqGrid: [
 		{
 			card: {
 				title: string;
@@ -77,6 +64,32 @@ export type IHero = {
 			width: number;
 		};
 	};
+};
+export type IFAQTwo = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			height: number;
+			width: number;
+		};
+	};
+	faqGrid: [
+		{
+			card: {
+				title: string;
+				paragraph: string;
+			};
+		}
+	];
 };
 export type ICTATwo = {
 	title: string;

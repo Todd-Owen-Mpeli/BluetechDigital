@@ -27,12 +27,12 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				}}
 			>
 				<div className="container mx-auto">
-					<motion.h2
+					<motion.h3
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="max-w-6xl mx-auto text-center font-bold leading-normal text-lg lg:text-xl p-4 pl-0 text-white"
+						className="max-w-6xl mx-auto text-center font-bold text-medium lg:text-lg p-4 pl-0 text-white"
 					>
 						<span
 							className="p-2 mr-3 text-white"
@@ -43,7 +43,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 							{highlightText}
 						</span>
 						{title}
-					</motion.h2>
+					</motion.h3>
 					<Link
 						href={`${buttonLink?.url}`}
 						target={buttonLink?.target}

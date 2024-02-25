@@ -146,7 +146,7 @@ const Navbar: FC = () => {
 														href={`${item?.node?.url}`}
 														className={`${
 															scrollPosition > 50 ? "text-black" : "text-white"
-														} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+														} group-hover:text-black group-hover:hover:text-blue-two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
 														{item?.node?.label}
 													</Link>
@@ -198,7 +198,7 @@ const Navbar: FC = () => {
 														href={`${item?.node?.url}`}
 														className={`${
 															scrollPosition > 50 ? "text-black" : "text-white"
-														} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+														} group-hover:text-black group-hover:hover:text-blue-two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 													>
 														{item?.node?.label}
 													</Link>
@@ -276,7 +276,7 @@ const Navbar: FC = () => {
 													href={`${item?.node?.url}`}
 													className={`${
 														scrollPosition > 50 ? "text-black" : "text-white"
-													} group-hover:text-black group-hover:hover:text-blue-Two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
+													} group-hover:text-black group-hover:hover:text-blue-two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}
 												>
 													{item?.node?.label}
 												</Link>

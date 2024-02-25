@@ -7,6 +7,7 @@ import CTA from "../CTA";
 import FAQ from "../FAQ";
 import Hero from "../Hero";
 import CTATwo from "../CTATwo";
+import FAQTwo from "../FAQTwo";
 import HeroTwo from "../HeroTwo";
 import Gallery from "../Gallery";
 import VideoBlock from "../VideoBlock";
@@ -22,6 +23,7 @@ import TestimonialsTwo from "../TestimonialsTwo";
 import FeaturesGridTwo from "../FeaturesGridTwo";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
+import TestimonialsSlider from "../TestimonialsSlider";
 import JumboContentSection from "../JumboContentSection";
 import FeaturesGridContent from "../FeaturesGridContent";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
@@ -158,6 +160,11 @@ const RenderFlexibleContent: FC = () => {
 						) : item?.fieldGroupName === `${FlexibleContent}_Testimonials` ? (
 							<></>
 						) : item?.fieldGroupName ===
+						  `${FlexibleContent}_TestimonialsSlider` ? (
+							<>
+								<TestimonialsSlider />
+							</>
+						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_TestimonialsTwo` ? (
 							<>
 								<TestimonialsTwo
@@ -171,11 +178,20 @@ const RenderFlexibleContent: FC = () => {
 							<>
 								<FAQ
 									title={item?.title}
+									faqGrid={item?.faqGrid}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_FaqTwo` ? (
+							<>
+								<FAQTwo
+									title={item?.title}
 									image={item?.image}
+									faqGrid={item?.faqGrid}
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									buttonLink={item?.buttonLink}
-									faqContent={item?.faqContent}
 								/>
 							</>
 						) : item?.fieldGroupName ===

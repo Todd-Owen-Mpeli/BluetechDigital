@@ -1,188 +1,156 @@
 // Imports
 import fadeInUp, {
-	fadeIn,
 	initial,
 	stagger,
-	initialTwo,
-	slideInRightFinish,
-	slideInRightInitial,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
-import Link from "next/link";
-import Image from "next/image";
-import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
+import {FC, Fragment, useState} from "react";
 import {IFAQ} from "@/types/components/index";
 
 // Components
 import FAQCard from "./Cards/FAQCard";
 import Paragraph from "./Elements/Paragraph";
 
-const FAQ: FC<IFAQ> = ({
-	title,
-	image,
-	subtitle,
-	paragraph,
-	faqContent,
-	buttonLink,
-}) => {
+const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
+	const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+
+	const handleButtonClick = (index: any) => {
+		setSelectedItemIndex(index);
+	};
+
 	return (
 		<>
-			<div className="py-6 px-4 lg:px-0 bg-white">
-				<div className="container px-0 mx-auto">
+			<div
+				className="relative py-12 sm:py-16 px-4 bg-white bg-cover bg-center bg-no-repeat"
+				style={{
+					backgroundImage: `url("/svg/background/polygon-scatter-haikei-lightgrey.svg")`,
+				}}
+			>
+				<div className="container relative m-auto flex flex-col items-center gap-6">
 					<motion.div
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="flex flex-col items-center mb-10"
+						className="flex flex-col items-center"
 					>
 						<motion.h4
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center text-tiny lg:text-base text-yellow-Two"
+							className="text-center text-tiny lg:text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
-						<motion.h2
+						<motion.h3
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-lg lg:text-3xl"
+							className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center font-extrabold text-lg md:text-xl"
 						>
 							{title}
-						</motion.h2>
+						</motion.h3>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black text-base lg:text-paragraph text-center"
+							tailwindStyling="lg:max-w-3xl mx-auto text-black text-base text-center"
 						/>
 					</motion.div>
-
-					<div className="flex flex-col lg:flex-row gap-4 xl:gap-10">
+					<div className="w-full relative py-0 lg:py-20 lg:py-24 overflow-hidden">
 						<motion.div
 							initial={initial}
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className={`w-full flex flex-col items-center justify-center gap-4 ${
-								image?.sourceUrl ? "lg:w-1/2" : `w-full`
-							}`}
+							className="max-w-7xl mx-auto flex flex-wrap -mx-4 -mb-8"
 						>
-							{faqContent?.length > 0 ? (
-								faqContent.map((item: any, keys: number) => (
-									<Fragment key={keys}>
-										<motion.div
-											custom={keys}
+							<div className="w-full lg:w-1/3 py-8 px-4 mb-15 lg:mb-0">
+								<div className="max-w-xl mx-auto lg:mx-0 lg:max-w-full flex flex-wrap -mx-2 lg:flex-col lg:max-w-sm border-b lg:border-b-0 lg:border-r-2 border-blue-default">
+									<div className="w-full lg:w-full px-2 mb-15">
+										<motion.h3
 											initial={initial}
+											whileInView={fadeInUp}
+											viewport={{once: true}}
+											className="uppercase text-black text-center sm:text-left font-extrabold text-lg mb-9"
+										>
+											Getting Started
+										</motion.h3>
+										<motion.ul
+											initial={initial}
+											variants={stagger}
 											whileInView="animate"
 											viewport={{once: true}}
-											variants={arrayLoopStaggerChildren}
-											className="w-full"
+											className="flex flex-col sm:items-baseline items-center justify-center"
 										>
-											<FAQCard
-												index={keys}
-												title={item?.card?.title}
-												paragraph={item?.card?.paragraph}
+											{faqGrid?.length > 0 ? (
+												faqGrid?.map((item: any, keys: number) => (
+													<Fragment key={keys}>
+														<motion.li
+															custom={keys}
+															initial={initial}
+															whileInView="animate"
+															viewport={{once: true}}
+															variants={arrayLoopStaggerChildren}
+															className="mb-6 lg:pr-6"
+														>
+															<button
+																onClick={() => handleButtonClick(keys)}
+																className={`flex items-center justify-center text-tiny font-semibold hover:text-orange-default ${
+																	selectedItemIndex === keys
+																		? "text-yellow-default"
+																		: "text-black"
+																}`}
+															>
+																<svg
+																	width="12"
+																	height="12"
+																	viewBox="0 0 12 12"
+																	fill="none"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<circle
+																		cx="6"
+																		cy="6"
+																		r="5"
+																		stroke="#C3C6CE"
+																		strokeWidth="2"
+																	></circle>
+																</svg>
+																<span className="ml-3 text-center sm:text-left">
+																	{item?.card?.title}
+																</span>
+															</button>
+														</motion.li>
+													</Fragment>
+												))
+											) : (
+												<></>
+											)}
+										</motion.ul>
+									</div>
+								</div>
+							</div>
+							<div className="w-full lg:w-2/3 px-4">
+								<div className="max-w-xl xl:max-w-3xl mx-auto py-8 lg:py-0 lg:mr-0">
+									{selectedItemIndex !== null && (
+										<>
+											<motion.h3
+												initial={initial}
+												whileInView={fadeInUp}
+												viewport={{once: true}}
+												className="uppercase text-black text-center sm:text-left font-extrabold text-lg mb-6"
+											>
+												{faqGrid[selectedItemIndex]?.card?.title}
+											</motion.h3>
+											<Paragraph
+												content={faqGrid[selectedItemIndex]?.card?.paragraph}
+												tailwindStyling=" text-black text-base text-left"
 											/>
-										</motion.div>
-									</Fragment>
-								))
-							) : (
-								<></>
-							)}
+										</>
+									)}
+								</div>
+							</div>
 						</motion.div>
-						<div className={image?.sourceUrl ? "w-full lg:w-1/2" : `hidden`}>
-							<motion.div
-								viewport={{once: true}}
-								initial={slideInRightInitial}
-								whileInView={slideInRightFinish}
-								className="relative"
-							>
-								<Image
-									alt={image?.altText}
-									src={image?.sourceUrl}
-									width={image?.mediaDetails?.width}
-									height={image?.mediaDetails?.height}
-									className={
-										image?.sourceUrl
-											? `block object-cover object-center w-full h-[225px] sm:h-[400px]`
-											: `hidden`
-									}
-									style={{
-										clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
-									}}
-								/>
-								<Link
-									href={`${buttonLink?.url}`}
-									target={buttonLink?.target}
-									className={
-										buttonLink?.url
-											? "block absolute bottom-0 left-0"
-											: "hidden"
-									}
-								>
-									<motion.button
-										initial={initialTwo}
-										whileInView={fadeIn}
-										viewport={{once: true}}
-										className={
-											buttonLink?.title
-												? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit bg-blue-default hover:bg-yellow-default transition-all ease-in-out duration-500 text-white`
-												: `hidden`
-										}
-									>
-										<span>{buttonLink?.title}</span>
-										<span className="hidden group-hover:block">
-											<svg
-												height="35"
-												width="30.237"
-												viewBox="0 0 30.237 35"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<g transform="translate(-4906.763 143)">
-													<path
-														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
-														transform="translate(4870 -143)"
-														fill="#ffffff"
-													></path>
-													<g transform="translate(4890.311 -1111.861)">
-														<path
-															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
-															transform="translate(0 0)"
-															fill="#ffffff"
-														></path>
-													</g>
-												</g>
-											</svg>
-										</span>
-										<span className="block group-hover:hidden">
-											<svg
-												height="35"
-												width="30.237"
-												viewBox="0 0 30.237 35"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<g transform="translate(-4906.763 143)">
-													<path
-														d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
-														transform="translate(4870 -143)"
-														fill="#ffffff"
-													></path>
-													<g transform="translate(4890.311 -1111.861)">
-														<path
-															d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
-															transform="translate(0 0)"
-															fill="#ffffff"
-														></path>
-													</g>
-												</g>
-											</svg>
-										</span>
-									</motion.button>
-								</Link>
-							</motion.div>
-						</div>
 					</div>
 				</div>
 			</div>

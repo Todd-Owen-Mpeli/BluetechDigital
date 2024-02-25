@@ -75,7 +75,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-Two"
+									className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-two"
 								>
 									{subtitle}
 								</motion.h3>

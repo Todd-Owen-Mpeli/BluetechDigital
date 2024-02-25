@@ -22,22 +22,22 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 	switch (backgroundColor) {
 		case "Purple":
 			titleStyling = "text-white";
-			subtitleStyling = "text-yellow-Two";
+			subtitleStyling = "text-yellow-two";
 			paragraphStyling = "text-white";
 			backgroundWaveStyling = "none";
-			backgroundColorStyling = "bg-purple-Two";
+			backgroundColorStyling = "bg-purple-two";
 
 			break;
 		case "Grey":
 			titleStyling = "text-black";
-			subtitleStyling = "text-yellow-Two";
+			subtitleStyling = "text-yellow-two";
 			paragraphStyling = "text-black";
 			backgroundWaveStyling = "none";
 			backgroundColorStyling = "bg-lightGreyTwo";
 			break;
 		case "BlueWave":
 			titleStyling = "text-white";
-			subtitleStyling = "text-yellow-Two";
+			subtitleStyling = "text-yellow-two";
 			paragraphStyling = "text-white";
 			backgroundColorStyling = "bg-transparent";
 			backgroundWaveStyling = "stacked-waves-haikei-blue-darkblue";
@@ -58,7 +58,7 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 			break;
 		default:
 			titleStyling = "text-black";
-			subtitleStyling = "text-yellow-Two";
+			subtitleStyling = "text-yellow-two";
 			paragraphStyling = "text-black";
 			backgroundWaveStyling = "none";
 			backgroundColorStyling = "bg-lightGrey";
@@ -90,7 +90,7 @@ const FeaturesGridContentCard: FC<IFeaturesGridContentCard> = ({
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-Two ${subtitleStyling}`}
+						className={`mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-two ${subtitleStyling}`}
 					>
 						{subtitle}
 					</motion.h4>

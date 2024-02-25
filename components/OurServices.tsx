@@ -39,7 +39,7 @@ const OurServices: FC<IOurServices> = ({
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left text-paragraph text-yellow-Two"
+									className="text-center lg:text-left text-paragraph text-yellow-two"
 								>
 									{subtitle}
 								</motion.h4>

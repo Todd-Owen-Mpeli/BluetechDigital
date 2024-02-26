@@ -594,7 +594,6 @@ export type IValuesBlocksImageCard = {
 		};
 	};
 };
-
 export type IJumboContentSectionCard = {
 	title: string;
 	subtitle: string;

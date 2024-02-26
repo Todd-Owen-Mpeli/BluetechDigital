@@ -10,6 +10,8 @@
 	},
 	"dependencies": {
 		"@apollo/client": "^3.9.4",
+		"@vercel/analytics": "^1.2.2",
+		"@vercel/speed-insights": "^1.0.10",
 		"cookie": "^0.6.0",
 		"dateformat": "^5.0.3",
 		"dompurify": "^3.0.8",

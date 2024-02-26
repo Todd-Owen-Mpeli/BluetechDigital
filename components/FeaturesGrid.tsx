@@ -35,7 +35,12 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 					className="relative z-50 flex flex-wrap -m-3"
 				>
 					{/* Card One */}
-					<div className="w-full p-3 md:w-1/2">
+					<motion.div
+						viewport={{once: true}}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
+						className="w-full p-3 md:w-1/2"
+					>
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -68,7 +73,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 								tailwindStyling="text-black text-center lg:text-left text-paragraph"
 							/>
 						</motion.div>
-					</div>
+					</motion.div>
 					{/* Card Two */}
 					<motion.div
 						viewport={{once: true}}

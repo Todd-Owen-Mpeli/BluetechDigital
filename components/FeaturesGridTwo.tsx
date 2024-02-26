@@ -1,8 +1,14 @@
 // Imports
+import fadeInUp, {
+	initial,
+	stagger,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
+} from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IFeaturesGridTwo} from "@/types/components";
-import fadeInUp, {initial, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
@@ -26,7 +32,12 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 						className="flex flex-wrap -m-3"
 					>
 						{/* Card One */}
-						<div className="w-full p-3 md:w-1/2">
+						<motion.div
+							viewport={{once: true}}
+							initial={slideInLeftInitial}
+							whileInView={slideInRightFinish}
+							className="w-full p-3 md:w-1/2"
+						>
 							<motion.div
 								initial={initial}
 								variants={stagger}
@@ -59,9 +70,12 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 									tailwindStyling="text-black text-center lg:text-left text-paragraph"
 								/>
 							</motion.div>
-						</div>
+						</motion.div>
 						{/* Card Two */}
-						<div
+						<motion.div
+							viewport={{once: true}}
+							initial={slideInRightInitial}
+							whileInView={slideInRightFinish}
 							className={
 								cardTwo?.backgroundImage?.sourceUrl
 									? `w-full p-3 md:w-1/2 min-h-[450px]`
@@ -75,7 +89,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 									backgroundImage: `url("${cardTwo?.backgroundImage?.sourceUrl}")`,
 								}}
 							/>
-						</div>
+						</motion.div>
 						{/* Remaining Cards */}
 						{gridContent?.length > 0 ? (
 							gridContent?.map((item: any, keys: number) => (
@@ -93,7 +107,10 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 							<></>
 						)}
 						{/* Last Card */}
-						<div
+						<motion.div
+							viewport={{once: true}}
+							initial={slideInRightInitial}
+							whileInView={slideInRightFinish}
 							className={
 								lastCard?.backgroundImage?.sourceUrl
 									? `w-full p-3 md:w-1/2 min-h-[450px]`
@@ -107,7 +124,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 									backgroundImage: `url("${lastCard?.backgroundImage?.sourceUrl}")`,
 								}}
 							/>
-						</div>
+						</motion.div>
 					</motion.div>
 				</div>
 			</div>

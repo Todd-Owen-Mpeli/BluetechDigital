@@ -37,7 +37,7 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 			break;
 		case "BlueWave":
 			titleStyling = "text-white";
-			subtitleStyling = "text-yellow-two";
+			subtitleStyling = "text-white";
 			paragraphStyling = "text-white";
 			backgroundColorStyling = "bg-transparent";
 			backgroundWaveStyling = "stacked-waves-haikei-blue-darkblue";
@@ -62,6 +62,7 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 			paragraphStyling = "text-black";
 			backgroundWaveStyling = "none";
 			backgroundColorStyling = "bg-lightGrey";
+			break;
 	}
 
 	return (
@@ -90,7 +91,7 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-two ${subtitleStyling}`}
+						className={`mb-2 text-center lg:text-center text-tiny lg:text-base ${subtitleStyling}`}
 					>
 						{subtitle}
 					</motion.h4>

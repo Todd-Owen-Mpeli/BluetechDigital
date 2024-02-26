@@ -1,16 +1,17 @@
 // Imports
+import {
+	fadeIn,
+	initial,
+	stagger,
+	initialTwo,
+	slideInLeftInitial,
+	slideInRightFinish,
+	slideInRightInitial,
+} from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {IVideoBlock} from "@/types/components";
-import {
-	fadeIn,
-	initial,
-	initialTwo,
-	slideInRightFinish,
-	slideInRightInitial,
-	stagger,
-} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
@@ -33,10 +34,9 @@ const VideoBlock: FC<IVideoBlock> = ({
 			<div id="VideoBlock" className="py-10 px-4 bg-lightGreyTwo">
 				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
-						initial={initial}
-						variants={stagger}
-						whileInView="animate"
 						viewport={{once: true}}
+						initial={slideInLeftInitial}
+						whileInView={slideInRightFinish}
 						className={
 							title && highlightText && paragraph
 								? "max-w-2xl mx-auto text-center lg:max-w-5xl w-full lg:w-[50%] xl:w-[35%]"

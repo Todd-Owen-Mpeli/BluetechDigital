@@ -66,6 +66,7 @@ const config: Config = {
 			purple: {
 				default: "#833df4",
 				two: "#7736f1",
+				three: "#622bc7",
 				dark: "#2d2378",
 			},
 		},

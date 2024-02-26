@@ -48,7 +48,7 @@ const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
 									<path
 										d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
 										transform="translate(4870 -143)"
-										fill="#e4a002"
+										fill="#ffffff"
 									></path>
 									<g transform="translate(4890.311 -1111.861)">
 										<path

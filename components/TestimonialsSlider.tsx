@@ -34,7 +34,7 @@ const TestimonialsSlider: FC = () => {
 							centeredSlides={true}
 							modules={[Autoplay, Navigation]}
 							autoplay={{
-								delay: 3000,
+								delay: 6000,
 								disableOnInteraction: false,
 							}}
 							className="mySwiper"

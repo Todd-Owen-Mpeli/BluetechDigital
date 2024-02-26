@@ -7,7 +7,6 @@ import {ICTA} from "@/types/components/index";
 import {fadeIn, initialTwo} from "../animations/animations";
 
 // Components
-import Title from "./Elements/Title";
 import Paragraph from "./Elements/Paragraph";
 import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 
@@ -29,7 +28,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								height={backgroundImage?.mediaDetails?.height}
 								className={
 									backgroundImage?.sourceUrl
-										? `block absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-all ease-in-out duration-500 object-contain object-center`
+										? `block absolute inset-0 w-full h-full object-cover transform lg:group-hover:scale-105 transition-all ease-in-out duration-500 object-contain object-center`
 										: `hidden`
 								}
 							/>
@@ -37,7 +36,12 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 					</Link>
 				</div>
 				<div className="w-full lg:w-7/12 p-4">
-					<div className="bg-blue-default flex flex-col justify-between h-full p-8">
+					<div
+						className="flex flex-col justify-between bg-blue-default h-full p-8 bg-cover bg-no-repeat bg-center"
+						style={{
+							backgroundImage: `url("/svg/background/stacked-waves-haikei-purple-two.svg")`,
+						}}
+					>
 						<div className="max-w-3xl mx-auto lg:mx-0">
 							<motion.h2
 								initial={initialTwo}

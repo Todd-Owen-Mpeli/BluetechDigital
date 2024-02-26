@@ -34,14 +34,14 @@ const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
 							className="w-full flex items-center justify-between"
 							onClick={displayAccordionContent}
 						>
-							<motion.h2
+							<motion.h3
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="w-[90%] text-left text-base uppercase text-black font-extrabold"
+								className="w-[90%] text-left text-base lg:text-paragraph text-black font-extrabold"
 							>
 								{title}
-							</motion.h2>
+							</motion.h3>
 							<Image
 								width={500}
 								height={500}

@@ -37,7 +37,7 @@ const CTATwo: FC<ICTATwo> = ({
 					>
 						{title}
 						<span
-							className="p-2 ml-3 text-white"
+							className={highlightText ? "p-2 ml-3 text-white" : "hidden"}
 							style={{
 								backgroundColor: `${highlightTextColor}`,
 							}}

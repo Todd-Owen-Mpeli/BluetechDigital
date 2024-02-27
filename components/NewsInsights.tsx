@@ -1,5 +1,5 @@
 // Imports
-import {FC, Fragment} from "react";
+import {FC} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {INewsInsights} from "@/types/components";
@@ -8,7 +8,6 @@ import {initial, fadeInUp, stagger} from "@/animations/animations";
 // Components
 import Paragraph from "./Elements/Paragraph";
 import Pagination from "./Elements/Pagination";
-import NewsInsightsCard from "./Cards/NewsInsightsCard";
 
 const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 	const globalContext = useGlobalContext();

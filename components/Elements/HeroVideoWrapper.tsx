@@ -4,7 +4,7 @@ import parse from "html-react-parser";
 import styled from "styled-components";
 import {IVideoWrapper} from "@/types/components";
 
-const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
+const HeroVideoWrapper: FC<IVideoWrapper> = ({children}) => {
 	const VimeoVideo = styled.div`
 		height: auto;
 		max-width: 100%;
@@ -19,7 +19,7 @@ const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
 			width: 100%;
 			height: 100%;
 			position: static;
-			min-height: 275px;
+			min-height: 500px;
 			max-height: 1000px;
 		}
 
@@ -62,4 +62,4 @@ const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
 	);
 };
 
-export default VideoWrapper;
+export default HeroVideoWrapper;

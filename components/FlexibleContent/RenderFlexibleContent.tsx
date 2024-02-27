@@ -15,6 +15,8 @@ import LinkedInCta from "../LinkedInCta";
 import ContactInfo from "../ContactInfo";
 import OurPartners from "../OurPartners";
 import OurServices from "../OurServices";
+import ContactForm from "../ContactForm";
+import FeaturesGrid from "../FeaturesGrid";
 import NewsInsights from "../NewsInsights";
 import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
@@ -25,7 +27,6 @@ import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import TestimonialsSlider from "../TestimonialsSlider";
 import JumboContentSection from "../JumboContentSection";
-import FeaturesGrid from "../FeaturesGrid";
 import AchievementsStatsCTA from "../AchievementsStatsCTA";
 import TwoColumnButtonContent from "../TwoColumnButtonContent";
 import NewsInsightsThreeCards from "../NewsInsightsThreeCards";
@@ -280,6 +281,14 @@ const RenderFlexibleContent: FC = () => {
 						) : item?.fieldGroupName === `${FlexibleContent}_ContactInfo` ? (
 							<>
 								<ContactInfo title={item?.title} paragraph={item?.paragraph} />
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_ContactForm` ? (
+							<>
+								<ContactForm
+									title={item?.title}
+									paragraph={item?.paragraph}
+									formTitle={item?.formTitle}
+								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Maintenance` ? (
 							<>

@@ -158,6 +158,11 @@ export type ILinkedInCta = {
 		target: string;
 	};
 };
+export type IContactForm = {
+	title: string;
+	formTitle: string;
+	paragraph: string;
+};
 export type IContactInfo = {
 	title: string;
 	paragraph: string;
@@ -639,13 +644,14 @@ export type IValuesBlocksImageOrMapCard = {
 };
 
 // Elements
-export type ISideMenu = {
-	menuActive: boolean;
-	setMenuActive: any;
-};
+
 export type ITitle = {
 	content: string;
 	tailwindStyling: string;
+};
+export type ISideMenu = {
+	menuActive: boolean;
+	setMenuActive: any;
 };
 export type IParagraph = {
 	content: string;
@@ -665,12 +671,12 @@ export type IButtonBorderSliced = {
 	fullWidth: boolean;
 	tailwindColor: string;
 };
+export type IDownloadButtonLinks = {
+	title: string;
+	pdfLink: boolean;
+};
 export type IYoutubeButtonBorderSliced = {
 	title: string;
 	fullWidth: boolean;
 	displayYoutubeIcon: boolean;
-};
-export type IDownloadButtonLinks = {
-	title: string;
-	pdfLink: boolean;
 };

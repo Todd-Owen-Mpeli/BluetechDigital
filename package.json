@@ -10,6 +10,7 @@
 	},
 	"dependencies": {
 		"@apollo/client": "^3.9.4",
+		"@react-email/components": "0.0.15",
 		"@vercel/analytics": "^1.2.2",
 		"@vercel/speed-insights": "^1.0.10",
 		"cookie": "^0.6.0",
@@ -25,6 +26,7 @@
 		"posthog-js": "^1.105.7",
 		"react": "^18",
 		"react-dom": "^18",
+		"react-email": "2.1.0",
 		"react-google-recaptcha": "^3.1.0",
 		"sass": "^1.70.0",
 		"styled-components": "^6.1.8",

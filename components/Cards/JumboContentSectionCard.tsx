@@ -99,7 +99,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	return (
 		<>
 			<div
-				className={` relative pb-28 ${
+				className={` relative pt-10 pb-28 ${
 					smallImage ? "lg:pb-28" : "lg:pb-10"
 				} lg:py-10 overflow-hidden bg-center bg-no-repeat bg-cover ${backgroundColor}`}
 				style={{
@@ -137,7 +137,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `block object-cover object-center w-full h-[300px] sm:h-[400px]`
+										? `block object-cover object-center w-full h-[275px] sm:h-[400px]`
 										: `hidden`
 								}
 								style={{
@@ -151,7 +151,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={smallImage?.mediaDetails?.height}
 								className={
 									smallImage?.sourceUrl
-										? `block sm:absolute top-[225px] lg:top-[275px] xl:top-[250px] left-[0px] mt-6 lg:ml-0 lg:left-[-50px] object-cover object-center w-full sm:w-[300px] lg:w-[375px] lg:h-[225px] border-none sm:border-solid border-[0.5rem] ${borderImageColor}`
+										? `block sm:absolute top-[225px] lg:top-[275px] xl:top-[250px] left-[0px] mt-6 lg:ml-0 lg:left-[-50px] object-cover object-center h-[275px] sm:h-full w-full sm:w-[300px] lg:w-[375px] lg:h-[225px] border-none sm:border-solid border-[0.5rem] ${borderImageColor}`
 										: `hidden`
 								}
 								style={{
@@ -178,7 +178,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className={`mb-1 text-center lg:text-center text-paragraph ${subtitleColor}`}
+									className={`mb-3 text-center lg:text-left text-base ${subtitleColor}`}
 								>
 									{subtitle}
 								</motion.h4>
@@ -186,7 +186,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className={`mt-2 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl ${titleColor} lg:pr-8`}
+									className={`mb-3 text-center font-semibold leading-tight lg:text-left text-xl lg:text-3xl ${titleColor} lg:pr-8`}
 								>
 									{title}
 								</motion.h2>
@@ -222,7 +222,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={image?.mediaDetails?.height}
 								className={
 									image?.sourceUrl
-										? `block object-cover object-center w-full h-[300px] sm:h-[400px]`
+										? `block object-cover object-center w-full h-[275px] sm:h-[400px]`
 										: `hidden`
 								}
 								style={{
@@ -236,7 +236,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								height={smallImage?.mediaDetails?.height}
 								className={
 									smallImage?.sourceUrl
-										? `block sm:absolute top-[225px] lg:top-[275px] xl:top-[250px] right-[0px] mt-6 lg:ml-0 lg:right-[-50px] object-cover object-center w-full sm:w-[300px] lg:h-[175px] lg:w-[375px] border-none sm:border-solid border-[0.5rem] ${borderImageColor}`
+										? `block sm:absolute top-[225px] lg:top-[275px] xl:top-[250px] right-[0px] mt-6 lg:ml-0 lg:right-[-50px] object-cover object-center h-[275px] sm:h-full w-full sm:w-[300px] lg:h-[175px] lg:w-[375px] border-none sm:border-solid border-[0.5rem] ${borderImageColor}`
 										: `hidden`
 								}
 								style={{

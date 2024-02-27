@@ -7,7 +7,6 @@ import {
 	initialTwo,
 	slideInRightFinish,
 	slideInLeftInitial,
-	slideInRightInitial,
 } from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
@@ -16,6 +15,7 @@ import {IFeaturesGrid} from "@/types/components";
 // Components
 import Paragraph from "./Elements/Paragraph";
 import FeaturesGridCard from "./Cards/FeaturesGridCard";
+import FeaturesGridImageCard from "./Cards/FeaturesGridImageCard";
 
 const FeaturesGrid: FC<IFeaturesGrid> = ({
 	cardOne,
@@ -49,22 +49,20 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 							className="h-full p-10 rounded-sm bg-lightGrey"
 						>
 							<div className="flex flex-wrap items-center justify-center lg:justify-start">
-								<div className="w-auto p-2">
-									<motion.h4
-										initial={initial}
-										whileInView={fadeInUp}
-										viewport={{once: true}}
-										className="mb-2 text-center lg:text-center text-tiny lg:text-base text-yellow-two"
-									>
-										{cardOne?.subtitle}
-									</motion.h4>
-								</div>
+								<motion.h4
+									initial={initial}
+									whileInView={fadeInUp}
+									viewport={{once: true}}
+									className="mb-2 text-center lg:text-center text-base text-yellow-two"
+								>
+									{cardOne?.subtitle}
+								</motion.h4>
 							</div>
 							<motion.h2
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="mb-3 text-3xl font-semibold text-center lg:text-left"
+								className="mb-3 text-xl lg:text-3xl font-semibold text-center lg:text-left"
 							>
 								{cardOne?.title}
 							</motion.h2>
@@ -75,24 +73,9 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 						</motion.div>
 					</motion.div>
 					{/* Card Two */}
-					<motion.div
-						viewport={{once: true}}
-						initial={slideInRightInitial}
-						whileInView={slideInRightFinish}
-						className={
-							cardTwo?.backgroundImage?.sourceUrl
-								? `w-full p-3 md:w-1/2 min-h-[450px]`
-								: `hidden`
-						}
-					>
-						<div
-							className="h-full p-8 bg-center bg-no-repeat bg-cover rounded-sm bg-lightGrey"
-							style={{
-								clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
-								backgroundImage: `url("${cardTwo?.backgroundImage?.sourceUrl}")`,
-							}}
-						/>
-					</motion.div>
+					<FeaturesGridImageCard
+						backgroundImage={cardTwo?.backgroundImage?.sourceUrl}
+					/>
 					{/* Card Three */}
 					<motion.div
 						viewport={{once: true}}
@@ -194,24 +177,9 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 						<></>
 					)}
 					{/* Last Card */}
-					<motion.div
-						viewport={{once: true}}
-						initial={slideInRightInitial}
-						whileInView={slideInRightFinish}
-						className={
-							lastCard?.backgroundImage?.sourceUrl
-								? `w-full p-3 md:w-1/2 min-h-[450px]`
-								: `hidden`
-						}
-					>
-						<div
-							className="h-full p-8 bg-center bg-no-repeat bg-cover rounded-sm bg-lightGrey"
-							style={{
-								clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
-								backgroundImage: `url("${lastCard?.backgroundImage?.sourceUrl}")`,
-							}}
-						/>
-					</motion.div>
+					<FeaturesGridImageCard
+						backgroundImage={lastCard?.backgroundImage?.sourceUrl}
+					/>
 				</motion.div>
 			</div>
 		</div>

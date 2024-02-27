@@ -10,13 +10,17 @@ import {fadeIn, initial, stagger, initialTwo} from "@/animations/animations";
 // Styling
 import styles from "@/styles/components/Navbar.module.scss";
 
-const SideMenu: FC<ISideMenu> = ({menuActive}) => {
+const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 	const globalContext = useGlobalContext();
 
 	const [newsInsightsSublinksOpen, setNewsInsightsSublinksOpen]: any =
 		useState(false);
 	const [ourServicesSublinksOpen, setOurServicesSublinksOpen]: any =
 		useState(false);
+
+	const toggleMenu = () => {
+		setMenuActive(!menuActive);
+	};
 
 	// Hides or Display Our Services sublinks
 	const displayOurServicesSublinks = () => {
@@ -68,8 +72,9 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 											>
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
 													<Link
+														onClick={toggleMenu}
 														href={item?.node?.url}
-														className="text-black text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
+														className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
 													>
 														{item?.node?.label}
 													</Link>
@@ -98,22 +103,21 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 																globalContext?.ourServicesLinks?.map(
 																	(item: any, keys: any) => (
 																		<Fragment key={keys}>
-																			<Link href={`${item?.node?.url}`}>
-																				<li
-																					className={`${
-																						keys < 1
-																							? "border-t-[1px] border-darkGrey border-opacity-50"
-																							: "border-t-[0px]"
-																					} hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white`}
+																			<li
+																				className={`${
+																					keys < 1
+																						? "border-t-[1px] border-darkGrey border-opacity-50"
+																						: "border-t-[0px]"
+																				} hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white`}
+																			>
+																				<Link
+																					onClick={toggleMenu}
+																					href={`${item?.node?.url}`}
+																					className="block p-4 text-tiny font-semibold"
 																				>
-																					<Link
-																						href={`${item?.node?.url}`}
-																						className="block p-4 text-base font-semibold"
-																					>
-																						{item?.node?.label}
-																					</Link>
-																				</li>
-																			</Link>
+																					{item?.node?.label}
+																				</Link>
+																			</li>
 																		</Fragment>
 																	)
 																)
@@ -130,10 +134,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
 											>
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<span className="text-black text-base font-semibold text-center tracking-[0.05rem]hover:text-blue-two transition-all ease-in-out duration-500">
+													<span className="text-black text-tiny font-semibold text-center tracking-[0.05rem]hover:text-blue-two transition-all ease-in-out duration-500">
 														<Link
+															onClick={toggleMenu}
 															href="/career"
-															className="text-black text-base font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
+															className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
 														>
 															{item?.node?.label}
 														</Link>
@@ -156,8 +161,9 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 														>
 															<li className="hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white">
 																<Link
+																	onClick={toggleMenu}
 																	href="/case-studies"
-																	className="block p-4 text-base font-semibold"
+																	className="block p-4 text-tiny font-semibold"
 																>
 																	Case Studies
 																</Link>
@@ -169,8 +175,9 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										) : (
 											<li className="border-b-[1px] border-yellow-dark border-opacity-50">
 												<Link
+													onClick={toggleMenu}
 													href={`${item?.node?.url}`}
-													className="block py-4 text-base font-semibold text-black hover:text-blue-two"
+													className="block py-4 text-tiny font-semibold text-black hover:text-blue-two"
 												>
 													{item?.node?.label}
 												</Link>
@@ -191,11 +198,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 							whileInView="animate"
 							className="flex flex-col items-center justify-between gap-4"
 						>
-							<h4 className="mb-5 text-base font-semibold tracking-normal text-center uppercase md:text-left text-black">
+							<h4 className="mb-5 text-tiny font-semibold tracking-normal text-center uppercase md:text-left text-black">
 								Contact Links
 							</h4>
 							<div className="flex items-center justify-center gap-4 text-center">
 								<Link
+									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
 								>
@@ -220,6 +228,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 									</svg>
 								</Link>
 								<Link
+									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.twitterLink}`}
 								>
@@ -244,6 +253,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 									</svg>
 								</Link>
 								<Link
+									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.telegramLink}`}
 								>
@@ -297,7 +307,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium text-base tracking-wide text-black hover:text-yellow-two"
+										onClick={toggleMenu}
+										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									>
 										{globalContext?.themesOptionsContent?.email}
@@ -331,7 +342,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive}) => {
 										</svg>
 									</div>
 									<Link
-										className="font-medium text-base tracking-wide text-black hover:text-yellow-two"
+										onClick={toggleMenu}
+										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 										href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									>
 										{globalContext?.themesOptionsContent?.emailTwo}

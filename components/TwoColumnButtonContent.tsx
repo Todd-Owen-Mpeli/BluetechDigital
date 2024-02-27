@@ -56,7 +56,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	return (
 		<>
 			<div className={` py-10 px-4 ${backgroundColor}`}>
-				<div className="container m-auto xl:px-16 flex flex-col lg:flex-row gap-16 lg:gap-x-16">
+				<div className="container m-auto xl:px-16 flex flex-col lg:flex-row gap-6 lg:gap-16">
 					<motion.div
 						initial={initialTwo}
 						variants={stagger}
@@ -70,7 +70,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 text-center lg:text-center text-tiny lg:text-base text-yellow-two"
+							className="mb-2 text-center lg:text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
@@ -78,7 +78,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-black"
+							className="mb-3 text-center font-semibold leading-tight lg:text-left text-xl lg:text-3xl text-black"
 						>
 							{title}
 						</motion.h2>
@@ -101,7 +101,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-full flex flex-col lg:flex-row gap-12 lg:gap-0 pt-0 lg:pt-10"
+						className="w-full flex flex-col lg:flex-row gap-6 lg:gap-12 lg:gap-0 pt-0 lg:pt-10"
 					>
 						<div className="w-full lg:w-[65%] flex flex-col">
 							<motion.button
@@ -111,7 +111,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								onClick={displayContentOne}
 								className={`${
 									columnTwoContent?.buttonText ? "block" : "hidden"
-								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+								} py-3 lg:py-4 px-6 flex flex-row gap-4 text-left text-medium lg:text-lg font-extrabold border-l-[4px] border-solid ${
 									contentOneOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>
@@ -130,7 +130,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								onClick={displayContentTwo}
 								className={`${
 									columnTwoContent?.buttonText ? "block" : "hidden"
-								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+								} py-3 lg:py-4 px-6 flex flex-row gap-4 text-left text-medium lg:text-lg font-extrabold border-l-[4px] border-solid ${
 									contentTwoOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>
@@ -149,7 +149,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 								onClick={displayContentThree}
 								className={`${
 									columnTwoContent?.buttonText ? "block" : "hidden"
-								} py-4 px-6 flex flex-row gap-4 text-left text-lg font-extrabold border-l-[4px] border-solid ${
+								} py-3 lg:py-4 px-6 flex flex-row gap-4 text-left text-medium lg:text-lg font-extrabold border-l-[4px] border-solid ${
 									contentThreeOpen ? "border-yellow-default" : "border-black"
 								}`}
 							>

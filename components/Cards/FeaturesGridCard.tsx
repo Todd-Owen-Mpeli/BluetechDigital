@@ -91,7 +91,7 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-2 text-center lg:text-center text-tiny lg:text-base ${subtitleStyling}`}
+						className={`mb-2 text-center lg:text-center text-base ${subtitleStyling}`}
 					>
 						{subtitle}
 					</motion.h4>
@@ -100,7 +100,7 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 					initial={initial}
 					viewport={{once: true}}
 					whileInView={fadeInUp}
-					className={`mb-3 text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
+					className={`mb-3 text-xl lg:text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
 				>
 					{title}
 				</motion.h2>

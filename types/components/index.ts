@@ -594,6 +594,9 @@ export type IValuesBlocksImageCard = {
 		};
 	};
 };
+export type IFeaturesGridImageCard = {
+	backgroundImage: string;
+};
 export type IJumboContentSectionCard = {
 	title: string;
 	subtitle: string;
@@ -638,6 +641,7 @@ export type IValuesBlocksImageOrMapCard = {
 // Elements
 export type ISideMenu = {
 	menuActive: boolean;
+	setMenuActive: any;
 };
 export type ITitle = {
 	content: string;

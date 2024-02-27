@@ -31,7 +31,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 }) => {
 	return (
 		<>
-			<div id="VideoBlock" className="py-10 px-4 bg-lightGreyTwo">
+			<div className="py-10 px-4 bg-lightGreyTwo">
 				<div className="container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
 						viewport={{once: true}}
@@ -48,7 +48,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="text-center lg:text-left text-paragraph text-yellow-two"
+								className="text-center lg:text-left text-base text-yellow-two"
 							>
 								{subtitle}
 							</motion.h4>
@@ -57,7 +57,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="leading-[2.5rem] my-2 max-w-2xl mx-auto text-center lg:text-left font-semibold text-lg lg:text-3xl"
+								className="leading-[2.5rem] my-2 max-w-2xl mx-auto text-center lg:text-left font-semibold text-xl lg:text-3xl"
 							>
 								{title}
 								<span className="p-2 ml-3 bg-blue-two text-white">

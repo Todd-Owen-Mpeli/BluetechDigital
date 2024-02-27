@@ -39,7 +39,7 @@ const OurServices: FC<IOurServices> = ({
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left text-paragraph text-yellow-two"
+									className="text-center lg:text-left text-base text-yellow-two"
 								>
 									{subtitle}
 								</motion.h4>
@@ -47,7 +47,7 @@ const OurServices: FC<IOurServices> = ({
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="my-2 lg:max-w-3xl text-center lg:text-left font-semibold leading-tight text-4xl lg:text-7xl xl:text-8xl tracking-tighter text-white"
+									className="my-2 lg:max-w-3xl text-center lg:text-left lg:font-semibold leading-tight text-4xl lg:text-7xl xl:text-8xl tracking-tighter text-white"
 								>
 									{title}
 								</motion.h2>

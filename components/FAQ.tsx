@@ -40,7 +40,7 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center text-tiny lg:text-base text-yellow-two"
+							className="text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>

@@ -13,14 +13,14 @@ import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
 const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (
 		<>
-			<div className="flex flex-col-reverse lg:flex-row flex-wrap px-4 lg:p-10 -m-4">
+			<div className="flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:p-10 -m-4">
 				<div className="w-full lg:w-5/12 p-4">
 					<Link
 						href={buttonLink?.url}
 						target={buttonLink?.target}
 						className={buttonLink?.url ? "block group" : "hidden"}
 					>
-						<div className="relative overflow-hidden h-[400px]">
+						<div className="relative overflow-hidden h-[325px] lg:h-[400px]">
 							<Image
 								alt={backgroundImage?.altText}
 								src={backgroundImage?.sourceUrl}
@@ -47,7 +47,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="mb-4 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
+								className="mb-4 text-center font-semibold leading-tight lg:text-left text-xl lg:text-3xl text-white"
 							>
 								{title}
 							</motion.h2>

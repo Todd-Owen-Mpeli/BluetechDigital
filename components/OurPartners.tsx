@@ -32,7 +32,7 @@ const OurPartners: FC<IOurPartners> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-center text-tiny lg:text-base text-yellow-two"
+							className="text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
@@ -40,7 +40,7 @@ const OurPartners: FC<IOurPartners> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-lg lg:text-3xl"
+							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
 						>
 							{title}
 						</motion.h2>

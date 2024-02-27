@@ -300,7 +300,7 @@ const Navbar: FC = () => {
 							<span aria-hidden="true"></span>
 						</button>
 						{/* Hidden Side Menu */}
-						<SideMenu menuActive={menuActive} />
+						<SideMenu menuActive={menuActive} setMenuActive={setMenuActive} />
 					</motion.div>
 				</div>
 			</nav>

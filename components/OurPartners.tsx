@@ -1,9 +1,7 @@
 // Imports
-import {
-	fadeIn,
+import fadeInUp, {
 	initial,
 	stagger,
-	initialTwo,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import Image from "next/image";
@@ -29,16 +27,16 @@ const OurPartners: FC<IOurPartners> = ({
 				<div className="container px-0 mx-auto">
 					<div className="flex flex-col items-center">
 						<motion.h4
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
 						<motion.h2
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
 						>

@@ -1,10 +1,8 @@
 // Imports
 import {
-	fadeIn,
 	initial,
 	stagger,
 	fadeInUp,
-	initialTwo,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import {motion} from "framer-motion";
@@ -12,7 +10,6 @@ import {FC, Fragment, useState} from "react";
 import {IFAQ} from "@/types/components/index";
 
 // Components
-import FAQCard from "./Cards/FAQCard";
 import Paragraph from "./Elements/Paragraph";
 
 const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
@@ -39,16 +36,16 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 						className="flex flex-col items-center"
 					>
 						<motion.h4
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
 						<motion.h2
-							initial={initialTwo}
-							whileInView={fadeIn}
+							initial={initial}
+							whileInView={fadeInUp}
 							viewport={{once: true}}
 							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
 						>

@@ -7,6 +7,7 @@ import {
 	initial,
 	fadeInUp,
 	initialTwo,
+	arrayLoopStaggerChildren,
 } from "@/animations/animations";
 import Image from "next/image";
 import {motion} from "framer-motion";
@@ -17,6 +18,7 @@ import {IPagination} from "@/types/components/index";
 import Paragraph from "./Paragraph";
 import BlogsCard from "../Cards/BlogsCard";
 import TestimonialsCard from "../Cards/TestimonialsCard";
+import NewsInsightsCard from "../Cards/NewsInsightsCard";
 
 const Pagination: FC<IPagination> = ({
 	contentType,
@@ -51,59 +53,72 @@ const Pagination: FC<IPagination> = ({
 
 	return (
 		<>
-			<motion.div
-				initial={initial}
-				variants={stagger}
-				whileInView="animate"
-				viewport={{once: true}}
-				className={`${tailwindStyling}`}
-			>
+			<div className={`${tailwindStyling}`}>
 				{currentContent?.length > 0 ? (
 					currentContent?.map((item: any, keys: number) => (
 						<Fragment key={keys}>
-							{contentType === `Gallery` ? (
-								<>
-									<Image
-										alt={item?.altText}
-										src={item?.sourceUrl}
-										width={item?.mediaDetails?.width}
-										height={item?.mediaDetails?.height}
-										className={
-											item?.sourceUrl
-												? `block object-cover object-center w-full h-[175px] ${
-														itemsPerPage === 12
-															? "sm:h-[250px]"
-															: "sm:h-[250px] xl:h-[205px]"
-												  }`
-												: `hidden`
-										}
-										style={{
-											clipPath: `polygon(94% 0, 100% 6%, 100% 100%, 0 100%, 0 0)`,
-										}}
-									/>
-								</>
-							) : contentType === `BlogsCard` ? (
-								<>
-									<BlogsCard
-										uri={item?.node?.uri}
-										date={item?.node?.date}
-										title={item?.node?.title}
-										excerpt={item?.node?.excerpt}
-										featuredImage={item?.node?.featuredImage}
-									/>
-								</>
-							) : contentType === `TestimonialsCard` ? (
-								<>
-									<TestimonialsCard
-										name={item?.node?.testimonialReview?.name}
-										image={item?.node?.testimonialReview?.image}
-										position={item?.node?.testimonialReview?.position}
-										paragraph={item?.node?.testimonialReview?.paragraph}
-									/>
-								</>
-							) : (
-								<></>
-							)}
+							<motion.div
+								custom={keys}
+								initial={initial}
+								whileInView="animate"
+								viewport={{once: true}}
+								variants={arrayLoopStaggerChildren}
+								className="w-full"
+							>
+								{contentType === `Gallery` ? (
+									<>
+										<Image
+											alt={item?.altText}
+											src={item?.sourceUrl}
+											width={item?.mediaDetails?.width}
+											height={item?.mediaDetails?.height}
+											className={
+												item?.sourceUrl
+													? `block object-cover object-center w-full h-[175px] ${
+															itemsPerPage === 12
+																? "sm:h-[250px]"
+																: "sm:h-[250px] xl:h-[205px]"
+													  }`
+													: `hidden`
+											}
+											style={{
+												clipPath: `polygon(94% 0, 100% 6%, 100% 100%, 0 100%, 0 0)`,
+											}}
+										/>
+									</>
+								) : contentType === `BlogsCard` ? (
+									<>
+										<BlogsCard
+											uri={item?.node?.uri}
+											date={item?.node?.date}
+											title={item?.node?.title}
+											excerpt={item?.node?.excerpt}
+											featuredImage={item?.node?.featuredImage}
+										/>
+									</>
+								) : contentType === `TestimonialsCard` ? (
+									<>
+										<TestimonialsCard
+											name={item?.node?.testimonialReview?.name}
+											image={item?.node?.testimonialReview?.image}
+											position={item?.node?.testimonialReview?.position}
+											paragraph={item?.node?.testimonialReview?.paragraph}
+										/>
+									</>
+								) : contentType === `NewsInsightsCard` ? (
+									<>
+										<NewsInsightsCard
+											uri={item?.node?.uri}
+											title={item?.node?.title}
+											paragraph={item?.node?.excerpt}
+											featuredImage={item?.node?.featuredImage}
+										/>
+									</>
+								) : (
+									<></>
+								)}
+								selectedPrograms
+							</motion.div>
 						</Fragment>
 					))
 				) : (
@@ -143,7 +158,7 @@ const Pagination: FC<IPagination> = ({
 						</div>
 					</>
 				)}
-			</motion.div>
+			</div>
 			<div>
 				{totalPages > 1 && contentArray?.length > 0 ? (
 					<>

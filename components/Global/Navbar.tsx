@@ -102,7 +102,7 @@ const Navbar: FC = () => {
 								priority
 								width={500}
 								height={500}
-								alt="BluetechDigital Logo"
+								alt="Bluetech Digital Logo"
 								src="/svg/logo/BluetechDigital-Logo-color.svg"
 								className={`${
 									scrollPosition > 50 ? "block" : "hidden group-hover:block"
@@ -112,7 +112,7 @@ const Navbar: FC = () => {
 								priority
 								width={500}
 								height={500}
-								alt="BluetechDigital Logo White"
+								alt="Bluetech Digital Logo White"
 								src="/svg/logo/BluetechDigital-Logo-white.svg"
 								className={`${
 									scrollPosition > 50 ? "hidden" : "block group-hover:hidden"

@@ -1,16 +1,16 @@
 // Imports
+import {
+	fadeIn,
+	initial,
+	stagger,
+	fadeInUp,
+	initialTwo,
+} from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {IContactInfo} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
-import {
-	initial,
-	fadeInUp,
-	stagger,
-	fadeIn,
-	initialTwo,
-} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
@@ -26,7 +26,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="lg:max-w-lg mb-6 text-center lg:text-left font-semibold leading-tight text-lg lg:text-3xl text-black"
+						className="lg:max-w-lg mb-6 text-center lg:text-left font-semibold leading-tight text-xl lg:text-3xl text-black"
 					>
 						{title}
 					</motion.h2>

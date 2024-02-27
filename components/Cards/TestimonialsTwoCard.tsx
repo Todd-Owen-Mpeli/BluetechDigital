@@ -64,7 +64,7 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 							<Image
 								width={500}
 								height={500}
-								alt="BluetechDigital Logo"
+								alt="Bluetech Digital Logo"
 								src="/svg/logo/BluetechDigital-Logo-color.svg"
 								className="object-contain object-center w-full h-10"
 							/>

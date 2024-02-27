@@ -156,7 +156,7 @@ export type IThemesOptionsContent = {
 	copyrightText: string;
 	facebookLink: string;
 	twitterLink: string;
-	telegramLink: string;
+	linkedinLink: string;
 	textarea: string;
 	awardsCertificationsGallery: [
 		{

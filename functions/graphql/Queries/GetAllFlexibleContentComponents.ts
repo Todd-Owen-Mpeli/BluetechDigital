@@ -529,6 +529,12 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 											}
+											... on ${postTypeFlexibleContent}_ContactForm {
+												fieldGroupName
+												title
+												formTitle
+												paragraph
+											}
 											... on ${postTypeFlexibleContent}_Maintenance {
 												fieldGroupName
 												title

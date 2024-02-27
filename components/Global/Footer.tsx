@@ -43,7 +43,7 @@ const Footer: FC = () => {
 									priority
 									width={500}
 									height={500}
-									alt="BluetechDigital Logo"
+									alt="Bluetech Digital Logo"
 									src="/svg/logo/BluetechDigital-Logo-color.svg"
 									className="object-contain object-center w-full h-[75px]"
 								/>
@@ -206,7 +206,7 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={`${globalContext?.themesOptionsContent?.telegramLink}`}
+									href={`${globalContext?.themesOptionsContent?.linkedinLink}`}
 								>
 									<svg
 										height="100%"

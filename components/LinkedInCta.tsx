@@ -20,7 +20,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 				variants={stagger}
 				whileInView="animate"
 				viewport={{once: true}}
-				className="relative pb-12 pt-2 lg:pb-10"
+				className="relative px-4 pb-12 pt-2 lg:pb-10"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 					clipPath: `polygon(77% 0, 100% 0, 100% 98%, 21% 89%, 0 98%, 0 0)`,

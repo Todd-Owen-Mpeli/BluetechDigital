@@ -17,7 +17,7 @@ import styles from "../styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import VideoWrapper from "./Elements/VideoWrapper";
+import HeroVideoWrapper from "./Elements/HeroVideoWrapper";
 
 const Hero: FC<IHero> = ({
 	video,
@@ -243,7 +243,11 @@ const Hero: FC<IHero> = ({
 							}")`,
 						}}
 					>
-						{displayVideo ? <VideoWrapper>{video}</VideoWrapper> : <></>}
+						{displayVideo ? (
+							<HeroVideoWrapper>{video}</HeroVideoWrapper>
+						) : (
+							<></>
+						)}
 					</motion.div>
 					<motion.div
 						viewport={{once: true}}

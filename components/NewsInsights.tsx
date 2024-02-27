@@ -7,6 +7,7 @@ import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
+import Pagination from "./Elements/Pagination";
 import NewsInsightsCard from "./Cards/NewsInsightsCard";
 
 const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
@@ -50,28 +51,12 @@ const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 						tailwindStyling="max-w-3xl mx-auto text-black text-paragraph"
 					/>
 				</motion.div>
-				<motion.div
-					initial={initial}
-					variants={stagger}
-					whileInView="animate"
-					viewport={{once: true}}
-					className="grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
-				>
-					{globalContext?.newsInsights?.length > 0 ? (
-						globalContext?.newsInsights?.map((item: any, keys: any) => (
-							<Fragment key={keys}>
-								<NewsInsightsCard
-									uri={item?.node?.uri}
-									title={item?.node?.title}
-									paragraph={item?.node?.excerpt}
-									featuredImage={item?.node?.featuredImage}
-								/>
-							</Fragment>
-						))
-					) : (
-						<></>
-					)}
-				</motion.div>
+				<Pagination
+					contentType="NewsInsightsCard"
+					numberOfItemsRenderedPerPage={12}
+					contentArray={globalContext?.newsInsights}
+					tailwindStyling={`grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3`}
+				/>
 			</div>
 		</>
 	);

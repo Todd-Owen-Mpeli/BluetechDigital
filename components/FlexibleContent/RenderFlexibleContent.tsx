@@ -23,6 +23,7 @@ import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
 import TestimonialsTwo from "../TestimonialsTwo";
 import FeaturesGridTwo from "../FeaturesGridTwo";
+import TestimonialsGrid from "../TestimonialsGrid";
 import TitleContentImage from "../TitleContentImage";
 import JumboContentImage from "../JumboContentImage";
 import TestimonialsSlider from "../TestimonialsSlider";
@@ -159,7 +160,13 @@ const RenderFlexibleContent: FC = () => {
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Testimonials` ? (
-							<></>
+							<>
+								<TestimonialsGrid
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+								/>
+							</>
 						) : item?.fieldGroupName ===
 						  `${FlexibleContent}_TestimonialsSlider` ? (
 							<>

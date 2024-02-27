@@ -117,7 +117,6 @@ const Pagination: FC<IPagination> = ({
 								) : (
 									<></>
 								)}
-								selectedPrograms
 							</motion.div>
 						</Fragment>
 					))

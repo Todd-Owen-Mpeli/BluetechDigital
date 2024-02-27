@@ -1,8 +1,10 @@
 // Imports
 import {
+	fadeIn,
 	initial,
 	stagger,
 	fadeInUp,
+	initialTwo,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import {motion} from "framer-motion";
@@ -37,27 +39,27 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 						className="flex flex-col items-center"
 					>
 						<motion.h4
-							initial={initial}
-							whileInView={fadeInUp}
+							initial={initialTwo}
+							whileInView={fadeIn}
 							viewport={{once: true}}
 							className="text-center text-base text-yellow-two"
 						>
 							{subtitle}
 						</motion.h4>
-						<motion.h3
-							initial={initial}
-							whileInView={fadeInUp}
+						<motion.h2
+							initial={initialTwo}
+							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-3 max-w-xl mx-auto xl:mx-0 uppercase text-black text-center font-extrabold text-lg md:text-xl"
+							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
 						>
 							{title}
-						</motion.h3>
+						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black text-base text-center"
+							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
 						/>
 					</motion.div>
-					<div className="w-full relative py-0 lg:py-20 lg:py-24 overflow-hidden">
+					<div className="w-full relative py-0 lg:py-12 overflow-hidden">
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -68,20 +70,20 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 							<div className="w-full lg:w-1/3 py-8 px-4 mb-15 lg:mb-0">
 								<div className="max-w-xl mx-auto lg:mx-0 lg:max-w-full flex flex-wrap -mx-2 lg:flex-col lg:max-w-sm border-b lg:border-b-0 lg:border-r-2 border-blue-default">
 									<div className="w-full lg:w-full px-2 mb-15">
-										<motion.h3
+										<motion.h2
 											initial={initial}
 											whileInView={fadeInUp}
 											viewport={{once: true}}
-											className="uppercase text-black text-center sm:text-left font-extrabold text-lg mb-9"
+											className="text-black text-center sm:text-left font-extrabold text-lg lg:text-xl mb-9"
 										>
 											Getting Started
-										</motion.h3>
+										</motion.h2>
 										<motion.ul
 											initial={initial}
 											variants={stagger}
 											whileInView="animate"
 											viewport={{once: true}}
-											className="flex flex-col sm:items-baseline items-center justify-center"
+											className="flex flex-col items-baseline justify-center"
 										>
 											{faqGrid?.length > 0 ? (
 												faqGrid?.map((item: any, keys: number) => (
@@ -117,7 +119,7 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 																		strokeWidth="2"
 																	></circle>
 																</svg>
-																<span className="ml-3 text-center sm:text-left">
+																<span className="ml-3 text-left">
 																	{item?.card?.title}
 																</span>
 															</button>
@@ -135,14 +137,14 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 								<div className="max-w-xl xl:max-w-3xl mx-auto py-8 lg:py-0 lg:mr-0">
 									{selectedItemIndex !== null && (
 										<>
-											<motion.h3
+											<motion.h2
 												initial={initial}
 												whileInView={fadeInUp}
 												viewport={{once: true}}
-												className="uppercase text-black text-center sm:text-left font-extrabold text-lg mb-6"
+												className="text-black text-center sm:text-left font-extrabold text-lg lg:text-xl mb-6"
 											>
 												{faqGrid[selectedItemIndex]?.card?.title}
-											</motion.h3>
+											</motion.h2>
 											<Paragraph
 												content={faqGrid[selectedItemIndex]?.card?.paragraph}
 												tailwindStyling=" text-black text-base text-left"

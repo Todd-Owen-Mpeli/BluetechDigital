@@ -349,7 +349,7 @@ export const getAllFlexibleContentComponents = async (
 														title
 														subtitle
 														paragraph
-														buttonLinks {
+														buttonLink {
 															url
 															title
 															target
@@ -360,6 +360,29 @@ export const getAllFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_ServicesGrid {
+           										fieldGroupName
+           										servicesGrid {
+           											card {
+           												title
+           												subtitle
+														paragraph
+           												image {
+           													altText
+           													sourceUrl
+           													mediaDetails {
+           														height
+           														width
+           													}
+           												}
+           												buttonLink {
+           													url
+           													title
+           													target
+           												}
+           											}
+           										}
+           									}
 											... on ${postTypeFlexibleContent}_Testimonials {
 												fieldGroupName
 												title

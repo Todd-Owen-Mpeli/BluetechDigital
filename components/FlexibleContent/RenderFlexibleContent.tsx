@@ -18,6 +18,7 @@ import OurServices from "../OurServices";
 import ContactForm from "../ContactForm";
 import FeaturesGrid from "../FeaturesGrid";
 import NewsInsights from "../NewsInsights";
+import ServicesGrid from "../ServicesGrid";
 import ErrorPage from "../Global/ErrorPage";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
@@ -158,6 +159,10 @@ const RenderFlexibleContent: FC = () => {
 									buttonLink={item?.buttonLink}
 									servicesGrid={item?.servicesGrid}
 								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_ServicesGrid` ? (
+							<>
+								<ServicesGrid servicesGrid={item?.servicesGrid} />
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_Testimonials` ? (
 							<>

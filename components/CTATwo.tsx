@@ -22,7 +22,7 @@ const CTATwo: FC<ICTATwo> = ({
 				variants={stagger}
 				whileInView="animate"
 				viewport={{once: true}}
-				className="flex flex-col lg:flex-row justify-around py-6 px-4 items-center"
+				className="flex flex-col lg:flex-row justify-around p-4 items-center"
 				style={{
 					backgroundColor: `${backgroundColor}`,
 				}}
@@ -33,7 +33,7 @@ const CTATwo: FC<ICTATwo> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="text-center font-bold leading-[2.35rem] lg:text-left text-xl p-4 pl-0 text-white"
+						className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left sm:leading-9 font-normal text-lg p-4 pl-0 text-white"
 					>
 						{title}
 						<span

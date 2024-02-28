@@ -224,13 +224,37 @@ export type IOurServices = {
 				title: string;
 				subtitle: string;
 				paragraph: string;
-				buttonLinks: {
+				buttonLink: {
 					url: string;
 					title: string;
 					target: string;
 				};
 				backgroundImage: {
 					sourceUrl: string;
+				};
+			};
+		}
+	];
+};
+export type IServicesGrid = {
+	servicesGrid: [
+		{
+			card: {
+				title: string;
+				subtitle: string;
+				paragraph: string;
+				buttonLink: {
+					url: string;
+					title: string;
+					target: string;
+				};
+				image: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
 				};
 			};
 		}

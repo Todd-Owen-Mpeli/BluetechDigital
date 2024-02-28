@@ -158,11 +158,11 @@ const OurServices: FC<IOurServices> = ({
 											</div>
 											<div>
 												<Link
-													href={`${item?.card?.buttonLinks?.url}`}
-													target={item?.card?.buttonLinks?.target}
+													href={`${item?.card?.buttonLink?.url}`}
+													target={item?.card?.buttonLink?.target}
 													className="group inline-flex py-3 px-6 items-center justify-center text-bse font-medium text-white hover:text-black bg-transparent hover:bg-white border-2 border-white transition duration-200"
 												>
-													{item?.card?.buttonLinks?.title}
+													{item?.card?.buttonLink?.title}
 												</Link>
 											</div>
 										</div>

@@ -380,6 +380,9 @@ export const getAllFlexibleContentComponents = async (
            													title
            													target
            												}
+														bulletPoints {
+                											text
+                										}
            											}
            										}
            									}

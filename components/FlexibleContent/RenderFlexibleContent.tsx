@@ -40,7 +40,7 @@ const RenderFlexibleContent: FC = () => {
 	return (
 		<>
 			{content?.content?.length > 0 ? (
-				content?.content?.map((item: any, keys: any) => (
+				content?.content?.map((item: any, keys: number) => (
 					<section key={keys}>
 						{item?.fieldGroupName === `${FlexibleContent}_Hero` ? (
 							<>

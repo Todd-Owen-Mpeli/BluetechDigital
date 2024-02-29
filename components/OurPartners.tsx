@@ -58,7 +58,7 @@ const OurPartners: FC<IOurPartners> = ({
 							} lg:items-center lg:justify-between pt-12`}
 						>
 							{imageGrid?.length > 0 ? (
-								imageGrid.map((item: any, keys: any) => (
+								imageGrid.map((item: any, keys: number) => (
 									<Fragment key={keys}>
 										<motion.div
 											custom={keys}

@@ -256,6 +256,11 @@ export type IServicesGrid = {
 						height: number;
 					};
 				};
+				bulletPoints: [
+					{
+						text: string;
+					}
+				];
 			};
 		}
 	];
@@ -668,7 +673,6 @@ export type IValuesBlocksImageOrMapCard = {
 };
 
 // Elements
-
 export type ITitle = {
 	content: string;
 	tailwindStyling: string;

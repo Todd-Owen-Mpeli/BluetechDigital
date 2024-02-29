@@ -73,7 +73,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 				>
 					{globalContext?.newsInsightsThreeCards?.length > 0 ? (
 						globalContext?.newsInsightsThreeCards?.map(
-							(item: any, keys: any) => (
+							(item: any, keys: number) => (
 								<Fragment key={keys}>
 									<motion.div
 										custom={keys}

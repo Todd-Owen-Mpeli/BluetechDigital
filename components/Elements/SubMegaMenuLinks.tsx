@@ -47,25 +47,27 @@ const SubMegaMenuLinks: FC = () => {
 						>
 							{/* Menu Link*/}
 							{globalContext?.ourServicesLinks?.length > 0 ? (
-								globalContext?.ourServicesLinks?.map((item: any, keys: any) => (
-									<Fragment key={keys}>
-										<motion.li
-											custom={keys}
-											initial={initial}
-											whileInView="animate"
-											viewport={{once: true}}
-											variants={arrayLoopStaggerChildren}
-											className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default"
-										>
-											<Link
-												href={`${item?.node?.url}`}
-												className="block p-4 text-tiny text-black hover:text-white"
+								globalContext?.ourServicesLinks?.map(
+									(item: any, keys: number) => (
+										<Fragment key={keys}>
+											<motion.li
+												custom={keys}
+												initial={initial}
+												whileInView="animate"
+												viewport={{once: true}}
+												variants={arrayLoopStaggerChildren}
+												className="w-full group-scoped hover:bg-blue-default border-b-[2px] border-lightGrey hover:border-blue-default"
 											>
-												{item?.node?.label}
-											</Link>
-										</motion.li>
-									</Fragment>
-								))
+												<Link
+													href={`${item?.node?.url}`}
+													className="block p-4 text-tiny text-black hover:text-white"
+												>
+													{item?.node?.label}
+												</Link>
+											</motion.li>
+										</Fragment>
+									)
+								)
 							) : (
 								<></>
 							)}

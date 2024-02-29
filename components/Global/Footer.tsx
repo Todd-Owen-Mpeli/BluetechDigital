@@ -373,7 +373,7 @@ const Footer: FC = () => {
 					>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}
-							tailwindStyling="text-black text-sm text-center lg:text-left"
+							tailwindStyling="max-w-lg mx-auto lg:mx-0 text-black text-sm text-center lg:text-left"
 						/>
 					</motion.div>
 					<motion.ul

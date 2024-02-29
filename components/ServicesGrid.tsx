@@ -41,7 +41,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 										whileInView="animate"
 										viewport={{once: true}}
 										variants={arrayLoopStaggerChildren}
-										className="py-8lg:py-12 px-4"
+										className="py-8 lg:py-12 px-4"
 									>
 										<motion.div
 											initial={initial}

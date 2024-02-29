@@ -69,6 +69,11 @@ export const getAllFlexibleContentComponents = async (
 												fieldGroupName
 												title
 												paragraph
+												buttonLink {
+													url
+													title
+													target
+												}
 												backgroundImage {
 													sourceUrl
 												}
@@ -304,6 +309,15 @@ export const getAllFlexibleContentComponents = async (
 												title
 												paragraph
 												displayParagraph
+											}
+											... on ${postTypeFlexibleContent}_BenefitsStats {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												benefitsGrid {
+													text
+												}
 											}
 											... on ${postTypeFlexibleContent}_OurPartners {
 												fieldGroupName

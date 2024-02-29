@@ -20,6 +20,7 @@ import FeaturesGrid from "../FeaturesGrid";
 import NewsInsights from "../NewsInsights";
 import ServicesGrid from "../ServicesGrid";
 import ErrorPage from "../Global/ErrorPage";
+import BenefitsStats from "../BenefitsStats";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
 import TestimonialsTwo from "../TestimonialsTwo";
@@ -36,6 +37,7 @@ import NewsInsightsThreeCards from "../NewsInsightsThreeCards";
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
 	const FlexibleContent = content?.postTypeFlexibleContent;
+	// BenefitsStats
 
 	return (
 		<>
@@ -64,6 +66,7 @@ const RenderFlexibleContent: FC = () => {
 								<HeroTwo
 									title={item?.title}
 									paragraph={item?.paragraph}
+									buttonLink={item?.buttonLink}
 									backgroundImage={item?.backgroundImage?.sourceUrl}
 								/>
 							</>
@@ -147,6 +150,15 @@ const RenderFlexibleContent: FC = () => {
 									subtitle={item?.subtitle}
 									paragraph={item?.paragraph}
 									imageGrid={item?.imageGrid}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_BenefitsStats` ? (
+							<>
+								<BenefitsStats
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
+									benefitsGrid={item?.benefitsGrid}
 								/>
 							</>
 						) : item?.fieldGroupName === `${FlexibleContent}_OurServices` ? (

@@ -245,7 +245,7 @@ const Footer: FC = () => {
 							>
 								{globalContext?.footerMenuLinks?.length > 0 ? (
 									globalContext?.footerMenuLinks?.map(
-										(item: any, keys: any) => (
+										(item: any, keys: number) => (
 											<Fragment key={keys}>
 												{item?.node?.label === "Our Services" ? (
 													<>
@@ -303,7 +303,7 @@ const Footer: FC = () => {
 							>
 								{globalContext?.ourServicesLinks?.length > 0 ? (
 									globalContext?.ourServicesLinks?.map(
-										(item: any, keys: any) => (
+										(item: any, keys: number) => (
 											<Fragment key={keys}>
 												<motion.li
 													className="px-0"
@@ -336,7 +336,7 @@ const Footer: FC = () => {
 								{globalContext?.themesOptionsContent
 									?.awardsCertificationsGallery?.length > 0 ? (
 									globalContext?.themesOptionsContent?.awardsCertificationsGallery?.map(
-										(item: any, keys: any) => (
+										(item: any, keys: number) => (
 											<Fragment key={keys}>
 												<motion.div
 													custom={keys}
@@ -384,7 +384,7 @@ const Footer: FC = () => {
 						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
 						{globalContext?.copyrightLinks?.length > 0 ? (
-							globalContext?.copyrightLinks?.map((item: any, keys: any) => (
+							globalContext?.copyrightLinks?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
 									<motion.li
 										custom={keys}

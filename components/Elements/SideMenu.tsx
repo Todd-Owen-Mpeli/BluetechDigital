@@ -101,7 +101,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 															{/* Menu Link*/}
 															{globalContext?.ourServicesLinks?.length > 0 ? (
 																globalContext?.ourServicesLinks?.map(
-																	(item: any, keys: any) => (
+																	(item: any, keys: number) => (
 																		<Fragment key={keys}>
 																			<li
 																				className={`${

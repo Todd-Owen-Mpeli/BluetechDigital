@@ -202,6 +202,14 @@ export const getAllPreviewFlexibleContentComponents = async (
 																width
 															}
 														}
+														smallImage {
+															altText
+															sourceUrl
+															mediaDetails {
+																height
+																width
+															}
+														}
 													}
 												}
 											}
@@ -344,7 +352,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 														title
 														subtitle
 														paragraph
-														buttonLinks {
+														buttonLink {
 															url
 															title
 															target
@@ -355,11 +363,37 @@ export const getAllPreviewFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_ServicesGrid {
+           										fieldGroupName
+           										servicesGrid {
+           											card {
+           												title
+           												subtitle
+														paragraph
+           												image {
+           													altText
+           													sourceUrl
+           													mediaDetails {
+           														height
+           														width
+           													}
+           												}
+           												buttonLink {
+           													url
+           													title
+           													target
+           												}
+           											}
+           										}
+           									}
 											... on ${postTypeFlexibleContent}_Testimonials {
 												fieldGroupName
 												title
 												subtitle
 												paragraph
+											}
+											... on ${postTypeFlexibleContent}_TestimonialsSlider {
+												fieldGroupName
 											}
 											... on ${postTypeFlexibleContent}_TestimonialsTwo {
 												fieldGroupName
@@ -441,6 +475,18 @@ export const getAllPreviewFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
+												faqGrid {
+													card {
+														title
+														paragraph
+													}
+												}
+											}
+											... on ${postTypeFlexibleContent}_FaqTwo {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
 												buttonLink {
 													url
 													title
@@ -454,7 +500,7 @@ export const getAllPreviewFlexibleContentComponents = async (
 														width
 													}
 												}
-												faqContent {
+												faqGrid {
 													card {
 														title
 														paragraph
@@ -471,7 +517,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_CtaTwo {
@@ -502,6 +553,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_ContactInfo {
 												fieldGroupName
 												title
+												paragraph
+											}
+											... on ${postTypeFlexibleContent}_ContactForm {
+												fieldGroupName
+												title
+												formTitle
 												paragraph
 											}
 											... on ${postTypeFlexibleContent}_Maintenance {

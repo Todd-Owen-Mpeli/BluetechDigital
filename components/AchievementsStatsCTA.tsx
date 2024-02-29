@@ -44,7 +44,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						} px-4 py-10 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
 					>
 						{achievements?.length > 0 ? (
-							achievements?.map((item: any, keys: any) => (
+							achievements?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
 									<motion.div
 										initial={slideInRightInitial}

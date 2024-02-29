@@ -126,7 +126,7 @@ const OurServices: FC<IOurServices> = ({
 					</div>
 					<div className="w-full relative grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 py-6 lg:py-6 px-0 sm:px-4 xl:px-0 gap-6 items-center justify-center">
 						{servicesGrid?.length > 0 ? (
-							servicesGrid.map((item: any, keys: any) => (
+							servicesGrid.map((item: any, keys: number) => (
 								<Fragment key={keys}>
 									<>
 										<div

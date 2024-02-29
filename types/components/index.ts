@@ -112,6 +112,11 @@ export type ICTATwo = {
 export type IHeroTwo = {
 	title: string;
 	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	backgroundImage: string;
 };
 export type IGallery = {
@@ -309,6 +314,16 @@ export type INewsInsights = {
 	title: string;
 	italic: string;
 	paragraph: string;
+};
+export type IBenefitsStats = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	benefitsGrid: [
+		{
+			text: string;
+		}
+	];
 };
 export type ITitleParagraph = {
 	title: string;

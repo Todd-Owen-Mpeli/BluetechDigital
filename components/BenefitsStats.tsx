@@ -27,7 +27,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 				}}
 			>
 				<div className="container px-0 mx-auto flex flex-col lg:flex-row gap-6 lg:gap-4 xl:gap-32">
-					<div className="py-10 px-4 lg:px-8 xl:px-0 bg-blue-default lg:bg-blue-darkerTwo/[0] flex flex-col items-center w-full lg:w-[50%] xl:w-[35%]">
+					<div className="py-10 px-4 lg:px-8 xl:px-0 bg-blue-default lg:bg-blue-darkerTwo/[0] flex flex-col items-center w-full lg:w-[45%] xl:w-[35%]">
 						<motion.h4
 							initial={initial}
 							whileInView={fadeInUp}
@@ -49,7 +49,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 							tailwindStyling="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center lg:text-left"
 						/>
 					</div>
-					<div className="py-10 px-4 md:px-8 max-w-6xl mx-auto bg-white w-full lg:w-[50%] xl:w-[65%] grid grid-cols-2 md:grid-cols-2 gap-4 lg:gap-0 items-center justify-start md:justify-center">
+					<div className="py-10 px-6 md:px-8 xl:pl-28 max-w-6xl mx-auto bg-white w-full lg:w-[55%] xl:w-[65%] grid grid-cols-2 md:grid-cols-2 gap-4 lg:gap-0 items-center justify-start md:justify-center">
 						{benefitsGrid?.length > 0 ? (
 							benefitsGrid?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
@@ -69,11 +69,11 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 												className="block mr-5 w-4 h-4 md:w-7 md:h-7"
 												xmlns="http://www.w3.org/2000/svg"
 											>
-												<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+												<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 												<g
 													id="SVGRepo_tracerCarrier"
-													stroke-linecap="round"
-													stroke-linejoin="round"
+													strokeLinecap="round"
+													strokeLinejoin="round"
 												></g>
 												<g id="SVGRepo_iconCarrier">
 													<path d="M28.998 8.531l-2.134-2.134c-0.394-0.393-1.030-0.393-1.423 0l-12.795 12.795-6.086-6.13c-0.393-0.393-1.029-0.393-1.423 0l-2.134 2.134c-0.393 0.394-0.393 1.030 0 1.423l8.924 8.984c0.393 0.393 1.030 0.393 1.423 0l15.648-15.649c0.393-0.392 0.393-1.030 0-1.423z"></path>{" "}
@@ -82,7 +82,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 										</span>
 										<Paragraph
 											content={item?.text}
-											tailwindStyling="text-black text-tiny lg:text-base text-left"
+											tailwindStyling="text-black text-tiny xl:text-base text-left"
 										/>
 									</motion.div>
 								</Fragment>

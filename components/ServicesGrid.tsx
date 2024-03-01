@@ -1,9 +1,11 @@
 // Imports
 import {
-	fadeInUp,
 	initial,
 	stagger,
+	fadeInUp,
 	arrayLoopStaggerChildren,
+	initialTwo,
+	fadeIn,
 } from "../animations/animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -92,11 +94,64 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															target={item?.card?.buttonLink?.target}
 															className="absolute bottom-0 left-0 z-10 m-4 hidden lg:block"
 														>
-															<ButtonBorderSliced
-																fullWidth={false}
-																tailwindColor="white"
-																title={item?.card?.buttonLink?.title}
-															/>
+															<motion.button
+																initial={initialTwo}
+																whileInView={fadeIn}
+																viewport={{once: true}}
+																className={
+																	item?.card?.buttonLink?.url
+																		? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base text-black hover:text-white w-fit border-2 border-solid border-white bg-white hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500`
+																		: `hidden`
+																}
+															>
+																<span>{item?.card?.buttonLink?.title}</span>
+																<span className="hidden group-hover:block">
+																	<svg
+																		height="35"
+																		width="30.237"
+																		viewBox="0 0 30.237 35"
+																		xmlns="http://www.w3.org/2000/svg"
+																	>
+																		<g transform="translate(-4906.763 143)">
+																			<path
+																				d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+																				transform="translate(4870 -143)"
+																				fill="#e4a002"
+																			></path>
+																			<g transform="translate(4890.311 -1111.861)">
+																				<path
+																					d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																					transform="translate(0 0)"
+																					fill="#ffffff"
+																				></path>
+																			</g>
+																		</g>
+																	</svg>
+																</span>
+																<span className="block group-hover:hidden">
+																	<svg
+																		height="35"
+																		width="30.237"
+																		viewBox="0 0 30.237 35"
+																		xmlns="http://www.w3.org/2000/svg"
+																	>
+																		<g transform="translate(-4906.763 143)">
+																			<path
+																				d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+																				transform="translate(4870 -143)"
+																				fill="#e4a002"
+																			></path>
+																			<g transform="translate(4890.311 -1111.861)">
+																				<path
+																					d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																					transform="translate(0 0)"
+																					fill="#000"
+																				></path>
+																			</g>
+																		</g>
+																	</svg>
+																</span>
+															</motion.button>
 														</Link>
 													</div>
 												</motion.div>
@@ -244,11 +299,64 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															target={item?.card?.buttonLink?.target}
 															className="absolute bottom-0 left-0 z-10 m-4 hidden lg:block"
 														>
-															<ButtonBorderSliced
-																fullWidth={false}
-																tailwindColor="white"
-																title={item?.card?.buttonLink?.title}
-															/>
+															<motion.button
+																initial={initialTwo}
+																whileInView={fadeIn}
+																viewport={{once: true}}
+																className={
+																	item?.card?.buttonLink?.url
+																		? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base text-black hover:text-white w-fit border-2 border-solid border-white bg-white hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500`
+																		: `hidden`
+																}
+															>
+																<span>{item?.card?.buttonLink?.title}</span>
+																<span className="hidden group-hover:block">
+																	<svg
+																		height="35"
+																		width="30.237"
+																		viewBox="0 0 30.237 35"
+																		xmlns="http://www.w3.org/2000/svg"
+																	>
+																		<g transform="translate(-4906.763 143)">
+																			<path
+																				d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+																				transform="translate(4870 -143)"
+																				fill="#e4a002"
+																			></path>
+																			<g transform="translate(4890.311 -1111.861)">
+																				<path
+																					d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																					transform="translate(0 0)"
+																					fill="#ffffff"
+																				></path>
+																			</g>
+																		</g>
+																	</svg>
+																</span>
+																<span className="block group-hover:hidden">
+																	<svg
+																		height="35"
+																		width="30.237"
+																		viewBox="0 0 30.237 35"
+																		xmlns="http://www.w3.org/2000/svg"
+																	>
+																		<g transform="translate(-4906.763 143)">
+																			<path
+																				d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
+																				transform="translate(4870 -143)"
+																				fill="#e4a002"
+																			></path>
+																			<g transform="translate(4890.311 -1111.861)">
+																				<path
+																					d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
+																					transform="translate(0 0)"
+																					fill="#000"
+																				></path>
+																			</g>
+																		</g>
+																	</svg>
+																</span>
+															</motion.button>
 														</Link>
 													</div>
 												</motion.div>

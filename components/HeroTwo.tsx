@@ -21,7 +21,9 @@ const HeroTwo: FC<IHeroTwo> = ({
 		<>
 			<div className={styles.hero}>
 				<div
-					className="relative z-50 flex flex-col h-[60vh] lg:h-[50vh] bg-center bg-no-repeat bg-cover"
+					className={`relative z-50 flex flex-col h-[60vh] lg:h-[50vh] bg-center bg-no-repeat bg-cover ${
+						buttonLink?.url ? "h-[60vh] lg:h-[60vh]" : "h-[60vh] lg:h-[50vh]"
+					}`}
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,
@@ -32,18 +34,18 @@ const HeroTwo: FC<IHeroTwo> = ({
 						clipPath: `polygon(0 0, 100% 0, 100% 91%, 64% 98%, 0 94%)`,
 					}}
 				>
-					<div className="lg:container relative flex flex-col items-center sm:items-baseline justify-center py-20 px-4 m-auto text-center sm:text-left">
+					<div className="lg:container relative flex flex-col items-center lg:items-baseline justify-center py-20 px-4 m-auto sm:text-left">
 						<motion.h1
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="max-w-3xl flex flex-col sm:block mb-3 text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-[3rem] lg:leading-[4rem]"
+							className="max-w-3xl flex flex-col sm:block mb-3 text-center lg:text-left text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-[3rem] lg:leading-[4rem]"
 						>
 							{title}
 						</motion.h1>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="max-w-2xl py-6 text-white leading-[1.75rem] text-base sm:text-lg text-center sm:text-left"
+							tailwindStyling="max-w-2xl py-6 text-white leading-[1.75rem] text-base sm:text-lg text-center lg:text-left"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}

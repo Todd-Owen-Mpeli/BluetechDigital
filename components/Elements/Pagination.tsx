@@ -103,6 +103,7 @@ const Pagination: FC<IPagination> = ({
 											image={item?.node?.testimonialReview?.image}
 											position={item?.node?.testimonialReview?.position}
 											paragraph={item?.node?.testimonialReview?.paragraph}
+											starRating={item?.node?.testimonialReview?.starRating}
 										/>
 									</>
 								) : contentType === `NewsInsightsCard` ? (

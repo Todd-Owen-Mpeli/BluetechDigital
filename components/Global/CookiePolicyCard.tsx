@@ -25,7 +25,7 @@ const CookiePolicyCard: FC = () => {
 			<div
 				className={
 					showCookiePolicyCard
-						? `fixed bottom-0 right-0 max-w-6xl px-0 md:max-w-xl z-[999]`
+						? `fixed bottom-0 right-0 mx-4 max-w-6xl px-0 md:max-w-xl z-[999]`
 						: `hidden`
 				}
 			>

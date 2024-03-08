@@ -586,6 +586,7 @@ export type ITestimonialsCard = {
 	name: string;
 	position: string;
 	paragraph: string;
+	starRating: number;
 	image: {
 		altText: string;
 		sourceUrl: string;
@@ -699,6 +700,9 @@ export type ISideMenu = {
 export type IParagraph = {
 	content: string;
 	tailwindStyling: string;
+};
+export type IRenderStars = {
+	starRating: number;
 };
 export type IVideoWrapper = {
 	children: React.ReactNode;

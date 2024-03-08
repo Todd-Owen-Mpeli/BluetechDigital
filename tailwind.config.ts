@@ -7,7 +7,15 @@ const config: Config = {
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 	],
 	theme: {
-		extend: {},
+		extend: {
+			screens: {
+				xs: "320px",
+				sm: "425px",
+				md: "768px",
+				lg: "1024px",
+				xl: "1280px",
+			},
+		},
 		fontSize: {
 			xs: ".75rem",
 			sm: ".8rem",

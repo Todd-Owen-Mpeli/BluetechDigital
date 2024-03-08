@@ -46,7 +46,7 @@ const Hero: FC<IHero> = ({
 					<div className="container mx-auto px-4 gap-8">
 						<div className="flex flex-wrap -mx-4 mb-16">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<h1 className="text-center text-white lg:text-left lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-4xl lg:text-7xl xl:text-8xl tracking-tighter">
+								<h1 className="text-center text-white lg:text-left xs:leading-[3.25rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-4xl xs:text-7xl lg:text-7xl xl:text-8xl tracking-tighter">
 									{titleStart}
 									<motion.span
 										initial={initialTwo}
@@ -91,7 +91,7 @@ const Hero: FC<IHero> = ({
 									content={paragraph}
 									tailwindStyling="text-white text-center lg:text-left text-paragraph xl:text-lg"
 								/>
-								<div className="mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
+								<div className="mt-6 lg:mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
 									<Link
 										href={`${buttonLink?.url}`}
 										target={buttonLink?.target}

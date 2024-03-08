@@ -51,7 +51,7 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								height={500}
 								alt="Bluetech Digital Logo"
 								src="/svg/logo/BluetechDigital-Logo-color.svg"
-								className="object-contain object-center w-full h-[50px]"
+								className="object-contain object-center w-[50px] h-[50px]"
 							/>
 						</Link>
 					</div>

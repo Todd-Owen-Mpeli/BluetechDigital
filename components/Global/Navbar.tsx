@@ -106,7 +106,7 @@ const Navbar: FC = () => {
 								src="/svg/logo/BluetechDigital-Logo-color.svg"
 								className={`${
 									scrollPosition > 50 ? "block" : "hidden group-hover:block"
-								} object-contain object-center w-full h-[50px]`}
+								} object-contain object-center w-[50px] h-[50px]`}
 							/>
 							<Image
 								priority
@@ -116,7 +116,7 @@ const Navbar: FC = () => {
 								src="/svg/logo/BluetechDigital-Logo-white.svg"
 								className={`${
 									scrollPosition > 50 ? "hidden" : "block group-hover:hidden"
-								} object-contain object-center w-full h-[50px]`}
+								} object-contain object-center w-[50px] h-[50px]`}
 							/>
 						</Link>
 					</motion.div>

@@ -113,7 +113,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						),url("${backgroundImage}")`,
 					}}
 				>
-					<div className="container p-0 mx-auto">
+					<div className="lg:container p-0 mx-auto">
 						<div className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row">
 							<motion.div
 								initial={initialTwo}

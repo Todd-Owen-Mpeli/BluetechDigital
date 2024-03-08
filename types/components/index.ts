@@ -330,6 +330,11 @@ export type ITitleParagraph = {
 	paragraph: string;
 	displayParagraph: boolean;
 };
+export type ICaseStudiesGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+};
 export type IFeaturesGridTwo = {
 	cardOne: {
 		title: string;
@@ -576,6 +581,22 @@ export type IBlogsCard = {
 		};
 	};
 };
+export type ICaseStudiesCard = {
+	slug: string;
+	date: string;
+	title: string;
+	excerpt: string;
+	featuredImage: {
+		node: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+};
 export type IFeaturesGridCard = {
 	title: string;
 	subtitle: string;
@@ -598,6 +619,7 @@ export type ITestimonialsCard = {
 };
 export type INewsInsightsCard = {
 	uri: string;
+	date: string;
 	title: string;
 	paragraph: string;
 	featuredImage: {

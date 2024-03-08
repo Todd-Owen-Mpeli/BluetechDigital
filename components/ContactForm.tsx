@@ -162,7 +162,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 					backgroundImage: `url("/svg/background/layered-peaks-haikei-lightgrey-grey-one.svg")`,
 				}}
 			>
-				<div className="container mx-auto flex flex-col lg:flex-row items-baseline ">
+				<div className="lg:container mx-auto flex flex-col lg:flex-row items-baseline ">
 					<div className="w-full lg:w-1/2 sm:p-6 flex flex-col">
 						<motion.div
 							initial={initial}
@@ -380,7 +380,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 						initialValues={formik?.initialValues}
 						className="w-full lg:w-1/2"
 					>
-						<Form className="container mx-auto py-10 md:max-w-xl">
+						<Form className="lg:container mx-auto py-10 md:max-w-xl">
 							{loading ? (
 								<motion.h2
 									initial={initialTwo}

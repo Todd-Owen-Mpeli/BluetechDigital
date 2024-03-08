@@ -24,7 +24,7 @@ const OurPartners: FC<IOurPartners> = ({
 	return (
 		<>
 			<div className={styles.ourPartners + ` py-10 px-4 lg:px-0 bg-white`}>
-				<div className="container px-0 mx-auto">
+				<div className="lg:container px-0 mx-auto">
 					<div className="flex flex-col items-center">
 						<motion.h4
 							initial={initial}

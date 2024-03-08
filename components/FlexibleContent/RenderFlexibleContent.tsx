@@ -23,6 +23,7 @@ import ErrorPage from "../Global/ErrorPage";
 import BenefitsStats from "../BenefitsStats";
 import TitleParagraph from "../TitleParagraph";
 import Maintenance from "../Global/Maintenance";
+import CaseStudiesGrid from "../CaseStudiesGrid";
 import TestimonialsTwo from "../TestimonialsTwo";
 import FeaturesGridTwo from "../FeaturesGridTwo";
 import TestimonialsGrid from "../TestimonialsGrid";
@@ -271,6 +272,15 @@ const RenderFlexibleContent: FC = () => {
 									gallery={item?.gallery}
 									paragraph={item?.paragraph}
 									highlightText={item?.highlightText}
+								/>
+							</>
+						) : item?.fieldGroupName === `${FlexibleContent}_CaseStudiesGrid` &&
+						  item?.displaySection ? (
+							<>
+								<CaseStudiesGrid
+									title={item?.title}
+									subtitle={item?.subtitle}
+									paragraph={item?.paragraph}
 								/>
 							</>
 						) : item?.fieldGroupName ===

@@ -11,7 +11,7 @@ import Paragraph from "./Elements/Paragraph";
 const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 	return (
 		<>
-			<div className="py-10 bg-white container px-4 mx-auto">
+			<div className="py-10 bg-white lg:container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}

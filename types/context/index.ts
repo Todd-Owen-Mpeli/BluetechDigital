@@ -208,10 +208,10 @@ export type IPageContext = {
 };
 export type IGlobalProps = {
 	mobileLinks: IMobileLinks;
+	caseStudies: ICaseStudies;
 	testimonials: ITestimonials;
 	newsInsights: INewsInsights;
 	copyrightLinks: ICopyrightLinks;
-	// caseStudiesContent: ICaseStudies;
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
 	ourServicesLinks: IOurServicesLinks;
@@ -220,10 +220,10 @@ export type IGlobalProps = {
 };
 export type IGlobalContext = {
 	mobileLinks: IMobileLinks;
+	caseStudies: ICaseStudies;
 	testimonials: ITestimonials;
 	newsInsights: INewsInsights;
 	copyrightLinks: ICopyrightLinks;
-	// caseStudiesContent: ICaseStudies;
 	navbarMenuLinks: INavbarMenuLinks;
 	footerMenuLinks: IFooterMenuLinks;
 	ourServicesLinks: IOurServicesLinks;

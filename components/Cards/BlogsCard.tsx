@@ -20,7 +20,7 @@ const BlogsCard: FC<IBlogsCard> = ({
 	return (
 		<>
 			<div className="w-full h-full">
-				<div className="relative px-4 lg:px-0 h-[300px]">
+				<div className="relative px-4 lg:px-0 h-[225px]">
 					<Link href={uri ? `blogs${uri}` : `/`}>
 						<Image
 							alt={featuredImage?.node?.altText}
@@ -42,20 +42,20 @@ const BlogsCard: FC<IBlogsCard> = ({
 					viewport={{once: true}}
 					className="flex flex-col items-baseline justify-between px-4 py-10"
 				>
+					<span className="mb-2 font-normal text-darkGrey text-tiny">
+						{dateFormat(date, "dddd, mmmm d, yyyy")}
+					</span>
+
 					<Link href={uri ? `blogs${uri}` : `/`}>
 						<motion.h2
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="mb-2 text-lg font-semibold text-black sm:text-xl"
+							className="mb-2 text-base font-semibold text-black sm:text-medium"
 						>
 							{title}
 						</motion.h2>
 					</Link>
-
-					<span className="mt-2 font-semibold text-yellow-default text-tiny">
-						{dateFormat(date, "dddd, mmmm d, yyyy")}
-					</span>
 
 					<motion.div
 						initial={initial}
@@ -64,13 +64,13 @@ const BlogsCard: FC<IBlogsCard> = ({
 					>
 						<Paragraph
 							content={
-								excerpt?.length < 150
+								excerpt?.length < 250
 									? excerpt
-									: excerpt.substring(0, 150) + "..."
+									: excerpt.substring(0, 250) + "..."
 							}
 							tailwindStyling={
 								excerpt
-									? `block my-6 text-base leading-normal text-darkGrey`
+									? `block mb-6 text-tiny leading-normal text-darkGrey`
 									: `hidden`
 							}
 						/>

@@ -31,7 +31,7 @@ const OurServices: FC<IOurServices> = ({
 					backgroundImage: `url("/svg/background/stacked-waves-haikei-blue-darkblue.svg")`,
 				}}
 			>
-				<div className="container mx-auto flex flex-col items-center">
+				<div className="lg:container mx-auto flex flex-col items-center">
 					<div className="flex flex-col py-8 items-center gap-2">
 						<div className="flex flex-wrap -mx-4">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
@@ -124,7 +124,7 @@ const OurServices: FC<IOurServices> = ({
 							</div>
 						</div>
 					</div>
-					<div className="w-full relative grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 py-6 lg:py-6 px-0 sm:px-4 xl:px-0 gap-6 items-center justify-center">
+					<div className="w-full relative grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 py-6 lg:py-6 px-0 sm:px-4 xl:px-0 gap-6 items-center justify-center">
 						{servicesGrid?.length > 0 ? (
 							servicesGrid.map((item: any, keys: number) => (
 								<Fragment key={keys}>

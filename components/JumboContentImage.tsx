@@ -38,7 +38,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 					" py-20 pb-4 lg:pt-36 sm:pb-10 px-4 bg-white"
 				}
 			>
-				<div className="container m-auto flex flex-col lg:flex-row gap-16 lg:gap-x-24">
+				<div className="lg:container m-auto flex flex-col lg:flex-row gap-16 lg:gap-x-24">
 					<motion.div
 						initial={initialTwo}
 						variants={stagger}

@@ -112,7 +112,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 					}`,
 				}}
 			>
-				<div className="container relative px-0 mx-auto lg:px-4">
+				<div className="lg:container relative px-0 mx-auto lg:px-4">
 					<div
 						className={
 							imageLocation === "Left"

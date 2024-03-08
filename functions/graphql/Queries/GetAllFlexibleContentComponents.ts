@@ -491,6 +491,13 @@ export const getAllFlexibleContentComponents = async (
             										}
 												}
 											}
+											... on ${postTypeFlexibleContent}_CaseStudiesGrid {
+            									fieldGroupName
+            									title
+            									subtitle
+            									paragraph
+            									displaySection
+            								}
 											... on ${postTypeFlexibleContent}_NewsInsightsGrid {
 												fieldGroupName
 												title

@@ -28,13 +28,13 @@ const ErrorPage: FC<IErrorPage> = ({
 			}}
 		>
 			<div className="relative z-50 px-10 my-auto overflow-hidden py-44">
-				<div className="container p-0 mx-auto">
+				<div className="lg:container p-0 mx-auto">
 					<motion.div
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="container relative flex flex-col items-baseline justify-center px-4 m-auto"
+						className="lg:container relative flex flex-col items-baseline justify-center px-4 m-auto"
 					>
 						<div className="max-w-3xl mx-auto">
 							<motion.h1

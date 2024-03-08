@@ -27,7 +27,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 	return (
 		<>
 			<div className="py-10 bg-white overflow-hidden">
-				<div className="container relative px-0 mx-auto lg:px-4">
+				<div className="lg:container relative px-0 mx-auto lg:px-4">
 					<div
 						className={
 							imageLocation === "Left"

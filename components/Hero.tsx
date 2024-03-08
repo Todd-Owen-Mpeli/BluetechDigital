@@ -43,10 +43,10 @@ const Hero: FC<IHero> = ({
 						clipPath: `polygon(0 0, 100% 0, 100% 91%, 64% 98%, 0 94%)`,
 					}}
 				>
-					<div className="container mx-auto px-4 gap-8">
+					<div className="lg:container mx-auto px-4 gap-8">
 						<div className="flex flex-wrap -mx-4 mb-16">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<h1 className="text-center text-white lg:text-left xs:leading-[3.25rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-4xl xs:text-7xl lg:text-7xl xl:text-8xl tracking-tighter">
+								<h1 className="text-center text-white lg:text-left xs:leading-[3.25rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-7xl lg:text-7xl xl:text-8xl tracking-tighter">
 									{titleStart}
 									<motion.span
 										initial={initialTwo}
@@ -226,7 +226,7 @@ const Hero: FC<IHero> = ({
 					</div>
 				</div>
 				<div
-					className={`relative z-50 mt-[-195px] sm:mt-[-125px] lg:mt-[-200px] container mx-auto px-4 gap-8 md:gap-12 xl:gap-16 lg:px-0 flex flex-col lg:flex-row`}
+					className={`relative z-50 mt-[-195px] sm:mt-[-125px] lg:mt-[-200px] lg:container mx-auto px-4 gap-8 md:gap-12 xl:gap-16 lg:px-0 flex flex-col lg:flex-row`}
 				>
 					<motion.div
 						viewport={{once: true}}

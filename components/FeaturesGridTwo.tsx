@@ -22,7 +22,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 }) => {
 	return (
 		<div className="overflow-hidden bg-white lg:px-4">
-			<div className="container px-4 mx-auto">
+			<div className="lg:container px-4 mx-auto">
 				<div className="mx-auto max-w-7xl py-10">
 					<motion.div
 						initial={initial}

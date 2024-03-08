@@ -123,7 +123,7 @@ const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
 				viewport={{once: true}}
 				className={
 					title
-						? `flex items-center justify-center group mt-3 relative gap-3 px-6 py-3 font-semibold tracking-widest text-base ${
+						? `flex items-center justify-center group mt-3 relative gap-3 px-4 py-2 font-semibold tracking-widest text-tiny ${
 								fullWidth ? "w-full" : "w-fit"
 						  } sm:mx-0 border-2 border-solid ${borderColor} ${backgroundColorHover} ${borderColorHover} transition-all ease-in-out duration-500 ${textColor} ${textColorHover} before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] ${beforeBackgroundColor} ${beforeBackgroundColorHover} after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] ${afterBackgroundColor} ${afterBackgroundColorHover}`
 						: `hidden`

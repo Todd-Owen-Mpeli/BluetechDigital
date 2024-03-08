@@ -17,6 +17,7 @@ import {IPagination} from "@/types/components/index";
 // Components
 import Paragraph from "./Paragraph";
 import BlogsCard from "../Cards/BlogsCard";
+import CaseStudiesCard from "../Cards/CaseStudiesCard";
 import TestimonialsCard from "../Cards/TestimonialsCard";
 import NewsInsightsCard from "../Cards/NewsInsightsCard";
 
@@ -106,10 +107,21 @@ const Pagination: FC<IPagination> = ({
 											starRating={item?.node?.testimonialReview?.starRating}
 										/>
 									</>
+								) : contentType === `CaseStudiesCard` ? (
+									<>
+										<CaseStudiesCard
+											slug={item?.node?.slug}
+											date={item?.node?.date}
+											title={item?.node?.title}
+											excerpt={item?.node?.excerpt}
+											featuredImage={item?.node?.featuredImage}
+										/>
+									</>
 								) : contentType === `NewsInsightsCard` ? (
 									<>
 										<NewsInsightsCard
 											uri={item?.node?.uri}
+											date={item?.node?.date}
 											title={item?.node?.title}
 											paragraph={item?.node?.excerpt}
 											featuredImage={item?.node?.featuredImage}

@@ -27,7 +27,7 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 					backgroundImage: `url("/svg/background/polygon-scatter-haikei-lightgrey.svg")`,
 				}}
 			>
-				<div className="container relative m-auto flex flex-col items-center gap-6">
+				<div className="lg:container relative m-auto flex flex-col items-center gap-6">
 					<motion.div
 						initial={initial}
 						variants={stagger}

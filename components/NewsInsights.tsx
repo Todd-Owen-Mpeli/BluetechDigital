@@ -14,7 +14,7 @@ const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 
 	return (
 		<>
-			<div className="py-10 pb-16 bg-white container px-4 mx-auto">
+			<div className="py-10 pb-16 bg-white lg:container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}

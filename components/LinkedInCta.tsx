@@ -26,7 +26,7 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 					clipPath: `polygon(77% 0, 100% 0, 100% 98%, 21% 89%, 0 98%, 0 0)`,
 				}}
 			>
-				<div className="container mx-auto">
+				<div className="lg:container mx-auto">
 					<motion.h3
 						initial={initial}
 						variants={stagger}

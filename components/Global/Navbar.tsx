@@ -90,7 +90,7 @@ const Navbar: FC = () => {
 					}`
 				}
 			>
-				<div className="container mx-auto flex flex-col sm:flex-row items-baseline sm:items-center justify-between py-3 px-4">
+				<div className="lg:container mx-auto flex flex-col sm:flex-row items-baseline sm:items-center justify-between py-3 px-4">
 					<motion.div
 						initial={initialTwo}
 						whileInView={fadeIn}

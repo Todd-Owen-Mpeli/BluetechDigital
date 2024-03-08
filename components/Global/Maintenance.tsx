@@ -38,7 +38,7 @@ const Maintenance: FC<IMaintenance> = ({title, paragraph, backgroundImage}) => {
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="container relative flex flex-col items-baseline justify-center px-4 m-auto text-center sm:text-left"
+					className="lg:container relative flex flex-col items-baseline justify-center px-4 m-auto text-center sm:text-left"
 				>
 					<div className="max-w-3xl mx-auto">
 						<motion.h1

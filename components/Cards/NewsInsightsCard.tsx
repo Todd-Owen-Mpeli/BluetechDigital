@@ -9,6 +9,7 @@ import {
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
+import dateFormat from "dateformat";
 import {motion} from "framer-motion";
 import {INewsInsightsCard} from "@/types/components";
 
@@ -18,6 +19,7 @@ import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
 
 const newsInsightsCard: FC<INewsInsightsCard> = ({
 	uri,
+	date,
 	title,
 	paragraph,
 	featuredImage,
@@ -30,7 +32,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 			}}
 		>
 			<div
-				className="relative px-0 h-[300px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-lightGrey"
+				className="relative px-0 h-[225px] border-r-[5px] lg:border-r-[10px] border-t-[5px] border-b-0 border-lightGrey"
 				style={{
 					clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 				}}
@@ -50,14 +52,18 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 				variants={stagger}
 				whileInView="animate"
 				viewport={{once: true}}
-				className="flex flex-col items-baseline justify-between px-8 pt-10 pb-4"
+				className="flex flex-col items-baseline justify-between px-8 pt-5 pb-4"
 			>
+				<span className="mb-2 font-normal text-darkGrey text-tiny">
+					{dateFormat(date, "dddd, mmmm d, yyyy")}
+				</span>
+
 				<Link href={uri ? `news-insights${uri}` : `/`}>
 					<motion.h2
 						initial={initial}
 						whileInView={fadeInUp}
 						viewport={{once: true}}
-						className="mb-2 text-lg leading-[1.75rem] font-semibold text-black transition-all ease-in-out duration-200 hover:text-purple-default"
+						className="mb-2 text-tiny sm:text-base leading-[1.5rem] font-semibold text-black transition-all ease-in-out duration-200 hover:text-purple-default"
 					>
 						{title}
 					</motion.h2>
@@ -68,15 +74,23 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					viewport={{once: true}}
 				>
 					<Paragraph
-						content={paragraph ? paragraph.substring(0, 200) + "..." : ""}
-						tailwindStyling="block px-0 text-base text-darkGrey"
+						content={
+							paragraph?.length < 175
+								? paragraph
+								: paragraph.substring(0, 175) + "..."
+						}
+						tailwindStyling={
+							paragraph
+								? `block text-tiny leading-normal text-darkGrey`
+								: `hidden`
+						}
 					/>
 				</motion.div>
 				<motion.div
 					initial={initialTwo}
 					whileInView={fadeIn}
 					viewport={{once: true}}
-					className="mt-6"
+					className="mt-2"
 				>
 					<Link
 						href={uri ? `news-insights${uri}` : `/`}

@@ -24,7 +24,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 
 	return (
 		<>
-			<div className="py-10 bg-white container px-4 mx-auto">
+			<div className="py-10 bg-white lg:container px-4 mx-auto">
 				<motion.div
 					initial={initial}
 					variants={stagger}
@@ -85,6 +85,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 									>
 										<NewsInsightsCard
 											uri={item?.node?.uri}
+											date={item?.node?.date}
 											title={item?.node?.title}
 											paragraph={item?.node?.excerpt}
 											featuredImage={item?.node?.featuredImage}

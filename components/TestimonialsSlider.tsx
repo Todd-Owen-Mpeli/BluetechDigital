@@ -79,7 +79,7 @@ const TestimonialsSlider: FC = () => {
 														<Image
 															className={
 																item?.node?.testimonialReview?.image?.sourceUrl
-																	? "h-52 w-52 mb-6 object-cover object-center"
+																	? "h-52 w-52 mb-6 bg-lightGreyTwo mx-auto lg:mx-0 object-cover object-center"
 																	: "hidden"
 															}
 															alt={
@@ -120,13 +120,13 @@ const TestimonialsSlider: FC = () => {
 																	: "md:ml-0"
 															}`}
 														>
-															<h3 className="mb-2 max-w-sm lg:max-w-xl text-lg lg:text-xl font-semibold font-heading text-blue-default">
+															<h3 className="text-blue-default text-lg lg:text-xl text-center lg:text-left font-semibold mb-1">
 																{item?.node?.testimonialReview?.name}
 															</h3>
 															<h4
 																className={
 																	item?.node?.testimonialReview?.position
-																		? "text-darkGrey"
+																		? "text-base text-darkGrey text-center lg:text-left"
 																		: "hidden"
 																}
 															>
@@ -144,11 +144,11 @@ const TestimonialsSlider: FC = () => {
 												>
 													<Paragraph
 														content={item?.node?.testimonialReview?.paragraph}
-														tailwindStyling={`max-w-md xl:max-w-xl mx-auto lg:mx-0 ${
+														tailwindStyling={`max-w-full px-6 lg:px-0 sm:max-w-lg lg:max-w-md xl:max-w-xl mx-auto lg:mx-0 ${
 															item?.node?.testimonialReview?.image?.sourceUrl
 																? "mb-28"
 																: "mb-0"
-														} sm:mb-0 text-base text-darkGrey leading-relaxed text-center lg:text-left`}
+														} leading-7 text-base text-darkGrey text-center lg:text-left`}
 													/>
 												</div>
 											</div>

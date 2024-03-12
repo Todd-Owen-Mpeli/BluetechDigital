@@ -48,7 +48,7 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 						<Text style={introParagraph}>Hello Team,</Text>
 						<Text style={paragraph}>
 							We&apos;ve just received a new inquiry through our website&apos;s
-							regarding &quot;{subject}&quot; and our general carpentry &
+							regarding &quot;{subject}&quot; and our general website
 							developments services. The customer as contacted us on{" "}
 							{formattedDate} their details are below.
 						</Text>

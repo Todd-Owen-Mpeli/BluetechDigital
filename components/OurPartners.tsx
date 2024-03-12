@@ -1,7 +1,8 @@
 // Imports
-import fadeInUp, {
+import {
 	initial,
 	stagger,
+	fadeInUp,
 	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import Image from "next/image";

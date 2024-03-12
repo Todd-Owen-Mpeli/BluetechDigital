@@ -79,10 +79,10 @@ export const CustomerEnquiryConfirmationEmail: React.FC<
 								</Link>
 							</Text>
 							<Text style={paragraph}>
-								Thank you once again for considering AWL Carpentry &
-								Developments Ltd for your kitchen design and installation needs.
-								We look forward to the opportunity to work with you and
-								transform your ideas to reality.
+								Thank you once again for considering Bluetech Digital Ltd for
+								your {selectedServices} needs. We look forward to the
+								opportunity to work with you and transform your ideas to
+								reality.
 							</Text>
 							<Text style={paragraph}>Best regards,</Text>
 							<Text style={paragraph}>

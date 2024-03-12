@@ -48,9 +48,9 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 						<Text style={introParagraph}>Hello Team,</Text>
 						<Text style={paragraph}>
 							We&apos;ve just received a new inquiry through our website&apos;s
-							regarding {subject} and our general carpentry & developments
-							services. The customer as contacted us on {formattedDate} their
-							details are below.
+							regarding &quot;{subject}&quot; and our general carpentry &
+							developments services. The customer as contacted us on{" "}
+							{formattedDate} their details are below.
 						</Text>
 						<Text style={detailsParagraph}>Inquiry Details:</Text>
 						<Text style={paragraph}>
@@ -64,8 +64,8 @@ export const BusinessCustomerEnquiryConfirmationEmail: React.FC<
 							</Link>
 							<br />
 							<strong>Phone Number:</strong>{" "}
-							<Link href={`tel:${phoneNumber}`} style={link}>
-								{phoneNumber}
+							<Link href={`tel:0${phoneNumber}`} style={link}>
+								0{phoneNumber}
 							</Link>
 							<br />
 							<strong>Services Inquired:</strong> {selectedServices} Services

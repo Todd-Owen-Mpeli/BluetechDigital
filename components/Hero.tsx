@@ -46,7 +46,7 @@ const Hero: FC<IHero> = ({
 					<div className="lg:container mx-auto px-4 gap-8">
 						<div className="flex flex-wrap -mx-4 mb-16">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<h1 className="text-center text-white lg:text-left xs:leading-[2.5rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-5xl lg:text-7xl xl:text-8xl tracking-tighter">
+								<h1 className="text-left text-white lg:text-left xs:leading-[2.65rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-6xl lg:text-7xl xl:text-8xl tracking-tighter">
 									{titleStart}
 									<motion.span
 										initial={initialTwo}
@@ -59,7 +59,7 @@ const Hero: FC<IHero> = ({
 											src={smallImageOne?.sourceUrl}
 											width={smallImageOne?.mediaDetails?.width}
 											height={smallImageOne?.mediaDetails?.height}
-											className="inline my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
+											className="inline my-1 lg:my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
 											}}
@@ -77,7 +77,7 @@ const Hero: FC<IHero> = ({
 											src={smallImageTwo?.sourceUrl}
 											width={smallImageTwo?.mediaDetails?.width}
 											height={smallImageTwo?.mediaDetails?.height}
-											className="inline w-[150px] lg:w-[175px] my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
+											className="inline w-[150px] lg:w-[175px] my-1 lg:my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
 											}}

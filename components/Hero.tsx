@@ -17,8 +17,8 @@ import styles from "../styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";
-import HeroVideoWrapper from "./Elements/HeroVideoWrapper";
 
+import HeroVideoWrapper from "./Elements/HeroVideoWrapper";
 const Hero: FC<IHero> = ({
 	video,
 	titleEnd,
@@ -46,7 +46,7 @@ const Hero: FC<IHero> = ({
 					<div className="lg:container mx-auto px-4 gap-8">
 						<div className="flex flex-wrap -mx-4 mb-16">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<h1 className="text-center text-white lg:text-left xs:leading-[3.25rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-7xl lg:text-7xl xl:text-8xl tracking-tighter">
+								<h1 className="text-center text-white lg:text-left xs:leading-[2.5rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-5xl lg:text-7xl xl:text-8xl tracking-tighter">
 									{titleStart}
 									<motion.span
 										initial={initialTwo}
@@ -269,9 +269,7 @@ const Hero: FC<IHero> = ({
 									  }`
 									: `hidden`
 							}
-							style={{
-								clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
-							}}
+							style={{clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`}}
 						/>
 					</motion.div>
 				</div>
@@ -279,5 +277,4 @@ const Hero: FC<IHero> = ({
 		</>
 	);
 };
-
 export default Hero;

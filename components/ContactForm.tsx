@@ -239,6 +239,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 								<Link
 									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
+									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									{globalContext?.themesOptionsContent?.phoneNumber}
 								</Link>

@@ -17,7 +17,7 @@ const ValuesBlocksImageCard: FC<IValuesBlocksImageCard> = ({image}) => {
 				viewport={{once: true}}
 			>
 				<Image
-					alt={image?.altText}
+					alt={`${image?.altText}`}
 					src={image?.sourceUrl}
 					width={image?.mediaDetails?.width}
 					height={image?.mediaDetails?.height}

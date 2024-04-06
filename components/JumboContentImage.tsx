@@ -131,7 +131,12 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 														? bottomContent?.buttonLink?.url
 														: `/`
 												}
-												target={bottomContent?.buttonLink?.target}
+												target={`${
+													bottomContent?.buttonLink?.target
+														? bottomContent?.buttonLink?.target
+														: "_self"
+												}`}
+												aria-label={`${bottomContent?.buttonLink?.title}`}
 											>
 												<motion.button
 													initial={initial}
@@ -191,7 +196,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 						className="w-full lg:w-[35%] relative flex flex-col items-center lg:items-baseline justify-center"
 					>
 						<Image
-							alt={image?.altText}
+							alt={`${image?.altText}`}
 							src={image?.sourceUrl}
 							width={image?.mediaDetails?.width}
 							height={image?.mediaDetails?.height}

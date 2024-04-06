@@ -60,6 +60,10 @@ const SubMegaMenuLinks: FC = () => {
 											>
 												<Link
 													href={`${item?.node?.url}`}
+													target={`${
+														item?.node?.target ? item?.node?.target : "_self"
+													}`}
+													aria-label={`${item?.node?.label}`}
 													className="block p-4 text-tiny text-black hover:text-white"
 												>
 													{item?.node?.label}

@@ -40,8 +40,13 @@ export const getAllPreviewFlexibleContentComponents = async (
 													title
 													target
 												}
-												videoBackgroundImage {
+												videobackgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 												smallImageOne {
 													altText
@@ -78,7 +83,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_FeaturesGrid {
@@ -282,7 +292,12 @@ export const getAllPreviewFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 												achievements {
 													card {

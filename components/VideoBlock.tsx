@@ -71,7 +71,8 @@ const VideoBlock: FC<IVideoBlock> = ({
 						/>
 						<Link
 							href={`${buttonLink?.url}`}
-							target={buttonLink?.target}
+							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+							aria-label={`${buttonLink?.title}`}
 							className={
 								buttonLink?.url
 									? "flex mt-6 lg:mt-0 items-center justify-center lg:justify-start"
@@ -94,7 +95,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 						} bg-center bg-no-repeat bg-cover mt-6 lg:mt-0 w-full lg:w-[50%] xl:w-[65%]`}
 						style={{
 							backgroundImage: `url("${
-								displayVideo ? "none" : videoBackgroundImage
+								displayVideo ? "none" : videoBackgroundImage?.sourceUrl
 							}")`,
 						}}
 					>

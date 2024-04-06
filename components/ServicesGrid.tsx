@@ -91,7 +91,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 														/>
 														<Link
 															href={`${item?.card?.buttonLink?.url}`}
-															target={item?.card?.buttonLink?.target}
+															target={`${
+																item?.card?.buttonLink?.target
+																	? item?.card?.buttonLink?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.card?.buttonLink?.title}`}
 															className="absolute bottom-0 left-0 z-10 m-4 hidden lg:block"
 														>
 															<motion.button
@@ -248,7 +253,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 													</div>
 													<Link
 														href={`${item?.card?.buttonLink?.url}`}
-														target={item?.card?.buttonLink?.target}
+														target={`${
+															item?.card?.buttonLink?.target
+																? item?.card?.buttonLink?.target
+																: "_self"
+														}`}
+														aria-label={`${item?.card?.buttonLink?.title}`}
 														className="mx-auto block lg:hidden"
 													>
 														<ButtonBorderSliced
@@ -296,7 +306,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 														/>
 														<Link
 															href={`${item?.card?.buttonLink?.url}`}
-															target={item?.card?.buttonLink?.target}
+															target={`${
+																item?.card?.buttonLink?.target
+																	? item?.card?.buttonLink?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.card?.buttonLink?.title}`}
 															className="absolute bottom-0 left-0 z-10 m-4 hidden lg:block"
 														>
 															<motion.button

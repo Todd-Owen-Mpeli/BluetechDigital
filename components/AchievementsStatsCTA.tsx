@@ -110,7 +110,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 							rgba(0, 0, 0, 0.50),
 							rgba(0, 0, 0, 0.85),
 							rgba(0, 0, 0, 0.95)
-						),url("${backgroundImage}")`,
+						),url("${backgroundImage?.sourceUrl}")`,
 					}}
 				>
 					<div className="lg:container p-0 mx-auto">
@@ -144,7 +144,10 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 								</div>
 								<Link
 									href={`${buttonLink?.url}`}
-									target={buttonLink?.target}
+									target={`${
+										buttonLink?.target ? buttonLink?.target : "_self"
+									}`}
+									aria-label={`${buttonLink?.title}`}
 									className={buttonLink?.url ? "block" : "hidden"}
 								>
 									<ButtonBorderSliced

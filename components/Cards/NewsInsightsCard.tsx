@@ -94,7 +94,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 				>
 					<Link
 						href={uri ? `news-insights${uri}` : `/`}
-						target=""
+						target="_self"
 						className={uri ? "block" : "hidden"}
 					>
 						<ButtonBorderSliced

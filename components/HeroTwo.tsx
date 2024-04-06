@@ -30,7 +30,7 @@ const HeroTwo: FC<IHeroTwo> = ({
 							rgba(0, 0, 0, 0.45),
 							rgba(0, 0, 0, 0.55),
 							rgba(0, 0, 0, 0.65)
-						),url("${backgroundImage}")`,
+						),url("${backgroundImage?.sourceUrl}")`,
 						clipPath: `polygon(0 0, 100% 0, 100% 91%, 64% 98%, 0 94%)`,
 					}}
 				>
@@ -49,7 +49,8 @@ const HeroTwo: FC<IHeroTwo> = ({
 						/>
 						<Link
 							href={`${buttonLink?.url}`}
-							target={buttonLink?.target}
+							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+							aria-label={`${buttonLink?.title}`}
 							className={buttonLink?.url ? "block" : "hidden"}
 						>
 							<motion.button

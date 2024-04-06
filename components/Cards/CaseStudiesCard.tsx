@@ -95,7 +95,7 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 					>
 						<Link
 							href={slug ? `case-study/${slug}` : `/`}
-							target=""
+							target="_self"
 							className={slug ? "block" : "hidden"}
 						>
 							<ButtonBorderSliced

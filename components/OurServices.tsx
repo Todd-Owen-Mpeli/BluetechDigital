@@ -59,7 +59,10 @@ const OurServices: FC<IOurServices> = ({
 								/>
 								<Link
 									href={`${buttonLink?.url}`}
-									target={buttonLink?.target}
+									target={`${
+										buttonLink?.target ? buttonLink?.target : "_self"
+									}`}
+									aria-label={`${buttonLink?.title}`}
 									className={buttonLink?.url ? "block" : "hidden"}
 								>
 									<motion.button
@@ -159,7 +162,12 @@ const OurServices: FC<IOurServices> = ({
 											<div>
 												<Link
 													href={`${item?.card?.buttonLink?.url}`}
-													target={item?.card?.buttonLink?.target}
+													target={`${
+														item?.card?.buttonLink?.target
+															? item?.card?.buttonLink?.target
+															: "_self"
+													}`}
+													aria-label={`${item?.card?.buttonLink?.title}`}
 													className="group inline-flex py-3 px-6 items-center justify-center text-bse font-medium text-white hover:text-black bg-transparent hover:bg-white border-2 border-white transition duration-200"
 												>
 													{item?.card?.buttonLink?.title}
@@ -179,7 +187,7 @@ const OurServices: FC<IOurServices> = ({
 							className="relative w-[660px] h-fit block sm:hidden 2xl:block"
 						>
 							<Image
-								alt={image?.altText}
+								alt={`${image?.altText}`}
 								src={image?.sourceUrl}
 								width={image?.mediaDetails?.width}
 								height={image?.mediaDetails?.height}

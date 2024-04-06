@@ -36,7 +36,14 @@ export type IHero = {
 	titleStart: string;
 	titleMiddle: string;
 	displayVideo: boolean;
-	videoBackgroundImage: string;
+	videoBackgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 	buttonLink: {
 		url: string;
 		title: string;
@@ -117,7 +124,14 @@ export type IHeroTwo = {
 		title: string;
 		target: string;
 	};
-	backgroundImage: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 };
 export type IGallery = {
 	title: string;
@@ -148,7 +162,12 @@ export type IVideoBlock = {
 		target: string;
 	};
 	videoBackgroundImage: {
+		altText: string;
 		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type ILinkedInCta = {
@@ -278,7 +297,12 @@ export type IFeaturesGrid = {
 	};
 	cardTwo: {
 		backgroundImage: {
+			altText: string;
 			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 	};
 	cardThree: {
@@ -306,7 +330,12 @@ export type IFeaturesGrid = {
 	];
 	lastCard: {
 		backgroundImage: {
+			altText: string;
 			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 	};
 };
@@ -343,7 +372,12 @@ export type IFeaturesGridTwo = {
 	};
 	cardTwo: {
 		backgroundImage: {
+			altText: string;
 			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 	};
 	gridContent: [
@@ -359,7 +393,12 @@ export type IFeaturesGridTwo = {
 	];
 	lastCard: {
 		backgroundImage: {
+			altText: string;
 			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 	};
 };
@@ -486,7 +525,14 @@ export type IJumboContentSection = {
 export type IAchievementsStatsCTA = {
 	title: string;
 	paragraph: string;
-	backgroundImage: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 	displayAchievementsContent: boolean;
 	buttonLink: {
 		url: string;
@@ -545,7 +591,14 @@ export type ILayout = {
 export type IErrorPage = {
 	title: string;
 	paragraph: string;
-	backgroundImage: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 	buttonLink: {
 		url: string;
 		title: string;
@@ -557,6 +610,10 @@ export type IPagination = {
 	contentType: string;
 	tailwindStyling: string;
 	numberOfItemsRenderedPerPage: number;
+};
+export type IDynamicComponentProps = {
+	componentName: string;
+	[key: string]: any;
 };
 
 // Cards
@@ -667,7 +724,14 @@ export type IValuesBlocksImageCard = {
 	};
 };
 export type IFeaturesGridImageCard = {
-	backgroundImage: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 };
 export type IJumboContentSectionCard = {
 	title: string;

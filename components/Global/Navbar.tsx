@@ -145,6 +145,12 @@ const Navbar: FC = () => {
 													<div className="flex justify-center items-center gap-2 cursor-pointer">
 														<Link
 															href={`${item?.node?.url}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.node?.label}`}
 															className={`${
 																scrollPosition > 50
 																	? "text-black"
@@ -199,6 +205,12 @@ const Navbar: FC = () => {
 													<span className="flex justify-center items-center gap-2 cursor-pointer">
 														<Link
 															href={`${item?.node?.url}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.node?.label}`}
 															className={`${
 																scrollPosition > 50
 																	? "text-black"
@@ -279,6 +291,10 @@ const Navbar: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
+														target={`${
+															item?.node?.target ? item?.node?.target : "_self"
+														}`}
+														aria-label={`${item?.node?.label}`}
 														className={`${
 															scrollPosition > 50 ? "text-black" : "text-white"
 														} group-hover:text-black group-hover:hover:text-blue-two text-tiny text-center tracking-[0.075rem] transition-all ease-in-out duration-500`}

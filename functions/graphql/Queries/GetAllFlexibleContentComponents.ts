@@ -39,7 +39,12 @@ export const getAllFlexibleContentComponents = async (
 													target
 												}
 												videoBackgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 												smallImageOne {
 													altText
@@ -77,48 +82,53 @@ export const getAllFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_FeaturesGrid {
                       							fieldGroupName
 												displaySection
                       							cardOne {
-                      							  title
-                      							  subtitle
-                      							  paragraph
+                      								title
+                      								subtitle
+                      								paragraph
                       							}
                       							cardTwo {
-                      							  backgroundImage {
-                      							    altText
-                      							    sourceUrl
-                      							    mediaDetails {
-                      							      height
-                      							      width
-                      							    }
-                      							  }
+                      								backgroundImage {
+                      									altText
+                      									sourceUrl
+                      									mediaDetails {
+                      										height
+                      										width
+                      									}
+                      								}
                       							}
                       							cardThree {
-                      							  foreground {
-                      							    title
-                      							    subtitle
-                      							    paragraph
-                      							  }
-                      							  background {
-                      							    title
-                      							    subtitle
-                      							    paragraph
-                      							  }
+                      								foreground {
+                      									title
+                      									subtitle
+                      									paragraph
+                      								}
+                      								background {
+                      									title
+                      									subtitle
+                      									paragraph
+                      								}
                       							}
                       							lastCard {
-                      							  backgroundImage {
-                      							    altText
-                      							    sourceUrl
-                      							    mediaDetails {
-                      							      height
-                      							      width
-                      							    }
-                      							  }
+                      								backgroundImage {
+                      									altText
+                      									sourceUrl
+                      									mediaDetails {
+                      										height
+                      										width
+                      									}
+                      								}
                       							}
                       							gridContent {
                       							  card {
@@ -139,23 +149,23 @@ export const getAllFlexibleContentComponents = async (
                       							}
                       							cardTwo {
                       							  backgroundImage {
-                      							    altText
-                      							    sourceUrl
-                      							    mediaDetails {
-                      							      height
-                      							      width
-                      							    }
-                      							  }
+                      									altText
+                      									sourceUrl
+                      									mediaDetails {
+                      										height
+                      										width
+                      									}
+                      								}
                       							}
                       							lastCard {
-                      							  backgroundImage {
-                      							    altText
-                      							    sourceUrl
-                      							    mediaDetails {
-                      							      height
-                      							      width
-                      							    }
-                      							  }
+                      								backgroundImage {
+                      									altText
+                      									sourceUrl
+                      									mediaDetails {
+                      										height
+                      										width
+                      									}
+                      								}
                       							}
                       							gridContent {
                       							  card {
@@ -287,7 +297,12 @@ export const getAllFlexibleContentComponents = async (
 													target
 												}
 												backgroundImage {
+													altText
 													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
 												}
 												achievements {
 													card {

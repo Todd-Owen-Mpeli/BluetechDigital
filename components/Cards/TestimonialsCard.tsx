@@ -28,7 +28,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 				<div className="flex items-center justify-center lg:justify-start gap-6 w-full">
 					<div className="flex flex-col lg:flex-row items-center justify-center gap-6">
 						<Image
-							alt={image?.altText}
+							alt={`${image?.altText}`}
 							src={`${
 								image?.sourceUrl
 									? image?.sourceUrl

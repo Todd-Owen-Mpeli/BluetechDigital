@@ -94,7 +94,10 @@ const Hero: FC<IHero> = ({
 								<div className="mt-6 lg:mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
 									<Link
 										href={`${buttonLink?.url}`}
-										target={buttonLink?.target}
+										target={`${
+											buttonLink?.target ? buttonLink?.target : "_self"
+										}`}
+										aria-label={`${buttonLink?.title}`}
 										className={buttonLink?.url ? "block" : "hidden"}
 									>
 										<motion.button
@@ -158,7 +161,10 @@ const Hero: FC<IHero> = ({
 									</Link>
 									<Link
 										href={`${buttonLinkTwo?.url}`}
-										target={buttonLinkTwo?.target}
+										target={`${
+											buttonLinkTwo?.target ? buttonLinkTwo?.target : "_self"
+										}`}
+										aria-label={`${buttonLinkTwo?.title}`}
 										className={buttonLinkTwo?.url ? "block" : "hidden"}
 									>
 										<motion.button
@@ -239,7 +245,7 @@ const Hero: FC<IHero> = ({
 						}`}
 						style={{
 							backgroundImage: `url("${
-								displayVideo ? "none" : videoBackgroundImage
+								displayVideo ? "none" : videoBackgroundImage?.sourceUrl
 							}")`,
 						}}
 					>

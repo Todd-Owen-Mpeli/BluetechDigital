@@ -70,9 +70,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 							</motion.div>
 						</motion.div>
 						{/* Card Two */}
-						<FeaturesGridImageCard
-							backgroundImage={cardTwo?.backgroundImage?.sourceUrl}
-						/>
+						<FeaturesGridImageCard backgroundImage={cardTwo?.backgroundImage} />
 						{/* Remaining Cards */}
 						{gridContent?.length > 0 ? (
 							gridContent?.map((item: any, keys: number) => (
@@ -91,7 +89,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 						)}
 						{/* Last Card */}
 						<FeaturesGridImageCard
-							backgroundImage={lastCard?.backgroundImage?.sourceUrl}
+							backgroundImage={lastCard?.backgroundImage}
 						/>
 					</motion.div>
 				</div>

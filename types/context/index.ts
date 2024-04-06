@@ -154,9 +154,21 @@ export type IThemesOptionsContent = {
 	phoneNumber: string;
 	phoneNumberTwo: string;
 	copyrightText: string;
-	facebookLink: string;
-	twitterLink: string;
-	linkedinLink: string;
+	facebookLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	twitterLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	linkedinLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	textarea: string;
 	awardsCertificationsGallery: [
 		{
@@ -195,7 +207,12 @@ export type IThemesOptionsContent = {
 			target: string;
 		};
 		backgroundImage: {
+			altText: string;
 			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
 		};
 	};
 };

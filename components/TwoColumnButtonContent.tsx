@@ -86,7 +86,11 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							content={paragraph}
 							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
 						/>
-						<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
+						<Link
+							href={`${buttonLink?.url}`}
+							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+							aria-label={`${buttonLink?.title}`}
+						>
 							<ButtonBorderSliced
 								fullWidth={false}
 								title={buttonLink?.title}

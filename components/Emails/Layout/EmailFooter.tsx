@@ -24,7 +24,7 @@ const EmailFooter: React.FC<IEmailFooter.IEmailFooter> = ({
 				</Section>
 				<Row>
 					<Column align="right" style={{width: "33%", paddingRight: "8px"}}>
-						<Link href={themesOptionsContent?.facebookLink} style={link}>
+						<Link href={themesOptionsContent?.facebookLink?.url} style={link}>
 							<Img
 								width="100%"
 								height="35px"
@@ -34,7 +34,7 @@ const EmailFooter: React.FC<IEmailFooter.IEmailFooter> = ({
 						</Link>
 					</Column>
 					<Column align="center" style={{width: "33%", paddingLeft: "8px"}}>
-						<Link href={themesOptionsContent?.linkedinLink} style={link}>
+						<Link href={themesOptionsContent?.linkedinLink?.url} style={link}>
 							<Img
 								width="100%"
 								height="35px"
@@ -44,7 +44,7 @@ const EmailFooter: React.FC<IEmailFooter.IEmailFooter> = ({
 						</Link>
 					</Column>
 					<Column align="left" style={{width: "33%", paddingLeft: "8px"}}>
-						<Link href={themesOptionsContent?.twitterLink} style={link}>
+						<Link href={themesOptionsContent?.twitterLink?.url} style={link}>
 							<Img
 								width="100%"
 								height="35px"

@@ -34,7 +34,7 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 							<div className="flex flex-wrap items-center -m-1.5">
 								<div className="w-auto p-1.5">
 									<Image
-										alt={image?.altText}
+										alt={`${image?.altText}`}
 										src={image?.sourceUrl}
 										width={image?.mediaDetails?.width}
 										height={image?.mediaDetails?.height}

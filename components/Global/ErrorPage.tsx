@@ -24,7 +24,7 @@ const ErrorPage: FC<IErrorPage> = ({
 		<section
 			className="relative h-[100vh] bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
 			style={{
-				backgroundImage: `url("${backgroundImage}")`,
+				backgroundImage: `url("${backgroundImage?.sourceUrl}")`,
 			}}
 		>
 			<div className="relative z-50 px-10 my-auto overflow-hidden py-44">
@@ -62,7 +62,8 @@ const ErrorPage: FC<IErrorPage> = ({
 						>
 							<Link
 								href={`${buttonLink?.url}`}
-								target={buttonLink?.target}
+								target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+								aria-label={`${buttonLink?.title}`}
 								className={buttonLink?.url ? "block" : "hidden"}
 							>
 								<motion.button

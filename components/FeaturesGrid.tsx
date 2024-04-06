@@ -73,9 +73,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 						</motion.div>
 					</motion.div>
 					{/* Card Two */}
-					<FeaturesGridImageCard
-						backgroundImage={cardTwo?.backgroundImage?.sourceUrl}
-					/>
+					<FeaturesGridImageCard backgroundImage={cardTwo?.backgroundImage} />
 					{/* Card Three */}
 					<motion.div
 						viewport={{once: true}}
@@ -177,9 +175,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 						<></>
 					)}
 					{/* Last Card */}
-					<FeaturesGridImageCard
-						backgroundImage={lastCard?.backgroundImage?.sourceUrl}
-					/>
+					<FeaturesGridImageCard backgroundImage={lastCard?.backgroundImage} />
 				</motion.div>
 			</div>
 		</div>

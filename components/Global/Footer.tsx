@@ -38,7 +38,11 @@ const Footer: FC = () => {
 							viewport={{once: true}}
 							className="mb-10"
 						>
-							<Link href="/">
+							<Link
+								href="/"
+								target="_self"
+								aria-label={`Bluetech Digital Homepage Link`}
+							>
 								<Image
 									priority
 									width={500}
@@ -90,6 +94,8 @@ const Footer: FC = () => {
 								<Link
 									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+									target="_self"
+									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
 								</Link>
@@ -124,6 +130,8 @@ const Footer: FC = () => {
 								<Link
 									className="font-medium tracking-wide text-black hover:text-yellow-two"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
+									target="_self"
+									aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
 								</Link>
@@ -146,7 +154,11 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
+									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
+									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+									target={
+										globalContext?.themesOptionsContent?.facebookLink?.target
+									}
 								>
 									<svg
 										height="100%"
@@ -176,7 +188,11 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={`${globalContext?.themesOptionsContent?.twitterLink}`}
+									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
+									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+									target={
+										globalContext?.themesOptionsContent?.twitterLink?.target
+									}
 								>
 									<svg
 										height="100%"
@@ -206,7 +222,11 @@ const Footer: FC = () => {
 							>
 								<Link
 									className="inline-block text-green"
-									href={`${globalContext?.themesOptionsContent?.linkedinLink}`}
+									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
+									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink.title}`}
+									target={
+										globalContext?.themesOptionsContent?.linkedinLink?.target
+									}
 								>
 									<svg
 										height="100%"
@@ -259,6 +279,12 @@ const Footer: FC = () => {
 														>
 															<Link
 																href={`${item?.node?.url}`}
+																target={`${
+																	item?.node?.target
+																		? item?.node?.target
+																		: "_self"
+																}`}
+																aria-label={`${item?.node?.label}`}
 																className="text-black text-base text-center lg:text-left hover:text-blue-two"
 															>
 																{item?.node?.label}
@@ -276,6 +302,12 @@ const Footer: FC = () => {
 													>
 														<Link
 															href={`${item?.node?.url}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.node?.label}`}
 															className="text-black text-base text-center lg:text-left hover:text-blue-two"
 														>
 															{item?.node?.label}
@@ -315,6 +347,10 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
+														target={`${
+															item?.node?.target ? item?.node?.target : "_self"
+														}`}
+														aria-label={`${item?.node?.label}`}
 														className="text-black text-base text-center lg:text-left hover:text-blue-two"
 													>
 														{item?.node?.label}
@@ -395,6 +431,10 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
+											target={`${
+												item?.node?.target ? item?.node?.target : "_self"
+											}`}
+											aria-label={`${item?.node?.label}`}
 											className="text-black transition-all duration-200 ease-in-out text-sm hover:text-blue-two"
 										>
 											{item?.node?.label}

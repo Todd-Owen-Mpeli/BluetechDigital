@@ -46,7 +46,8 @@ const LinkedInCta: FC<ILinkedInCta> = ({
 					</motion.h3>
 					<Link
 						href={`${buttonLink?.url}`}
-						target={buttonLink?.target}
+						target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+						aria-label={`${buttonLink?.title}`}
 						className={
 							buttonLink?.url ? "block w-full mx-auto max-w-[275px]" : "hidden"
 						}

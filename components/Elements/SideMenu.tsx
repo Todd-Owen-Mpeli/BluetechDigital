@@ -113,6 +113,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 																				<Link
 																					onClick={toggleMenu}
 																					href={`${item?.node?.url}`}
+																					target={`${
+																						item?.node?.target
+																							? item?.node?.target
+																							: "_self"
+																					}`}
+																					aria-label={`${item?.node?.label}`}
 																					className="block p-4 text-tiny font-semibold"
 																				>
 																					{item?.node?.label}
@@ -177,6 +183,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<Link
 													onClick={toggleMenu}
 													href={`${item?.node?.url}`}
+													target={`${
+														item?.node?.target ? item?.node?.target : "_self"
+													}`}
+													aria-label={`${item?.node?.label}`}
 													className="block py-4 text-tiny font-semibold text-black hover:text-blue-two"
 												>
 													{item?.node?.label}
@@ -205,7 +215,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								<Link
 									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
-									href={`${globalContext?.themesOptionsContent?.facebookLink}`}
+									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
+									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
+									target={
+										globalContext?.themesOptionsContent?.facebookLink?.target
+									}
 								>
 									<svg
 										height="100%"
@@ -230,7 +244,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								<Link
 									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
-									href={`${globalContext?.themesOptionsContent?.twitterLink}`}
+									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
+									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
+									target={
+										globalContext?.themesOptionsContent?.twitterLink?.target
+									}
 								>
 									<svg
 										height="100%"
@@ -255,7 +273,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 								<Link
 									onClick={toggleMenu}
 									className="inline-block px-1 hover:opacity-70"
-									href={`${globalContext?.themesOptionsContent?.linkedinLink}`}
+									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
+									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink.title}`}
+									target={
+										globalContext?.themesOptionsContent?.linkedinLink?.target
+									}
 								>
 									<svg
 										height="100%"

@@ -131,7 +131,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 							}
 						>
 							<Image
-								alt={image?.altText}
+								alt={`${image?.altText}`}
 								src={image?.sourceUrl}
 								width={image?.mediaDetails?.width}
 								height={image?.mediaDetails?.height}
@@ -195,7 +195,13 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-2 ${paragraphColor} text-center lg:text-left text-paragraph`}
 								/>
 								<div className={buttonLink?.url ? "mx-auto lg:mx-0" : "hidden"}>
-									<Link href={`${buttonLink?.url}`} target={buttonLink?.target}>
+									<Link
+										href={`${buttonLink?.url}`}
+										target={`${
+											buttonLink?.target ? buttonLink?.target : "_self"
+										}`}
+										aria-label={`${buttonLink?.title}`}
+									>
 										<ButtonBorderSliced
 											fullWidth={false}
 											title={buttonLink?.title}
@@ -216,7 +222,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 							}
 						>
 							<Image
-								alt={image?.altText}
+								alt={`${image?.altText}`}
 								src={image?.sourceUrl}
 								width={image?.mediaDetails?.width}
 								height={image?.mediaDetails?.height}

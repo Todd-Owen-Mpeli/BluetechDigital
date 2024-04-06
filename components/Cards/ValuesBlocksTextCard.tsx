@@ -33,7 +33,8 @@ const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 			</div>
 			<Link
 				href={`${buttonLink?.url}`}
-				target={buttonLink?.target}
+				target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
+				aria-label={`${buttonLink?.title}`}
 				className={displayButton ? "block" : "hidden"}
 			>
 				<ButtonBorderSliced

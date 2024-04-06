@@ -101,7 +101,7 @@ const FaqTwo: FC<IFAQTwo> = ({
 								className="relative"
 							>
 								<Image
-									alt={image?.altText}
+									alt={`${image?.altText}`}
 									src={image?.sourceUrl}
 									width={image?.mediaDetails?.width}
 									height={image?.mediaDetails?.height}
@@ -116,7 +116,10 @@ const FaqTwo: FC<IFAQTwo> = ({
 								/>
 								<Link
 									href={`${buttonLink?.url}`}
-									target={buttonLink?.target}
+									target={`${
+										buttonLink?.target ? buttonLink?.target : "_self"
+									}`}
+									aria-label={`${buttonLink?.title}`}
 									className={
 										buttonLink?.url
 											? "block absolute bottom-0 left-0"

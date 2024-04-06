@@ -18,10 +18,22 @@ export const getThemesOptionsContent = async () => {
 								phoneNumber
 								phoneNumberTwo
 								copyrightText
-								facebookLink
-								twitterLink
-								linkedinLink
 								textarea
+								facebookLink {
+									url
+									title
+									target
+								}
+								twitterLink {
+									url
+									title
+									target
+								}
+								linkedinLink {
+									url
+									title
+									target
+								}
 								awardsCertificationsGallery {
 									altText
 									sourceUrl
@@ -57,7 +69,12 @@ export const getThemesOptionsContent = async () => {
 										target
 									}
 									backgroundImage {
+										altText
 										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
 									}
 								}
 							}

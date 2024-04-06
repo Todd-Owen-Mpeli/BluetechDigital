@@ -13,7 +13,7 @@ const ValuesBlocksImageOrMapCard: FC<IValuesBlocksImageOrMapCard> = ({
 			{displayImageOrMap === "Image" ? (
 				<>
 					<Image
-						alt={image?.altText}
+						alt={`${image?.altText}`}
 						src={image?.sourceUrl}
 						width={image?.mediaDetails?.width}
 						height={image?.mediaDetails?.height}

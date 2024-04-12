@@ -37,6 +37,7 @@ const ValuesBlocksImageOrMapCard: FC<IValuesBlocksImageOrMapCard> = ({
 						width={600}
 						height={450}
 						loading="lazy"
+						title="Google Map"
 						src={`${googleMap}`}
 						allowFullScreen={true}
 						referrerPolicy="no-referrer-when-downgrade"

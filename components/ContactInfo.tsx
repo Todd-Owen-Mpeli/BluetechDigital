@@ -40,7 +40,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="flex flex-col w-full gap-8 px-4 w-full lg:w-1/2"
+					className="flex flex-col w-full gap-8 px-4 lg:w-1/2"
 				>
 					<motion.div
 						initial={initial}

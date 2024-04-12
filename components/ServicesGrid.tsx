@@ -83,7 +83,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 													/>
 													<div className="block relative w-full h-full">
 														<Image
-															alt={item?.card?.image?.altText}
+															alt={`${item?.card?.image?.altText}`}
 															src={item?.card?.image?.sourceUrl}
 															width={
 																item?.card?.image?.mediaDetails?.width
@@ -306,7 +306,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 													/>
 													<div className="block relative w-full h-full">
 														<Image
-															alt={item?.card?.image?.altText}
+															alt={`${item?.card?.image?.altText}`}
 															src={item?.card?.image?.sourceUrl}
 															width={
 																item?.card?.image?.mediaDetails?.width

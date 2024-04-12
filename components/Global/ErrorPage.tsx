@@ -62,9 +62,9 @@ const ErrorPage: FC<IErrorPage> = ({
 						>
 							<Link
 								href={`${buttonLink?.url}`}
-								target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 								aria-label={`${buttonLink?.title}`}
 								className={buttonLink?.url ? "block" : "hidden"}
+								target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 							>
 								<motion.button
 									initial={initialTwo}

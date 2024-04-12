@@ -88,8 +88,8 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						/>
 						<Link
 							href={`${buttonLink?.url}`}
-							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 							aria-label={`${buttonLink?.title}`}
+							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 						>
 							<ButtonBorderSliced
 								fullWidth={false}
@@ -105,7 +105,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-full flex flex-col lg:flex-row gap-6 lg:gap-12 lg:gap-0 pt-0 lg:pt-10"
+						className="w-full flex flex-col lg:flex-row gap-6 lg:gap-12 pt-0 lg:pt-10"
 					>
 						<div className="w-full lg:w-[65%] flex flex-col">
 							<motion.button

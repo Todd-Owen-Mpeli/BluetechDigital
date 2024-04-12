@@ -93,8 +93,8 @@ const Footer: FC = () => {
 								</div>
 								<Link
 									className="font-medium tracking-wide text-black hover:text-yellow-two"
-									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									target="_self"
+									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
@@ -129,8 +129,8 @@ const Footer: FC = () => {
 								</div>
 								<Link
 									className="font-medium tracking-wide text-black hover:text-yellow-two"
-									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									target="_self"
+									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
@@ -268,29 +268,27 @@ const Footer: FC = () => {
 										(item: any, index: number) => (
 											<Fragment key={index}>
 												{item?.node?.label === "Our Services" ? (
-													<>
-														<motion.li
-															className="px-0"
-															custom={index}
-															initial={initial}
-															whileInView="animate"
-															viewport={{once: true}}
-															variants={arrayLoopStaggerChildren}
+													<motion.li
+														className="px-0"
+														custom={index}
+														initial={initial}
+														whileInView="animate"
+														viewport={{once: true}}
+														variants={arrayLoopStaggerChildren}
+													>
+														<Link
+															href={`${item?.node?.url}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
+															aria-label={`${item?.node?.label}`}
+															className="text-black text-base text-center lg:text-left hover:text-blue-two"
 														>
-															<Link
-																href={`${item?.node?.url}`}
-																target={`${
-																	item?.node?.target
-																		? item?.node?.target
-																		: "_self"
-																}`}
-																aria-label={`${item?.node?.label}`}
-																className="text-black text-base text-center lg:text-left hover:text-blue-two"
-															>
-																{item?.node?.label}
-															</Link>
-														</motion.li>
-													</>
+															{item?.node?.label}
+														</Link>
+													</motion.li>
 												) : (
 													<motion.li
 														className="px-0"
@@ -382,10 +380,18 @@ const Footer: FC = () => {
 													variants={arrayLoopStaggerChildren}
 												>
 													<Image
-														width={item?.mediaDetails?.width}
-														height={item?.mediaDetails?.height}
-														alt={item?.altText}
+														alt={`${item?.altText}`}
 														src={item?.sourceUrl}
+														width={
+															item?.mediaDetails?.width
+																? item?.mediaDetails?.width
+																: 500
+														}
+														height={
+															item?.mediaDetails?.height
+																? item?.mediaDetails?.height
+																: 500
+														}
 														className="object-contain object-center w-full h-[75px] lg:h-[100px]"
 													/>
 												</motion.div>

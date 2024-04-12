@@ -97,7 +97,11 @@ const Navbar: FC = () => {
 						viewport={{once: true}}
 						className="flex flex-col justify-start"
 					>
-						<Link href="/">
+						<Link
+							href="/"
+							target="_self"
+							aria-label={`Bluetech Digital Homepage Link`}
+						>
 							<Image
 								priority
 								width={500}
@@ -134,13 +138,13 @@ const Navbar: FC = () => {
 										<Fragment key={index}>
 											{item?.node?.label === "Our Services" ? (
 												<motion.li
-													className="relative"
-													onClick={displayOurServicesSublinks}
 													custom={index}
 													initial={initial}
+													className="relative"
 													whileInView="animate"
 													viewport={{once: true}}
 													variants={arrayLoopStaggerChildren}
+													onClick={displayOurServicesSublinks}
 												>
 													<div className="flex justify-center items-center gap-2 cursor-pointer">
 														<Link
@@ -265,7 +269,9 @@ const Navbar: FC = () => {
 																		variants={arrayLoopStaggerChildren}
 																	>
 																		<Link
+																			target="_self"
 																			href="/case-studies"
+																			aria-label={`Case Studies`}
 																			className={` ${
 																				newsInsightsSublinksOpen
 																					? "text-black hover:text-white"

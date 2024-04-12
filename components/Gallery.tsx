@@ -48,8 +48,8 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 					className="grid gap-4 grid-cols-2 lg:grid-cols-4"
 				>
 					{gallery?.length > 0 ? (
-						gallery?.map((item: any, keys: number) => (
-							<Fragment key={keys}>
+						gallery?.map((item: any, index: number) => (
+							<Fragment key={index}>
 								<>
 									<Image
 										alt={item?.altText}

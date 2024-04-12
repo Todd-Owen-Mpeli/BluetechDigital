@@ -48,10 +48,10 @@ const SubMegaMenuLinks: FC = () => {
 							{/* Menu Link*/}
 							{globalContext?.ourServicesLinks?.length > 0 ? (
 								globalContext?.ourServicesLinks?.map(
-									(item: any, keys: number) => (
-										<Fragment key={keys}>
+									(item: any, index: number) => (
+										<Fragment key={index}>
 											<motion.li
-												custom={keys}
+												custom={index}
 												initial={initial}
 												whileInView="animate"
 												viewport={{once: true}}

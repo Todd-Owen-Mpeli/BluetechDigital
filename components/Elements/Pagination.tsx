@@ -56,10 +56,10 @@ const Pagination: FC<IPagination> = ({
 		<>
 			<div className={`${tailwindStyling}`}>
 				{currentContent?.length > 0 ? (
-					currentContent?.map((item: any, keys: number) => (
-						<Fragment key={keys}>
+					currentContent?.map((item: any, index: number) => (
+						<Fragment key={index}>
 							<motion.div
-								custom={keys}
+								custom={index}
 								initial={initial}
 								whileInView="animate"
 								viewport={{once: true}}

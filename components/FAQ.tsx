@@ -83,10 +83,10 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 											className="flex flex-col items-baseline justify-center"
 										>
 											{faqGrid?.length > 0 ? (
-												faqGrid?.map((item: any, keys: number) => (
-													<Fragment key={keys}>
+												faqGrid?.map((item: any, index: number) => (
+													<Fragment key={index}>
 														<motion.li
-															custom={keys}
+															custom={index}
 															initial={initial}
 															whileInView="animate"
 															viewport={{once: true}}
@@ -94,9 +94,9 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 															className="mb-6 lg:pr-6"
 														>
 															<button
-																onClick={() => handleButtonClick(keys)}
+																onClick={() => handleButtonClick(index)}
 																className={`flex items-center justify-center text-tiny font-semibold hover:text-orange-default ${
-																	selectedItemIndex === keys
+																	selectedItemIndex === index
 																		? "text-yellow-default"
 																		: "text-black"
 																}`}

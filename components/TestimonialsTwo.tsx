@@ -126,10 +126,10 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 									{globalContext?.testimonials?.length > 0 ? (
 										globalContext?.testimonials
 											.slice(0, 2)
-											.map((item: any, keys: number) => (
-												<Fragment key={keys}>
+											.map((item: any, index: number) => (
+												<Fragment key={index}>
 													<motion.div
-														custom={keys}
+														custom={index}
 														initial={initial}
 														whileInView="animate"
 														viewport={{once: true}}
@@ -157,10 +157,10 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 									{globalContext?.testimonials?.length > 0 ? (
 										globalContext?.testimonials
 											.slice(2, 4)
-											.map((item: any, keys: number) => (
-												<Fragment key={keys}>
+											.map((item: any, index: number) => (
+												<Fragment key={index}>
 													<motion.div
-														custom={keys}
+														custom={index}
 														initial={initial}
 														whileInView="animate"
 														viewport={{once: true}}
@@ -188,10 +188,10 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 									{globalContext?.testimonials?.length > 0 ? (
 										globalContext?.testimonials
 											.slice(4, 6)
-											.map((item: any, keys: number) => (
-												<Fragment key={keys}>
+											.map((item: any, index: number) => (
+												<Fragment key={index}>
 													<motion.div
-														custom={keys}
+														custom={index}
 														initial={initial}
 														whileInView="animate"
 														viewport={{once: true}}

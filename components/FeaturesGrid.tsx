@@ -161,8 +161,8 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 					</motion.div>
 					{/* Remaining Cards */}
 					{gridContent?.length > 0 ? (
-						gridContent?.map((item: any, keys: number) => (
-							<Fragment key={keys}>
+						gridContent?.map((item: any, index: number) => (
+							<Fragment key={index}>
 								<FeaturesGridCard
 									title={item?.card?.title}
 									subtitle={item?.card?.subtitle}

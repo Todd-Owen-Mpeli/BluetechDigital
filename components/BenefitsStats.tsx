@@ -51,10 +51,10 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 					</div>
 					<div className="py-10 px-6 md:px-8 xl:pl-28 max-w-6xl mx-auto bg-white w-full lg:w-[55%] xl:w-[65%] grid grid-cols-2 md:grid-cols-2 gap-4 lg:gap-0 items-center justify-start md:justify-center">
 						{benefitsGrid?.length > 0 ? (
-							benefitsGrid?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
+							benefitsGrid?.map((item: any, index: number) => (
+								<Fragment key={index}>
 									<motion.div
-										custom={keys}
+										custom={index}
 										initial={initial}
 										whileInView="animate"
 										viewport={{once: true}}

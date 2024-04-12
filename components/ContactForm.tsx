@@ -34,7 +34,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 	const [errorMessage, setErrorMessage] = useState(false);
 
 	// A custom validation function. This must return an object
-	// which keys are symmetrical to our values/initialValues
+	// which index are symmetrical to our values/initialValues
 	const validate: any = (values: any) => {
 		const errors: any = {};
 		if (!values?.firstName) {
@@ -577,8 +577,8 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 									>
 										{globalContext?.ourServicesLinks?.length > 0 ? (
 											globalContext?.ourServicesLinks?.map(
-												(item: any, keys: number) => (
-													<Fragment key={keys}>
+												(item: any, index: number) => (
+													<Fragment key={index}>
 														<option value={item?.node?.label}>
 															{item?.node?.label}
 														</option>

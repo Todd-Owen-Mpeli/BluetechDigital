@@ -130,13 +130,13 @@ const Navbar: FC = () => {
 						>
 							{globalContext?.navbarMenuLinks?.length > 0 ? (
 								globalContext?.navbarMenuLinks?.map(
-									(item: any, keys: number) => (
-										<Fragment key={keys}>
+									(item: any, index: number) => (
+										<Fragment key={index}>
 											{item?.node?.label === "Our Services" ? (
 												<motion.li
 													className="relative"
 													onClick={displayOurServicesSublinks}
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}
@@ -196,7 +196,7 @@ const Navbar: FC = () => {
 											) : item?.node?.url === "/news-insights" ? (
 												<motion.li
 													className="relative"
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}
@@ -258,7 +258,7 @@ const Navbar: FC = () => {
 																>
 																	<motion.li
 																		className="w-full hover:bg-blue-default"
-																		custom={keys}
+																		custom={index}
 																		initial={initial}
 																		whileInView="animate"
 																		viewport={{once: true}}
@@ -283,7 +283,7 @@ const Navbar: FC = () => {
 											) : (
 												<motion.li
 													className="hidden xl:block"
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}

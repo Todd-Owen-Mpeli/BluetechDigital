@@ -63,8 +63,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 							viewport={{once: true}}
 						>
 							{globalContext?.mobileLinks.length > 0 ? (
-								globalContext?.mobileLinks.map((item: any, keys: number) => (
-									<Fragment key={keys}>
+								globalContext?.mobileLinks.map((item: any, index: number) => (
+									<Fragment key={index}>
 										{item?.node?.label === "Our Services" ? (
 											<li
 												onClick={displayOurServicesSublinks}
@@ -101,11 +101,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 															{/* Menu Link*/}
 															{globalContext?.ourServicesLinks?.length > 0 ? (
 																globalContext?.ourServicesLinks?.map(
-																	(item: any, keys: number) => (
-																		<Fragment key={keys}>
+																	(item: any, index: number) => (
+																		<Fragment key={index}>
 																			<li
 																				className={`${
-																					keys < 1
+																					index < 1
 																						? "border-t-[1px] border-darkGrey border-opacity-50"
 																						: "border-t-[0px]"
 																				} hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white`}

@@ -44,8 +44,8 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 						} px-4 py-10 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
 					>
 						{achievements?.length > 0 ? (
-							achievements?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
+							achievements?.map((item: any, index: number) => (
+								<Fragment key={index}>
 									<motion.div
 										initial={slideInRightInitial}
 										whileInView={slideInRightFinish}
@@ -62,9 +62,9 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 									>
 										<div
 											className={`p-6 w-[80%] sm:w-[40%] md:w-[60%] lg:w-full xl:shadow-2xl xl:w-[55%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
-												keys === 0
+												index === 0
 													? "bg-purple-three"
-													: keys === 1
+													: index === 1
 													? "bg-purple-three"
 													: "bg-purple-default"
 											}`}

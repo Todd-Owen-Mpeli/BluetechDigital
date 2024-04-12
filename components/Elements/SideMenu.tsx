@@ -142,8 +142,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
 													<span className="text-black text-tiny font-semibold text-center tracking-[0.05rem]hover:text-blue-two transition-all ease-in-out duration-500">
 														<Link
-															onClick={toggleMenu}
 															href="/career"
+															target="_self"
+															onClick={toggleMenu}
+															aria-label="Max Lynn Carpentry Website Link"
 															className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
 														>
 															{item?.node?.label}

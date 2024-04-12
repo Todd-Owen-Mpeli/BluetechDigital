@@ -62,10 +62,10 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className="max-w-7xl mx-auto flex flex-wrap -mx-4 -mb-8"
+							className="max-w-7xl mx-auto flex flex-wrap -mb-8"
 						>
 							<div className="w-full lg:w-1/3 py-8 px-4 mb-15 lg:mb-0">
-								<div className="max-w-xl mx-auto lg:mx-0 lg:max-w-full flex flex-wrap -mx-2 lg:flex-col lg:max-w-sm border-b lg:border-b-0 lg:border-r-2 border-blue-default">
+								<div className="max-w-xl mx-auto lg:mx-0 flex flex-wrap lg:flex-col lg:max-w-sm border-b lg:border-b-0 lg:border-r-2 border-blue-default">
 									<div className="w-full lg:w-full px-2 mb-15">
 										<motion.h2
 											initial={initial}

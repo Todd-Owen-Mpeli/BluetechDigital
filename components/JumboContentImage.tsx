@@ -109,8 +109,16 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 											<Image
 												alt={bottomContent?.image?.altText}
 												src={bottomContent?.image?.sourceUrl}
-												width={bottomContent?.image?.mediaDetails?.width}
-												height={bottomContent?.image?.mediaDetails?.height}
+												width={
+													bottomContent?.image?.mediaDetails?.width
+														? image?.mediaDetails?.width
+														: 500
+												}
+												height={
+													bottomContent?.image?.mediaDetails?.height
+														? image?.mediaDetails?.height
+														: 500
+												}
 												className={
 													bottomContent?.image?.sourceUrl
 														? `block object-contain object-center h-[35px] ${
@@ -198,8 +206,12 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 						<Image
 							alt={`${image?.altText}`}
 							src={image?.sourceUrl}
-							width={image?.mediaDetails?.width}
-							height={image?.mediaDetails?.height}
+							width={
+								image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+							}
+							height={
+								image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+							}
 							className={
 								image?.sourceUrl
 									? `block object-cover object-center w-full h-[500px]`

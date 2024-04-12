@@ -85,8 +85,16 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 														<Image
 															alt={item?.card?.image?.altText}
 															src={item?.card?.image?.sourceUrl}
-															width={item?.card?.image?.mediaDetails?.width}
-															height={item?.card?.image?.mediaDetails?.height}
+															width={
+																item?.card?.image?.mediaDetails?.width
+																	? item?.card?.mediaDetails?.width
+																	: 500
+															}
+															height={
+																item?.card?.image?.mediaDetails?.height
+																	? item?.card?.mediaDetails?.height
+																	: 500
+															}
 															className="object-cover object-center w-full h-full min-h-[400px]"
 														/>
 														<Link
@@ -300,8 +308,16 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 														<Image
 															alt={item?.card?.image?.altText}
 															src={item?.card?.image?.sourceUrl}
-															width={item?.card?.image?.mediaDetails?.width}
-															height={item?.card?.image?.mediaDetails?.height}
+															width={
+																item?.card?.image?.mediaDetails?.width
+																	? item?.card?.mediaDetails?.width
+																	: 500
+															}
+															height={
+																item?.card?.image?.mediaDetails?.height
+																	? item?.card?.mediaDetails?.height
+																	: 500
+															}
 															className="object-cover object-center w-full h-full min-h-[400px]"
 														/>
 														<Link

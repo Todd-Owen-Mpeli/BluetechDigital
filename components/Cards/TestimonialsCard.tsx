@@ -40,10 +40,22 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 									: `hidden`
 							}
 							width={
-								image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+								image?.mediaDetails?.width
+									? image?.mediaDetails?.width
+									: 500
+									? image?.mediaDetails?.width
+										? image?.mediaDetails?.width
+										: 500
+									: 500
 							}
 							height={
-								image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+								image?.mediaDetails?.height
+									? image?.mediaDetails?.height
+									: 500
+									? image?.mediaDetails?.height
+										? image?.mediaDetails?.height
+										: 500
+									: 500
 							}
 						/>
 						<div className={image?.sourceUrl ? "ml-0 lg:ml-2" : "ml-0"}>

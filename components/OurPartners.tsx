@@ -71,8 +71,16 @@ const OurPartners: FC<IOurPartners> = ({
 											<Image
 												alt={item?.image?.altText}
 												src={item?.image?.sourceUrl}
-												width={item?.image?.mediaDetails?.width}
-												height={item?.image?.mediaDetails?.height}
+												width={
+													item?.image?.mediaDetails?.width
+														? item?.image?.mediaDetails?.width
+														: 500
+												}
+												height={
+													item?.image?.mediaDetails?.height
+														? item?.image?.mediaDetails?.height
+														: 500
+												}
 												className={
 													item?.image?.sourceUrl
 														? `block w-[150px] mx-auto h-full sm:w-[150px] lg:w-full lg:h-[100px] object-contain object-center`

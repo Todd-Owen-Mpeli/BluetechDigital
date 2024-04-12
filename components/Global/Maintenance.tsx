@@ -13,7 +13,7 @@ const Maintenance: FC<IMaintenance> = ({title, paragraph, backgroundImage}) => {
 		<>
 			<div
 				className="relative flex flex-col h-full min-h-screen bg-center bg-no-repeat bg-cover"
-				style={{backgroundImage: `url("${backgroundImage}")`}}
+				style={{backgroundImage: `url("${backgroundImage?.sourceUrl}")`}}
 			>
 				<motion.div
 					initial={initial}

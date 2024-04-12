@@ -23,11 +23,19 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							<Image
 								alt={backgroundImage?.altText}
 								src={backgroundImage?.sourceUrl}
-								width={backgroundImage?.mediaDetails?.width}
-								height={backgroundImage?.mediaDetails?.height}
+								width={
+									backgroundImage?.mediaDetails?.width
+										? backgroundImage?.mediaDetails?.width
+										: 500
+								}
+								height={
+									backgroundImage?.mediaDetails?.height
+										? backgroundImage?.mediaDetails?.height
+										: 500
+								}
 								className={
 									backgroundImage?.sourceUrl
-										? `block absolute inset-0 w-full h-full object-cover transform lg:group-hover:scale-105 transition-all ease-in-out duration-500 object-contain object-center`
+										? `block absolute inset-0 w-full h-full object-cover transform lg:group-hover:scale-105 transition-all ease-in-out duration-500 object-center`
 										: `hidden`
 								}
 							/>

@@ -264,8 +264,16 @@ const Hero: FC<IHero> = ({
 						<Image
 							alt={rightsideImage?.altText}
 							src={rightsideImage?.sourceUrl}
-							width={rightsideImage?.mediaDetails?.width}
-							height={rightsideImage?.mediaDetails?.height}
+							width={
+								rightsideImage?.mediaDetails?.width
+									? rightsideImage?.mediaDetails?.width
+									: 500
+							}
+							height={
+								rightsideImage?.mediaDetails?.height
+									? rightsideImage?.mediaDetails?.height
+									: 500
+							}
 							className={
 								rightsideImage?.sourceUrl
 									? `block object-cover object-center w-full ${

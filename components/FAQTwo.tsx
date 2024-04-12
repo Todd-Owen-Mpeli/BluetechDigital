@@ -101,10 +101,18 @@ const FaqTwo: FC<IFAQTwo> = ({
 								className="relative"
 							>
 								<Image
-									alt={`${image?.altText}`}
 									src={image?.sourceUrl}
-									width={image?.mediaDetails?.width}
-									height={image?.mediaDetails?.height}
+									alt={`${image?.altText}`}
+									width={
+										image?.mediaDetails?.width
+											? image?.mediaDetails?.width
+											: 500
+									}
+									height={
+										image?.mediaDetails?.height
+											? image?.mediaDetails?.height
+											: 500
+									}
 									className={
 										image?.sourceUrl
 											? `block object-cover object-center w-full h-[225px] sm:h-[400px]`

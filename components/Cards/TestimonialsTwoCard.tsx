@@ -36,8 +36,16 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 									<Image
 										alt={`${image?.altText}`}
 										src={image?.sourceUrl}
-										width={image?.mediaDetails?.width}
-										height={image?.mediaDetails?.height}
+										width={
+											image?.mediaDetails?.width
+												? image?.mediaDetails?.width
+												: 500
+										}
+										height={
+											image?.mediaDetails?.height
+												? image?.mediaDetails?.height
+												: 500
+										}
 										className={
 											image?.sourceUrl
 												? `object-cover object-center w-14 h-14 rounded-full`

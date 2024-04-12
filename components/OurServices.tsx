@@ -189,8 +189,14 @@ const OurServices: FC<IOurServices> = ({
 							<Image
 								alt={`${image?.altText}`}
 								src={image?.sourceUrl}
-								width={image?.mediaDetails?.width}
-								height={image?.mediaDetails?.height}
+								width={
+									image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+								}
+								height={
+									image?.mediaDetails?.height
+										? image?.mediaDetails?.height
+										: 500
+								}
 								className={
 									image?.sourceUrl
 										? `sm:absolute rotate-[6deg] sm:rotate-[-6deg] top-0 lg:top-[-285px] ml-[-100px] sm:right-[0px] object-cover object-center w-[700px] h-[700px] sm:w-[750px] sm:h-[750px]`

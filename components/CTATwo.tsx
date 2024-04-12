@@ -49,9 +49,9 @@ const CTATwo: FC<ICTATwo> = ({
 				<div className="text-box-two">
 					<Link
 						href={`${buttonLink?.url}`}
-						target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 						aria-label={`${buttonLink?.title}`}
 						className={buttonLink?.url ? "block" : "hidden"}
+						target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 					>
 						<ButtonBorderSliced
 							fullWidth={false}

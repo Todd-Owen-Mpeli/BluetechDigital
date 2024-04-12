@@ -45,7 +45,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 			>
 				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white">
 					<div className="flex flex-col items-center mb-8">
-						<Link className="mr-auto text-3xl font-bold leading-none" href="/">
+						<Link
+							href="/"
+							target="_self"
+							aria-label={`Bluetech Digital Homepage Link`}
+							className="mr-auto text-3xl font-bold leading-none"
+						>
 							<Image
 								width={500}
 								height={500}
@@ -74,6 +79,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 													<Link
 														onClick={toggleMenu}
 														href={item?.node?.url}
+														aria-label={`${item?.node?.title}`}
+														target={`${
+															item?.node?.target ? item?.node?.target : "_self"
+														}`}
 														className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
 													>
 														{item?.node?.label}
@@ -142,10 +151,14 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<div className="py-4 flex flex-row justify-between items-center gap-2">
 													<span className="text-black text-tiny font-semibold text-center tracking-[0.05rem]hover:text-blue-two transition-all ease-in-out duration-500">
 														<Link
-															href="/career"
-															target="_self"
 															onClick={toggleMenu}
-															aria-label="Max Lynn Carpentry Website Link"
+															href={item?.node?.url}
+															aria-label={`${item?.node?.label}`}
+															target={`${
+																item?.node?.target
+																	? item?.node?.target
+																	: "_self"
+															}`}
 															className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
 														>
 															{item?.node?.label}
@@ -169,8 +182,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														>
 															<li className="hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white">
 																<Link
-																	onClick={toggleMenu}
+																	target="_self"
 																	href="/case-studies"
+																	onClick={toggleMenu}
+																	aria-label={`Case Studies Page`}
 																	className="block p-4 text-tiny font-semibold"
 																>
 																	Case Studies
@@ -185,10 +200,10 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 												<Link
 													onClick={toggleMenu}
 													href={`${item?.node?.url}`}
+													aria-label={`${item?.node?.label}`}
 													target={`${
 														item?.node?.target ? item?.node?.target : "_self"
 													}`}
-													aria-label={`${item?.node?.label}`}
 													className="block py-4 text-tiny font-semibold text-black hover:text-blue-two"
 												>
 													{item?.node?.label}
@@ -219,9 +234,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
 									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
-									target={
+									target={`${
 										globalContext?.themesOptionsContent?.facebookLink?.target
-									}
+											? globalContext?.themesOptionsContent?.facebookLink
+													?.target
+											: "_self"
+									}`}
 								>
 									<svg
 										height="100%"
@@ -248,9 +266,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
 									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
-									target={
+									target={`${
 										globalContext?.themesOptionsContent?.twitterLink?.target
-									}
+											? globalContext?.themesOptionsContent?.twitterLink?.target
+											: "_self"
+									}`}
 								>
 									<svg
 										height="100%"
@@ -277,9 +297,12 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 									className="inline-block px-1 hover:opacity-70"
 									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
 									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink.title}`}
-									target={
+									target={`${
 										globalContext?.themesOptionsContent?.linkedinLink?.target
-									}
+											? globalContext?.themesOptionsContent?.linkedinLink
+													?.target
+											: "_self"
+									}`}
 								>
 									<svg
 										height="100%"
@@ -331,9 +354,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 										</svg>
 									</div>
 									<Link
+										target="_self"
 										onClick={toggleMenu}
-										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+										aria-label={`${globalContext?.themesOptionsContent?.email}`}
+										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 									>
 										{globalContext?.themesOptionsContent?.email}
 									</Link>
@@ -366,9 +391,11 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 										</svg>
 									</div>
 									<Link
+										target="_self"
 										onClick={toggleMenu}
-										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 										href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
+										aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
+										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 									>
 										{globalContext?.themesOptionsContent?.emailTwo}
 									</Link>

@@ -52,10 +52,18 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 							<Fragment key={index}>
 								<>
 									<Image
-										alt={item?.altText}
+										alt={`${item?.altText}`}
 										src={item?.sourceUrl}
-										width={item?.mediaDetails?.width}
-										height={item?.mediaDetails?.height}
+										width={
+											item?.mediaDetails?.width
+												? item?.mediaDetails?.width
+												: 500
+										}
+										height={
+											item?.mediaDetails?.height
+												? item?.mediaDetails?.height
+												: 500
+										}
 										className={
 											item?.sourceUrl
 												? `block object-cover object-center w-full h-[175px] sm:h-[250px]`

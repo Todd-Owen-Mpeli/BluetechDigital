@@ -125,10 +125,14 @@ const SubMegaMenuLinks: FC = () => {
 									globalContext?.themesOptionsContent?.menuColumnTwo?.buttonLink
 										?.url
 								}
-								target={
+								target={`${
 									globalContext?.themesOptionsContent?.menuColumnTwo?.buttonLink
 										?.target
-								}
+										? globalContext?.themesOptionsContent?.menuColumnTwo
+												?.buttonLink?.target
+										: "_self"
+								}`}
+								aria-label={`${globalContext?.themesOptionsContent?.menuColumnTwo?.buttonLink?.title}`}
 							>
 								<motion.button
 									initial={initialTwo}
@@ -244,10 +248,14 @@ const SubMegaMenuLinks: FC = () => {
 									globalContext?.themesOptionsContent?.menuColumnThree
 										?.buttonLink?.url
 								}
-								target={
-									globalContext?.themesOptionsContent?.menuColumnThree
-										?.buttonLink?.target
-								}
+								target={`${
+									globalContext?.themesOptionsContent?.menuColumnTwo?.buttonLink
+										?.target
+										? globalContext?.themesOptionsContent?.menuColumnTwo
+												?.buttonLink?.target
+										: "_self"
+								}`}
+								aria-label={`${globalContext?.themesOptionsContent?.menuColumnTwo?.buttonLink?.title}`}
 							>
 								<ButtonBorderSliced
 									fullWidth={false}

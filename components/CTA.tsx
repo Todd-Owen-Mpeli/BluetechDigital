@@ -16,7 +16,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 			<div className="flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:p-10 -m-4">
 				<div className="w-full lg:w-5/12 p-4">
 					<Link
-						href={buttonLink?.url}
+						href={`${buttonLink?.url}`}
+						aria-label={`${buttonLink?.title}`}
+						target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 						className={buttonLink?.url ? "block group" : "hidden"}
 					>
 						<div className="relative overflow-hidden h-[325px] lg:h-[400px]">
@@ -64,7 +66,9 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							/>
 						</div>
 						<Link
-							href={buttonLink?.url}
+							href={`${buttonLink?.url}`}
+							aria-label={`${buttonLink?.title}`}
+							target={`${buttonLink?.target ? buttonLink?.target : "_self"}`}
 							className={buttonLink?.url ? "block mx-auto lg:mx-0" : "hidden"}
 						>
 							<ButtonBorderSliced

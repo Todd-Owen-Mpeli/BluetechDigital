@@ -21,7 +21,11 @@ const BlogsCard: FC<IBlogsCard> = ({
 		<>
 			<div className="w-full h-full">
 				<div className="relative px-4 lg:px-0 h-[225px]">
-					<Link href={uri ? `blogs${uri}` : `/`}>
+					<Link
+						target="_self"
+						aria-label={`blogs${uri}`}
+						href={uri ? `blogs${uri}` : `/`}
+					>
 						<Image
 							alt={featuredImage?.node?.altText}
 							src={featuredImage?.node?.sourceUrl}
@@ -46,7 +50,11 @@ const BlogsCard: FC<IBlogsCard> = ({
 						{dateFormat(date, "dddd, mmmm d, yyyy")}
 					</span>
 
-					<Link href={uri ? `blogs${uri}` : `/`}>
+					<Link
+						target="_self"
+						aria-label={`blogs${uri}`}
+						href={uri ? `blogs${uri}` : `/`}
+					>
 						<motion.h2
 							initial={initial}
 							whileInView={fadeInUp}
@@ -81,6 +89,8 @@ const BlogsCard: FC<IBlogsCard> = ({
 						viewport={{once: true}}
 					>
 						<Link
+							target="_self"
+							aria-label={`blogs${uri}`}
 							href={uri ? `blogs${uri}` : `/`}
 							className="text-sm font-bold text-black uppercase transition duration-200 lg:text-blue hover:text-blue-two hover:underline"
 						>

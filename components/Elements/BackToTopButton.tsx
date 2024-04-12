@@ -35,7 +35,12 @@ const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
 				}
 			>
 				<div className="fixed right-6 z-20 bottom-[2.5rem] flex justify-center">
-					<Link href={`${link}`} className={styles.backToTopButton}>
+					<Link
+						target="_self"
+						href={`${link}`}
+						aria-label={`back to the top Button`}
+						className={styles.backToTopButton}
+					>
 						<span className={styles.span}>
 							<svg
 								height="35"

@@ -11,7 +11,12 @@ const BackHoverButton: FC<IBackHoverButton> = ({link}) => {
 		<>
 			<div className="absolute items-center justify-center hidden w-full h-full xl:flex">
 				<div className="fixed left-10 z-10 top-[7.5rem] flex justify-center">
-					<Link href={`${link}`} className={styles.backHoverButton}>
+					<Link
+						target="_self"
+						href={`${link}`}
+						aria-label={`previous page Button`}
+						className={styles.backHoverButton}
+					>
 						<span className={styles.span}>
 							<svg
 								width="45px"

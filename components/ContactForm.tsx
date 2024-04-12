@@ -238,6 +238,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 								</motion.h2>
 								<Link
 									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
+									target="_self"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
@@ -245,7 +246,9 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 								</Link>
 								<Link
 									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
+									target="_self"
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
+									aria-label={`${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.phoneNumberTwo}
 								</Link>
@@ -301,7 +304,9 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
 											: "hidden"
 									}
+									target="_self"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
+									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
 								</Link>
@@ -311,7 +316,9 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
 											: "hidden"
 									}
+									target="_self"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
+									aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
 									{globalContext?.themesOptionsContent?.emailTwo}
 								</Link>

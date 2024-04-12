@@ -26,7 +26,11 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 					boxShadow: "28px 28px 2px -20px rgba(0,0,0,0.1)",
 				}}
 			>
-				<Link href={slug ? `case-study/${slug}` : `/`}>
+				<Link
+					target="_self"
+					aria-label={`case-study/${slug}`}
+					href={slug ? `case-study/${slug}` : `/`}
+				>
 					<Image
 						alt={featuredImage?.node?.altText}
 						src={featuredImage?.node?.sourceUrl}
@@ -57,7 +61,11 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 							{dateFormat(date, "dddd, mmmm d, yyyy")}
 						</span>
 
-						<Link href={slug ? `case-study/${slug}` : `/`}>
+						<Link
+							target="_self"
+							href={slug ? `case-study/${slug}` : `/`}
+							aria-label={`case-study/${slug}`}
+						>
 							<motion.h2
 								initial={initial}
 								whileInView={fadeInUp}
@@ -94,8 +102,9 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 						className="mt-2"
 					>
 						<Link
-							href={slug ? `case-study/${slug}` : `/`}
 							target="_self"
+							aria-label={`case-study/${slug}`}
+							href={slug ? `case-study/${slug}` : `/`}
 							className={slug ? "block" : "hidden"}
 						>
 							<ButtonBorderSliced

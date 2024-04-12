@@ -37,7 +37,11 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 				}}
 			>
-				<Link href={uri ? `news-insights${uri}` : `/`}>
+				<Link
+					target="_self"
+					aria-label={`news-insights${uri}`}
+					href={uri ? `news-insights${uri}` : `/`}
+				>
 					<Image
 						alt={featuredImage?.node?.altText}
 						src={featuredImage?.node?.sourceUrl}
@@ -58,7 +62,11 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					{dateFormat(date, "dddd, mmmm d, yyyy")}
 				</span>
 
-				<Link href={uri ? `news-insights${uri}` : `/`}>
+				<Link
+					target="_self"
+					aria-label={`news-insights${uri}`}
+					href={uri ? `news-insights${uri}` : `/`}
+				>
 					<motion.h2
 						initial={initial}
 						whileInView={fadeInUp}
@@ -93,8 +101,9 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					className="mt-2"
 				>
 					<Link
-						href={uri ? `news-insights${uri}` : `/`}
 						target="_self"
+						aria-label={`news-insights${uri}`}
+						href={uri ? `news-insights${uri}` : `/`}
 						className={uri ? "block" : "hidden"}
 					>
 						<ButtonBorderSliced

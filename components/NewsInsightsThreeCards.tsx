@@ -73,10 +73,10 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 				>
 					{globalContext?.newsInsightsThreeCards?.length > 0 ? (
 						globalContext?.newsInsightsThreeCards?.map(
-							(item: any, keys: number) => (
-								<Fragment key={keys}>
+							(item: any, index: number) => (
+								<Fragment key={index}>
 									<motion.div
-										custom={keys}
+										custom={index}
 										initial={initial}
 										whileInView="animate"
 										viewport={{once: true}}

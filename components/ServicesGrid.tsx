@@ -34,11 +34,11 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 			>
 				<div className="lg:container px-0 mx-auto">
 					{servicesGrid?.length > 0 ? (
-						servicesGrid?.map((item: any, keys: number) => (
-							<Fragment key={keys}>
+						servicesGrid?.map((item: any, index: number) => (
+							<Fragment key={index}>
 								<>
 									<motion.div
-										custom={keys}
+										custom={index}
 										initial={initial}
 										whileInView="animate"
 										viewport={{once: true}}
@@ -51,12 +51,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 											whileInView="animate"
 											viewport={{once: true}}
 											className={`flex ${
-												keys % 2 === 0 ? "flex-col-reverse" : "flex-col"
+												index % 2 === 0 ? "flex-col-reverse" : "flex-col"
 											} lg:flex-row -mx-4 gap-8 items-center`}
 										>
 											<div
 												className={
-													keys % 2 === 0 ? "w-full lg:w-1/2 px-4" : "hidden"
+													index % 2 === 0 ? "w-full lg:w-1/2 px-4" : "hidden"
 												}
 											>
 												<motion.div
@@ -68,15 +68,15 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 												>
 													<div
 														className={`absolute w-full h-full min-h-[400px] top-0 left-[-45px] mt-6 ml-6 ${
-															keys === 0
+															index === 0
 																? "bg-blue-default"
-																: keys === 1
+																: index === 1
 																? "bg-yellow-default"
-																: keys === 2
+																: index === 2
 																? "bg-purple-default"
-																: keys === 3
+																: index === 3
 																? "bg-green-default"
-																: keys === 4
+																: index === 4
 																? "bg-yellow-default"
 																: "bg-blue-default"
 														}`}
@@ -271,7 +271,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 											</div>
 											<div
 												className={
-													keys % 2 === 0 ? "hidden" : "w-full lg:w-1/2 px-4"
+													index % 2 === 0 ? "hidden" : "w-full lg:w-1/2 px-4"
 												}
 											>
 												<motion.div
@@ -283,15 +283,15 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 												>
 													<div
 														className={`absolute w-full h-full min-h-[400px] top-0 left-0 mt-6 ml-6 ${
-															keys === 0
+															index === 0
 																? "bg-blue-default"
-																: keys === 1
+																: index === 1
 																? "bg-yellow-default"
-																: keys === 2
+																: index === 2
 																? "bg-purple-default"
-																: keys === 3
+																: index === 3
 																? "bg-green-default"
-																: keys === 4
+																: index === 4
 																? "bg-yellow-default"
 																: "bg-blue-default"
 														}`}

@@ -265,13 +265,13 @@ const Footer: FC = () => {
 							>
 								{globalContext?.footerMenuLinks?.length > 0 ? (
 									globalContext?.footerMenuLinks?.map(
-										(item: any, keys: number) => (
-											<Fragment key={keys}>
+										(item: any, index: number) => (
+											<Fragment key={index}>
 												{item?.node?.label === "Our Services" ? (
 													<>
 														<motion.li
 															className="px-0"
-															custom={keys}
+															custom={index}
 															initial={initial}
 															whileInView="animate"
 															viewport={{once: true}}
@@ -294,7 +294,7 @@ const Footer: FC = () => {
 												) : (
 													<motion.li
 														className="px-0"
-														custom={keys}
+														custom={index}
 														initial={initial}
 														whileInView="animate"
 														viewport={{once: true}}
@@ -335,11 +335,11 @@ const Footer: FC = () => {
 							>
 								{globalContext?.ourServicesLinks?.length > 0 ? (
 									globalContext?.ourServicesLinks?.map(
-										(item: any, keys: number) => (
-											<Fragment key={keys}>
+										(item: any, index: number) => (
+											<Fragment key={index}>
 												<motion.li
 													className="px-0"
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}
@@ -372,10 +372,10 @@ const Footer: FC = () => {
 								{globalContext?.themesOptionsContent
 									?.awardsCertificationsGallery?.length > 0 ? (
 									globalContext?.themesOptionsContent?.awardsCertificationsGallery?.map(
-										(item: any, keys: number) => (
-											<Fragment key={keys}>
+										(item: any, index: number) => (
+											<Fragment key={index}>
 												<motion.div
-													custom={keys}
+													custom={index}
 													initial={initial}
 													whileInView="animate"
 													viewport={{once: true}}
@@ -420,10 +420,10 @@ const Footer: FC = () => {
 						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
 						{globalContext?.copyrightLinks?.length > 0 ? (
-							globalContext?.copyrightLinks?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
+							globalContext?.copyrightLinks?.map((item: any, index: number) => (
+								<Fragment key={index}>
 									<motion.li
-										custom={keys}
+										custom={index}
 										initial={initial}
 										whileInView="animate"
 										viewport={{once: true}}

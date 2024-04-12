@@ -71,10 +71,10 @@ const FaqTwo: FC<IFAQTwo> = ({
 							}`}
 						>
 							{faqGrid?.length > 0 ? (
-								faqGrid.map((item: any, keys: number) => (
-									<Fragment key={keys}>
+								faqGrid.map((item: any, index: number) => (
+									<Fragment key={index}>
 										<motion.div
-											custom={keys}
+											custom={index}
 											initial={initial}
 											whileInView="animate"
 											viewport={{once: true}}
@@ -82,7 +82,7 @@ const FaqTwo: FC<IFAQTwo> = ({
 											className="w-full"
 										>
 											<FAQCard
-												index={keys}
+												index={index}
 												title={item?.card?.title}
 												paragraph={item?.card?.paragraph}
 											/>

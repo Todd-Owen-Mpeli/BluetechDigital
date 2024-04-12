@@ -12,8 +12,8 @@ const JumboContentSection: FC<IJumboContentSection> = ({
 		<>
 			<div>
 				{jumboContentSection?.length > 0 ? (
-					jumboContentSection?.map((item: any, keys: number) => (
-						<Fragment key={keys}>
+					jumboContentSection?.map((item: any, index: number) => (
+						<Fragment key={index}>
 							<JumboContentSectionCard
 								title={item?.content?.title}
 								image={item?.content?.image}

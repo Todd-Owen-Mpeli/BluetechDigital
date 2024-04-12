@@ -73,10 +73,10 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 						<FeaturesGridImageCard backgroundImage={cardTwo?.backgroundImage} />
 						{/* Remaining Cards */}
 						{gridContent?.length > 0 ? (
-							gridContent?.map((item: any, keys: number) => (
-								<Fragment key={keys}>
+							gridContent?.map((item: any, index: number) => (
+								<Fragment key={index}>
 									<FeaturesGridCard
-										key={keys}
+										key={index}
 										title={item?.card?.title}
 										subtitle={item?.card?.subtitle}
 										paragraph={item?.card?.paragraph}

@@ -45,8 +45,16 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 					<Image
 						alt={featuredImage?.node?.altText}
 						src={featuredImage?.node?.sourceUrl}
-						width={featuredImage?.node?.mediaDetails?.width}
-						height={featuredImage?.node?.mediaDetails?.height}
+						width={
+							featuredImage?.node?.mediaDetails?.width
+								? featuredImage?.node?.mediaDetails?.width
+								: 500
+						}
+						height={
+							featuredImage?.node?.mediaDetails?.height
+								? featuredImage?.node?.mediaDetails?.height
+								: 500
+						}
 						className="object-cover object-center w-full h-full"
 					/>
 				</Link>

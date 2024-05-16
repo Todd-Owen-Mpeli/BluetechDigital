@@ -164,8 +164,8 @@ const Navbar: FC = () => {
 															{item?.node?.label}
 														</Link>
 														<Image
-															width={550}
-															height={550}
+															width={500}
+															height={500}
 															alt="White Arrow Icon"
 															src="/svg/navigation-menu-dropdown-arrow-white.svg"
 															className={`${
@@ -175,8 +175,8 @@ const Navbar: FC = () => {
 															} group-hover:hidden cursor-pointer w-[22px] h-[22px] object-contain object-center`}
 														/>
 														<Image
-															width={550}
-															height={550}
+															width={500}
+															height={500}
 															alt="Black Arrow Icon"
 															src="/svg/navigation-menu-dropdown-arrow-black.svg"
 															className={`${
@@ -224,8 +224,8 @@ const Navbar: FC = () => {
 															{item?.node?.label}
 														</Link>
 														<Image
-															width={550}
-															height={550}
+															width={500}
+															height={500}
 															alt="White Arrow Icon"
 															onClick={displayNewsInsightsSublinks}
 															src="/svg/navigation-menu-dropdown-arrow-white.svg"
@@ -236,8 +236,8 @@ const Navbar: FC = () => {
 															} group-hover:hidden cursor-pointer w-[22px] h-[22px] object-contain object-center`}
 														/>
 														<Image
-															width={550}
-															height={550}
+															width={500}
+															height={500}
 															alt="Black Arrow Icon"
 															onClick={displayNewsInsightsSublinks}
 															src="/svg/navigation-menu-dropdown-arrow-black.svg"

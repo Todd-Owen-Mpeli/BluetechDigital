@@ -230,8 +230,16 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 								<Image
 									alt={contentBox?.icon?.altText}
 									src={contentBox?.icon?.sourceUrl}
-									width={contentBox?.icon?.mediaDetails?.width}
-									height={contentBox?.icon?.mediaDetails?.height}
+									width={
+										contentBox?.icon?.mediaDetails?.width
+											? contentBox?.icon?.mediaDetails?.width
+											: 500
+									}
+									height={
+										contentBox?.icon?.mediaDetails?.height
+											? contentBox?.icon?.mediaDetails?.height
+											: 500
+									}
 									className={
 										contentBox?.icon?.sourceUrl
 											? `block object-contain object-center w-full h-[50px] mb-4`

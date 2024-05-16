@@ -88,8 +88,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														{item?.node?.label}
 													</Link>
 													<Image
-														width={550}
-														height={550}
+														width={500}
+														height={500}
 														alt="Black Arrow Icon"
 														src="/svg/navigation-menu-dropdown-arrow-black.svg"
 														className="w-[25px] h-[25px] object-contain object-center"
@@ -165,8 +165,8 @@ const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
 														</Link>
 													</span>
 													<Image
-														width={550}
-														height={550}
+														width={500}
+														height={500}
 														alt="Black Arrow Icon"
 														src="/svg/navigation-menu-dropdown-arrow-black.svg"
 														className="w-[25px] h-[25px] object-contain object-center"

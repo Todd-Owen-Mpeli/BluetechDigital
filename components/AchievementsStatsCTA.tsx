@@ -72,8 +72,16 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 											<Image
 												alt={item?.card?.icon?.altText}
 												src={item?.card?.icon?.sourceUrl}
-												width={item?.card?.icon?.mediaDetails?.width}
-												height={item?.card?.icon?.mediaDetails?.height}
+												width={
+													item?.card?.icon?.mediaDetails?.width
+														? item?.card?.icon?.mediaDetails?.width
+														: 500
+												}
+												height={
+													item?.card?.icon?.mediaDetails?.height
+														? item?.card?.icon?.mediaDetails?.height
+														: 500
+												}
 												className={
 													item?.card?.icon?.sourceUrl
 														? `block object-contain object-center w-full h-[50px] lg:h-[60px] mb-6`

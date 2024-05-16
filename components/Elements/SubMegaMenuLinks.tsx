@@ -97,10 +97,16 @@ const SubMegaMenuLinks: FC = () => {
 								width={
 									globalContext?.themesOptionsContent?.menuColumnTwo?.image
 										?.mediaDetails?.width
+										? globalContext?.themesOptionsContent?.menuColumnTwo?.image
+												?.mediaDetails?.width
+										: 500
 								}
 								height={
 									globalContext?.themesOptionsContent?.menuColumnTwo?.image
 										?.mediaDetails?.height
+										? globalContext?.themesOptionsContent?.menuColumnTwo?.image
+												?.mediaDetails?.height
+										: 500
 								}
 								alt={
 									globalContext?.themesOptionsContent?.menuColumnTwo?.image

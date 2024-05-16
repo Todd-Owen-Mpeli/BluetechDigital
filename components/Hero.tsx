@@ -57,8 +57,16 @@ const Hero: FC<IHero> = ({
 											decoding="async"
 											alt={smallImageOne?.altText}
 											src={smallImageOne?.sourceUrl}
-											width={smallImageOne?.mediaDetails?.width}
-											height={smallImageOne?.mediaDetails?.height}
+											width={
+												smallImageOne?.mediaDetails?.width
+													? smallImageOne?.mediaDetails?.width
+													: 500
+											}
+											height={
+												smallImageOne?.mediaDetails?.height
+													? smallImageOne?.mediaDetails?.height
+													: 500
+											}
 											className="inline my-1 lg:my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
@@ -75,8 +83,16 @@ const Hero: FC<IHero> = ({
 											decoding="async"
 											alt={smallImageTwo?.altText}
 											src={smallImageTwo?.sourceUrl}
-											width={smallImageTwo?.mediaDetails?.width}
-											height={smallImageTwo?.mediaDetails?.height}
+											width={
+												smallImageTwo?.mediaDetails?.width
+													? smallImageTwo?.mediaDetails?.width
+													: 500
+											}
+											height={
+												smallImageTwo?.mediaDetails?.height
+													? smallImageTwo?.mediaDetails?.height
+													: 500
+											}
 											className="inline w-[150px] lg:w-[175px] my-1 lg:my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,

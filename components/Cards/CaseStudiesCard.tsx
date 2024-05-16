@@ -34,8 +34,16 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 					<Image
 						alt={featuredImage?.node?.altText}
 						src={featuredImage?.node?.sourceUrl}
-						width={featuredImage?.node?.mediaDetails?.width}
-						height={featuredImage?.node?.mediaDetails?.height}
+						width={
+							featuredImage?.node?.mediaDetails?.width
+								? featuredImage?.node?.mediaDetails?.width
+								: 500
+						}
+						height={
+							featuredImage?.node?.mediaDetails?.height
+								? featuredImage?.node?.mediaDetails?.height
+								: 500
+						}
 						className={
 							featuredImage?.node?.sourceUrl
 								? `absolute top-[-125px] z-20 object-contain object-center w-full h-[350px]`

@@ -1,11 +1,11 @@
 // Imports
 import {
+	fadeIn,
 	initial,
 	stagger,
 	fadeInUp,
-	arrayLoopStaggerChildren,
 	initialTwo,
-	fadeIn,
+	arrayLoopStaggerChildren,
 } from "../animations/animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -87,12 +87,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															src={item?.card?.image?.sourceUrl}
 															width={
 																item?.card?.image?.mediaDetails?.width
-																	? item?.card?.mediaDetails?.width
+																	? item?.card?.image?.mediaDetails?.width
 																	: 500
 															}
 															height={
 																item?.card?.image?.mediaDetails?.height
-																	? item?.card?.mediaDetails?.height
+																	? item?.card?.image?.mediaDetails?.height
 																	: 500
 															}
 															className="object-cover object-center w-full h-full min-h-[400px]"
@@ -310,12 +310,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															src={item?.card?.image?.sourceUrl}
 															width={
 																item?.card?.image?.mediaDetails?.width
-																	? item?.card?.mediaDetails?.width
+																	? item?.card?.image?.mediaDetails?.width
 																	: 500
 															}
 															height={
 																item?.card?.image?.mediaDetails?.height
-																	? item?.card?.mediaDetails?.height
+																	? item?.card?.image?.mediaDetails?.height
 																	: 500
 															}
 															className="object-cover object-center w-full h-full min-h-[400px]"

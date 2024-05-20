@@ -7,7 +7,7 @@ const nextConfig = {
 				protocol: "https",
 				hostname: `${process.env.IMAGE_REMOTE_PATTERNS_HOSTNAME}`,
 				port: "",
-				pathname: "/wp-content/uploads/**",
+				pathname: `${process.env.IMAGE_REMOTE_PATHNAME}`,
 			},
 		],
 	},

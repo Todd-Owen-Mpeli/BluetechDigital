@@ -40,36 +40,6 @@ export type IPostTypes = {
 	caseStudies: string;
 	testimonials: string;
 };
-export type IMobileLinks = [
-	{
-		node: {
-			id: string;
-			url: string;
-			label: string;
-		};
-	}
-];
-export type ICaseStudies = [
-	{
-		node: {
-			id: string;
-			uri: string;
-			date: string;
-			title: string;
-			excerpt: string;
-			featuredImage: {
-				node: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-			};
-		};
-	}
-];
 export type ITestimonials = [
 	{
 		node: {
@@ -87,63 +57,6 @@ export type ITestimonials = [
 					};
 				};
 			};
-		};
-	}
-];
-export type INewsInsights = [
-	{
-		node: {
-			id: string;
-			uri: string;
-			date: string;
-			title: string;
-			excerpt: string;
-			featuredImage: {
-				node: {
-					altText: string;
-					sourceUrl: string;
-					mediaDetails: {
-						width: number;
-						height: number;
-					};
-				};
-			};
-		};
-	}
-];
-export type ICopyrightLinks = [
-	{
-		node: {
-			id: string;
-			url: string;
-			label: string;
-		};
-	}
-];
-export type IFooterMenuLinks = [
-	{
-		node: {
-			id: string;
-			url: string;
-			label: string;
-		};
-	}
-];
-export type INavbarMenuLinks = [
-	{
-		node: {
-			id: string;
-			url: string;
-			label: string;
-		};
-	}
-];
-export type IOurServicesLinks = [
-	{
-		node: {
-			id: string;
-			url: string;
-			label: string;
 		};
 	}
 ];
@@ -217,6 +130,48 @@ export type IThemesOptionsContent = {
 	};
 };
 
+// WEBSITE NEWS AND CASE STUDIES TYPES
+export namespace INewsCaseStudies {
+	export type INewsInsights = {
+		node: {
+			id: string;
+			uri: string;
+			date: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}[];
+
+	export interface ICaseStudies extends INewsInsights {}
+}
+
+// WEBSITE LINKS AND SUBLINKS TYPES
+export namespace ILinks {
+	export type INavbarMenuLinks = {
+		node: {
+			id: string;
+			url: string;
+			label: string;
+		};
+	}[];
+
+	export interface IMobileLinks extends INavbarMenuLinks {}
+	export interface ICareerSublinks extends INavbarMenuLinks {}
+	export interface ICopyrightLinks extends INavbarMenuLinks {}
+	export interface IFooterMenuLinks extends INavbarMenuLinks {}
+	export interface IOurServicesLinks extends INavbarMenuLinks {}
+}
+
 /* CONTEXT PROVIDERS  */
 export type IPageContext = {
 	seo: ISeo;
@@ -224,28 +179,36 @@ export type IPageContext = {
 	postTypeFlexibleContent: IPostTypeFlexibleContent;
 };
 export type IGlobalProps = {
-	mobileLinks: IMobileLinks;
-	caseStudies: ICaseStudies;
 	testimonials: ITestimonials;
-	newsInsights: INewsInsights;
-	copyrightLinks: ICopyrightLinks;
-	navbarMenuLinks: INavbarMenuLinks;
-	footerMenuLinks: IFooterMenuLinks;
-	ourServicesLinks: IOurServicesLinks;
-	newsInsightsThreeCards: INewsInsights;
 	themesOptionsContent: IThemesOptionsContent;
+
+	// Website Links
+	mobileLinks: ILinks.IMobileLinks;
+	copyrightLinks: ILinks.ICopyrightLinks;
+	navbarMenuLinks: ILinks.INavbarMenuLinks;
+	footerMenuLinks: ILinks.IFooterMenuLinks;
+	ourServicesLinks: ILinks.IOurServicesLinks;
+
+	// News & Case Studies
+	caseStudies: INewsCaseStudies.ICaseStudies;
+	newsInsights: INewsCaseStudies.INewsInsights;
+	newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
 };
 export type IGlobalContext = {
-	mobileLinks: IMobileLinks;
-	caseStudies: ICaseStudies;
 	testimonials: ITestimonials;
-	newsInsights: INewsInsights;
-	copyrightLinks: ICopyrightLinks;
-	navbarMenuLinks: INavbarMenuLinks;
-	footerMenuLinks: IFooterMenuLinks;
-	ourServicesLinks: IOurServicesLinks;
-	newsInsightsThreeCards: INewsInsights;
 	themesOptionsContent: IThemesOptionsContent;
+
+	// Website Links
+	mobileLinks: ILinks.IMobileLinks;
+	copyrightLinks: ILinks.ICopyrightLinks;
+	navbarMenuLinks: ILinks.INavbarMenuLinks;
+	footerMenuLinks: ILinks.IFooterMenuLinks;
+	ourServicesLinks: ILinks.IOurServicesLinks;
+
+	// News & Case Studies
+	caseStudies: INewsCaseStudies.ICaseStudies;
+	newsInsights: INewsCaseStudies.INewsInsights;
+	newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
 };
 export type IPageContextProvider = {
 	seo: ISeo;

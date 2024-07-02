@@ -3,7 +3,7 @@ import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {ILinkedInCta} from "@/types/components/index";
-import {initial, stagger} from "../animations/animations";
+import {initial, stagger} from "@/animations/animations";
 
 const LinkedInCta: FC<ILinkedInCta> = ({
 	title,

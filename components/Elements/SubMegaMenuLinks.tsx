@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import {
 	fadeIn,
@@ -16,8 +18,8 @@ import {useGlobalContext} from "@/context/global";
 import styles from "./../../styles/components/Navbar.module.scss";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
-import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const SubMegaMenuLinks: FC = () => {
 	const globalContext = useGlobalContext();

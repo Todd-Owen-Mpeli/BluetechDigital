@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
@@ -6,8 +8,8 @@ import {ICaseStudiesGrid} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import Pagination from "./Elements/Pagination";
+import Paragraph from "@/components/Elements/Paragraph";
+import Pagination from "@/components/Elements/Pagination";
 
 const CaseStudiesGrid: FC<ICaseStudiesGrid> = ({
 	title,

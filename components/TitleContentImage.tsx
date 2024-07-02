@@ -5,7 +5,7 @@ import {
 	slideInLeftInitial,
 	slideInRightFinish,
 	slideInRightInitial,
-} from "../animations/animations";
+} from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,8 +13,8 @@ import {motion} from "framer-motion";
 import {ITitleContentImage} from "@/types/components";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const TitleContentImage: FC<ITitleContentImage> = ({
 	title,

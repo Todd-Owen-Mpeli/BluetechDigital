@@ -5,11 +5,11 @@ import Link from "next/link";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import {ITwoColumnButtonContent} from "@/types/components/index";
-import {fadeIn, stagger, initialTwo} from "../animations/animations";
+import {fadeIn, stagger, initialTwo} from "@/animations/animations";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	title,

@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import Link from "next/link";
 import {FC, useEffect, useState} from "react";

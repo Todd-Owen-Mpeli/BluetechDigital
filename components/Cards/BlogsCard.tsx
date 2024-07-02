@@ -5,10 +5,10 @@ import Image from "next/image";
 import dateFormat from "dateformat";
 import {motion} from "framer-motion";
 import {IBlogsCard} from "@/types/components/index";
-import {fadeInUp, initial, stagger} from "../../animations/animations";
+import {fadeInUp, initial, stagger} from "@/animations/animations";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const BlogsCard: FC<IBlogsCard> = ({
 	uri,

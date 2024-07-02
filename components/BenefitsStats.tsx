@@ -3,14 +3,14 @@ import fadeInUp, {
 	initial,
 	stagger,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IBenefitsStats} from "@/types/components/index";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const BenefitsStats: FC<IBenefitsStats> = ({
 	title,

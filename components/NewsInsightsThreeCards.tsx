@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import {
 	initial,
@@ -11,7 +13,7 @@ import {useGlobalContext} from "@/context/global";
 import {INewsInsights} from "@/types/components";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 import NewsInsightsCard from "./Cards/NewsInsightsCard";
 
 const newsInsightsThreeCards: FC<INewsInsights> = ({

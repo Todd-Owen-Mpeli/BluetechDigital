@@ -4,13 +4,13 @@ import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IOurServices} from "@/types/components/index";
-import fadeInUp, {fadeIn, initial, initialTwo} from "../animations/animations";
+import fadeInUp, {fadeIn, initial, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "../styles/components/OurServices.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const OurServices: FC<IOurServices> = ({
 	title,

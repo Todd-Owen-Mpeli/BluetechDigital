@@ -1,9 +1,11 @@
+"use client";
+
 // Imports
 import {FC} from "react";
 import {useGlobalContext} from "@/context/global";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 const NoticeInfoBanner: FC = () => {
 	const globalContext = useGlobalContext();
 

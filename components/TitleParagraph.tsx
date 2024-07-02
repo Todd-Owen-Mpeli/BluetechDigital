@@ -2,10 +2,10 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {ITitleParagraph} from "@/types/components";
-import {fadeInUp, initial} from "../animations/animations";
+import {fadeInUp, initial} from "@/animations/animations";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const TitleParagraph: FC<ITitleParagraph> = ({
 	title,

@@ -15,11 +15,11 @@ import {useGlobalContext} from "@/context/global";
 import {useState, FC, Fragment, useEffect} from "react";
 
 // Styling
-import styles from "./../../styles/components/Navbar.module.scss";
+import styles from "@/styles/components/Navbar.module.scss";
 
 // Components
-import SideMenu from "../Elements/SideMenu";
-import SubMegaMenuLinks from "../Elements/SubMegaMenuLinks";
+import SideMenu from "@/components/Elements/SideMenu";
+import SubMegaMenuLinks from "@/components/Elements/SubMegaMenuLinks";
 
 const Navbar: FC = () => {
 	const globalContext = useGlobalContext();

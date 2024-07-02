@@ -1,4 +1,3 @@
-// Imports
 import nodemailer from "nodemailer";
 
 const host: any = process.env.EMAIL_HOST;

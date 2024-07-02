@@ -1,18 +1,21 @@
+"use client";
+
 // Imports
-import {FC, Fragment} from "react";
-import Link from "next/link";
-import {motion} from "framer-motion";
-import {useGlobalContext} from "@/context/global";
-import {ITestimonialsTwo} from "@/types/components/index";
 import {
 	fadeIn,
 	initial,
 	initialTwo,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
+import { FC, Fragment } from "react";
+import Link from "next/link";
+import {motion} from "framer-motion";
+import {useGlobalContext} from "@/context/global";
+import {ITestimonialsTwo} from "@/types/components/index";
+
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 import TestimonialsTwoCard from "./Cards/TestimonialsTwoCard";
 
 const TestimonialsTwo: FC<ITestimonialsTwo> = ({

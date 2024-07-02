@@ -2,7 +2,7 @@
 import {
 	slideInRightFinish,
 	slideInLeftInitial,
-} from "../../animations/animations";
+} from "@/animations/animations";
 import {FC} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";

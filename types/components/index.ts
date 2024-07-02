@@ -588,32 +588,11 @@ export type ITwoColumnButtonContent = {
 export type ILayout = {
 	children: React.ReactNode;
 };
-export type IErrorPage = {
-	title: string;
-	paragraph: string;
-	backgroundImage: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
-	buttonLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-};
 export type IPagination = {
 	contentArray: any;
 	contentType: string;
 	tailwindStyling: string;
 	numberOfItemsRenderedPerPage: number;
-};
-export type IDynamicComponentProps = {
-	componentName: string;
-	[key: string]: any;
 };
 
 // Cards
@@ -782,6 +761,9 @@ export type ITitle = {
 export type ISideMenu = {
 	menuActive: boolean;
 	setMenuActive: any;
+};
+export type IFormikForm = {
+	formTitle: string;
 };
 export type IParagraph = {
 	content: string;

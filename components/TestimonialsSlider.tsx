@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import Image from "next/image";
 import React, {FC} from "react";
@@ -13,7 +15,7 @@ import {Autoplay, Navigation} from "swiper/modules";
 import styles from "../styles/components/Testimonials.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const TestimonialsSlider: FC = () => {
 	const globalContext = useGlobalContext();

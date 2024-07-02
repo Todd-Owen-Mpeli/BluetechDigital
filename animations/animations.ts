@@ -78,6 +78,21 @@ export const arrayLoopStaggerChildren: ArrayLoopStaggerChildren = {
 		},
 	}),
 };
+export const navigationMenuStaggerChildren: ArrayLoopStaggerChildren = {
+	initial: {
+		opacity: 0,
+		y: 0,
+	},
+	animate: (keys: number) => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: 0.25 * keys,
+			duration: 0.5,
+			ease: "easeInOut",
+		},
+	}),
+};
 
 // Slide In Direction (Horizontal)
 export const slideInRightInitial: SlideInRightInitial | any = {

@@ -14,8 +14,8 @@ import {motion} from "framer-motion";
 import {INewsInsightsCard} from "@/types/components";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
-import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const newsInsightsCard: FC<INewsInsightsCard> = ({
 	uri,

@@ -5,11 +5,11 @@ import Image from "next/image";
 import {motion} from "framer-motion";
 import dateFormat from "dateformat";
 import {ICaseStudiesCard} from "@/types/components/index";
-import {initial, stagger, fadeInUp} from "../../animations/animations";
+import {initial, stagger, fadeInUp} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 	slug,

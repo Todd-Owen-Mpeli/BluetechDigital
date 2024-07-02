@@ -1,46 +1,46 @@
+"use client";
+
 // Imports
 import React, {FC, Fragment} from "react";
-import {usePageContext} from "@/context/pages";
+import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // Components
-import CTA from "../CTA";
-import FAQ from "../FAQ";
-import Hero from "../Hero";
-import CTATwo from "../CTATwo";
-import FAQTwo from "../FAQTwo";
-import HeroTwo from "../HeroTwo";
-import Gallery from "../Gallery";
-import VideoBlock from "../VideoBlock";
-import LinkedInCta from "../LinkedInCta";
-import ContactInfo from "../ContactInfo";
-import OurPartners from "../OurPartners";
-import OurServices from "../OurServices";
-import ContactForm from "../ContactForm";
-import FeaturesGrid from "../FeaturesGrid";
-import NewsInsights from "../NewsInsights";
-import ServicesGrid from "../ServicesGrid";
-import ErrorPage from "../Global/ErrorPage";
-import BenefitsStats from "../BenefitsStats";
-import TitleParagraph from "../TitleParagraph";
-import Maintenance from "../Global/Maintenance";
-import CaseStudiesGrid from "../CaseStudiesGrid";
-import TestimonialsTwo from "../TestimonialsTwo";
-import FeaturesGridTwo from "../FeaturesGridTwo";
-import TestimonialsGrid from "../TestimonialsGrid";
-import TitleContentImage from "../TitleContentImage";
-import JumboContentImage from "../JumboContentImage";
-import TestimonialsSlider from "../TestimonialsSlider";
-import JumboContentSection from "../JumboContentSection";
-import AchievementsStatsCTA from "../AchievementsStatsCTA";
-import TwoColumnButtonContent from "../TwoColumnButtonContent";
-import NewsInsightsThreeCards from "../NewsInsightsThreeCards";
+import CTA from "@/components/CTA";
+import FAQ from "@/components/FAQ";
+import Hero from "@/components/Hero";
+import CTATwo from "@/components/CTATwo";
+import FAQTwo from "@/components/FAQTwo";
+import HeroTwo from "@/components/HeroTwo";
+import Gallery from "@/components/Gallery";
+import VideoBlock from "@/components/VideoBlock";
+import LinkedInCta from "@/components/LinkedInCta";
+import ContactInfo from "@/components/ContactInfo";
+import OurPartners from "@/components/OurPartners";
+import OurServices from "@/components/OurServices";
+import ContactForm from "@/components/ContactForm";
+import FeaturesGrid from "@/components/FeaturesGrid";
+import NewsInsights from "@/components/NewsInsights";
+import ServicesGrid from "@/components/ServicesGrid";
+import BenefitsStats from "@/components/BenefitsStats";
+import TitleParagraph from "@/components/TitleParagraph";
+import CaseStudiesGrid from "@/components/CaseStudiesGrid";
+import TestimonialsTwo from "@/components/TestimonialsTwo";
+import FeaturesGridTwo from "@/components/FeaturesGridTwo";
+import TestimonialsGrid from "@/components/TestimonialsGrid";
+import TitleContentImage from "@/components/TitleContentImage";
+import JumboContentImage from "@/components/JumboContentImage";
+import TestimonialsSlider from "@/components/TestimonialsSlider";
+import JumboContentSection from "@/components/JumboContentSection";
+import AchievementsStatsCTA from "@/components/AchievementsStatsCTA";
+import TwoColumnButtonContent from "@/components/TwoColumnButtonContent";
+import NewsInsightsThreeCards from "@/components/NewsInsightsThreeCards";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
-	const FlexibleContent = content?.postTypeFlexibleContent;
+	const FlexibleContent: any = content?.postTypeFlexibleContent;
 
 	// Components Key Value Pairs
-	const componentMapping: any = {
+	const componentMap: any = {
 		[`${FlexibleContent}_Cta`]: CTA,
 		[`${FlexibleContent}_Faq`]: FAQ,
 		[`${FlexibleContent}_Hero`]: Hero,
@@ -48,14 +48,12 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
 		[`${FlexibleContent}_Gallery`]: Gallery,
 		[`${FlexibleContent}_HeroTwo`]: HeroTwo,
-		[`${FlexibleContent}_ErrorPage`]: ErrorPage,
 		[`${FlexibleContent}_VideoBlock`]: VideoBlock,
 		[`${FlexibleContent}_LinkedInCta`]: LinkedInCta,
 		[`${FlexibleContent}_ContactInfo`]: ContactInfo,
 		[`${FlexibleContent}_OurPartners`]: OurPartners,
 		[`${FlexibleContent}_OurServices`]: OurServices,
 		[`${FlexibleContent}_ContactForm`]: ContactForm,
-		[`${FlexibleContent}_Maintenance`]: Maintenance,
 		[`${FlexibleContent}_FeaturesGrid`]: FeaturesGrid,
 		[`${FlexibleContent}_NewsInsights`]: NewsInsights,
 		[`${FlexibleContent}_ServicesGrid`]: ServicesGrid,
@@ -76,24 +74,21 @@ const RenderFlexibleContent: FC = () => {
 
 	return (
 		<>
-			{content?.content?.length > 0 ? (
+			{content?.content?.length > 0 &&
 				content?.content?.map((item: any, index: number) => (
 					<section
 						key={index}
 						className={item?.displaySection ? "block" : "hidden"}
 					>
-						{componentMapping[item?.fieldGroupName] && (
+						{componentMap[item?.fieldGroupName] && (
 							<Fragment>
-								{React.createElement(componentMapping[item?.fieldGroupName], {
+								{React.createElement(componentMap[item?.fieldGroupName], {
 									...item,
 								})}
 							</Fragment>
 						)}
 					</section>
-				))
-			) : (
-				<></>
-			)}
+				))}
 		</>
 	);
 };

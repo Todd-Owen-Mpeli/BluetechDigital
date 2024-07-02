@@ -5,10 +5,10 @@ import Image from "next/image";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
 import {IFAQCard} from "@/types/components/index";
-import {fadeIn, initialTwo} from "../../animations/animations";
+import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
 	// Displays Accordion Content

@@ -8,7 +8,7 @@ import {
 	slideInRightFinish,
 	slideInRightInitial,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
@@ -17,7 +17,7 @@ import {IFAQTwo} from "@/types/components/index";
 
 // Components
 import FAQCard from "./Cards/FAQCard";
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const FaqTwo: FC<IFAQTwo> = ({
 	title,

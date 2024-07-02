@@ -128,6 +128,23 @@ export type IThemesOptionsContent = {
 			};
 		};
 	};
+	errorPageContent: {
+		title: string;
+		paragraph: string;
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+		backgroundImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
 };
 
 // WEBSITE NEWS AND CASE STUDIES TYPES
@@ -174,9 +191,8 @@ export namespace ILinks {
 
 /* CONTEXT PROVIDERS  */
 export type IPageContext = {
-	seo: ISeo;
 	content: IContent;
-	postTypeFlexibleContent: IPostTypeFlexibleContent;
+	postTypeFlexibleContent: string;
 };
 export type IGlobalProps = {
 	testimonials: ITestimonials;
@@ -211,10 +227,9 @@ export type IGlobalContext = {
 	newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
 };
 export type IPageContextProvider = {
-	seo: ISeo;
 	content: IContent;
 	children: React.ReactNode;
-	postTypeFlexibleContent: IPostTypeFlexibleContent;
+	postTypeFlexibleContent: string;
 };
 export type IFlexibleContentType = {
 	pages: string;
@@ -225,6 +240,13 @@ export type IGlobalContextProvider = {
 	globalProps: IGlobalContext;
 	children: React.ReactNode;
 };
-export type IPostTypeFlexibleContent = {
-	postTypeFlexibleContent: string;
+export type IApolloContextProvider = {
+	children: React.ReactNode;
 };
+
+type SlugResponse = {
+	slug: string;
+	modified: string;
+};
+
+export interface ISlug extends Array<SlugResponse> {}

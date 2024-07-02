@@ -3,13 +3,13 @@ import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {IHeroTwo} from "@/types/components/index";
-import {fadeIn, initialTwo} from "../animations/animations";
+import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "../styles/components/Hero.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const HeroTwo: FC<IHeroTwo> = ({
 	title,

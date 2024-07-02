@@ -4,11 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {ICTA} from "@/types/components/index";
-import {fadeIn, initialTwo} from "../animations/animations";
+import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 	return (

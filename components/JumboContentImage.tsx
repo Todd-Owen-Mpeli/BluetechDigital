@@ -7,7 +7,7 @@ import {
 	initialTwo,
 	slideInRightFinish,
 	slideInRightInitial,
-} from "../animations/animations";
+} from "@/animations/animations";
 import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ import {IJumboContentImage} from "@/types/components/index";
 import styles from "../styles/components/JumboContentImage.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const JumboContentImage: FC<IJumboContentImage> = ({
 	title,

@@ -5,7 +5,7 @@ import {IFeaturesGridCard} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 	title,
@@ -66,50 +66,52 @@ const FeaturesGridCard: FC<IFeaturesGridCard> = ({
 	}
 
 	return (
-		<div className="w-full p-3 md:w-1/2">
-			<motion.div
-				initial={initial}
-				viewport={{once: true}}
-				variants={stagger}
-				whileInView="animate"
-				className={`h-full p-10 rounded-sm bg-cover bg-no-repeat bg-center ${backgroundColorStyling}`}
-				style={{
-					backgroundImage: `url(${
-						backgroundColor
-							? `/svg/background/${backgroundWaveStyling}.svg`
-							: "none"
-					})`,
-				}}
-			>
+		<>
+			<div className="w-full p-3 md:w-1/2">
 				<motion.div
 					initial={initial}
 					viewport={{once: true}}
-					whileInView={fadeInUp}
-					className="flex flex-wrap items-center justify-center lg:justify-start"
+					variants={stagger}
+					whileInView="animate"
+					className={`h-full p-10 rounded-sm bg-cover bg-no-repeat bg-center ${backgroundColorStyling}`}
+					style={{
+						backgroundImage: `url(${
+							backgroundColor
+								? `/svg/background/${backgroundWaveStyling}.svg`
+								: "none"
+						})`,
+					}}
 				>
-					<motion.h4
+					<motion.div
 						initial={initial}
 						viewport={{once: true}}
 						whileInView={fadeInUp}
-						className={`mb-2 text-center lg:text-center text-base ${subtitleStyling}`}
+						className="flex flex-wrap items-center justify-center lg:justify-start"
 					>
-						{subtitle}
-					</motion.h4>
+						<motion.h4
+							initial={initial}
+							viewport={{once: true}}
+							whileInView={fadeInUp}
+							className={`mb-2 text-center lg:text-center text-base ${subtitleStyling}`}
+						>
+							{subtitle}
+						</motion.h4>
+					</motion.div>
+					<motion.h2
+						initial={initial}
+						viewport={{once: true}}
+						whileInView={fadeInUp}
+						className={`mb-3 text-xl lg:text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
+					>
+						{title}
+					</motion.h2>
+					<Paragraph
+						content={paragraph}
+						tailwindStyling={`${paragraphStyling} text-center lg:text-left text-paragraph`}
+					/>
 				</motion.div>
-				<motion.h2
-					initial={initial}
-					viewport={{once: true}}
-					whileInView={fadeInUp}
-					className={`mb-3 text-xl lg:text-3xl font-semibold text-center ${titleStyling} lg:text-left`}
-				>
-					{title}
-				</motion.h2>
-				<Paragraph
-					content={paragraph}
-					tailwindStyling={`${paragraphStyling} text-center lg:text-left text-paragraph`}
-				/>
-			</motion.div>
-		</div>
+			</div>
+		</>
 	);
 };
 

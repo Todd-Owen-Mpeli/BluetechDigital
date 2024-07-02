@@ -6,7 +6,7 @@ import {ITestimonialsTwoCard} from "@/types/components";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 	name,

@@ -14,9 +14,9 @@ import {motion} from "framer-motion";
 import {IVideoBlock} from "@/types/components";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import VideoWrapper from "./Elements/VideoWrapper";
-import YoutubeButtonBorderSliced from "./Elements/YoutubeButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import VideoWrapper from "@/components/Elements/VideoWrapper";
+import YoutubeButtonBorderSliced from "@/components/Elements/YoutubeButtonBorderSliced";
 
 const VideoBlock: FC<IVideoBlock> = ({
 	title,

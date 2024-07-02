@@ -13,7 +13,7 @@ import {motion} from "framer-motion";
 import {IFeaturesGrid} from "@/types/components";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 import FeaturesGridCard from "./Cards/FeaturesGridCard";
 import FeaturesGridImageCard from "./Cards/FeaturesGridImageCard";
 

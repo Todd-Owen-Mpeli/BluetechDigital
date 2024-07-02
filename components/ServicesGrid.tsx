@@ -6,7 +6,7 @@ import {
 	fadeInUp,
 	initialTwo,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
@@ -17,8 +17,8 @@ import {IServicesGrid} from "@/types/components/index";
 import styles from "../styles/components/OurServices.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 	return (

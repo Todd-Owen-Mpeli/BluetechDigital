@@ -5,9 +5,9 @@ import {motion} from "framer-motion";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 import {IValuesBlocksTextCard} from "@/types/components";
-import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
 	title,

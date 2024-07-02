@@ -1,16 +1,18 @@
+"use client";
+
 // Imports
 import {
 	initial,
 	stagger,
 	fadeInUp,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {IFAQ} from "@/types/components/index";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 	const [selectedItemIndex, setSelectedItemIndex] = useState(0);

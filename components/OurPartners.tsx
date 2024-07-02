@@ -4,7 +4,7 @@ import {
 	stagger,
 	fadeInUp,
 	arrayLoopStaggerChildren,
-} from "../animations/animations";
+} from "@/animations/animations";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
@@ -14,7 +14,7 @@ import {IOurPartners} from "@/types/components/index";
 import styles from "../styles/components/OurPartners.module.scss";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const OurPartners: FC<IOurPartners> = ({
 	title,

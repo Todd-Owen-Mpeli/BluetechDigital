@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import {
 	fadeIn,
@@ -13,7 +15,7 @@ import {IContactInfo} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 	const globalContext = useGlobalContext();

@@ -6,7 +6,7 @@ import {IGallery} from "@/types/components";
 import {initial, stagger} from "@/animations/animations";
 
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 	return (

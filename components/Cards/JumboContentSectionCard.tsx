@@ -7,7 +7,7 @@ import {
 	slideInLeftInitial,
 	slideInRightFinish,
 	slideInRightInitial,
-} from "../../animations/animations";
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
@@ -15,8 +15,8 @@ import {FC, useEffect, useState} from "react";
 import {IJumboContentSectionCard} from "@/types/components/index";
 
 // Components
-import Paragraph from "../Elements/Paragraph";
-import ButtonBorderSliced from "../Elements/ButtonBorderSliced";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 	title,

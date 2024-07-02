@@ -5,16 +5,16 @@ import {
 	initialTwo,
 	slideInRightFinish,
 	slideInRightInitial,
-} from "../animations/animations";
+} from "@/animations/animations";
 import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IAchievementsStatsCTA} from "@/types/components/index";
 // Components
-import Title from "./Elements/Title";
-import Paragraph from "./Elements/Paragraph";
-import ButtonBorderSliced from "./Elements/ButtonBorderSliced";
+import Title from "@/components/Elements/Title";
+import Paragraph from "@/components/Elements/Paragraph";
+import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
 const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 	title,

@@ -15,6 +15,7 @@ export const postType: IPostTypes = {
 	previewPost: "post",
 };
 export const homePage: string = "Home";
+export const servicesPage: string = "services";
 export const flexibleContentType: IFlexibleContentType = {
 	// Public pages
 	pages: "DefaultTemplate_Flexiblecontent_FlexibleContent",

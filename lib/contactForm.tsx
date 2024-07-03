@@ -9,19 +9,19 @@ import CustomerEnquiryConfirmationEmail from "@/components/Emails/CustomerEnquir
 import BusinessCustomerEnquiryConfirmationEmail from "@/components/Emails/BusinessCustomerEnquiryConfirmationEmail";
 
 export const sendContactForm = async (data: any) => {
-	console.log(`
-		
-		Send Contact Form:
-		
-		email: ${data?.email}
-		firstName: ${data?.firstName}
-		lastName: ${data?.lastName}
-		message: ${data?.message}
-		phoneNumber: ${data?.phoneNumber}
-		selectedServices: ${data?.selectedServices}
-		subject: ${data?.subject}
+	// console.log(`
 
-		`);
+	// 	Send Contact Form:
+
+	// 	email: ${data?.email}
+	// 	firstName: ${data?.firstName}
+	// 	lastName: ${data?.lastName}
+	// 	message: ${data?.message}
+	// 	phoneNumber: ${data?.phoneNumber}
+	// 	selectedServices: ${data?.selectedServices}
+	// 	subject: ${data?.subject}
+
+	// 	`);
 
 	// If any of these values are undefined
 	if (

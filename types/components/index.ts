@@ -585,14 +585,14 @@ export type ITwoColumnButtonContent = {
 };
 
 // Global
-export type ILayout = {
-	children: React.ReactNode;
-};
 export type IPagination = {
 	contentArray: any;
 	contentType: string;
 	tailwindStyling: string;
 	numberOfItemsRenderedPerPage: number;
+};
+export type ISmoothScrolling = {
+	children: React.ReactNode;
 };
 
 // Cards

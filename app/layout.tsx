@@ -24,6 +24,7 @@ import {getAllTestimonialsContent} from "@/graphql/GetAllTestimonials";
 // Components
 import Navbar from "@/components/Global/Navbar";
 import Footer from "@/components/Global/Footer";
+import SmoothScrolling from "@/components/Global/SmoothScrolling";
 import GlobalContextProvider from "@/context/providers/GlobalContextProvider";
 import ApolloContextProvider from "@/context/providers/ApolloContextProvider";
 
@@ -74,9 +75,11 @@ const App = async ({children}: AppProps | any) => {
 			<body>
 				<ApolloContextProvider>
 					<GlobalContextProvider globalProps={globalProps}>
-						<Navbar />
-						<main>{children}</main>
-						<Footer />
+						<SmoothScrolling>
+							<Navbar />
+							{children}
+							<Footer />
+						</SmoothScrolling>
 					</GlobalContextProvider>
 				</ApolloContextProvider>
 			</body>

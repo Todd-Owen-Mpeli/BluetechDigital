@@ -9,7 +9,6 @@ import {
 	initialTwo,
 } from "@/animations/animations";
 import {motion} from "framer-motion";
-import {useRouter} from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import {IFormikForm} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
@@ -21,7 +20,6 @@ import {useFormik, Formik, Field, Form} from "formik";
 import styles from "@/styles/components/ContactForm.module.scss";
 
 const FormikForm: FC<IFormikForm> = ({formTitle}) => {
-	const router = useRouter();
 	const globalContext = useGlobalContext();
 
 	// Loading, Send & Error Message States
@@ -107,7 +105,6 @@ const FormikForm: FC<IFormikForm> = ({formTitle}) => {
 		onSubmit: async (values: any) => {
 			if (reCaptchaResult) {
 				try {
-					console.log(values);
 					await sendContactForm(values);
 				} catch (error) {
 					setErrorMessage(true);
@@ -132,11 +129,13 @@ const FormikForm: FC<IFormikForm> = ({formTitle}) => {
 				setLoading(true);
 				/* Send Form Content */
 				formik.handleSubmit();
+
 				setLoading(false);
 				setMessageSent(true);
 				setTimeout(() => {
-					router.push("/contact");
-				}, 3000);
+					formik.resetForm();
+					setMessageSent(false);
+				}, 5000);
 			} catch (error) {
 				setErrorMessage(true);
 				throw new Error(

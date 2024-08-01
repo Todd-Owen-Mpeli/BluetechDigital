@@ -8,7 +8,7 @@ export const emailTransporter: any = nodemailer.createTransport({
 	host: host,
 	service: host,
 	port: 587,
-	secure: true,
+	secure: false,
 	auth: {
 		user: email,
 		pass: password,

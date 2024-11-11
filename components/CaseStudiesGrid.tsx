@@ -21,7 +21,7 @@ const CaseStudiesGrid: FC<ICaseStudies.IProps> = ({
 	return (
 		<>
 			<div className="py-12 px-4 bg-white">
-				<div className="lg:container px-0 mx-auto flex flex-col items-center gap-6 lg:gap-16">
+				<div className="lg:max-w-[1700px] px-0 mx-auto flex flex-col items-center gap-6 lg:gap-16">
 					<motion.div
 						initial={initial}
 						variants={stagger}

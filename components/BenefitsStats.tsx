@@ -26,7 +26,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 					backgroundImage: `url("/svg/background/layered-steps-haikei-multi-colour.svg")`,
 				}}
 			>
-				<div className="lg:container px-0 mx-auto flex flex-col lg:flex-row gap-6 lg:gap-4 xl:gap-32">
+				<div className="lg:max-w-[1700px] px-0 mx-auto flex flex-col lg:flex-row gap-6 lg:gap-4 xl:gap-32">
 					<div className="py-10 px-4 lg:px-8 xl:px-0 bg-blue-default lg:bg-blue-darkerTwo/[0] flex flex-col items-center w-full lg:w-[45%] xl:w-[35%]">
 						<motion.h4
 							initial={initial}

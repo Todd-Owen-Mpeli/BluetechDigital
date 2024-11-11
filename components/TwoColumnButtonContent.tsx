@@ -56,7 +56,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	return (
 		<>
 			<div className={` py-10 px-4 ${backgroundColor}`}>
-				<div className="lg:container m-auto xl:px-16 flex flex-col lg:flex-row gap-6 lg:gap-16">
+				<div className="lg:max-w-[1700px] m-auto xl:px-16 flex flex-col lg:flex-row gap-6 lg:gap-16">
 					<motion.div
 						initial={initialTwo}
 						variants={stagger}

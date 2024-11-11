@@ -112,7 +112,7 @@ const JumboContentSectionCard: FC<IJumboContentSection.ICard> = ({
 					}`,
 				}}
 			>
-				<div className="lg:container relative px-0 mx-auto lg:px-4">
+				<div className="lg:max-w-[1700px] relative px-0 mx-auto lg:px-4">
 					<div
 						className={
 							imageLocation === "Left"

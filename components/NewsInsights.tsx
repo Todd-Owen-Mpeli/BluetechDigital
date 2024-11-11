@@ -7,6 +7,9 @@ import {useGlobalContext} from "@/context/global";
 import {INewsInsights} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
+// Styling
+import styles from "@/styles/components/NewsInsights.module.scss";
+
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import Pagination from "@/components/Elements/Pagination";
@@ -16,20 +19,20 @@ const NewsInsights: FC<INewsInsights.IProps> = ({title, italic, paragraph}) => {
 
 	return (
 		<>
-			<div className="py-10 pb-16 bg-white lg:container px-4 mx-auto">
+			<div className={styles.newsInsights}>
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="max-w-2xl mx-auto mb-20 text-center lg:max-w-5xl"
+					className={styles.container}
 				>
 					<motion.h2
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="my-2 max-w-xl mx-auto text-black text-center font-bold text-lg lg:text-3xl"
+						className={styles.title}
 					>
 						<motion.span
 							initial={initial}
@@ -42,21 +45,18 @@ const NewsInsights: FC<INewsInsights.IProps> = ({title, italic, paragraph}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="ml-4 font-serif font-normal italic"
+							className={styles.italicText}
 						>
 							{italic}
 						</motion.span>
 					</motion.h2>
-					<Paragraph
-						content={paragraph}
-						className="max-w-3xl mx-auto text-black text-paragraph"
-					/>
+					<Paragraph content={paragraph} className={styles.jumboContentImage} />
 				</motion.div>
 				<Pagination
+					className={styles.pagination}
 					contentType="NewsInsightsCard"
 					numberOfItemsRenderedPerPage={12}
 					contentArray={globalContext?.newsInsights}
-					className={`grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3`}
 				/>
 			</div>
 		</>

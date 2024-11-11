@@ -32,7 +32,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 					backgroundImage: `url("/svg/background/polygon-scatter-haikei-lightgrey-one.svg")`,
 				}}
 			>
-				<div className="lg:container px-0 mx-auto">
+				<div className="lg:max-w-[1700px] px-0 mx-auto">
 					{servicesGrid?.length > 0 ? (
 						servicesGrid?.map((item: any, index: number) => (
 							<Fragment key={index}>

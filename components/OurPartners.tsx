@@ -11,7 +11,7 @@ import {motion} from "framer-motion";
 import {IOurPartners} from "@/types/components/index";
 
 // Styling
-import styles from "../styles/components/OurPartners.module.scss";
+import styles from "@/styles/components/OurPartners.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
@@ -24,14 +24,14 @@ const OurPartners: FC<IOurPartners> = ({
 }) => {
 	return (
 		<>
-			<div className={styles.ourPartners + ` py-10 px-4 lg:px-0 bg-white`}>
-				<div className="lg:container px-0 mx-auto">
-					<div className="flex flex-col items-center">
+			<div className={styles.ourPartners}>
+				<div className={styles.container}>
+					<div className={styles.topContent}>
 						<motion.h4
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center text-base text-yellow-two"
+							className={styles.subtitle}
 						>
 							{subtitle}
 						</motion.h4>
@@ -39,24 +39,24 @@ const OurPartners: FC<IOurPartners> = ({
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
+							className={styles.title}
 						>
 							{title}
 						</motion.h2>
-						<Paragraph
-							content={paragraph}
-							className="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
-						/>
+						<Paragraph content={paragraph} className={styles.paragraph} />
 					</div>
-					<div className="max-w-6xl mx-auto">
+					<div className={styles.bottomContent}>
 						<motion.div
 							initial={initial}
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className={`grid items-center justify-center grid-cols-2 gap-4 ${
-								imageGrid?.length <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-6"
-							} lg:items-center lg:justify-between pt-12`}
+							className={
+								styles.imageGrid +
+								` ${
+									imageGrid?.length <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-6"
+								}`
+							}
 						>
 							{imageGrid?.length > 0 ? (
 								imageGrid.map((item: any, index: number) => (
@@ -82,9 +82,7 @@ const OurPartners: FC<IOurPartners> = ({
 														: 1000
 												}
 												className={
-													item?.image?.sourceUrl
-														? `block w-[150px] mx-auto h-full sm:w-[150px] lg:w-full lg:h-[100px] object-contain object-center`
-														: `hidden`
+													item?.image?.sourceUrl ? styles.image : `hidden`
 												}
 											/>
 										</motion.div>

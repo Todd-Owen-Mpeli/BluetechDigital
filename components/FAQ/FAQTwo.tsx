@@ -30,7 +30,7 @@ const FaqTwo: FC<IFAQ.IFAQTwo> = ({
 	return (
 		<>
 			<div className="py-6 px-4 lg:px-0 bg-white">
-				<div className="lg:container px-0 mx-auto">
+				<div className="lg:max-w-[1700px] px-0 mx-auto">
 					<motion.div
 						initial={initial}
 						variants={stagger}

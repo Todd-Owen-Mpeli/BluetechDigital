@@ -31,7 +31,7 @@ const Footer: FC = () => {
 				" px-0 overflow-hidden border-t-4 bg-lightGreyTwo border-yellow-default"
 			}
 		>
-			<div className="lg:container relative z-50 px-4 mx-auto ">
+			<div className="lg:max-w-[1700px] relative z-50 px-4 mx-auto ">
 				<div className="py-28 flex flex-col items-center justify-between gap-6 px-6 -m-6 md:items-start lg:px-8 lg:flex-row">
 					<div className="flex flex-col items-center justify-between w-full lg:w-[35%] py-6 md:py-0 lg:items-start">
 						<motion.div

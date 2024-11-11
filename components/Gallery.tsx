@@ -5,47 +5,41 @@ import {motion} from "framer-motion";
 import {IGallery} from "@/types/components";
 import {initial, stagger} from "@/animations/animations";
 
+// Styling
+import styles from "@/styles/components/Gallery.module.scss";
+
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
 const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 	return (
 		<>
-			<div className="py-10 bg-white lg:container px-4 mx-auto">
+			<div className={styles.gallery}>
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className={
-						title && highlightText
-							? "max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl"
-							: "hidden"
-					}
+					className={title && highlightText ? styles.content : "hidden"}
 				>
 					<motion.h2
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="max-w-2xl mx-auto text-center font-bold leading-normal text-lg lg:text-3xl p-4 pl-0 text-black"
+						className={styles.title}
 					>
 						{title}
-						<span className="p-2 ml-3 bg-blue-default text-white">
-							{highlightText}
-						</span>
+						<span className={styles.highlightText}>{highlightText}</span>
 					</motion.h2>
-					<Paragraph
-						content={paragraph}
-						className="max-w-3xl mx-auto text-black text-paragraph"
-					/>
+					<Paragraph content={paragraph} className={styles.paragraph} />
 				</motion.div>
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="grid gap-4 grid-cols-2 lg:grid-cols-4"
+					className={styles.galleryGrid}
 				>
 					{gallery?.length > 0 ? (
 						gallery?.map((item: any, index: number) => (
@@ -64,11 +58,7 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 												? item?.mediaDetails?.height
 												: 1000
 										}
-										className={
-											item?.sourceUrl
-												? `block object-cover object-center w-full h-[175px] sm:h-[250px]`
-												: `hidden`
-										}
+										className={item?.sourceUrl ? styles.image : `hidden`}
 									/>
 								</>
 							</Fragment>

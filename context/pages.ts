@@ -1,9 +1,9 @@
 // Imports
-import {IPostTypes, IFlexibleContentType, IPage} from "@/types/context";
+import {IPost, IFlexibleContentType, IPage} from "@/types/context";
 
 /* PUBLIC PAGES & POSTS */
 /* PREVIEW PAGES & POSTS */
-export const postType: IPostTypes = {
+export const postType: IPost.ITypes = {
 	// Public pages
 	pages: "pages",
 	posts: "posts",

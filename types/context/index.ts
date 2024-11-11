@@ -182,14 +182,18 @@ export namespace ILinks {
 }
 
 /* CONTEXT PROVIDERS  */
-export type IPostTypes = {
-	pages: string;
-	posts: string;
-	previewPage: string;
-	previewPost: string;
-	caseStudies: string;
-	testimonials: string;
-};
+/* POST: Project Types, Content 
+& Content Provider Interface */
+export namespace IPost {
+	export type ITypes = {
+		pages: string;
+		posts: string;
+		previewPage: string;
+		previewPost: string;
+		caseStudies: string;
+		testimonials: string;
+	};
+}
 
 /* PAGE: Project Types, Content 
 & Content Provider Interface */

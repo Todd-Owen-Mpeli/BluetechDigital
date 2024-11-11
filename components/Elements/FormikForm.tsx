@@ -10,7 +10,7 @@ import {
 } from "@/animations/animations";
 import {motion} from "framer-motion";
 import ReCAPTCHA from "react-google-recaptcha";
-import {IFormikForm} from "@/types/components";
+import {IElements} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 import {sendContactForm} from "@/lib/contactForm";
 import React, {useState, FC, Fragment} from "react";
@@ -19,7 +19,7 @@ import {useFormik, Formik, Field, Form} from "formik";
 // Styling
 import styles from "@/styles/components/ContactForm.module.scss";
 
-const FormikForm: FC<IFormikForm> = ({formTitle}) => {
+const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 	const globalContext = useGlobalContext();
 
 	// Loading, Send & Error Message States

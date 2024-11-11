@@ -4,13 +4,13 @@
 import Image from "next/image";
 import {FC, useState} from "react";
 import {motion} from "framer-motion";
-import {IFAQCard} from "@/types/components/index";
+import {IFAQ} from "@/types/components/index";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
-const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
+const FAQCard: FC<IFAQ.ICard> = ({title, paragraph}) => {
 	// Displays Accordion Content
 	const [iconOpen, setIconOpen]: any = useState(true);
 	const [accordionOpen, setAccordionOpen]: any = useState(false);

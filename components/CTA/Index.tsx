@@ -10,7 +10,12 @@ import {fadeIn, initialTwo} from "@/animations/animations";
 import Paragraph from "@/components/Elements/Paragraph";
 import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
-const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
+const CTA: FC<ICTA.IProps> = ({
+	title,
+	paragraph,
+	buttonLink,
+	backgroundImage,
+}) => {
 	return (
 		<>
 			<div className="flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:p-10 -m-4">

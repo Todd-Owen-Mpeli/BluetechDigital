@@ -19,7 +19,7 @@ import styles from "@/styles/components/Hero.module.scss";
 import Paragraph from "@/components/Elements/Paragraph";
 
 import HeroVideoWrapper from "@/components/Elements/HeroVideoWrapper";
-const Hero: FC<IHero> = ({
+const Hero: FC<IHero.IProps> = ({
 	video,
 	titleEnd,
 	paragraph,

@@ -2,14 +2,14 @@
 import {FC} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {ITestimonialsCard} from "@/types/components";
+import {ITestimonials} from "@/types/components";
 import {initial, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import RenderStars from "@/components/Elements/RenderStars";
 
-const TestimonialsCard: FC<ITestimonialsCard> = ({
+const TestimonialsCard: FC<ITestimonials.ICard> = ({
 	name,
 	image,
 	position,

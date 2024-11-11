@@ -12,13 +12,13 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {FC, useEffect, useState} from "react";
-import {IJumboContentSectionCard} from "@/types/components/index";
+import {IJumboContentSection} from "@/types/components/index";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
-const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
+const JumboContentSectionCard: FC<IJumboContentSection.ICard> = ({
 	title,
 	image,
 	subtitle,

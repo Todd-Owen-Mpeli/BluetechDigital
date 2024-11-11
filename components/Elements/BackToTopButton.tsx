@@ -2,15 +2,13 @@
 
 // Imports
 import Link from "next/link";
+import {IElements} from "@/types/components";
 import {FC, useEffect, useState} from "react";
 
 // Styling
-import styles from "../../styles/components/Elements/BackHoverButton.module.scss";
+import styles from "@/styles/components/Elements/BackHoverButton.module.scss";
 
-// Components
-import {IBackHoverButton} from "@/types/components";
-
-const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
+const BackToTopButton: FC<IElements.IBackHoverButton> = ({link}) => {
 	// Background color scroll position change
 	const [scrollPosition, setScrollPosition] = useState(0);
 

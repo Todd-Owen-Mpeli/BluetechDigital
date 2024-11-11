@@ -1,11 +1,11 @@
 // Imports
-import {slideInRightFinish, slideInLeftInitial} from "@/animations/animations";
 import {FC} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
-import {IValuesBlocksImageCard} from "@/types/components";
+import {IValuesBlocks} from "@/types/components";
+import {slideInRightFinish, slideInLeftInitial} from "@/animations/animations";
 
-const ValuesBlocksImageCard: FC<IValuesBlocksImageCard> = ({image}) => {
+const ValuesBlocksImageCard: FC<IValuesBlocks.IImageCard> = ({image}) => {
 	return (
 		<>
 			<motion.div

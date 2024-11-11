@@ -4,7 +4,7 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {ITestimonialsGrid} from "@/types/components/index";
+import {ITestimonials} from "@/types/components/index";
 import {fadeInUp, initial, stagger} from "@/animations/animations";
 
 // Styling
@@ -14,7 +14,7 @@ import styles from "@/styles/components/Testimonials.module.scss";
 import Paragraph from "@/components/Elements/Paragraph";
 import Pagination from "@/components/Elements/Pagination";
 
-const TestimonialsGrid: FC<ITestimonialsGrid> = ({
+const TestimonialsGrid: FC<ITestimonials.IProps> = ({
 	title,
 	subtitle,
 	paragraph,

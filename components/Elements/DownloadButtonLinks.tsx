@@ -1,10 +1,13 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IDownloadButtonLinks} from "@/types/components";
+import {IElements} from "@/types/components";
 import {initial, fadeInUp} from "@/animations/animations";
 
-const DownloadButtonLinks: FC<IDownloadButtonLinks> = ({title, pdfLink}) => {
+const DownloadButtonLinks: FC<IElements.IDownloadButtonLinks> = ({
+	title,
+	pdfLink,
+}) => {
 	return (
 		<>
 			<motion.button

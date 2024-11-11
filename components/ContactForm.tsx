@@ -5,14 +5,14 @@ import {initial, stagger, fadeInUp} from "@/animations/animations";
 import Link from "next/link";
 import React, {FC} from "react";
 import {motion} from "framer-motion";
-import {IContactForm} from "@/types/components";
+import {IContact} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import FormikForm from "@/components/Elements/FormikForm";
 
-const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
+const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	return (

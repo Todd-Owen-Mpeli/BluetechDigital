@@ -17,7 +17,7 @@ import Paragraph from "@/components/Elements/Paragraph";
 import FeaturesGridCard from "@/components/FeaturesGrid/Card/Card";
 import FeaturesGridImageCard from "@/components/FeaturesGrid/Card/ImageCard";
 
-const FeaturesGrid: FC<IFeaturesGrid> = ({
+const FeaturesGrid: FC<IFeaturesGrid.IProps> = ({
 	cardOne,
 	cardTwo,
 	lastCard,

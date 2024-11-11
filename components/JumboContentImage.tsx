@@ -32,25 +32,20 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 }) => {
 	return (
 		<>
-			<div
-				className={
-					styles.jumboContentImage +
-					" py-20 pb-4 lg:pt-36 sm:pb-10 px-4 bg-white"
-				}
-			>
-				<div className="lg:container m-auto flex flex-col lg:flex-row gap-16 lg:gap-x-24">
+			<div className={styles.jumboContentImage}>
+				<div className={styles.container}>
 					<motion.div
 						initial={initialTwo}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-full lg:w-[65%] flex flex-col items-center lg:items-baseline justify-center"
+						className={styles.topContent}
 					>
 						<motion.h3
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="mb-1 uppercase text-center lg:text-center text-lg tracking-[0.15rem] text-yellow-two"
+							className={styles.subtitle}
 						>
 							{subtitle}
 						</motion.h3>
@@ -58,7 +53,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-2 max-w-3xl text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-black"
+							className={styles.title}
 						>
 							{title}
 						</motion.h2>
@@ -67,19 +62,16 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							variants={stagger}
 							whileInView="animate"
 							viewport={{once: true}}
-							className="flex flex-col lg:flex-row items lg:items-start justify-between mt-8 gap-12 lg:gap-8"
+							className={styles.content}
 						>
-							<div className="flex flex-col w-full lg:w-[65%]">
-								<Paragraph
-									content={paragraph}
-									className="lg:max-w-lg text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
-								/>
+							<div className={styles.leftSection}>
+								<Paragraph content={paragraph} className={styles.paragraph} />
 								<div
 									className={
 										!bottomContent?.displayTextarea &&
 										bottomContent?.displayButtonOrImage === "Image"
-											? "flex flex-col gap-5 xl:flex-row items-center mt-4 lg:items-baseline"
-											: "flex flex-col gap-5 xl:flex-row items-center mt-4"
+											? styles.wrapper + " lg:items-baseline"
+											: styles.wrapper
 									}
 								>
 									<div
@@ -91,7 +83,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 											initial={initialTwo}
 											whileInView={fadeIn}
 											viewport={{once: true}}
-											className="mb-2 text-center lg:text-left font-extrabold text-base tracking-[0.10rem] text-black"
+											className={styles.text}
 										>
 											{bottomContent?.text}
 										</motion.h4>
@@ -99,7 +91,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 											initial={initialTwo}
 											whileInView={fadeIn}
 											viewport={{once: true}}
-											className="mb-1 text-center lg:text-left text-tiny tracking-[0.10rem] text-black"
+											className={styles.textTwo}
 										>
 											{bottomContent?.textTwo}
 										</motion.h4>
@@ -121,7 +113,8 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 												}
 												className={
 													bottomContent?.image?.sourceUrl
-														? `block object-contain object-center h-[35px] ${
+														? styles.image +
+														  ` ${
 																!bottomContent?.displayTextarea &&
 																bottomContent?.displayButtonOrImage === "Image"
 																	? "w-fit"
@@ -152,7 +145,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 													viewport={{once: true}}
 													className={
 														bottomContent?.buttonLink?.url
-															? `block mt-3 relative px-6 py-3 font-semibold tracking-widest text-base w-fit sm:mx-0 border-2 border-solid border-blue-default hover:bg-blue-default hover:border-blue-default transition-all ease-in-out duration-500 text-blue-default hover:text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-blue-default after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-blue-default`
+															? styles.buttonLink
 															: `hidden`
 													}
 												>
@@ -165,19 +158,19 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 									)}
 								</div>
 							</div>
-							<div className="flex flex-col gap-6  w-full lg:w-[35%]">
+							<div className={styles.rightSection}>
 								<div>
 									<motion.h4
 										initial={initialTwo}
 										whileInView={fadeIn}
 										viewport={{once: true}}
-										className="mb-1 uppercase text-center lg:text-left font-extrabold text-medium tracking-[0.10rem] text-blue-two"
+										className={styles.title}
 									>
 										{quality?.title}
 									</motion.h4>
 									<Paragraph
 										content={quality?.paragraph}
-										className="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
+										className={styles.paragraph}
 									/>
 								</div>
 								<div>
@@ -185,13 +178,13 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 										initial={initialTwo}
 										whileInView={fadeIn}
 										viewport={{once: true}}
-										className="mb-1 uppercase text-center lg:text-left font-extrabold text-medium tracking-[0.10rem] text-blue-two"
+										className={styles.title}
 									>
 										{reliability?.title}
 									</motion.h4>
 									<Paragraph
 										content={reliability?.paragraph}
-										className="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
+										className={styles.paragraph}
 									/>
 								</div>
 							</div>
@@ -201,27 +194,23 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 						initial={slideInRightInitial}
 						whileInView={slideInRightFinish}
 						viewport={{once: true}}
-						className="w-full lg:w-[35%] relative flex flex-col items-center lg:items-baseline justify-center"
+						className={styles.bottomContent}
 					>
 						<Image
-							alt={`${image?.altText}`}
 							src={image?.sourceUrl}
+							alt={`${image?.altText}`}
+							className={image?.sourceUrl ? styles.image : `hidden`}
 							width={
 								image?.mediaDetails?.width ? image?.mediaDetails?.width : 1000
 							}
 							height={
 								image?.mediaDetails?.height ? image?.mediaDetails?.height : 1000
 							}
-							className={
-								image?.sourceUrl
-									? `block object-cover object-center w-full h-[500px]`
-									: `hidden`
-							}
 							style={{
 								clipPath: `polygon(0% 0%, 100% 0%, 94.9% 88.5%, 0% 97.8%)`,
 							}}
 						/>
-						<div className="bg-blue-default absolute bottom-1/3 left-0 lg:left-[-50px] p-6 flex flex-col items-center justify-center">
+						<div className={styles.image}>
 							<motion.div
 								initial={initialTwo}
 								whileInView={fadeIn}
@@ -241,9 +230,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 											: 1000
 									}
 									className={
-										contentBox?.icon?.sourceUrl
-											? `block object-contain object-center w-full h-[50px] mb-4`
-											: `hidden`
+										contentBox?.icon?.sourceUrl ? styles.icon : `hidden`
 									}
 								/>
 							</motion.div>
@@ -251,13 +238,13 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="mb-1 uppercase text-center lg:text-center font-extrabold text-2xl tracking-[0.10rem] text-white"
+								className={styles.text}
 							>
 								{contentBox?.text}
 							</motion.h4>
 							<Paragraph
 								content={contentBox?.subtext}
-								className="max-w-xl text-white text-paragraph text-center lg:text-left"
+								className={styles.subtext}
 							/>
 						</div>
 					</motion.div>

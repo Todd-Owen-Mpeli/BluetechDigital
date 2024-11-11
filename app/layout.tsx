@@ -1,6 +1,6 @@
 // Imports
 import type {AppProps} from "next/app";
-import {IGlobalProps} from "@/types/context";
+import {IGlobal} from "@/types/context";
 
 // Global Styling
 import "@/styles/globals.scss";
@@ -57,7 +57,7 @@ const App = async ({children}: AppProps | any) => {
 		getAllTestimonialsContent(),
 	]);
 
-	const globalProps: IGlobalProps = {
+	const globalProps: IGlobal.IProps = {
 		mobileLinks: mobileLinks,
 		caseStudies: caseStudies,
 		testimonials: testimonials,

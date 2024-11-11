@@ -18,22 +18,22 @@ import ContactInfo from "@/components/ContactInfo";
 import OurPartners from "@/components/OurPartners";
 import OurServices from "@/components/OurServices";
 import ContactForm from "@/components/ContactForm";
-import FeaturesGrid from "@/components/FeaturesGrid";
 import NewsInsights from "@/components/NewsInsights";
 import ServicesGrid from "@/components/ServicesGrid";
 import BenefitsStats from "@/components/BenefitsStats";
 import TitleParagraph from "@/components/TitleParagraph";
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
-import TestimonialsTwo from "@/components/TestimonialsTwo";
-import FeaturesGridTwo from "@/components/FeaturesGridTwo";
-import TestimonialsGrid from "@/components/TestimonialsGrid";
+import FeaturesGrid from "@/components/FeaturesGrid/Index";
 import TitleContentImage from "@/components/TitleContentImage";
 import JumboContentImage from "@/components/JumboContentImage";
-import TestimonialsSlider from "@/components/TestimonialsSlider";
 import JumboContentSection from "@/components/JumboContentSection";
 import AchievementsStatsCTA from "@/components/AchievementsStatsCTA";
+import TestimonialsTwo from "@/components/Testimonials/TestimonialsTwo";
+import FeaturesGridTwo from "@/components/FeaturesGrid/FeaturesGridTwo";
 import TwoColumnButtonContent from "@/components/TwoColumnButtonContent";
 import NewsInsightsThreeCards from "@/components/NewsInsightsThreeCards";
+import TestimonialsGrid from "@/components/Testimonials/TestimonialsGrid";
+import TestimonialsSlider from "@/components/Testimonials/TestimonialsSlider";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();

@@ -8,7 +8,7 @@ import {ITestimonialsGrid} from "@/types/components/index";
 import {fadeInUp, initial, stagger} from "@/animations/animations";
 
 // Styling
-import styles from "../styles/components/Testimonials.module.scss";
+import styles from "@/styles/components/Testimonials.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";

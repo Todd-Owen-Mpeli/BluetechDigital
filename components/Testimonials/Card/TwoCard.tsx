@@ -1,6 +1,6 @@
 // Imports
+import {FC} from "react";
 import Image from "next/image";
-import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {ITestimonialsTwoCard} from "@/types/components";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";

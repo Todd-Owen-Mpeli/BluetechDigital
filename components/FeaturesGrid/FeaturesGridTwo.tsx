@@ -11,8 +11,8 @@ import {IFeaturesGridTwo} from "@/types/components";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import FeaturesGridCard from "./Cards/FeaturesGridCard";
-import FeaturesGridImageCard from "./Cards/FeaturesGridImageCard";
+import FeaturesGridCard from "@/components/FeaturesGrid/Card/Card";
+import FeaturesGridImageCard from "@/components/FeaturesGrid/Card/ImageCard";
 
 const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 	cardOne,

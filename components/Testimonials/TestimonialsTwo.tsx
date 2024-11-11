@@ -15,7 +15,7 @@ import {ITestimonialsTwo} from "@/types/components/index";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import TestimonialsTwoCard from "./Cards/TestimonialsTwoCard";
+import TestimonialsTwoCard from "@/components/Testimonials/Card/TwoCard";
 
 const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 	title,

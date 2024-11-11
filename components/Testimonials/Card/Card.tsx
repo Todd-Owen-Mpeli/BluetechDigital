@@ -6,8 +6,8 @@ import {ITestimonialsCard} from "@/types/components";
 import {initial, stagger} from "@/animations/animations";
 
 // Components
-import RenderStars from "@/components/Elements/RenderStars";
 import Paragraph from "@/components/Elements/Paragraph";
+import RenderStars from "@/components/Elements/RenderStars";
 
 const TestimonialsCard: FC<ITestimonialsCard> = ({
 	name,

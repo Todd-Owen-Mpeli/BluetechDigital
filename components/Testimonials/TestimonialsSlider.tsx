@@ -12,7 +12,7 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 
 // Styling
-import styles from "../styles/components/Testimonials.module.scss";
+import styles from "@/styles/components/Testimonials.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";

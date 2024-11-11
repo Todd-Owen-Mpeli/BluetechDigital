@@ -19,7 +19,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 	backgroundColor,
 	columnTwoContent,
 }) => {
-	const columnTwoContentTailwindStyling =
+	const columnTwoContentclassName =
 		"text-darkGrey leading-[1.75rem] text-paragraph text-center lg:text-left";
 	const [contentOneOpen, setContentOneOpen]: any = useState(true);
 	const [contentTwoOpen, setContentTwoOpen]: any = useState(false);
@@ -84,7 +84,7 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="max-w-xl text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
+							className="max-w-xl text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}
@@ -170,22 +170,22 @@ const TwoColumnButtonContent: FC<ITwoColumnButtonContent> = ({
 							{contentOneOpen ? (
 								<Paragraph
 									content={columnTwoContent?.paragraph}
-									tailwindStyling={columnTwoContentTailwindStyling}
+									className={columnTwoContentclassName}
 								/>
 							) : contentTwoOpen ? (
 								<Paragraph
 									content={columnTwoContent?.paragraphTwo}
-									tailwindStyling={columnTwoContentTailwindStyling}
+									className={columnTwoContentclassName}
 								/>
 							) : contentThreeOpen ? (
 								<Paragraph
 									content={columnTwoContent?.paragraphThree}
-									tailwindStyling={columnTwoContentTailwindStyling}
+									className={columnTwoContentclassName}
 								/>
 							) : (
 								<Paragraph
 									content={columnTwoContent?.paragraph}
-									tailwindStyling={columnTwoContentTailwindStyling}
+									className={columnTwoContentclassName}
 								/>
 							)}
 						</div>

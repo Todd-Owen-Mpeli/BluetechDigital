@@ -99,7 +99,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 											</motion.h4>
 											<Paragraph
 												content={item?.card?.paragraph}
-												tailwindStyling="w-full lg:max-w-[40rem] mt-4 text-center text-white text-base"
+												className="w-full lg:max-w-[40rem] mt-4 text-center text-white text-base"
 											/>
 										</div>
 									</motion.div>
@@ -139,11 +139,11 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 								<div>
 									<Title
 										content={title}
-										tailwindStyling="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
+										className="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
 									/>
 									<Paragraph
 										content={paragraph}
-										tailwindStyling={`${
+										className={`${
 											achievements?.length >= 2
 												? "max-w-none lg:max-w-sm 2xl:max-w-lg"
 												: "max-w-none lg:max-w-6xl"

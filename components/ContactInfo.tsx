@@ -34,7 +34,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="lg:max-w-lg text-center lg:text-left text-black text-paragraph"
+						className="lg:max-w-lg text-center lg:text-left text-black text-paragraph"
 					/>
 				</div>
 				<motion.div
@@ -78,7 +78,7 @@ const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
 							</div>
 							<Paragraph
 								content={globalContext?.themesOptionsContent?.address}
-								tailwindStyling="w-full lg:max-w-xl text-center lg:text-left text-black text-paragraph"
+								className="w-full lg:max-w-xl text-center lg:text-left text-black text-paragraph"
 							/>
 						</motion.div>
 					</motion.div>

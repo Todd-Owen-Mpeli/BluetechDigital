@@ -63,7 +63,7 @@ const newsInsightsThreeCards: FC<INewsInsights> = ({
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="max-w-3xl mx-auto text-black text-paragraph"
+						className="max-w-3xl mx-auto text-black text-paragraph"
 					/>
 				</motion.div>
 				<motion.div

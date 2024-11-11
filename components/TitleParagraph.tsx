@@ -34,7 +34,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 				</motion.h2>
 				<Paragraph
 					content={paragraph}
-					tailwindStyling={
+					className={
 						paragraph
 							? `lg:max-w-6xl mx-auto mb-10 text-black leading-[1.75rem] text-paragraph text-center ${
 									displayParagraph ? "lg:text-center" : "lg:text-left"

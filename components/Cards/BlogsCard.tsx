@@ -84,7 +84,7 @@ const BlogsCard: FC<IBlogsCard> = ({
 									? excerpt
 									: excerpt.substring(0, 250) + "..."
 							}
-							tailwindStyling={
+							className={
 								excerpt
 									? `block mb-6 text-tiny leading-normal text-darkGrey`
 									: `hidden`

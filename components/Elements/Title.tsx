@@ -5,7 +5,7 @@ import DOMPurify from "isomorphic-dompurify";
 import {ITitle} from "@/types/components/index";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
-const Title: FC<ITitle> = ({content, tailwindStyling}) => {
+const Title: FC<ITitle> = ({content, className}) => {
 	/* Sanitize the WYSIWYG title content */
 	function createTitleMarkup(titleContent: string) {
 		return {
@@ -18,7 +18,7 @@ const Title: FC<ITitle> = ({content, tailwindStyling}) => {
 			initial={initialTwo}
 			whileInView={fadeIn}
 			viewport={{once: true}}
-			className={content ? `block ${tailwindStyling}` : `hidden`}
+			className={content ? `block ${className}` : `hidden`}
 			dangerouslySetInnerHTML={createTitleMarkup(content)}
 		/>
 	);

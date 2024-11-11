@@ -55,7 +55,7 @@ const FAQCard: FC<IFAQCard> = ({title, paragraph}) => {
 						{accordionOpen ? (
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="mt-4 max-w-xl text-black leading-[1.75rem] text-base text-left"
+								className="mt-4 max-w-xl text-black leading-[1.75rem] text-base text-left"
 							/>
 						) : null}
 					</div>

@@ -20,7 +20,7 @@ const NoticeInfoBanner: FC = () => {
 			>
 				<Paragraph
 					content={globalContext?.themesOptionsContent?.noticeBannerTextarea}
-					tailwindStyling="w-full font-semibold lg:max-w-[50rem] mx-auto text-white text-center text-base"
+					className="w-full font-semibold lg:max-w-[50rem] mx-auto text-white text-center text-base"
 				/>
 			</div>
 		</>

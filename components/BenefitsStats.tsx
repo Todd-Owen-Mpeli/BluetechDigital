@@ -46,7 +46,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center lg:text-left"
+							className="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center lg:text-left"
 						/>
 					</div>
 					<div className="py-10 px-6 md:px-8 xl:pl-28 max-w-6xl mx-auto bg-white w-full lg:w-[55%] xl:w-[65%] grid grid-cols-2 md:grid-cols-2 gap-4 lg:gap-0 items-center justify-start md:justify-center">
@@ -82,7 +82,7 @@ const BenefitsStats: FC<IBenefitsStats> = ({
 										</span>
 										<Paragraph
 											content={item?.text}
-											tailwindStyling="text-black text-tiny xl:text-base text-left"
+											className="text-black text-tiny xl:text-base text-left"
 										/>
 									</motion.div>
 								</Fragment>

@@ -55,7 +55,7 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
+							className="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
 						/>
 					</motion.div>
 					<div className="w-full relative py-0 lg:py-12 overflow-hidden">
@@ -146,7 +146,7 @@ const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
 											</motion.h2>
 											<Paragraph
 												content={faqGrid[selectedItemIndex]?.card?.paragraph}
-												tailwindStyling=" text-black text-base text-left"
+												className=" text-black text-base text-left"
 											/>
 										</>
 									)}

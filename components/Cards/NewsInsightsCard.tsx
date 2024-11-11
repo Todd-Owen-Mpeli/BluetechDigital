@@ -95,7 +95,7 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 								? paragraph
 								: paragraph.substring(0, 175) + "..."
 						}
-						tailwindStyling={
+						className={
 							paragraph
 								? `block text-tiny leading-normal text-darkGrey`
 								: `hidden`

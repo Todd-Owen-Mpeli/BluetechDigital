@@ -8,7 +8,7 @@ import {fadeIn, initialTwo} from "@/animations/animations";
 // Styling
 import styles from "../../styles/components/Elements/Paragraph.module.scss";
 
-const Paragraph: FC<IParagraph> = ({content, tailwindStyling}) => {
+const Paragraph: FC<IParagraph> = ({content, className}) => {
 	/* Sanitize the WYSIWYG paragraph content */
 	function createParagraphMarkup(paragraphContent: string) {
 		return {
@@ -21,9 +21,7 @@ const Paragraph: FC<IParagraph> = ({content, tailwindStyling}) => {
 			initial={initialTwo}
 			whileInView={fadeIn}
 			viewport={{once: true}}
-			className={
-				content ? styles.paragraph + ` block ${tailwindStyling}` : `hidden`
-			}
+			className={content ? styles.paragraph + ` block ${className}` : `hidden`}
 			dangerouslySetInnerHTML={createParagraphMarkup(content)}
 		/>
 	);

@@ -143,7 +143,7 @@ const TestimonialsSlider: FC = () => {
 											>
 												<Paragraph
 													content={item?.node?.testimonialReview?.paragraph}
-													tailwindStyling={`max-w-full px-6 lg:px-0 sm:max-w-lg lg:max-w-md xl:max-w-xl mx-auto lg:mx-0 ${
+													className={`max-w-full px-6 lg:px-0 sm:max-w-lg lg:max-w-md xl:max-w-xl mx-auto lg:mx-0 ${
 														item?.node?.testimonialReview?.image?.sourceUrl
 															? "mb-28"
 															: "mb-0"

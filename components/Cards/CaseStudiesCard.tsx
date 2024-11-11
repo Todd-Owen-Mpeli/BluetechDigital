@@ -95,7 +95,7 @@ const CaseStudiesCard: FC<ICaseStudiesCard> = ({
 										? excerpt
 										: excerpt.substring(0, 250) + "..."
 								}
-								tailwindStyling={
+								className={
 									excerpt
 										? `block text-tiny leading-normal text-darkGrey`
 										: `hidden`

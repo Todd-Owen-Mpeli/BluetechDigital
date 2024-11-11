@@ -24,7 +24,7 @@ import NewsInsightsCard from "../Cards/NewsInsightsCard";
 const Pagination: FC<IPagination> = ({
 	contentType,
 	contentArray,
-	tailwindStyling,
+	className,
 	numberOfItemsRenderedPerPage,
 }) => {
 	const itemsPerPage = numberOfItemsRenderedPerPage;
@@ -54,7 +54,7 @@ const Pagination: FC<IPagination> = ({
 
 	return (
 		<>
-			<div className={`${tailwindStyling}`}>
+			<div className={`${className}`}>
 				{currentContent?.length > 0 ? (
 					currentContent?.map((item: any, index: number) => (
 						<Fragment key={index}>
@@ -171,7 +171,7 @@ const Pagination: FC<IPagination> = ({
 								>
 									<Paragraph
 										content="Nothing to display"
-										tailwindStyling="px-0 text-base text-white"
+										className="px-0 text-base text-white"
 									/>
 								</motion.div>
 							</motion.div>

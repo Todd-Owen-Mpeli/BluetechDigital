@@ -68,7 +68,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 
 				<Paragraph
 					content={paragraph}
-					tailwindStyling="text-center lg:text-left text-black text-sm leading-relaxed"
+					className="text-center lg:text-left text-black text-sm leading-relaxed"
 				/>
 			</motion.div>
 		</>

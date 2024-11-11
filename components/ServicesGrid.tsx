@@ -190,7 +190,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 														</motion.h2>
 														<Paragraph
 															content={item?.card?.paragraph}
-															tailwindStyling="leading-8 mb-10 text-black text-base lg:text-paragraph text-center lg:text-left"
+															className="leading-8 mb-10 text-black text-base lg:text-paragraph text-center lg:text-left"
 														/>
 													</div>
 													<div>
@@ -249,7 +249,7 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 																			</span>
 																			<Paragraph
 																				content={itemTwo?.text}
-																				tailwindStyling="text-black text-base text-left"
+																				className="text-black text-base text-left"
 																			/>
 																		</motion.div>
 																	</Fragment>

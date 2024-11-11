@@ -56,7 +56,7 @@ const FaqTwo: FC<IFAQTwo> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black text-base lg:text-paragraph text-center"
+							className="lg:max-w-3xl mx-auto text-black text-base lg:text-paragraph text-center"
 						/>
 					</motion.div>
 

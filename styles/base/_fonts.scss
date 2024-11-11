@@ -17,3 +17,10 @@
 // Font Stack Properties
 $main: "TelkaRegular", "PlusJakartaSans";
 $body: "PlusJakartaSans", "Inter";
+
+.font-TelkaRegular {
+	font-family: $main;
+}
+.font-PlusJakartaSans {
+	font-family: $body;
+}

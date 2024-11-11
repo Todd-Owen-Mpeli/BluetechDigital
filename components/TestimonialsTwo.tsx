@@ -7,12 +7,11 @@ import {
 	initialTwo,
 	arrayLoopStaggerChildren,
 } from "@/animations/animations";
-import { FC, Fragment } from "react";
+import {FC, Fragment} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {ITestimonialsTwo} from "@/types/components/index";
-
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
@@ -54,7 +53,7 @@ const TestimonialsTwo: FC<ITestimonialsTwo> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="mb-6 lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center xl:text-left"
+							className="mb-6 lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base lg:text-paragraph text-center xl:text-left"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}

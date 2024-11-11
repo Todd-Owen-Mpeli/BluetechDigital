@@ -49,7 +49,7 @@ const CookiePolicyCard: FC = () => {
 					</motion.h3>
 					<Paragraph
 						content={`<p>This website uses cookies to enhance the user experience and ensure the proper functioning of the site. By using this website, you agree to the use of cookies in accordance with this Cookie Policy.</p>`}
-						tailwindStyling="mt-1 mb-2 text-sm text-left text-black"
+						className="mt-1 mb-2 text-sm text-left text-black"
 					/>
 					<motion.div
 						initial={initial}

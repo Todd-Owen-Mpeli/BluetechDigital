@@ -588,7 +588,7 @@ export type ITwoColumnButtonContent = {
 export type IPagination = {
 	contentArray: any;
 	contentType: string;
-	tailwindStyling: string;
+	className: string;
 	numberOfItemsRenderedPerPage: number;
 };
 export type ISmoothScrolling = {
@@ -756,7 +756,7 @@ export type IValuesBlocksImageOrMapCard = {
 // Elements
 export type ITitle = {
 	content: string;
-	tailwindStyling: string;
+	className: string;
 };
 export type ISideMenu = {
 	menuActive: boolean;
@@ -767,7 +767,7 @@ export type IFormikForm = {
 };
 export type IParagraph = {
 	content: string;
-	tailwindStyling: string;
+	className: string;
 };
 export type IRenderStars = {
 	starRating: number;

@@ -32,8 +32,10 @@ export type IContent = [
 		content: any;
 	}
 ];
-export type ITestimonials = [
-	{
+
+/* CUSTOM POST TYPES TYPES  */
+export namespace ICustomPostTypes {
+	export type ITestimonials = {
 		node: {
 			testimonialReview: {
 				name: string;
@@ -50,94 +52,94 @@ export type ITestimonials = [
 				};
 			};
 		};
-	}
-];
-export type IThemesOptionsContent = {
-	email: string;
-	address: string;
-	emailTwo: string;
-	phoneNumber: string;
-	phoneNumberTwo: string;
-	copyrightText: string;
-	facebookLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	twitterLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	linkedinLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	textarea: string;
-	awardsCertificationsGallery: [
-		{
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		}
-	];
-	displayNoticeBanner: boolean;
-	noticeBannerTextarea: string;
-	menuColumnTwo: {
-		title: string;
-		buttonLink: {
+	}[];
+	export type IThemesOptions = {
+		email: string;
+		address: string;
+		emailTwo: string;
+		phoneNumber: string;
+		phoneNumberTwo: string;
+		copyrightText: string;
+		facebookLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	menuColumnThree: {
-		title: string;
-		paragraph: string;
-		buttonLink: {
+		twitterLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	errorPageContent: {
-		title: string;
-		paragraph: string;
-		buttonLink: {
+		linkedinLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
+		textarea: string;
+		awardsCertificationsGallery: [
+			{
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			}
+		];
+		displayNoticeBanner: boolean;
+		noticeBannerTextarea: string;
+		menuColumnTwo: {
+			title: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+		menuColumnThree: {
+			title: string;
+			paragraph: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+		errorPageContent: {
+			title: string;
+			paragraph: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
 			};
 		};
 	};
-};
+}
 
 // WEBSITE NEWS AND CASE STUDIES TYPES
 export namespace INewsCaseStudies {
@@ -212,12 +214,13 @@ export namespace IPage {
 		postTypeFlexibleContent: string;
 	};
 }
+
 /* GLOBAL: Project Props, Content 
 & Content Provider Interface */
 export namespace IGlobal {
 	export type IProps = {
-		testimonials: ITestimonials;
-		themesOptionsContent: IThemesOptionsContent;
+		testimonials: ICustomPostTypes.ITestimonials;
+		themesOptionsContent: ICustomPostTypes.IThemesOptions;
 
 		// Website Links
 		mobileLinks: ILinks.IMobileLinks;

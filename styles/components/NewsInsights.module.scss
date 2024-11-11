@@ -1,0 +1,51 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.newsInsights {
+	@apply py-10 pb-16 bg-white lg:max-w-[1700px] px-4 mx-auto;
+
+	.container {
+		@apply max-w-2xl mx-auto mb-20 text-center lg:max-w-5xl;
+
+		.title {
+			@apply my-2 max-w-xl mx-auto text-black text-center font-bold text-lg lg:text-3xl;
+
+			.italicText {
+				@apply ml-4 font-serif font-normal italic;
+			}
+		}
+
+		.paragraph {
+			@apply max-w-3xl mx-auto text-black text-paragraph;
+		}
+	}
+
+	.pagination {
+		@apply grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+	}
+}
+
+.newsInsightsThreeCards {
+	@apply py-10 bg-white lg:max-w-[1700px] px-4 mx-auto;
+
+	.container {
+		@apply max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl;
+
+		.title {
+			@apply my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl;
+
+			.italicText {
+				@apply ml-4 font-serif font-normal italic;
+			}
+		}
+
+		.paragraph {
+			@apply max-w-3xl mx-auto text-black text-paragraph;
+		}
+	}
+
+	.gridContent {
+		@apply grid px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+	}
+}

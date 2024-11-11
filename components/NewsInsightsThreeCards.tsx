@@ -12,6 +12,9 @@ import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {INewsInsights} from "@/types/components";
 
+// Styling
+import styles from "@/styles/components/NewsInsights.module.scss";
+
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import NewsInsightsCard from "./Cards/NewsInsightsCard";
@@ -26,24 +29,20 @@ const newsInsightsThreeCards: FC<INewsInsights.IThreeCards> = ({
 
 	return (
 		<>
-			<div className="py-10 bg-white lg:container px-4 mx-auto">
+			<div className={styles.newsInsightsThreeCards}>
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className={
-						title && italic
-							? "max-w-2xl mx-auto mb-24 text-center flex flex-col items-center lg:max-w-5xl"
-							: "hidden"
-					}
+					className={title && italic ? styles.container : "hidden"}
 				>
 					<motion.h2
 						initial={initial}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl"
+						className={styles.title}
 					>
 						<motion.span
 							initial={initial}
@@ -56,22 +55,19 @@ const newsInsightsThreeCards: FC<INewsInsights.IThreeCards> = ({
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="ml-4 font-serif font-normal italic"
+							className={styles.italicText}
 						>
 							{italic}
 						</motion.span>
 					</motion.h2>
-					<Paragraph
-						content={paragraph}
-						className="max-w-3xl mx-auto text-black text-paragraph"
-					/>
+					<Paragraph content={paragraph} className={styles.paragraph} />
 				</motion.div>
 				<motion.div
 					initial={initial}
 					variants={stagger}
 					whileInView="animate"
 					viewport={{once: true}}
-					className="grid px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3"
+					className={styles.gridContent}
 				>
 					{globalContext?.newsInsightsThreeCards?.length > 0 ? (
 						globalContext?.newsInsightsThreeCards?.map(
@@ -80,10 +76,10 @@ const newsInsightsThreeCards: FC<INewsInsights.IThreeCards> = ({
 									<motion.div
 										custom={index}
 										initial={initial}
+										className="w-full"
 										whileInView="animate"
 										viewport={{once: true}}
 										variants={arrayLoopStaggerChildren}
-										className="w-full"
 									>
 										<NewsInsightsCard
 											uri={item?.node?.uri}

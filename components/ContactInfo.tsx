@@ -22,7 +22,7 @@ const ContactInfo: FC<IContact.IInfo> = ({title, paragraph}) => {
 
 	return (
 		<>
-			<div className="py-10 bg-white lg:px-4 lg:container px-0 mx-auto gap-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
+			<div className="py-10 bg-white lg:px-4 lg:max-w-[1700px] px-0 mx-auto gap-6 flex flex-col lg:flex-row items-center lg:items-start justify-between">
 				<div className="w-full px-4 lg:mb-0 lg:w-1/2">
 					<motion.h2
 						initial={initial}

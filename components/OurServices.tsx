@@ -31,7 +31,7 @@ const OurServices: FC<IOurServices> = ({
 					backgroundImage: `url("/svg/background/stacked-waves-haikei-blue-darkblue.svg")`,
 				}}
 			>
-				<div className="lg:container mx-auto flex flex-col items-center">
+				<div className="lg:max-w-[1700px] mx-auto flex flex-col items-center">
 					<div className="flex flex-col py-8 items-center gap-2">
 						<div className="flex flex-wrap -mx-4">
 							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">

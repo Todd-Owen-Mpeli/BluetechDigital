@@ -13,7 +13,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 	displayParagraph,
 }) => {
 	return (
-		<div className="bg-white lg:container p-0 mx-auto flex flex-col px-4">
+		<div className="bg-white lg:max-w-[1700px] p-0 mx-auto flex flex-col px-4">
 			<motion.div
 				initial={initial}
 				whileInView={fadeInUp}

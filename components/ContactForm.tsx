@@ -23,7 +23,7 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 					backgroundImage: `url("/svg/background/layeblue-peaks-haikei-white-lightgrey.svg")`,
 				}}
 			>
-				<div className="lg:container mx-auto flex flex-col lg:flex-row items-baseline ">
+				<div className="lg:max-w-[1700px] mx-auto flex flex-col lg:flex-row items-baseline ">
 					<div className="w-full lg:w-1/2 sm:p-6 flex flex-col">
 						<motion.div
 							initial={initial}

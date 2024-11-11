@@ -3,9 +3,41 @@
 @import "../base/colors";
 
 .ourPartners {
-	p {
-		a {
-			@apply font-semibold underline text-blue-two hover:text-yellow-two transition-all ease-in-out duration-500;
+	@apply py-10 px-4 lg:px-0 bg-white;
+
+	.container {
+		@apply lg:max-w-[1700px] px-0 mx-auto;
+
+		.topContent {
+			@apply flex flex-col items-center;
+
+			.subtitle {
+				@apply text-center text-base text-yellow-two;
+			}
+
+			.title {
+				@apply my-2 max-w-xl mx-auto xl:mx-0 text-black text-center font-bold text-xl lg:text-3xl;
+			}
+
+			.paragraph {
+				@apply lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center;
+
+				a {
+					@apply font-semibold underline text-blue-two hover:text-yellow-two transition-all ease-in-out duration-500;
+				}
+			}
+		}
+
+		.bottomContent {
+			@apply max-w-6xl mx-auto;
+
+			.imageGrid {
+				@apply grid items-center justify-center grid-cols-2 gap-4 lg:items-center lg:justify-between pt-12;
+
+				.image {
+					@apply block w-[150px] mx-auto h-full sm:w-[150px] lg:w-full lg:h-[100px] object-contain object-center;
+				}
+			}
 		}
 	}
 }

@@ -32,7 +32,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 	return (
 		<>
 			<div className="py-10 px-4 bg-lightGreyTwo">
-				<div className="lg:container mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
+				<div className="lg:max-w-[1700px] mx-auto flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-x-4 xl:gap-x-16">
 					<motion.div
 						viewport={{once: true}}
 						initial={slideInLeftInitial}

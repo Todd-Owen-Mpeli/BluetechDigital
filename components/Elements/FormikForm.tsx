@@ -156,7 +156,7 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 				initialValues={formik?.initialValues}
 				className="w-full lg:w-1/2"
 			>
-				<Form className="lg:container mx-auto py-10 md:max-w-xl">
+				<Form className="lg:max-w-[1700px] mx-auto py-10 md:max-w-xl">
 					{loading ? (
 						<motion.h2
 							initial={initialTwo}

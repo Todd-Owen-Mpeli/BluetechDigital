@@ -26,7 +26,7 @@ const FeaturesGrid: FC<IFeaturesGrid.IProps> = ({
 }) => {
 	return (
 		<div className="overflow-hidden bg-white lg:px-4">
-			<div className="lg:lg:container px-4 mx-auto py-10">
+			<div className="lg:lg:max-w-[1700px] px-4 mx-auto py-10">
 				<motion.div
 					initial={initial}
 					variants={stagger}

@@ -34,7 +34,7 @@ const HeroTwo: FC<IHero.IHeroTwo> = ({
 						clipPath: `polygon(0 0, 100% 0, 100% 91%, 64% 98%, 0 94%)`,
 					}}
 				>
-					<div className="lg:container relative flex flex-col items-center lg:items-baseline justify-center py-20 px-4 m-auto sm:text-left">
+					<div className="lg:max-w-[1700px] relative flex flex-col items-center lg:items-baseline justify-center py-20 px-4 m-auto sm:text-left">
 						<motion.h1
 							initial={initialTwo}
 							whileInView={fadeIn}

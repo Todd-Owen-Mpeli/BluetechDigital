@@ -48,12 +48,12 @@ const newsInsightsCard: FC<INewsInsightsCard> = ({
 						width={
 							featuredImage?.node?.mediaDetails?.width
 								? featuredImage?.node?.mediaDetails?.width
-								: 500
+								: 1000
 						}
 						height={
 							featuredImage?.node?.mediaDetails?.height
 								? featuredImage?.node?.mediaDetails?.height
-								: 500
+								: 1000
 						}
 						className="object-cover object-center w-full h-full"
 					/>

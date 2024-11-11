@@ -1,8 +1,5 @@
 // Imports
-import {
-	slideInRightFinish,
-	slideInLeftInitial,
-} from "@/animations/animations";
+import {slideInRightFinish, slideInLeftInitial} from "@/animations/animations";
 import {FC} from "react";
 import Image from "next/image";
 import {motion} from "framer-motion";
@@ -19,9 +16,9 @@ const ValuesBlocksImageCard: FC<IValuesBlocksImageCard> = ({image}) => {
 				<Image
 					alt={`${image?.altText}`}
 					src={image?.sourceUrl}
-					width={image?.mediaDetails?.width ? image?.mediaDetails?.width : 500}
+					width={image?.mediaDetails?.width ? image?.mediaDetails?.width : 1000}
 					height={
-						image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+						image?.mediaDetails?.height ? image?.mediaDetails?.height : 1000
 					}
 					className={
 						image?.sourceUrl

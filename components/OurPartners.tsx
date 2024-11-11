@@ -74,12 +74,12 @@ const OurPartners: FC<IOurPartners> = ({
 												width={
 													item?.image?.mediaDetails?.width
 														? item?.image?.mediaDetails?.width
-														: 500
+														: 1000
 												}
 												height={
 													item?.image?.mediaDetails?.height
 														? item?.image?.mediaDetails?.height
-														: 500
+														: 1000
 												}
 												className={
 													item?.image?.sourceUrl

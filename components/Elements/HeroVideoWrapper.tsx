@@ -19,7 +19,7 @@ const HeroVideoWrapper: FC<IVideoWrapper> = ({children}) => {
 			width: 100%;
 			height: 100%;
 			position: static;
-			min-height: 500px;
+			min-height: 1000px;
 			max-height: 1000px;
 		}
 
@@ -50,7 +50,7 @@ const HeroVideoWrapper: FC<IVideoWrapper> = ({children}) => {
 			iframe,
 			object,
 			embed {
-				min-height: 500px;
+				min-height: 1000px;
 			}
 		}
 	`;

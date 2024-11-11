@@ -112,12 +112,12 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 												width={
 													bottomContent?.image?.mediaDetails?.width
 														? image?.mediaDetails?.width
-														: 500
+														: 1000
 												}
 												height={
 													bottomContent?.image?.mediaDetails?.height
 														? image?.mediaDetails?.height
-														: 500
+														: 1000
 												}
 												className={
 													bottomContent?.image?.sourceUrl
@@ -207,10 +207,10 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							alt={`${image?.altText}`}
 							src={image?.sourceUrl}
 							width={
-								image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+								image?.mediaDetails?.width ? image?.mediaDetails?.width : 1000
 							}
 							height={
-								image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+								image?.mediaDetails?.height ? image?.mediaDetails?.height : 1000
 							}
 							className={
 								image?.sourceUrl
@@ -233,12 +233,12 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 									width={
 										contentBox?.icon?.mediaDetails?.width
 											? contentBox?.icon?.mediaDetails?.width
-											: 500
+											: 1000
 									}
 									height={
 										contentBox?.icon?.mediaDetails?.height
 											? contentBox?.icon?.mediaDetails?.height
-											: 500
+											: 1000
 									}
 									className={
 										contentBox?.icon?.sourceUrl

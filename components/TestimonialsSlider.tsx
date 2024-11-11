@@ -95,14 +95,14 @@ const TestimonialsSlider: FC = () => {
 																?.width
 																? item?.node?.testimonialReview?.image
 																		?.mediaDetails?.width
-																: 500
+																: 1000
 														}
 														height={
 															item?.node?.testimonialReview?.image?.mediaDetails
 																?.height
 																? item?.node?.testimonialReview?.image
 																		?.mediaDetails?.height
-																: 500
+																: 1000
 														}
 													/>
 													<div

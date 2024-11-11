@@ -16,10 +16,10 @@ const ValuesBlocksImageOrMapCard: FC<IValuesBlocksImageOrMapCard> = ({
 						alt={`${image?.altText}`}
 						src={image?.sourceUrl}
 						width={
-							image?.mediaDetails?.width ? image?.mediaDetails?.width : 500
+							image?.mediaDetails?.width ? image?.mediaDetails?.width : 1000
 						}
 						height={
-							image?.mediaDetails?.height ? image?.mediaDetails?.height : 500
+							image?.mediaDetails?.height ? image?.mediaDetails?.height : 1000
 						}
 						className={
 							image?.sourceUrl

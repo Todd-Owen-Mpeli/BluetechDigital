@@ -50,7 +50,7 @@ const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
 			iframe,
 			object,
 			embed {
-				min-height: 500px;
+				min-height: 1000px;
 			}
 		}
 	`;

@@ -1,6 +1,6 @@
 import {client} from "@/config/apollo";
-import {ISlug} from "@/types/context";
 import {DocumentNode, gql} from "@apollo/client";
+import {INewsCaseStudies, ISlug} from "@/types/context";
 
 /* CASE STUDIES SLUGS (URLS) */
 export const getAllCaseStudiesSlugs = async (): Promise<ISlug> => {
@@ -30,44 +30,45 @@ export const getAllCaseStudiesSlugs = async (): Promise<ISlug> => {
 };
 
 // All Case Studies Content
-export const getAllCaseStudiesContent = async () => {
-	try {
-		const content: DocumentNode = gql`
-			{
-				caseStudiesContent: caseStudies(
-					where: {status: PUBLISH, orderby: {field: DATE, order: ASC}}
-					first: 100
-				) {
-					edges {
-						node {
-							slug
-							excerpt
-							title(format: RENDERED)
-							featuredImage {
-								node {
-									altText
-									sourceUrl
-									mediaDetails {
-										height
-										width
+export const getAllCaseStudiesContent =
+	async (): Promise<INewsCaseStudies.ICaseStudies> => {
+		try {
+			const content: DocumentNode = gql`
+				{
+					caseStudiesContent: caseStudies(
+						where: {status: PUBLISH, orderby: {field: DATE, order: ASC}}
+						first: 100
+					) {
+						edges {
+							node {
+								slug
+								excerpt
+								title(format: RENDERED)
+								featuredImage {
+									node {
+										altText
+										sourceUrl
+										mediaDetails {
+											height
+											width
+										}
 									}
 								}
 							}
 						}
 					}
 				}
-			}
-		`;
+			`;
 
-		const response: any = await client.query({
-			query: content,
-		});
+			const response: any = await client.query({
+				query: content,
+			});
 
-		return response?.data?.caseStudiesContent?.edges;
-	} catch (error) {
-		console.log(error);
-		throw new Error(
-			"Something went wrong trying to fetch all the case studies content"
-		);
-	}
-};
+			return response?.data?.caseStudiesContent?.edges;
+		} catch (error) {
+			console.log(error);
+			throw new Error(
+				"Something went wrong trying to fetch all the case studies content"
+			);
+		}
+	};

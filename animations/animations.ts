@@ -1,28 +1,17 @@
 /*  FRAMER-MOTION ANIMATIONS
 Custom reusable Animation Properties/variables */
 
-// WhileInView
-import {
-	FadeIn,
-	Stagger,
-	Initial,
-	FadeInUp,
-	FadeInTwo,
-	InitialTwo,
-	SlideInLeftInitial,
-	SlideInRightFinish,
-	SlideInRightInitial,
-	ArrayLoopStaggerChildren,
-} from "@/types/animations";
+// Imports
+import {IAnimation} from "@/types/animations";
 
-export const initial: Initial | any = {
+export const initial: IAnimation.Initial | any = {
 	y: 0,
 	opacity: 0,
 };
-export const initialTwo: InitialTwo | any = {
+export const initialTwo: IAnimation.InitialTwo | any = {
 	opacity: 0,
 };
-export const fadeIn: FadeIn | any = {
+export const fadeIn: IAnimation.FadeIn | any = {
 	opacity: 1,
 	transition: {
 		delay: 0.5,
@@ -30,7 +19,7 @@ export const fadeIn: FadeIn | any = {
 		ease: "easeOut",
 	},
 };
-export const fadeInTwo: FadeInTwo | any = {
+export const fadeInTwo: IAnimation.FadeInTwo | any = {
 	y: 0,
 	opacity: 1,
 	transition: {
@@ -39,7 +28,7 @@ export const fadeInTwo: FadeInTwo | any = {
 		ease: "easeOut",
 	},
 };
-export const fadeInUp: FadeInUp = {
+export const fadeInUp: IAnimation.FadeInUp = {
 	y: 0,
 	opacity: 1,
 	transition: {
@@ -48,7 +37,7 @@ export const fadeInUp: FadeInUp = {
 		ease: "easeInOut",
 	},
 };
-export const stagger: Stagger = {
+export const stagger: IAnimation.Stagger = {
 	initial: {
 		opacity: 0,
 		y: 0,
@@ -63,7 +52,7 @@ export const stagger: Stagger = {
 		},
 	},
 };
-export const arrayLoopStaggerChildren: ArrayLoopStaggerChildren = {
+export const arrayLoopStaggerChildren: IAnimation.ArrayLoopStaggerChildren = {
 	initial: {
 		opacity: 0,
 		y: 0,
@@ -78,34 +67,35 @@ export const arrayLoopStaggerChildren: ArrayLoopStaggerChildren = {
 		},
 	}),
 };
-export const navigationMenuStaggerChildren: ArrayLoopStaggerChildren = {
-	initial: {
-		opacity: 0,
-		y: 0,
-	},
-	animate: (keys: number) => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.25 * keys,
-			duration: 0.5,
-			ease: "easeInOut",
+export const navigationMenuStaggerChildren: IAnimation.ArrayLoopStaggerChildren =
+	{
+		initial: {
+			opacity: 0,
+			y: 0,
 		},
-	}),
-};
+		animate: (keys: number) => ({
+			opacity: 1,
+			y: 0,
+			transition: {
+				delay: 0.25 * keys,
+				duration: 0.5,
+				ease: "easeInOut",
+			},
+		}),
+	};
 
 // Slide In Direction (Horizontal)
-export const slideInRightInitial: SlideInRightInitial | any = {
+export const slideInRightInitial: IAnimation.SlideInRightInitial | any = {
 	y: 0,
 	x: 200,
 	opacity: 0,
 };
-export const slideInLeftInitial: SlideInLeftInitial | any = {
+export const slideInLeftInitial: IAnimation.SlideInLeftInitial | any = {
 	y: 0,
 	x: -200,
 	opacity: 0,
 };
-export const slideInRightFinish: SlideInRightFinish = {
+export const slideInRightFinish: IAnimation.SlideInRightFinish = {
 	y: 0,
 	x: 0,
 	opacity: 1,

@@ -1,10 +1,15 @@
+// Imports
+import {ISeo} from "@/types/context";
 import {client} from "@/config/apollo";
 import {DocumentNode, gql} from "@apollo/client";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Seo Content (For 
 	every flexible content page) */
-export const getAllSeoContent = async (slug: string, postType: string) => {
+export const getAllSeoContent = async (
+	slug: string,
+	postType: string
+): Promise<ISeo> => {
 	try {
 		const content: DocumentNode = gql`
 			{

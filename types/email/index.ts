@@ -1,4 +1,4 @@
-import {IThemesOptionsContent} from "../context";
+import {ICustomPostTypes} from "../context";
 
 /* Customer Enquiry 
 Confirmation Email */
@@ -44,7 +44,7 @@ Global Email Footer (IEmailFooter) */
 export namespace IEmailFooter {
 	export type IEmailFooter = {
 		imagesDirUrl?: string;
-		themesOptionsContent?: IThemesOptionsContent;
+		themesOptionsContent?: ICustomPostTypes.IThemesOptions;
 	};
 	export type ILink = {
 		color: string;
@@ -83,7 +83,7 @@ export namespace ICustomerEmail {
 		phoneNumber?: number;
 		imagesDirUrl?: string;
 		selectedServices?: string;
-		themesOptionsContent?: IThemesOptionsContent;
+		themesOptionsContent?: ICustomPostTypes.IThemesOptions;
 	};
 	export type IMain = {
 		padding: string;
@@ -162,7 +162,7 @@ export namespace IBusinessEmail {
 		phoneNumber?: number;
 		imagesDirUrl?: string;
 		selectedServices?: string;
-		themesOptionsContent?: IThemesOptionsContent;
+		themesOptionsContent?: ICustomPostTypes.IThemesOptions;
 	};
 	export type IMain = {
 		padding: string;

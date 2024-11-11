@@ -1,6 +1,6 @@
 // Imports
 import type {AppProps} from "next/app";
-import {IGlobalProps} from "@/types/context";
+import {IGlobal} from "@/types/context";
 
 // Global Styling
 import "@/styles/globals.scss";
@@ -32,32 +32,39 @@ const App = async ({children}: AppProps | any) => {
 	// PUBLIC PAGES //
 	/* Fetch all global content
 	remaining content simultaneously */
-	const [
-		mobileLinks,
-		copyrightLinks,
-		navbarMenuLinks,
-		footerMenuLinks,
-		ourServicesLinks,
-		themesOptionsContent,
-		caseStudies,
-		newsInsights,
-		newsInsightsThreeCards,
-		testimonials,
-	]: //
-	any = await Promise.all([
+	const promises: Promise<any>[] = [
+		// Website Links
 		getMobileLinks(),
 		getCopyrightLinks(),
 		getNavbarMenuLinks(),
 		getFooterMenuLinks(),
 		getOurServicesSublinks(),
+
+		// Custom Post Types
 		getThemesOptionsContent(),
 		getAllCaseStudiesContent(),
 		getAllNewsInsightsContent(),
 		getThreeNewsInsightsContent(),
 		getAllTestimonialsContent(),
-	]);
+	];
 
-	const globalProps: IGlobalProps = {
+	const [
+		// Website Links
+		mobileLinks,
+		copyrightLinks,
+		navbarMenuLinks,
+		footerMenuLinks,
+		ourServicesLinks,
+
+		// Custom Post Types
+		themesOptionsContent,
+		caseStudies,
+		newsInsights,
+		newsInsightsThreeCards,
+		testimonials,
+	] = await Promise.all(promises);
+
+	const globalProps: IGlobal.IProps = {
 		mobileLinks: mobileLinks,
 		caseStudies: caseStudies,
 		testimonials: testimonials,

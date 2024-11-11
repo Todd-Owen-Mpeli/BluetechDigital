@@ -1,10 +1,10 @@
 "use client";
 
 // Imports
-import {IGlobalContext} from "@/types/context";
+import {IGlobal} from "@/types/context";
 import {createContext, useContext} from "react";
 
-export const GlobalContext = createContext<IGlobalContext | undefined>(
+export const GlobalContext = createContext<IGlobal.IContext | undefined>(
 	undefined
 );
 

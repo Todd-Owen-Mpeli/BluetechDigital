@@ -5,13 +5,13 @@ import React, {FC, Fragment} from "react";
 import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // Components
-import CTA from "@/components/CTA";
-import FAQ from "@/components/FAQ";
-import Hero from "@/components/Hero";
-import CTATwo from "@/components/CTATwo";
-import FAQTwo from "@/components/FAQTwo";
-import HeroTwo from "@/components/HeroTwo";
+import CTA from "@/components/CTA/Index";
+import FAQ from "@/components/FAQ/Index";
+import Hero from "@/components/Hero/Index";
 import Gallery from "@/components/Gallery";
+import CTATwo from "@/components/CTA/CTATwo";
+import FAQTwo from "@/components/FAQ/FAQTwo";
+import HeroTwo from "@/components/Hero/HeroTwo";
 import VideoBlock from "@/components/VideoBlock";
 import LinkedInCta from "@/components/LinkedInCta";
 import ContactInfo from "@/components/ContactInfo";

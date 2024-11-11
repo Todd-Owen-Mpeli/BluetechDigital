@@ -1,6 +1,6 @@
 // Imports
 import {NextPage, Metadata} from "next";
-import {flexibleContentType, postType, servicesPage} from "@/context/pages";
+import {flexibleContentType, postType, pageType} from "@/context/pages";
 
 // Queries Functions
 import {getAllSeoContent} from "@/graphql/GetAllSeoContent";
@@ -13,7 +13,7 @@ import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleCo
 
 // Dynamic Pages Generated Metadata
 export async function generateMetadata(): Promise<Metadata> {
-	const seo: any = await getAllSeoContent(servicesPage, postType?.pages);
+	const seo: any = await getAllSeoContent(pageType?.services, postType?.pages);
 
 	return {
 		title: seo?.title,
@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 const ServicesPage: NextPage = async () => {
 	// Fetch priority content
 	const flexibleContentComponents: any = await getAllFlexibleContentComponents(
-		servicesPage,
+		pageType?.services,
 		postType?.pages,
 		flexibleContentType?.pages
 	);

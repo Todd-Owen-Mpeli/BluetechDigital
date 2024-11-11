@@ -1,52 +1,42 @@
 import {client} from "@/config/apollo";
 import {DocumentNode, gql} from "@apollo/client";
+import {ICustomPostTypes} from "@/types/context";
 
 /* THEMES OPTIONS CONTENT
  The ID number refers to the
 "Global Content" page ID*/
-export const getThemesOptionsContent = async () => {
-	try {
-		const content: DocumentNode = gql`
-			{
-				themeOptions(where: {name: "Global Content", status: PUBLISH}) {
-					edges {
-						node {
-							themeOptions {
-								email
-								address
-								emailTwo
-								phoneNumber
-								phoneNumberTwo
-								copyrightText
-								textarea
-								facebookLink {
-									url
-									title
-									target
-								}
-								twitterLink {
-									url
-									title
-									target
-								}
-								linkedinLink {
-									url
-									title
-									target
-								}
-								awardsCertificationsGallery {
-									altText
-									sourceUrl
-									mediaDetails {
-										height
-										width
+export const getThemesOptionsContent =
+	async (): Promise<ICustomPostTypes.IThemesOptions> => {
+		try {
+			const content: DocumentNode = gql`
+				{
+					themeOptions(where: {name: "Global Content", status: PUBLISH}) {
+						edges {
+							node {
+								themeOptions {
+									email
+									address
+									emailTwo
+									phoneNumber
+									phoneNumberTwo
+									copyrightText
+									textarea
+									facebookLink {
+										url
+										title
+										target
 									}
-								}
-								displayNoticeBanner
-								noticeBannerTextarea
-								menuColumnTwo {
-									title
-									image {
+									twitterLink {
+										url
+										title
+										target
+									}
+									linkedinLink {
+										url
+										title
+										target
+									}
+									awardsCertificationsGallery {
 										altText
 										sourceUrl
 										mediaDetails {
@@ -54,44 +44,57 @@ export const getThemesOptionsContent = async () => {
 											width
 										}
 									}
-									buttonLink {
-										url
+									displayNoticeBanner
+									noticeBannerTextarea
+									menuColumnTwo {
 										title
-										target
-									}
-								}
-								menuColumnThree {
-									title
-									paragraph
-									buttonLink {
-										url
-										title
-										target
-									}
-									backgroundImage {
-										altText
-										sourceUrl
-										mediaDetails {
-											height
-											width
+										image {
+											altText
+											sourceUrl
+											mediaDetails {
+												height
+												width
+											}
+										}
+										buttonLink {
+											url
+											title
+											target
 										}
 									}
-								}
-								errorPageContent {
-									displaySection
-									title
-									paragraph
-									buttonLink {
-										url
+									menuColumnThree {
 										title
-										target
+										paragraph
+										buttonLink {
+											url
+											title
+											target
+										}
+										backgroundImage {
+											altText
+											sourceUrl
+											mediaDetails {
+												height
+												width
+											}
+										}
 									}
-									backgroundImage {
-										altText
-										sourceUrl
-										mediaDetails {
-											height
-											width
+									errorPageContent {
+										displaySection
+										title
+										paragraph
+										buttonLink {
+											url
+											title
+											target
+										}
+										backgroundImage {
+											altText
+											sourceUrl
+											mediaDetails {
+												height
+												width
+											}
 										}
 									}
 								}
@@ -99,18 +102,17 @@ export const getThemesOptionsContent = async () => {
 						}
 					}
 				}
-			}
-		`;
+			`;
 
-		const response: any = await client.query({
-			query: content,
-		});
+			const response: any = await client.query({
+				query: content,
+			});
 
-		return response?.data?.themeOptions?.edges[0]?.node?.themeOptions;
-	} catch (error) {
-		console.log(error);
-		throw new Error(
-			"Something went wrong trying to fetch themes options content"
-		);
-	}
-};
+			return response?.data?.themeOptions?.edges[0]?.node?.themeOptions;
+		} catch (error) {
+			console.log(error);
+			throw new Error(
+				"Something went wrong trying to fetch themes options content"
+			);
+		}
+	};

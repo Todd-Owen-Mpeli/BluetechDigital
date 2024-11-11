@@ -32,16 +32,10 @@ export type IContent = [
 		content: any;
 	}
 ];
-export type IPostTypes = {
-	pages: string;
-	posts: string;
-	previewPage: string;
-	previewPost: string;
-	caseStudies: string;
-	testimonials: string;
-};
-export type ITestimonials = [
-	{
+
+/* CUSTOM POST TYPES TYPES  */
+export namespace ICustomPostTypes {
+	export type ITestimonials = {
 		node: {
 			testimonialReview: {
 				name: string;
@@ -58,94 +52,94 @@ export type ITestimonials = [
 				};
 			};
 		};
-	}
-];
-export type IThemesOptionsContent = {
-	email: string;
-	address: string;
-	emailTwo: string;
-	phoneNumber: string;
-	phoneNumberTwo: string;
-	copyrightText: string;
-	facebookLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	twitterLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	linkedinLink: {
-		url: string;
-		title: string;
-		target: string;
-	};
-	textarea: string;
-	awardsCertificationsGallery: [
-		{
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		}
-	];
-	displayNoticeBanner: boolean;
-	noticeBannerTextarea: string;
-	menuColumnTwo: {
-		title: string;
-		buttonLink: {
+	}[];
+	export type IThemesOptions = {
+		email: string;
+		address: string;
+		emailTwo: string;
+		phoneNumber: string;
+		phoneNumberTwo: string;
+		copyrightText: string;
+		facebookLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	menuColumnThree: {
-		title: string;
-		paragraph: string;
-		buttonLink: {
+		twitterLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	errorPageContent: {
-		title: string;
-		paragraph: string;
-		buttonLink: {
+		linkedinLink: {
 			url: string;
 			title: string;
 			target: string;
 		};
-		backgroundImage: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
+		textarea: string;
+		awardsCertificationsGallery: [
+			{
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			}
+		];
+		displayNoticeBanner: boolean;
+		noticeBannerTextarea: string;
+		menuColumnTwo: {
+			title: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+		menuColumnThree: {
+			title: string;
+			paragraph: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		};
+		errorPageContent: {
+			title: string;
+			paragraph: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
 			};
 		};
 	};
-};
+}
 
 // WEBSITE NEWS AND CASE STUDIES TYPES
 export namespace INewsCaseStudies {
@@ -190,58 +184,87 @@ export namespace ILinks {
 }
 
 /* CONTEXT PROVIDERS  */
-export type IPageContext = {
-	content: IContent;
-	postTypeFlexibleContent: string;
-};
-export type IGlobalProps = {
-	testimonials: ITestimonials;
-	themesOptionsContent: IThemesOptionsContent;
+/* POST: Project Types, Content 
+& Content Provider Interface */
+export namespace IPost {
+	export type ITypes = {
+		pages: string;
+		posts: string;
+		previewPage: string;
+		previewPost: string;
+		caseStudies: string;
+		testimonials: string;
+	};
+}
 
-	// Website Links
-	mobileLinks: ILinks.IMobileLinks;
-	copyrightLinks: ILinks.ICopyrightLinks;
-	navbarMenuLinks: ILinks.INavbarMenuLinks;
-	footerMenuLinks: ILinks.IFooterMenuLinks;
-	ourServicesLinks: ILinks.IOurServicesLinks;
+/* PAGE: Project Types, Content 
+& Content Provider Interface */
+export namespace IPage {
+	export type ITypes = {
+		home: string;
+		services: string;
+	};
+	export type IContext = {
+		content: IContent;
+		postTypeFlexibleContent: string;
+	};
+	export type IContextProvider = {
+		content: IContent;
+		children: React.ReactNode;
+		postTypeFlexibleContent: string;
+	};
+}
 
-	// News & Case Studies
-	caseStudies: INewsCaseStudies.ICaseStudies;
-	newsInsights: INewsCaseStudies.INewsInsights;
-	newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
-};
-export type IGlobalContext = {
-	testimonials: ITestimonials;
-	themesOptionsContent: IThemesOptionsContent;
+/* GLOBAL: Project Props, Content 
+& Content Provider Interface */
+export namespace IGlobal {
+	export type IProps = {
+		testimonials: ICustomPostTypes.ITestimonials;
+		themesOptionsContent: ICustomPostTypes.IThemesOptions;
 
-	// Website Links
-	mobileLinks: ILinks.IMobileLinks;
-	copyrightLinks: ILinks.ICopyrightLinks;
-	navbarMenuLinks: ILinks.INavbarMenuLinks;
-	footerMenuLinks: ILinks.IFooterMenuLinks;
-	ourServicesLinks: ILinks.IOurServicesLinks;
+		// Website Links
+		mobileLinks: ILinks.IMobileLinks;
+		copyrightLinks: ILinks.ICopyrightLinks;
+		navbarMenuLinks: ILinks.INavbarMenuLinks;
+		footerMenuLinks: ILinks.IFooterMenuLinks;
+		ourServicesLinks: ILinks.IOurServicesLinks;
 
-	// News & Case Studies
-	caseStudies: INewsCaseStudies.ICaseStudies;
-	newsInsights: INewsCaseStudies.INewsInsights;
-	newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
-};
-export type IPageContextProvider = {
-	content: IContent;
-	children: React.ReactNode;
-	postTypeFlexibleContent: string;
-};
+		// News & Case Studies
+		caseStudies: INewsCaseStudies.ICaseStudies;
+		newsInsights: INewsCaseStudies.INewsInsights;
+		newsInsightsThreeCards: INewsCaseStudies.INewsInsights;
+	};
+	export type IContext = {
+		// Website Links
+		testimonials: IProps[`testimonials`];
+		themesOptionsContent: IProps[`themesOptionsContent`];
+
+		// Website Links
+		mobileLinks: IProps[`mobileLinks`];
+		copyrightLinks: IProps[`copyrightLinks`];
+		navbarMenuLinks: IProps[`navbarMenuLinks`];
+		footerMenuLinks: IProps[`footerMenuLinks`];
+		ourServicesLinks: IProps[`ourServicesLinks`];
+
+		// News & Case Studies
+		caseStudies: IProps[`caseStudies`];
+		newsInsights: IProps[`newsInsights`];
+		newsInsightsThreeCards: IProps[`newsInsightsThreeCards`];
+	};
+	export type IContextProvider = {
+		globalProps: IProps;
+		children: React.ReactNode;
+	};
+}
+export namespace IApollo {
+	export type IContextProvider = {
+		children: React.ReactNode;
+	};
+}
 export type IFlexibleContentType = {
 	pages: string;
 	previewPage: string;
 	previewPost: string;
-};
-export type IGlobalContextProvider = {
-	globalProps: IGlobalContext;
-	children: React.ReactNode;
-};
-export type IApolloContextProvider = {
-	children: React.ReactNode;
 };
 
 type SlugResponse = {

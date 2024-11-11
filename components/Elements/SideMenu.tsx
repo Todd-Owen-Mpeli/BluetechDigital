@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
-import {ISideMenu} from "@/types/components";
+import {IElements} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 import {fadeIn, initial, stagger, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "@/styles/components/Navbar.module.scss";
 
-const SideMenu: FC<ISideMenu> = ({menuActive, setMenuActive}) => {
+const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 	const globalContext = useGlobalContext();
 
 	const [newsInsightsSublinksOpen, setNewsInsightsSublinksOpen]: any =

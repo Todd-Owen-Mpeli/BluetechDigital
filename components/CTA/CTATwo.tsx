@@ -2,13 +2,13 @@
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import {ICTATwo} from "@/types/components/index";
+import {ICTA} from "@/types/components/index";
 import {initial, stagger} from "@/animations/animations";
 
 // Components
 import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
-const CTATwo: FC<ICTATwo> = ({
+const CTATwo: FC<ICTA.ICTATwo> = ({
 	title,
 	buttonLink,
 	highlightText,

@@ -4,14 +4,14 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {ICaseStudiesGrid} from "@/types/components";
+import {ICaseStudies} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import Pagination from "@/components/Elements/Pagination";
 
-const CaseStudiesGrid: FC<ICaseStudiesGrid> = ({
+const CaseStudiesGrid: FC<ICaseStudies.IProps> = ({
 	title,
 	subtitle,
 	paragraph,

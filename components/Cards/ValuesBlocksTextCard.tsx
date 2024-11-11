@@ -6,10 +6,10 @@ import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import {IValuesBlocksTextCard} from "@/types/components";
+import {IValuesBlocks} from "@/types/components";
 import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
-const ValuesBlocksTextCard: FC<IValuesBlocksTextCard> = ({
+const ValuesBlocksTextCard: FC<IValuesBlocks.ITextCard> = ({
 	title,
 	paragraph,
 	buttonLink,

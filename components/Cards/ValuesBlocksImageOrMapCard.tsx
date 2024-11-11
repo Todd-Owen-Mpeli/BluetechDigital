@@ -1,9 +1,9 @@
 // Imports
 import {FC} from "react";
 import Image from "next/image";
-import {IValuesBlocksImageOrMapCard} from "@/types/components";
+import {IValuesBlocks} from "@/types/components";
 
-const ValuesBlocksImageOrMapCard: FC<IValuesBlocksImageOrMapCard> = ({
+const ValuesBlocksImageOrMapCard: FC<IValuesBlocks.IImageOrMapCard> = ({
 	image,
 	googleMap,
 	displayImageOrMap,

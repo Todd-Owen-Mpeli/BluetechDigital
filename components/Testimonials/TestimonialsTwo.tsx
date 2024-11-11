@@ -11,13 +11,13 @@ import {FC, Fragment} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
-import {ITestimonialsTwo} from "@/types/components/index";
+import {ITestimonials} from "@/types/components/index";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import TestimonialsTwoCard from "./Cards/TestimonialsTwoCard";
+import TestimonialsTwoCard from "@/components/Testimonials/Card/TwoCard";
 
-const TestimonialsTwo: FC<ITestimonialsTwo> = ({
+const TestimonialsTwo: FC<ITestimonials.ITestimonialsTwo> = ({
 	title,
 	subtitle,
 	paragraph,

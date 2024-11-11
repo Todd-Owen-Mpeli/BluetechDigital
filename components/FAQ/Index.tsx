@@ -14,7 +14,7 @@ import {IFAQ} from "@/types/components/index";
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
-const FAQ: FC<IFAQ> = ({title, subtitle, paragraph, faqGrid}) => {
+const FAQ: FC<IFAQ.IProps> = ({title, subtitle, paragraph, faqGrid}) => {
 	const [selectedItemIndex, setSelectedItemIndex] = useState(0);
 
 	const handleButtonClick = (index: any) => {

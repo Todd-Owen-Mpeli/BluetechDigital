@@ -2,13 +2,13 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import DOMPurify from "isomorphic-dompurify";
-import {IParagraph} from "@/types/components/index";
+import {IElements} from "@/types/components/index";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Styling
 import styles from "../../styles/components/Elements/Paragraph.module.scss";
 
-const Paragraph: FC<IParagraph> = ({content, className}) => {
+const Paragraph: FC<IElements.IParagraph> = ({content, className}) => {
 	/* Sanitize the WYSIWYG paragraph content */
 	function createParagraphMarkup(paragraphContent: string) {
 		return {

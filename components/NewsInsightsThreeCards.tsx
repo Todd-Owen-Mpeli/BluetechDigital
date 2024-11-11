@@ -16,7 +16,7 @@ import {INewsInsights} from "@/types/components";
 import Paragraph from "@/components/Elements/Paragraph";
 import NewsInsightsCard from "./Cards/NewsInsightsCard";
 
-const newsInsightsThreeCards: FC<INewsInsights> = ({
+const newsInsightsThreeCards: FC<INewsInsights.IThreeCards> = ({
 	title,
 	italic,
 	paragraph,

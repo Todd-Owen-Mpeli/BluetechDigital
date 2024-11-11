@@ -1,10 +1,10 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IButtonBorderSliced} from "@/types/components";
+import {IElements} from "@/types/components";
 import {initialTwo, fadeIn} from "@/animations/animations";
 
-const ButtonBorderSliced: FC<IButtonBorderSliced> = ({
+const ButtonBorderSliced: FC<IElements.IButtonBorderSliced> = ({
 	title,
 	fullWidth,
 	tailwindColor,

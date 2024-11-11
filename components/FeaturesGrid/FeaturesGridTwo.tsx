@@ -7,14 +7,14 @@ import fadeInUp, {
 } from "@/animations/animations";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
-import {IFeaturesGridTwo} from "@/types/components";
+import {IFeaturesGrid} from "@/types/components";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import FeaturesGridCard from "./Cards/FeaturesGridCard";
-import FeaturesGridImageCard from "./Cards/FeaturesGridImageCard";
+import FeaturesGridCard from "@/components/FeaturesGrid/Card/Card";
+import FeaturesGridImageCard from "@/components/FeaturesGrid/Card/ImageCard";
 
-const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
+const FeaturesGridTwo: FC<IFeaturesGrid.IFeaturesGridTwo> = ({
 	cardOne,
 	cardTwo,
 	lastCard,

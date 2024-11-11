@@ -11,13 +11,13 @@ import Link from "next/link";
 import Image from "next/image";
 import dateFormat from "dateformat";
 import {motion} from "framer-motion";
-import {INewsInsightsCard} from "@/types/components";
+import {INewsInsights} from "@/types/components";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 import ButtonBorderSliced from "@/components/Elements/ButtonBorderSliced";
 
-const newsInsightsCard: FC<INewsInsightsCard> = ({
+const newsInsightsCard: FC<INewsInsights.ICard> = ({
 	uri,
 	date,
 	title,

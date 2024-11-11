@@ -15,11 +15,11 @@ import {FC, Fragment, useState} from "react";
 import {IPagination} from "@/types/components/index";
 
 // Components
-import Paragraph from "./Paragraph";
-import BlogsCard from "../Cards/BlogsCard";
-import CaseStudiesCard from "../Cards/CaseStudiesCard";
-import TestimonialsCard from "../Cards/TestimonialsCard";
-import NewsInsightsCard from "../Cards/NewsInsightsCard";
+import BlogsCard from "@/components/Cards/BlogsCard";
+import Paragraph from "@/components/Elements/Paragraph";
+import CaseStudiesCard from "@/components/Cards/CaseStudiesCard";
+import NewsInsightsCard from "@/components/Cards/NewsInsightsCard";
+import TestimonialsCard from "@/components/Testimonials/Card/Card";
 
 const Pagination: FC<IPagination> = ({
 	contentType,

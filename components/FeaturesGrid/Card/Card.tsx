@@ -1,13 +1,13 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IFeaturesGridCard} from "@/types/components";
+import {IFeaturesGrid} from "@/types/components";
 import {initial, fadeInUp, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
-const FeaturesGridCard: FC<IFeaturesGridCard> = ({
+const FeaturesGridCard: FC<IFeaturesGrid.ICard> = ({
 	title,
 	subtitle,
 	paragraph,

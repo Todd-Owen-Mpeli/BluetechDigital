@@ -1,8 +1,8 @@
 // Imports
 import {FC} from "react";
-import {IRenderStars} from "@/types/components";
+import {IElements} from "@/types/components";
 
-const RenderStars: FC<IRenderStars> = ({starRating}) => {
+const RenderStars: FC<IElements.IRenderStars> = ({starRating}) => {
 	const renderStars = () => {
 		const stars = [];
 		if (starRating && typeof starRating === "number" && starRating > 0) {

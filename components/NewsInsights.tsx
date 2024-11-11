@@ -11,7 +11,7 @@ import {initial, fadeInUp, stagger} from "@/animations/animations";
 import Paragraph from "@/components/Elements/Paragraph";
 import Pagination from "@/components/Elements/Pagination";
 
-const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
+const NewsInsights: FC<INewsInsights.IProps> = ({title, italic, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	return (

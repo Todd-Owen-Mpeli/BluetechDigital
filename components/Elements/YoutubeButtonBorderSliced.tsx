@@ -1,10 +1,10 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IYoutubeButtonBorderSliced} from "@/types/components";
+import {IElements} from "@/types/components";
 import {initialTwo, fadeIn} from "@/animations/animations";
 
-const YoutubeButtonBorderSliced: FC<IYoutubeButtonBorderSliced> = ({
+const YoutubeButtonBorderSliced: FC<IElements.IYoutubeButtonBorderSliced> = ({
 	title,
 	fullWidth,
 	displayYoutubeIcon,

@@ -11,13 +11,13 @@ import {
 import {FC} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
-import {IContactInfo} from "@/types/components";
+import {IContact} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
-const ContactInfo: FC<IContactInfo> = ({title, paragraph}) => {
+const ContactInfo: FC<IContact.IInfo> = ({title, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	return (

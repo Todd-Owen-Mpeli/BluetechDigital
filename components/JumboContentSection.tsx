@@ -5,7 +5,7 @@ import {IJumboContentSection} from "@/types/components";
 // Components
 import JumboContentSectionCard from "./Cards/JumboContentSectionCard";
 
-const JumboContentSection: FC<IJumboContentSection> = ({
+const JumboContentSection: FC<IJumboContentSection.IProps> = ({
 	jumboContentSection,
 }) => {
 	return (

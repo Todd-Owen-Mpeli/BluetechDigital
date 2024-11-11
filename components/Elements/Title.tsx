@@ -2,10 +2,10 @@
 import {FC} from "react";
 import {motion} from "framer-motion";
 import DOMPurify from "isomorphic-dompurify";
-import {ITitle} from "@/types/components/index";
+import {IElements} from "@/types/components/index";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
-const Title: FC<ITitle> = ({content, className}) => {
+const Title: FC<IElements.ITitle> = ({content, className}) => {
 	/* Sanitize the WYSIWYG title content */
 	function createTitleMarkup(titleContent: string) {
 		return {

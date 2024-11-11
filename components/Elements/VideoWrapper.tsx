@@ -2,9 +2,9 @@
 import {FC} from "react";
 import parse from "html-react-parser";
 import styled from "styled-components";
-import {IVideoWrapper} from "@/types/components";
+import {IElements} from "@/types/components";
 
-const VideoWrapper: FC<IVideoWrapper> = ({children}) => {
+const VideoWrapper: FC<IElements.IVideoWrapper> = ({children}) => {
 	const VimeoVideo = styled.div`
 		height: auto;
 		max-width: 100%;

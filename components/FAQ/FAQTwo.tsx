@@ -13,13 +13,13 @@ import Link from "next/link";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
-import {IFAQTwo} from "@/types/components/index";
+import {IFAQ} from "@/types/components/index";
 
 // Components
 import FAQCard from "@/components/FAQ/Card/FAQCard";
 import Paragraph from "@/components/Elements/Paragraph";
 
-const FaqTwo: FC<IFAQTwo> = ({
+const FaqTwo: FC<IFAQ.IFAQTwo> = ({
 	title,
 	image,
 	subtitle,
@@ -82,7 +82,6 @@ const FaqTwo: FC<IFAQTwo> = ({
 											className="w-full"
 										>
 											<FAQCard
-												index={index}
 												title={item?.card?.title}
 												paragraph={item?.card?.paragraph}
 											/>

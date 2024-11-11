@@ -1,10 +1,10 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IFeaturesGridImageCard} from "@/types/components";
+import {IFeaturesGrid} from "@/types/components";
 import {slideInRightFinish, slideInRightInitial} from "@/animations/animations";
 
-const FeaturesGridImageCard: FC<IFeaturesGridImageCard> = ({
+const FeaturesGridImageCard: FC<IFeaturesGrid.IImageCard> = ({
 	backgroundImage,
 }) => {
 	return (

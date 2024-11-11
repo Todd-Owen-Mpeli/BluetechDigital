@@ -1,14 +1,14 @@
 // Imports
+import {FC} from "react";
 import Image from "next/image";
-import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
-import {ITestimonialsTwoCard} from "@/types/components";
+import {ITestimonials} from "@/types/components";
 import {fadeIn, initial, initialTwo, stagger} from "@/animations/animations";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
 
-const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
+const TestimonialsTwoCard: FC<ITestimonials.ITwoCard> = ({
 	name,
 	image,
 	jobTitle,

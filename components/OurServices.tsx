@@ -55,7 +55,7 @@ const OurServices: FC<IOurServices> = ({
 							<div className="w-full lg:w-[35%] px-4">
 								<Paragraph
 									content={paragraph}
-									tailwindStyling="mb-6 text-white text-center lg:text-left text-paragraph xl:text-lg"
+									className="mb-6 text-white text-center lg:text-left text-paragraph xl:text-lg"
 								/>
 								<Link
 									href={`${buttonLink?.url}`}
@@ -156,7 +156,7 @@ const OurServices: FC<IOurServices> = ({
 
 												<Paragraph
 													content={item?.card?.paragraph}
-													tailwindStyling="lg:max-w-3xl mb-4 text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
+													className="lg:max-w-3xl mb-4 text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
 												/>
 											</div>
 											<div>

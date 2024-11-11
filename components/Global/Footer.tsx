@@ -62,7 +62,7 @@ const Footer: FC = () => {
 						>
 							<Paragraph
 								content={globalContext?.themesOptionsContent?.textarea}
-								tailwindStyling="block px-0 max-w-full lg:max-w-sm text-base text-black text-center lg:text-left"
+								className="block px-0 max-w-full lg:max-w-sm text-base text-black text-center lg:text-left"
 							/>
 						</motion.div>
 						<div className="flex flex-col items-center justify-between w-auto gap-2 py-6 mb-10 md:items-baseline">
@@ -417,7 +417,7 @@ const Footer: FC = () => {
 					>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}
-							tailwindStyling="max-w-lg mx-auto lg:mx-0 text-black text-sm text-center lg:text-left"
+							className="max-w-lg mx-auto lg:mx-0 text-black text-sm text-center lg:text-left"
 						/>
 					</motion.div>
 					<motion.ul

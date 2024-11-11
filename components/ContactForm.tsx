@@ -43,7 +43,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
+								className="max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
 							/>
 						</motion.div>
 						<motion.div
@@ -239,7 +239,7 @@ const ContactForm: FC<IContactForm> = ({title, formTitle, paragraph}) => {
 								</motion.h2>
 								<Paragraph
 									content={globalContext?.themesOptionsContent?.address}
-									tailwindStyling="max-w-xl mx-auto xl:mx-0 text-tiny sm:text-base text-black text-center sm:text-left"
+									className="max-w-xl mx-auto xl:mx-0 text-tiny sm:text-base text-black text-center sm:text-left"
 								/>
 							</motion.div>
 						</motion.div>

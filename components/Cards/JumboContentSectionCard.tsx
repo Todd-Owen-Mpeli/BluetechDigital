@@ -206,7 +206,7 @@ const JumboContentSectionCard: FC<IJumboContentSectionCard> = ({
 								</motion.h2>
 								<Paragraph
 									content={paragraph}
-									tailwindStyling={`w-full lg:max-w-2xl mx-auto py-2 ${paragraphColor} text-center lg:text-left text-paragraph`}
+									className={`w-full lg:max-w-2xl mx-auto py-2 ${paragraphColor} text-center lg:text-left text-paragraph`}
 								/>
 								<div className={buttonLink?.url ? "mx-auto lg:mx-0" : "hidden"}>
 									<Link

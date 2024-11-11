@@ -7,11 +7,17 @@ import {ISmoothScrolling} from "@/types/components";
 
 const SmoothScrolling: FC<ISmoothScrolling> = ({children}) => {
 	return (
-		// <ReactLenis root options={{lerp: 0.01, duration: 0.5, syncTouch: true}}>
-		// 	<main>{children}</main>
-		// </ReactLenis>
-
-		<main>{children}</main>
+		<ReactLenis
+			root
+			options={{
+				// Learn more -> https://github.com/darkroomengineering/lenis?tab=readme-ov-file#instance-settings
+				lerp: 0.05,
+				//   infinite: true,
+				//   syncTouch: true,
+			}}
+		>
+			<main>{children}</main>
+		</ReactLenis>
 	);
 };
 

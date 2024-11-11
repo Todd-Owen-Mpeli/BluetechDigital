@@ -72,7 +72,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							<div className="flex flex-col w-full lg:w-[65%]">
 								<Paragraph
 									content={paragraph}
-									tailwindStyling="lg:max-w-lg text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
+									className="lg:max-w-lg text-black leading-[1.75rem] text-paragraph text-center lg:text-left"
 								/>
 								<div
 									className={
@@ -177,7 +177,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 									</motion.h4>
 									<Paragraph
 										content={quality?.paragraph}
-										tailwindStyling="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
+										className="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
 									/>
 								</div>
 								<div>
@@ -191,7 +191,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 									</motion.h4>
 									<Paragraph
 										content={reliability?.paragraph}
-										tailwindStyling="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
+										className="lg:max-w-xl text-darkGrey leading-[1.75rem] text-base  text-center lg:text-left"
 									/>
 								</div>
 							</div>
@@ -257,7 +257,7 @@ const JumboContentImage: FC<IJumboContentImage> = ({
 							</motion.h4>
 							<Paragraph
 								content={contentBox?.subtext}
-								tailwindStyling="max-w-xl text-white text-paragraph text-center lg:text-left"
+								className="max-w-xl text-white text-paragraph text-center lg:text-left"
 							/>
 						</div>
 					</motion.div>

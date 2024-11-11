@@ -68,7 +68,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 							</motion.h2>
 							<Paragraph
 								content={cardOne?.paragraph}
-								tailwindStyling="text-black text-center lg:text-left text-paragraph"
+								className="text-black text-center lg:text-left text-paragraph"
 							/>
 						</motion.div>
 					</motion.div>
@@ -121,7 +121,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.foreground?.paragraph}
-												tailwindStyling="text-base text-black"
+												className="text-base text-black"
 											/>
 										</motion.div>
 									</div>
@@ -151,7 +151,7 @@ const FeaturesGrid: FC<IFeaturesGrid> = ({
 											</motion.h4>
 											<Paragraph
 												content={cardThree?.background?.paragraph}
-												tailwindStyling="text-base text-black"
+												className="text-base text-black"
 											/>
 										</motion.div>
 									</div>

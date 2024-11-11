@@ -58,14 +58,14 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 						</motion.h2>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
+							className="lg:max-w-3xl mx-auto text-black leading-[1.75rem] text-base lg:text-paragraph text-center"
 						/>
 					</motion.div>
 					<Pagination
 						contentType="TestimonialsCard"
 						numberOfItemsRenderedPerPage={12}
 						contentArray={globalContext?.testimonials}
-						tailwindStyling={`grid px-4 lg:px-16 lg:-m-4 mt-12 lg:mt-12 gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`}
+						className={`grid px-4 lg:px-16 lg:-m-4 mt-12 lg:mt-12 gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`}
 					/>
 				</div>
 			</div>

@@ -45,7 +45,7 @@ const HeroTwo: FC<IHeroTwo> = ({
 						</motion.h1>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="max-w-2xl py-6 text-white leading-[1.75rem] text-base sm:text-lg text-center lg:text-left"
+							className="max-w-2xl py-6 text-white leading-[1.75rem] text-base sm:text-lg text-center lg:text-left"
 						/>
 						<Link
 							href={`${buttonLink?.url}`}

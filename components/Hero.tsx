@@ -105,7 +105,7 @@ const Hero: FC<IHero> = ({
 							<div className="w-full lg:w-[35%] px-4 mt-6 lg:mt-0">
 								<Paragraph
 									content={paragraph}
-									tailwindStyling="text-white text-center lg:text-left text-paragraph xl:text-lg"
+									className="text-white text-center lg:text-left text-paragraph xl:text-lg"
 								/>
 								<div className="mt-6 lg:mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
 									<Link

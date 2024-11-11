@@ -49,14 +49,14 @@ const NewsInsights: FC<INewsInsights> = ({title, italic, paragraph}) => {
 					</motion.h2>
 					<Paragraph
 						content={paragraph}
-						tailwindStyling="max-w-3xl mx-auto text-black text-paragraph"
+						className="max-w-3xl mx-auto text-black text-paragraph"
 					/>
 				</motion.div>
 				<Pagination
 					contentType="NewsInsightsCard"
 					numberOfItemsRenderedPerPage={12}
 					contentArray={globalContext?.newsInsights}
-					tailwindStyling={`grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3`}
+					className={`grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-col md:grid-cols-2 lg:grid-cols-3`}
 				/>
 			</div>
 		</>

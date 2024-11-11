@@ -84,7 +84,7 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 								? paragraph
 								: paragraph.substring(0, 175) + "..."
 						}
-						tailwindStyling="tracking-tight text-black text-tiny text-left"
+						className="tracking-tight text-black text-tiny text-left"
 					/>
 				</div>
 			</motion.div>

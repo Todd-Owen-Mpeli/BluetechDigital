@@ -62,7 +62,7 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 							</motion.h2>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
+								className="text-white leading-[1.75rem] text-paragraph text-center lg:text-left"
 							/>
 						</div>
 						<Link

@@ -241,7 +241,7 @@ const SubMegaMenuLinks: FC = () => {
 									globalContext?.themesOptionsContent?.menuColumnThree
 										?.paragraph
 								}
-								tailwindStyling="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base text-center lg:text-left"
+								className="lg:max-w-3xl mx-auto text-white leading-[1.75rem] text-base text-center lg:text-left"
 							/>
 						</motion.div>
 						<motion.div

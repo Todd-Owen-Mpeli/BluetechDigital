@@ -65,7 +65,7 @@ const FeaturesGridTwo: FC<IFeaturesGridTwo> = ({
 								</motion.h2>
 								<Paragraph
 									content={cardOne?.paragraph}
-									tailwindStyling="text-black text-center lg:text-left text-paragraph"
+									className="text-black text-center lg:text-left text-paragraph"
 								/>
 							</motion.div>
 						</motion.div>

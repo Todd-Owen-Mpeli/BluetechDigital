@@ -1,0 +1,39 @@
+// Imports
+@import "../../base/fonts";
+@import "../../base/colors";
+
+.error {
+	@apply relative h-[100vh] bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center;
+
+	.wrapper {
+		@apply relative z-50 px-10 my-auto overflow-hidden py-44;
+
+		.container {
+			@apply w-full max-w-[1800px] p-0 mx-auto;
+
+			.content {
+				@apply flex flex-col items-baseline justify-center px-4 m-auto;
+
+				.title {
+					@apply max-w-3xl mx-auto flex flex-col sm:block text-center mb-3 text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-[2rem] sm:leading-[3rem] lg:leading-[4rem];
+				}
+
+				.paragraph {
+					@apply mb-6 py-6 text-white leading-[1.75rem] text-base sm:text-medium text-center;
+				}
+
+				.button {
+					@apply flex flex-col items-center justify-center mx-auto md:max-w-max;
+
+					.link {
+						@apply font-TelkaRegular text-white uppercase text-left text-lg bg-blue-default hover:bg-yellow-default py-4 px-10 transition-all duration-500 ease-in-out;
+					}
+				}
+			}
+		}
+	}
+
+	.fadeDiv {
+		@apply absolute top-0 h-screen bottom-0 left-0 w-full opacity-90 bg-gradient-to-b from-pureBlack/90 from-5% via-pureBlack/90 via-10% to-pureBlack/10;
+	}
+}

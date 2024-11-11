@@ -49,14 +49,14 @@ const CaseStudiesGrid: FC<ICaseStudiesGrid> = ({
 						</div>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="max-w-full lg:max-w-xl text-black text-base text-center lg:text-left"
+							className="max-w-full lg:max-w-xl text-black text-base text-center lg:text-left"
 						/>
 					</motion.div>
 					<Pagination
 						contentType="CaseStudiesCard"
 						numberOfItemsRenderedPerPage={12}
 						contentArray={globalContext?.caseStudies}
-						tailwindStyling={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-6 px-0 sm:px-4 lg:-m-4 gap-44 md:gap-16 lg:gap-6`}
+						className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-6 px-0 sm:px-4 lg:-m-4 gap-44 md:gap-16 lg:gap-6`}
 					/>
 				</div>
 			</div>

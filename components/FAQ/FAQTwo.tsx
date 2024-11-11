@@ -16,7 +16,7 @@ import {motion} from "framer-motion";
 import {IFAQTwo} from "@/types/components/index";
 
 // Components
-import FAQCard from "./Cards/FAQCard";
+import FAQCard from "@/components/FAQ/Card/FAQCard";
 import Paragraph from "@/components/Elements/Paragraph";
 
 const FaqTwo: FC<IFAQTwo> = ({

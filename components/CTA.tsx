@@ -28,12 +28,12 @@ const CTA: FC<ICTA> = ({title, paragraph, buttonLink, backgroundImage}) => {
 								width={
 									backgroundImage?.mediaDetails?.width
 										? backgroundImage?.mediaDetails?.width
-										: 500
+										: 1000
 								}
 								height={
 									backgroundImage?.mediaDetails?.height
 										? backgroundImage?.mediaDetails?.height
-										: 500
+										: 1000
 								}
 								className={
 									backgroundImage?.sourceUrl

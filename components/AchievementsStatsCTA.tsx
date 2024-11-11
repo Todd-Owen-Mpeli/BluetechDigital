@@ -75,12 +75,12 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 												width={
 													item?.card?.icon?.mediaDetails?.width
 														? item?.card?.icon?.mediaDetails?.width
-														: 500
+														: 1000
 												}
 												height={
 													item?.card?.icon?.mediaDetails?.height
 														? item?.card?.icon?.mediaDetails?.height
-														: 500
+														: 1000
 												}
 												className={
 													item?.card?.icon?.sourceUrl

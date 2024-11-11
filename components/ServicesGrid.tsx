@@ -88,12 +88,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															width={
 																item?.card?.image?.mediaDetails?.width
 																	? item?.card?.image?.mediaDetails?.width
-																	: 500
+																	: 1000
 															}
 															height={
 																item?.card?.image?.mediaDetails?.height
 																	? item?.card?.image?.mediaDetails?.height
-																	: 500
+																	: 1000
 															}
 															className="object-cover object-center w-full h-full min-h-[400px]"
 														/>
@@ -311,12 +311,12 @@ const ServicesGrid: FC<IServicesGrid> = ({servicesGrid}) => {
 															width={
 																item?.card?.image?.mediaDetails?.width
 																	? item?.card?.image?.mediaDetails?.width
-																	: 500
+																	: 1000
 															}
 															height={
 																item?.card?.image?.mediaDetails?.height
 																	? item?.card?.image?.mediaDetails?.height
-																	: 500
+																	: 1000
 															}
 															className="object-cover object-center w-full h-full min-h-[400px]"
 														/>

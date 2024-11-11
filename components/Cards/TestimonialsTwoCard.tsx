@@ -39,12 +39,12 @@ const TestimonialsTwoCard: FC<ITestimonialsTwoCard> = ({
 										width={
 											image?.mediaDetails?.width
 												? image?.mediaDetails?.width
-												: 500
+												: 1000
 										}
 										height={
 											image?.mediaDetails?.height
 												? image?.mediaDetails?.height
-												: 500
+												: 1000
 										}
 										className={
 											image?.sourceUrl

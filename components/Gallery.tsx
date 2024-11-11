@@ -57,12 +57,12 @@ const Gallery: FC<IGallery> = ({title, highlightText, paragraph, gallery}) => {
 										width={
 											item?.mediaDetails?.width
 												? item?.mediaDetails?.width
-												: 500
+												: 1000
 										}
 										height={
 											item?.mediaDetails?.height
 												? item?.mediaDetails?.height
-												: 500
+												: 1000
 										}
 										className={
 											item?.sourceUrl

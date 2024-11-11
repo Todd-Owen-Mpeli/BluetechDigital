@@ -387,12 +387,12 @@ const Footer: FC = () => {
 														width={
 															item?.mediaDetails?.width
 																? item?.mediaDetails?.width
-																: 500
+																: 1000
 														}
 														height={
 															item?.mediaDetails?.height
 																? item?.mediaDetails?.height
-																: 500
+																: 1000
 														}
 														className="object-contain object-center w-full h-[75px] lg:h-[100px]"
 													/>
@@ -422,9 +422,9 @@ const Footer: FC = () => {
 					</motion.div>
 					<motion.ul
 						initial={initial}
-						viewport={{once: true}}
 						variants={stagger}
 						whileInView="animate"
+						viewport={{once: true}}
 						className="flex flex-col sm:flex-row -m-6 w-auto gap-2 sm:gap-6 p-6"
 					>
 						{globalContext?.copyrightLinks?.length > 0 ? (

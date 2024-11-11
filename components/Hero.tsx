@@ -60,12 +60,12 @@ const Hero: FC<IHero> = ({
 											width={
 												smallImageOne?.mediaDetails?.width
 													? smallImageOne?.mediaDetails?.width
-													: 500
+													: 1000
 											}
 											height={
 												smallImageOne?.mediaDetails?.height
 													? smallImageOne?.mediaDetails?.height
-													: 500
+													: 1000
 											}
 											className="inline my-1 lg:my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
@@ -86,12 +86,12 @@ const Hero: FC<IHero> = ({
 											width={
 												smallImageTwo?.mediaDetails?.width
 													? smallImageTwo?.mediaDetails?.width
-													: 500
+													: 1000
 											}
 											height={
 												smallImageTwo?.mediaDetails?.height
 													? smallImageTwo?.mediaDetails?.height
-													: 500
+													: 1000
 											}
 											className="inline w-[150px] lg:w-[175px] my-1 lg:my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
@@ -283,12 +283,12 @@ const Hero: FC<IHero> = ({
 							width={
 								rightsideImage?.mediaDetails?.width
 									? rightsideImage?.mediaDetails?.width
-									: 500
+									: 1000
 							}
 							height={
 								rightsideImage?.mediaDetails?.height
 									? rightsideImage?.mediaDetails?.height
-									: 500
+									: 1000
 							}
 							className={
 								rightsideImage?.sourceUrl

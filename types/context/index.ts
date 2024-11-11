@@ -32,14 +32,6 @@ export type IContent = [
 		content: any;
 	}
 ];
-export type IPostTypes = {
-	pages: string;
-	posts: string;
-	previewPage: string;
-	previewPost: string;
-	caseStudies: string;
-	testimonials: string;
-};
 export type ITestimonials = [
 	{
 		node: {
@@ -146,6 +138,34 @@ export type IThemesOptionsContent = {
 		};
 	};
 };
+
+/* CONTEXT PROVIDERS  */
+export type IPostTypes = {
+	pages: string;
+	posts: string;
+	previewPage: string;
+	previewPost: string;
+	caseStudies: string;
+	testimonials: string;
+};
+
+/* PAGE: Project Types, Content 
+& Content Provider Interface */
+export namespace IPage {
+	export type ITypes = {
+		home: string;
+		services: string;
+	};
+	export type IContext = {
+		content: IContent;
+		postTypeFlexibleContent: string;
+	};
+	export type IContextProvider = {
+		content: IContent;
+		children: React.ReactNode;
+		postTypeFlexibleContent: string;
+	};
+}
 
 // WEBSITE NEWS AND CASE STUDIES TYPES
 export namespace INewsCaseStudies {

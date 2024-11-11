@@ -8,7 +8,7 @@ export const getAllFlexibleContentComponents = async (
 	slug: string,
 	postType: string,
 	postTypeFlexibleContent: string
-) => {
+): Promise<any> => {
 	try {
 		const content: DocumentNode = gql`
 			{

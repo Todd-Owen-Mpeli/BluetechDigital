@@ -7,8 +7,7 @@
 		font-family: $body;
 	}
 
-	.aboutUsSublinks,
-	.ourServicesLinks {
+	.aboutUsSublinks {
 		li:nth-last-child(0) {
 			display: none;
 			@apply border-none;
@@ -16,21 +15,10 @@
 	}
 
 	.nav {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		z-index: 998;
-		display: flex;
-		position: fixed;
-		max-width: 35rem;
-		overflow: hidden;
-		width: 83.333333%;
 		visibility: hidden;
-		transition: all 500ms ease-in-out;
 		clip-path: circle(30px at calc(100% - 45px) 45px);
-	}
+		@apply top-0 right-0 bottom-0 z-[998] flex fixed max-w-[35rem] overflow-hidden w-[83.333333%] transition-all duration-500 ease-in-out;
 
-	.nav {
 		::-webkit-scrollbar {
 			// display: none;
 			width: 0.65rem;
@@ -48,6 +36,153 @@
 			&:hover {
 				transition: all 0.5s;
 				background-color: $lightBlue;
+			}
+		}
+
+		.container {
+			@apply relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white;
+
+			.top {
+				@apply flex flex-col items-center mb-8;
+
+				.link {
+					@apply mr-auto text-3xl font-bold leading-none;
+
+					.image {
+						@apply object-contain object-center w-[50px] h-[50px];
+					}
+				}
+			}
+
+			.middle {
+				@apply flex flex-col px-4 mt-4;
+
+				.ourServicesLinks,
+				.newsInsightsSublinks {
+					@apply border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer;
+
+					.content {
+						@apply py-4 flex flex-row justify-between items-center gap-2;
+
+						.image {
+							@apply w-[25px] h-[25px] object-contain object-center;
+						}
+					}
+
+					.ul {
+						@apply flex flex-col z-[999];
+
+						.li {
+							@apply hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white;
+
+							.link {
+								@apply block p-4 text-tiny font-semibold;
+							}
+						}
+					}
+				}
+
+				.ourServicesLinks {
+					.content {
+						.link {
+							@apply text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500;
+						}
+					}
+
+					.ul {
+						@apply my-4;
+
+						.li:nth-last-child(0) {
+							display: none;
+							@apply border-none;
+						}
+
+						.optionOne {
+							@apply border-t-[1px] border-darkGrey border-opacity-50;
+						}
+
+						.optionTwo {
+							@apply border-t-[0px];
+						}
+					}
+				}
+
+				.newsInsightsSublinks {
+					.content {
+						.span {
+							@apply text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500;
+
+							.link {
+								@apply text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500;
+							}
+
+							.image {
+								@apply w-[25px] h-[25px] object-contain object-center;
+							}
+						}
+					}
+
+					.ul {
+						@apply py-4 w-full;
+
+						.li:nth-last-child(0) {
+							display: none;
+							@apply border-none;
+						}
+					}
+				}
+
+				.otherLinks {
+					@apply border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer;
+
+					.link {
+						@apply block py-4 text-tiny font-semibold text-black hover:text-blue-two;
+					}
+				}
+			}
+
+			.bottom {
+				@apply mt-20;
+
+				.content {
+					@apply flex flex-col items-center justify-between gap-4;
+
+					.text {
+						@apply mb-5 text-tiny font-semibold tracking-normal text-center uppercase md:text-left text-black;
+					}
+
+					.socialLinks {
+						@apply flex items-center justify-center gap-4 text-center;
+
+						.link {
+							@apply inline-block px-1 hover:opacity-70;
+
+							.svg {
+								@apply w-5 h-5 fill-yellow-default;
+							}
+						}
+					}
+
+					.contactLinks {
+						@apply flex flex-col sm:flex-row items-center justify-center w-auto gap-2 py-6 mb-10;
+
+						.content {
+							@apply flex items-center justify-center gap-2;
+
+							.svgWrapper {
+								@apply flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3;
+
+								.svg {
+									@apply fill-none;
+								}
+							}
+
+							.link {
+								@apply font-medium text-tiny tracking-wide text-black hover:text-yellow-two;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

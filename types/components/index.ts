@@ -1,4 +1,5 @@
 import {Dispatch, SetStateAction} from "react";
+import {ILinks} from "../context";
 
 // Components
 export type IGallery = {
@@ -756,10 +757,21 @@ export namespace IElements {
 		content: string;
 		className: string;
 	};
-	export type ISideMenu = {
-		menuActive: boolean;
-		setMenuActive: any;
-	};
+	export namespace ISideMenu {
+		export type IProps = {
+			menuActive: boolean;
+			setMenuActive: any;
+		};
+		export type IMobileLinksCard = {
+			item: any;
+			toggleMenu: () => void;
+			ourServicesSublinksOpen: any;
+			newsInsightsSublinksOpen: any;
+			displayOurServicesSublinks: () => void;
+			displayNewsInsightsSublinks: () => void;
+			ourServicesLinks: ILinks.IOurServicesLinks;
+		};
+	}
 	export type IFormikForm = {
 		formTitle: string;
 	};

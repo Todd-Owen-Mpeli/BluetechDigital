@@ -18,10 +18,10 @@ import ContactInfo from "@/components/ContactInfo";
 import OurPartners from "@/components/OurPartners";
 import OurServices from "@/components/OurServices";
 import ContactForm from "@/components/ContactForm";
-import NewsInsights from "@/components/NewsInsights";
 import ServicesGrid from "@/components/ServicesGrid";
 import BenefitsStats from "@/components/BenefitsStats";
 import TitleParagraph from "@/components/TitleParagraph";
+import NewsInsights from "@/components/NewsInsights/Index";
 import CaseStudiesGrid from "@/components/CaseStudiesGrid";
 import FeaturesGrid from "@/components/FeaturesGrid/Index";
 import TitleContentImage from "@/components/TitleContentImage";
@@ -31,9 +31,9 @@ import AchievementsStatsCTA from "@/components/AchievementsStatsCTA";
 import TestimonialsTwo from "@/components/Testimonials/TestimonialsTwo";
 import FeaturesGridTwo from "@/components/FeaturesGrid/FeaturesGridTwo";
 import TwoColumnButtonContent from "@/components/TwoColumnButtonContent";
-import NewsInsightsThreeCards from "@/components/NewsInsightsThreeCards";
 import TestimonialsGrid from "@/components/Testimonials/TestimonialsGrid";
 import TestimonialsSlider from "@/components/Testimonials/TestimonialsSlider";
+import NewsInsightsThreeCards from "@/components/NewsInsights/NewsInsightsThreeCards";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();

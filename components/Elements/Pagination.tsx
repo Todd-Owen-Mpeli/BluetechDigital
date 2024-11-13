@@ -14,11 +14,14 @@ import {motion} from "framer-motion";
 import {FC, Fragment, useState} from "react";
 import {IPagination} from "@/types/components/index";
 
+// Styling
+import styles from "@/styles/components/Pagination.module.scss";
+
 // Components
 import BlogsCard from "@/components/Cards/BlogsCard";
 import Paragraph from "@/components/Elements/Paragraph";
 import CaseStudiesCard from "@/components/Cards/CaseStudiesCard";
-import NewsInsightsCard from "@/components/Cards/NewsInsightsCard";
+import NewsInsightsCard from "@/components/NewsInsights/Card/Card";
 import TestimonialsCard from "@/components/Testimonials/Card/Card";
 
 const Pagination: FC<IPagination> = ({
@@ -54,7 +57,7 @@ const Pagination: FC<IPagination> = ({
 
 	return (
 		<>
-			<div className={`${className}`}>
+			<div className={styles.pagination + ` ${className}`}>
 				{currentContent?.length > 0 ? (
 					currentContent?.map((item: any, index: number) => (
 						<Fragment key={index}>
@@ -63,8 +66,8 @@ const Pagination: FC<IPagination> = ({
 								initial={initial}
 								whileInView="animate"
 								viewport={{once: true}}
+								className={styles.currentContent}
 								variants={arrayLoopStaggerChildren}
-								className="w-full"
 							>
 								{contentType === `Gallery` ? (
 									<>

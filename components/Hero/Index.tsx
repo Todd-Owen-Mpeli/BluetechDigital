@@ -17,8 +17,8 @@ import styles from "@/styles/components/Hero.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
+import HeroVideoWrapper from "@/components/Hero/Card/VideoWrapper";
 
-import HeroVideoWrapper from "@/components/Elements/HeroVideoWrapper";
 const Hero: FC<IHero.IProps> = ({
 	video,
 	titleEnd,
@@ -35,18 +35,18 @@ const Hero: FC<IHero.IProps> = ({
 }) => {
 	return (
 		<>
-			<div className={styles.hero + `relative`}>
+			<div className={styles.hero}>
 				<div
-					className="bg-blue-darkerTwo pb-16 lg:pb-32 lg:mb-20 pt-36 bg-cover bg-no-repeat bg-center"
+					className={styles.topContainer}
 					style={{
 						backgroundImage: `url("/svg/background/stacked-waves-haikei-orange-yellow.svg")`,
 						clipPath: `polygon(0 0, 100% 0, 100% 91%, 64% 98%, 0 94%)`,
 					}}
 				>
-					<div className="lg:max-w-[1700px] mx-auto px-4 gap-8">
-						<div className="flex flex-wrap -mx-4 mb-16">
-							<div className="relative w-full lg:w-[65%] px-4 lg:mb-0">
-								<h1 className="text-left text-white lg:text-left xs:leading-[2.65rem] lg:leading-[3rem] xl:leading-[4rem] font-semibold max-w-full lg:max-w-4xl mx-auto lg:mx-0 text-3xl xs:text-6xl lg:text-7xl xl:text-8xl tracking-tighter">
+					<div className={styles.container}>
+						<div className={styles.content}>
+							<div className={styles.leftSection}>
+								<h1 className={styles.title}>
 									{titleStart}
 									<motion.span
 										initial={initialTwo}
@@ -55,6 +55,7 @@ const Hero: FC<IHero.IProps> = ({
 									>
 										<Image
 											decoding="async"
+											className={styles.image}
 											alt={smallImageOne?.altText}
 											src={smallImageOne?.sourceUrl}
 											width={
@@ -67,7 +68,6 @@ const Hero: FC<IHero.IProps> = ({
 													? smallImageOne?.mediaDetails?.height
 													: 1000
 											}
-											className="inline my-1 lg:my-2 mx-3 w-[150px] lg:w-[175px] h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
 											}}
@@ -81,6 +81,7 @@ const Hero: FC<IHero.IProps> = ({
 									>
 										<Image
 											decoding="async"
+											className={styles.image}
 											alt={smallImageTwo?.altText}
 											src={smallImageTwo?.sourceUrl}
 											width={
@@ -93,7 +94,6 @@ const Hero: FC<IHero.IProps> = ({
 													? smallImageTwo?.mediaDetails?.height
 													: 1000
 											}
-											className="inline w-[150px] lg:w-[175px] my-1 lg:my-2 mx-3 h-[50px] xl:h-[65px] object-cover object-center"
 											style={{
 												clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`,
 											}}
@@ -102,28 +102,23 @@ const Hero: FC<IHero.IProps> = ({
 									{titleEnd}
 								</h1>
 							</div>
-							<div className="w-full lg:w-[35%] px-4 mt-6 lg:mt-0">
-								<Paragraph
-									content={paragraph}
-									className="text-white text-center lg:text-left text-paragraph xl:text-lg"
-								/>
-								<div className="mt-6 lg:mt-3 flex flex-col xl:flex-row gap-4 items-center justify-center lg:items-baseline xl:justify-start">
+							<div className={styles.rightSection}>
+								<Paragraph content={paragraph} className={styles.paragraph} />
+								<div className={styles.buttonLinkWrapper}>
 									<Link
 										href={`${buttonLink?.url}`}
 										target={`${
 											buttonLink?.target ? buttonLink?.target : "_self"
 										}`}
 										aria-label={`${buttonLink?.title}`}
-										className={buttonLink?.url ? "block" : "hidden"}
+										className={buttonLink?.url ? styles.buttonLink : "hidden"}
 									>
 										<motion.button
 											initial={initialTwo}
 											whileInView={fadeIn}
 											viewport={{once: true}}
 											className={
-												buttonLink?.title
-													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid border-white hover:bg-white hover:border-white transition-all ease-in-out duration-500 text-white hover:text-black before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-white after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-white`
-													: `hidden`
+												buttonLink?.title ? styles.link + " group" : `hidden`
 											}
 										>
 											<span>{buttonLink?.title}</span>
@@ -181,16 +176,16 @@ const Hero: FC<IHero.IProps> = ({
 											buttonLinkTwo?.target ? buttonLinkTwo?.target : "_self"
 										}`}
 										aria-label={`${buttonLinkTwo?.title}`}
-										className={buttonLinkTwo?.url ? "block" : "hidden"}
+										className={
+											buttonLinkTwo?.url ? styles.buttonLinkTwo : "hidden"
+										}
 									>
 										<motion.button
 											initial={initialTwo}
 											whileInView={fadeIn}
 											viewport={{once: true}}
 											className={
-												buttonLinkTwo?.title
-													? `flex items-center justify-center mx-auto lg:mx-0 group relative gap-3 px-6 py-3 font-semibold tracking-widest text-base w-fit border-2 border-solid bg-purple-two border-purple-two hover:bg-purple-dark hover:border-purple-dark transition-all ease-in-out duration-500 text-white before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-purple-two hover:before:bg-purple-dark after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-purple-two hover:after:bg-purple-dark`
-													: `hidden`
+												buttonLinkTwo?.title ? styles.link + " group" : `hidden`
 											}
 										>
 											<span>{buttonLinkTwo?.title}</span>
@@ -247,18 +242,15 @@ const Hero: FC<IHero.IProps> = ({
 						</div>
 					</div>
 				</div>
-				<div
-					className={`relative z-50 mt-[-195px] sm:mt-[-125px] lg:mt-[-200px] lg:max-w-[1700px] mx-auto px-4 gap-8 md:gap-12 xl:gap-16 lg:px-0 flex flex-col lg:flex-row`}
-				>
+				<div className={styles.bottomContainer}>
 					<motion.div
 						viewport={{once: true}}
 						initial={slideInLeftInitial}
 						whileInView={slideInRightFinish}
-						className={`w-full lg:w-2/3 bg-cover bg-no-repeat bg-center ${
-							displayVideo
-								? `h-[375px] sm:h-[445px] lg:h-[450px] xl:h-[500px]`
-								: `h-[300px] lg:h-[400px] xl:h-[450px]`
-						}`}
+						className={
+							styles.videoSection +
+							` ${displayVideo ? styles.optionOne : styles.optionTwo}`
+						}
 						style={{
 							backgroundImage: `url("${
 								displayVideo ? "none" : videoBackgroundImage?.sourceUrl
@@ -275,7 +267,7 @@ const Hero: FC<IHero.IProps> = ({
 						viewport={{once: true}}
 						initial={slideInRightInitial}
 						whileInView={slideInRightFinish}
-						className="w-full lg:w-1/3 px-0 pb-10 lg:pb-0"
+						className={styles.rightSection}
 					>
 						<Image
 							alt={rightsideImage?.altText}
@@ -292,11 +284,8 @@ const Hero: FC<IHero.IProps> = ({
 							}
 							className={
 								rightsideImage?.sourceUrl
-									? `block object-cover object-center w-full ${
-											displayVideo
-												? `h-[300px] lg:h-[400px] xl:h-[450px]`
-												: `h-[350px] lg:h-[400px]`
-									  }`
+									? styles.image +
+									  ` ${displayVideo ? styles.optionOne : styles.optionTwo}`
 									: `hidden`
 							}
 							style={{clipPath: `polygon(0 0, 100% 0%, 95% 95%, 0 100%)`}}

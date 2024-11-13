@@ -11,6 +11,10 @@ import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {IAchievementsStatsCTA} from "@/types/components/index";
+
+// Styling
+import styles from "@/styles/components/AchievementsStatsCta.module.scss";
+
 // Components
 import Title from "@/components/Elements/Title";
 import Paragraph from "@/components/Elements/Paragraph";
@@ -26,48 +30,48 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 }) => {
 	return (
 		<>
-			<div className="flex flex-col lg:mt-24">
+			<div className={styles.achievementsStatsCta}>
 				<div
-					className={`bg-white relative ${
-						displayAchievementsContent ? "block" : "hidden"
-					}`}
+					className={
+						styles.container +
+						` ${displayAchievementsContent ? "block" : "hidden"}`
+					}
 				>
 					<motion.div
 						initial={initialTwo}
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className={`${
-							achievements?.length >= 2
-								? "grid grid-cols-1 md:grid-cols-2 lg:w-[55%] 2xl:w-[60%]"
-								: "flex lg:w-[35%] 2xl:w-[40%]"
-						} px-4 py-10 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end`}
+						className={
+							styles.content +
+							` ${
+								achievements?.length >= 2 ? styles.optionOne : styles.optionTwo
+							}`
+						}
 					>
 						{achievements?.length > 0 ? (
 							achievements?.map((item: any, index: number) => (
 								<Fragment key={index}>
 									<motion.div
+										viewport={{once: true}}
+										className={styles.achievements}
 										initial={slideInRightInitial}
 										whileInView={slideInRightFinish}
-										viewport={{once: true}}
-										className="w-full h-[500px] flex flex-col justify-end xl:shadow-2xl relative xl:p-8 bg-center bg-no-repeat bg-cover"
 										style={{
-											backgroundImage: `linear-gradient(
-											0deg,
-											rgba(0, 0, 0, 0.05),
-											rgba(0, 0, 0, 0.05),
-											rgba(0, 0, 0, 0.05)
-										),url("${item?.card?.image?.sourceUrl}")`,
+											backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05)),url("${item?.card?.image?.sourceUrl}")`,
 										}}
 									>
 										<div
-											className={`p-6 w-[80%] sm:w-[40%] md:w-[60%] lg:w-full xl:shadow-2xl xl:w-[55%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:mih-[22vh] transition-all ease-in-out duration-500 ${
-												index === 0
-													? "bg-purple-three"
-													: index === 1
-													? "bg-purple-three"
-													: "bg-purple-default"
-											}`}
+											className={
+												styles.wrapper +
+												` ${
+													index === 0
+														? "bg-purple-three"
+														: index === 1
+														? "bg-purple-three"
+														: "bg-purple-default"
+												}`
+											}
 										>
 											<Image
 												alt={item?.card?.icon?.altText}
@@ -83,9 +87,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 														: 1000
 												}
 												className={
-													item?.card?.icon?.sourceUrl
-														? `block object-contain object-center w-full h-[50px] lg:h-[60px] mb-6`
-														: `hidden`
+													item?.card?.icon?.sourceUrl ? styles.icon : `hidden`
 												}
 											/>
 
@@ -93,13 +95,13 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 												initial={initialTwo}
 												whileInView={fadeIn}
 												viewport={{once: true}}
-												className="text-white font-extrabold text-xl lg:text-4xl py-4 2xl:text-5xl text-center tracking-[0.10rem]"
+												className={styles.title}
 											>
 												{item?.card?.title}
 											</motion.h4>
 											<Paragraph
 												content={item?.card?.paragraph}
-												className="w-full lg:max-w-[40rem] mt-4 text-center text-white text-base"
+												className={styles.paragraph}
 											/>
 										</div>
 									</motion.div>
@@ -111,43 +113,42 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 					</motion.div>
 				</div>
 				<div
-					className="px-4 py-12 bg-center bg-no-repeat bg-cover lg:px-0 min-h-[400px]"
+					className={styles.bottomContent}
 					style={{
-						backgroundImage: `linear-gradient(
-							0deg,
-							rgba(0, 0, 0, 0.50),
-							rgba(0, 0, 0, 0.85),
-							rgba(0, 0, 0, 0.95)
-						),url("${backgroundImage?.sourceUrl}")`,
+						backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.50),rgba(0, 0, 0, 0.85),
+							rgba(0, 0, 0, 0.95)),url("${backgroundImage?.sourceUrl}")`,
 					}}
 				>
-					<div className="lg:max-w-[1700px] p-0 mx-auto">
-						<div className="flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row">
+					<div className={styles.wrapper}>
+						<div className={styles.achievements}>
 							<motion.div
 								initial={initialTwo}
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className={`w-full flex flex-col items-center justify-between gap-4 ${
-									displayAchievementsContent && achievements?.length >= 2
-										? "lg:w-[45%] lg:items-start"
-										: displayAchievementsContent && achievements?.length <= 1
-										? "lg:w-[55%] lg:items-start"
-										: "lg:w-full lg:flex-row lg:items-center"
-								}`}
+								className={
+									styles.content +
+									` ${
+										displayAchievementsContent && achievements?.length >= 2
+											? styles.optionOne
+											: displayAchievementsContent && achievements?.length <= 1
+											? styles.optionTwo
+											: styles.noOption
+									}`
+								}
 							>
 								<div>
-									<Title
-										content={title}
-										className="mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white"
-									/>
+									<Title content={title} className={styles.title} />
 									<Paragraph
 										content={paragraph}
-										className={`${
-											achievements?.length >= 2
-												? "max-w-none lg:max-w-sm 2xl:max-w-lg"
-												: "max-w-none lg:max-w-6xl"
-										} text-white leading-[1.75rem] text-paragraph text-center lg:text-left`}
+										className={
+											styles.paragraph +
+											` ${
+												achievements?.length >= 2
+													? "max-w-none lg:max-w-sm 2xl:max-w-lg"
+													: "max-w-none lg:max-w-6xl"
+											}`
+										}
 									/>
 								</div>
 								<Link
@@ -156,7 +157,7 @@ const AchievementsStatsCta: FC<IAchievementsStatsCTA> = ({
 										buttonLink?.target ? buttonLink?.target : "_self"
 									}`}
 									aria-label={`${buttonLink?.title}`}
-									className={buttonLink?.url ? "block" : "hidden"}
+									className={buttonLink?.url ? styles.buttonLink : "hidden"}
 								>
 									<ButtonBorderSliced
 										fullWidth={false}

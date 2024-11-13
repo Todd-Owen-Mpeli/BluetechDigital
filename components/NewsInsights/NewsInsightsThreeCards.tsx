@@ -17,7 +17,7 @@ import styles from "@/styles/components/NewsInsights.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import NewsInsightsCard from "./Cards/NewsInsightsCard";
+import NewsInsightsCard from "@/components/NewsInsights/Card/Card";
 
 const newsInsightsThreeCards: FC<INewsInsights.IThreeCards> = ({
 	title,

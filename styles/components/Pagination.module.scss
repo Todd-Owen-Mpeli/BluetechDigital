@@ -7,13 +7,45 @@
 		@apply w-full;
 
 		.galleryContent {
-			.galleryContent {
-				@apply w-full;
+			.image {
+				@apply block object-cover object-center w-full h-[175px];
+			}
+
+			.optionOne {
+				@apply sm:h-[250px];
+			}
+
+			.optionTwo {
+				@apply sm:h-[250px] xl:h-[205px];
 			}
 		}
 	}
 }
 
+.errorCard {
+	@apply bg-blue-darker;
+
+	.content {
+		@apply flex flex-col gap-4 p-10;
+
+		.title {
+			@apply mb-2 text-center text-lg leading-tight tracking-[0.05rem] uppercase font-extrabold text-white transition-all ease-in-out duration-200 hover:text-white;
+		}
+
+		.paragraph {
+			@apply px-0 text-base text-white;
+		}
+	}
+}
+
 .totalPages {
-	@apply grid mb-32 px-4 lg:-m-4 gap-y-12 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+	@apply mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 lg:gap-6;
+
+	.buttonStyling {
+		@apply relative px-6 py-2 text-pureBlack hover:text-white font-semibold tracking-widest text-tiny w-fit border-2 border-solid border-blue-two hover:bg-blue-two hover:border-blue-two transition-all ease-in-out duration-500 before:left-[15%] before:bottom-[-2px] before:block before:h-[2px] before:absolute before:w-[45%] before:content-[''] before:bg-white hover:before:bg-blue-two after:right-[15%] after:top-[-2px] after:block after:h-[2px] after:absolute after:w-[45%] after:content-[''] after:bg-white hover:after:bg-blue-two;
+	}
+
+	.text {
+		@apply text-center text-tiny font-semibold leading-tight text-black;
+	}
 }

@@ -1,3 +1,5 @@
+import {Dispatch, SetStateAction} from "react";
+
 // Components
 export type IGallery = {
 	title: string;
@@ -704,12 +706,28 @@ export namespace IJumboContentSection {
 }
 
 // Global
-export type IPagination = {
-	contentArray: any;
-	contentType: string;
-	className: string;
-	numberOfItemsRenderedPerPage: number;
-};
+export namespace IPagination {
+	export type IProps = {
+		contentArray: any;
+		className: string;
+		contentType: string;
+		numberOfItemsRenderedPerPage: number;
+	};
+	export type ICard = {
+		item: any;
+		index: number;
+		itemsPerPage: number;
+		contentType: IProps[`contentType`];
+	};
+	export type IPaginationCard = {
+		totalPages: any;
+		currentPage: any;
+		buttonClipPath: string;
+		contentArray: IProps[`contentArray`];
+		setCurrentPage: Dispatch<SetStateAction<number>>;
+	};
+}
+
 export type ISmoothScrolling = {
 	children: React.ReactNode;
 };

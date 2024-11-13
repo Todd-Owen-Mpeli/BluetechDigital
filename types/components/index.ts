@@ -640,40 +640,6 @@ export namespace ITestimonials {
 		};
 	};
 }
-export namespace IValuesBlocks {
-	export type ITextCard = {
-		title: string;
-		paragraph: string;
-		displayButton: boolean;
-		buttonLink: {
-			url: string;
-			title: string;
-			target: string;
-		};
-	};
-	export type IImageCard = {
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-	export type IImageOrMapCard = {
-		googleMap: string;
-		displayImageOrMap: string;
-		image: {
-			altText: string;
-			sourceUrl: string;
-			mediaDetails: {
-				width: number;
-				height: number;
-			};
-		};
-	};
-}
 export namespace IJumboContentSection {
 	export type IProps = {
 		jumboContentSection: {

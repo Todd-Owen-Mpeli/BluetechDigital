@@ -1,3 +1,6 @@
+import {Dispatch, SetStateAction} from "react";
+import {ILinks} from "../context";
+
 // Components
 export type IGallery = {
 	title: string;
@@ -704,12 +707,28 @@ export namespace IJumboContentSection {
 }
 
 // Global
-export type IPagination = {
-	contentArray: any;
-	contentType: string;
-	className: string;
-	numberOfItemsRenderedPerPage: number;
-};
+export namespace IPagination {
+	export type IProps = {
+		contentArray: any;
+		className: string;
+		contentType: string;
+		numberOfItemsRenderedPerPage: number;
+	};
+	export type ICard = {
+		item: any;
+		index: number;
+		itemsPerPage: number;
+		contentType: IProps[`contentType`];
+	};
+	export type IPaginationCard = {
+		totalPages: any;
+		currentPage: any;
+		buttonClipPath: string;
+		contentArray: IProps[`contentArray`];
+		setCurrentPage: Dispatch<SetStateAction<number>>;
+	};
+}
+
 export type ISmoothScrolling = {
 	children: React.ReactNode;
 };
@@ -738,10 +757,21 @@ export namespace IElements {
 		content: string;
 		className: string;
 	};
-	export type ISideMenu = {
-		menuActive: boolean;
-		setMenuActive: any;
-	};
+	export namespace ISideMenu {
+		export type IProps = {
+			menuActive: boolean;
+			setMenuActive: any;
+		};
+		export type IMobileLinksCard = {
+			item: any;
+			toggleMenu: () => void;
+			ourServicesSublinksOpen: any;
+			newsInsightsSublinksOpen: any;
+			displayOurServicesSublinks: () => void;
+			displayNewsInsightsSublinks: () => void;
+			ourServicesLinks: ILinks.IOurServicesLinks;
+		};
+	}
 	export type IFormikForm = {
 		formTitle: string;
 	};

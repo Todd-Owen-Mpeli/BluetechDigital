@@ -12,7 +12,141 @@ import {fadeIn, initial, stagger, initialTwo} from "@/animations/animations";
 // Styling
 import styles from "@/styles/components/Navbar.module.scss";
 
-const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
+const MobileLinksCard: FC<IElements.ISideMenu.IMobileLinksCard> = ({
+	item,
+	toggleMenu,
+	ourServicesLinks,
+	ourServicesSublinksOpen,
+	newsInsightsSublinksOpen,
+	displayOurServicesSublinks,
+	displayNewsInsightsSublinks,
+}) => {
+	return (
+		<>
+			{item?.node?.label === "Our Services" ? (
+				<li
+					className={styles.ourServicesLinks}
+					onClick={displayOurServicesSublinks}
+				>
+					<div className={styles.content}>
+						<Link
+							onClick={toggleMenu}
+							href={item?.node?.url}
+							className={styles.link}
+							aria-label={`${item?.node?.title}`}
+							target={`${item?.node?.target ? item?.node?.target : "_self"}`}
+						>
+							{item?.node?.label}
+						</Link>
+						<Image
+							width={500}
+							height={500}
+							alt="Black Arrow Icon"
+							className={styles.image}
+							src="/svg/navigation-menu-dropdown-arrow-black.svg"
+						/>
+					</div>
+					{ourServicesSublinksOpen ? (
+						<>
+							<motion.ul
+								initial={initialTwo}
+								variants={stagger}
+								whileInView="animate"
+								viewport={{once: true}}
+								className={styles.ul}
+							>
+								{/* Menu Link*/}
+								{ourServicesLinks?.length > 0 ? (
+									ourServicesLinks?.map((item: any, index: number) => (
+										<Fragment key={index}>
+											<li
+												className={
+													styles.li +
+													` ${index < 1 ? styles.optionOne : styles.optionTwo}`
+												}
+											>
+												<Link
+													onClick={toggleMenu}
+													className={styles.link}
+													href={`${item?.node?.url}`}
+													aria-label={`${item?.node?.label}`}
+													target={`${
+														item?.node?.target ? item?.node?.target : "_self"
+													}`}
+												>
+													{item?.node?.label}
+												</Link>
+											</li>
+										</Fragment>
+									))
+								) : (
+									<></>
+								)}
+							</motion.ul>
+						</>
+					) : null}
+				</li>
+			) : item?.node?.url === "/news-insights" ? (
+				<li className={styles.li} onClick={displayNewsInsightsSublinks}>
+					<div className={styles.content}>
+						<span className={styles.span}>
+							<Link
+								onClick={toggleMenu}
+								href={item?.node?.url}
+								className={styles.link}
+								aria-label={`${item?.node?.label}`}
+								target={`${item?.node?.target ? item?.node?.target : "_self"}`}
+							>
+								{item?.node?.label}
+							</Link>
+						</span>
+						<Image
+							width={500}
+							height={500}
+							alt="Black Arrow Icon"
+							className={styles.image}
+							src="/svg/navigation-menu-dropdown-arrow-black.svg"
+						/>
+					</div>
+					{newsInsightsSublinksOpen ? (
+						<>
+							<motion.ul className={styles.ul}>
+								<li className={styles.li}>
+									<Link
+										target="_self"
+										href="/case-studies"
+										onClick={toggleMenu}
+										className={styles.link}
+										aria-label={`Case Studies Page`}
+									>
+										Case Studies
+									</Link>
+								</li>
+							</motion.ul>
+						</>
+					) : null}
+				</li>
+			) : (
+				<li className={styles.otherLinks}>
+					<Link
+						onClick={toggleMenu}
+						className={styles.link}
+						href={`${item?.node?.url}`}
+						aria-label={`${item?.node?.label}`}
+						target={`${item?.node?.target ? item?.node?.target : "_self"}`}
+					>
+						{item?.node?.label}
+					</Link>
+				</li>
+			)}
+		</>
+	);
+};
+
+const SideMenu: FC<IElements.ISideMenu.IProps> = ({
+	menuActive,
+	setMenuActive,
+}) => {
 	const globalContext = useGlobalContext();
 
 	const [newsInsightsSublinksOpen, setNewsInsightsSublinksOpen]: any =
@@ -45,24 +179,24 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 						: `hidden ${styles.nav}`
 				}
 			>
-				<div className="relative flex flex-col w-full h-full px-6 py-6 overflow-x-hidden overflow-y-auto bg-white">
-					<div className="flex flex-col items-center mb-8">
+				<div className={styles.container}>
+					<div className={styles.top}>
 						<Link
 							href="/"
 							target="_self"
 							aria-label={`Bluetech Digital Homepage Link`}
-							className="mr-auto text-3xl font-bold leading-none"
+							className={styles.link}
 						>
 							<Image
 								width={500}
 								height={500}
 								alt="Bluetech Digital Logo"
 								src="/svg/logo/BluetechDigital-Logo-color.svg"
-								className="object-contain object-center w-[50px] h-[50px]"
+								className={styles.image}
 							/>
 						</Link>
 					</div>
-					<div className="flex flex-col px-4 mt-4">
+					<div className={styles.middle}>
 						<motion.ul
 							initial={initial}
 							variants={stagger}
@@ -72,146 +206,15 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 							{globalContext?.mobileLinks.length > 0 ? (
 								globalContext?.mobileLinks.map((item: any, index: number) => (
 									<Fragment key={index}>
-										{item?.node?.label === "Our Services" ? (
-											<li
-												onClick={displayOurServicesSublinks}
-												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
-											>
-												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<Link
-														onClick={toggleMenu}
-														href={item?.node?.url}
-														aria-label={`${item?.node?.title}`}
-														target={`${
-															item?.node?.target ? item?.node?.target : "_self"
-														}`}
-														className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
-													>
-														{item?.node?.label}
-													</Link>
-													<Image
-														width={500}
-														height={500}
-														alt="Black Arrow Icon"
-														src="/svg/navigation-menu-dropdown-arrow-black.svg"
-														className="w-[25px] h-[25px] object-contain object-center"
-													/>
-												</div>
-												{ourServicesSublinksOpen ? (
-													<>
-														<motion.ul
-															initial={initialTwo}
-															variants={stagger}
-															whileInView="animate"
-															viewport={{once: true}}
-															className={
-																styles.ourServicesLinks +
-																` flex flex-col my-4 z-[999]`
-															}
-														>
-															{/* Menu Link*/}
-															{globalContext?.ourServicesLinks?.length > 0 ? (
-																globalContext?.ourServicesLinks?.map(
-																	(item: any, index: number) => (
-																		<Fragment key={index}>
-																			<li
-																				className={`${
-																					index < 1
-																						? "border-t-[1px] border-darkGrey border-opacity-50"
-																						: "border-t-[0px]"
-																				} hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white`}
-																			>
-																				<Link
-																					onClick={toggleMenu}
-																					href={`${item?.node?.url}`}
-																					target={`${
-																						item?.node?.target
-																							? item?.node?.target
-																							: "_self"
-																					}`}
-																					aria-label={`${item?.node?.label}`}
-																					className="block p-4 text-tiny font-semibold"
-																				>
-																					{item?.node?.label}
-																				</Link>
-																			</li>
-																		</Fragment>
-																	)
-																)
-															) : (
-																<></>
-															)}
-														</motion.ul>
-													</>
-												) : null}
-											</li>
-										) : item?.node?.url === "/news-insights" ? (
-											<li
-												onClick={displayNewsInsightsSublinks}
-												className="border-b-[1px] border-yellow-dark border-opacity-50 cursor-pointer"
-											>
-												<div className="py-4 flex flex-row justify-between items-center gap-2">
-													<span className="text-black text-tiny font-semibold text-center tracking-[0.05rem]hover:text-blue-two transition-all ease-in-out duration-500">
-														<Link
-															onClick={toggleMenu}
-															href={item?.node?.url}
-															aria-label={`${item?.node?.label}`}
-															target={`${
-																item?.node?.target
-																	? item?.node?.target
-																	: "_self"
-															}`}
-															className="text-black text-tiny font-semibold text-center tracking-[0.05rem] hover:text-blue-two transition-all ease-in-out duration-500"
-														>
-															{item?.node?.label}
-														</Link>
-													</span>
-													<Image
-														width={500}
-														height={500}
-														alt="Black Arrow Icon"
-														src="/svg/navigation-menu-dropdown-arrow-black.svg"
-														className="w-[25px] h-[25px] object-contain object-center"
-													/>
-												</div>
-												{newsInsightsSublinksOpen ? (
-													<>
-														<ul
-															className={
-																styles.newsInsightsSublinks +
-																" py-4 w-full flex flex-col z-[999]"
-															}
-														>
-															<li className="hover:border-blue-two hover:bg-blue-two border-y-[1px] border-darkGrey border-opacity-50 text-black hover:text-white">
-																<Link
-																	target="_self"
-																	href="/case-studies"
-																	onClick={toggleMenu}
-																	aria-label={`Case Studies Page`}
-																	className="block p-4 text-tiny font-semibold"
-																>
-																	Case Studies
-																</Link>
-															</li>
-														</ul>
-													</>
-												) : null}
-											</li>
-										) : (
-											<li className="border-b-[1px] border-yellow-dark border-opacity-50">
-												<Link
-													onClick={toggleMenu}
-													href={`${item?.node?.url}`}
-													aria-label={`${item?.node?.label}`}
-													target={`${
-														item?.node?.target ? item?.node?.target : "_self"
-													}`}
-													className="block py-4 text-tiny font-semibold text-black hover:text-blue-two"
-												>
-													{item?.node?.label}
-												</Link>
-											</li>
-										)}
+										<MobileLinksCard
+											item={item}
+											toggleMenu={toggleMenu}
+											ourServicesSublinksOpen={ourServicesSublinksOpen}
+											ourServicesLinks={globalContext?.ourServicesLinks}
+											newsInsightsSublinksOpen={newsInsightsSublinksOpen}
+											displayOurServicesSublinks={displayOurServicesSublinks}
+											displayNewsInsightsSublinks={displayNewsInsightsSublinks}
+										/>
 									</Fragment>
 								))
 							) : (
@@ -219,21 +222,19 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 							)}
 						</motion.ul>
 					</div>
-					<div className="mt-20">
+					<div className={styles.bottom}>
 						<motion.div
 							initial={initial}
-							viewport={{once: true}}
 							variants={stagger}
 							whileInView="animate"
-							className="flex flex-col items-center justify-between gap-4"
+							viewport={{once: true}}
+							className={styles.content}
 						>
-							<h4 className="mb-5 text-tiny font-semibold tracking-normal text-center uppercase md:text-left text-black">
-								Contact Links
-							</h4>
-							<div className="flex items-center justify-center gap-4 text-center">
+							<h4 className={styles.text}>Contact Links</h4>
+							<div className={styles.socialLinks}>
 								<Link
 									onClick={toggleMenu}
-									className="inline-block px-1 hover:opacity-70"
+									className={styles.link}
 									href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
 									aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 									target={`${
@@ -245,17 +246,16 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 								>
 									<svg
 										height="100%"
-										className="w-5 h-5"
+										className={styles.svg}
 										style={{
-											fill: "#f6ad37",
 											fillRule: "evenodd",
 											clipRule: "evenodd",
 											strokeLinejoin: "round",
 											strokeMiterlimit: "2",
 										}}
+										width="100%"
 										version="1.1"
 										viewBox="0 0 512 512"
-										width="100%"
 									>
 										<path
 											d="M512,257.555c0,-141.385 -114.615,-256 -256,-256c-141.385,0 -256,114.615 -256,256c0,127.777 93.616,233.685 216,252.89l0,-178.89l-65,0l0,-74l65,0l0,-56.4c0,-64.16 38.219,-99.6 96.695,-99.6c28.009,0 57.305,5 57.305,5l0,63l-32.281,0c-31.801,0 -41.719,19.733 -41.719,39.978l0,48.022l71,0l-11.35,74l-59.65,0l0,178.89c122.385,-19.205 216,-125.113 216,-252.89Z"
@@ -265,7 +265,7 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 								</Link>
 								<Link
 									onClick={toggleMenu}
-									className="inline-block px-1 hover:opacity-70"
+									className={styles.link}
 									href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
 									aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 									target={`${
@@ -276,9 +276,8 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 								>
 									<svg
 										height="100%"
-										className="w-5 h-5"
+										className={styles.svg}
 										style={{
-											fill: "#f6ad37",
 											fillRule: "evenodd",
 											clipRule: "evenodd",
 											strokeLinejoin: "round",
@@ -296,7 +295,7 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 								</Link>
 								<Link
 									onClick={toggleMenu}
-									className="inline-block px-1 hover:opacity-70"
+									className={styles.link}
 									href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
 									aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink.title}`}
 									target={`${
@@ -309,7 +308,6 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 									<svg
 										height="100%"
 										style={{
-											fill: "#f6ad37",
 											fillRule: "evenodd",
 											clipRule: "evenodd",
 											strokeLinejoin: "round",
@@ -317,7 +315,7 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 										}}
 										version="1.1"
 										viewBox="0 0 512 512"
-										className="w-5 h-5"
+										className={styles.svg}
 										width="100%"
 									>
 										<path
@@ -327,23 +325,24 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 									</svg>
 								</Link>
 							</div>
-							<div className="flex flex-col sm:flex-row items-center justify-center w-auto gap-2 py-6 mb-10">
+							<div className={styles.contactLinks}>
 								<motion.div
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
 									className={
 										globalContext?.themesOptionsContent?.email
-											? "flex items-center justify-center gap-2"
+											? styles.content
 											: "hidden"
 									}
 								>
-									<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
+									<div className={styles.svgWrapper}>
 										<svg
 											width="20"
 											height="20"
-											viewBox="0 0 20 20"
 											fill="none"
+											viewBox="0 0 20 20"
+											className={styles.svg}
 											xmlns="http://www.w3.org/2000/svg"
 										>
 											<path
@@ -358,9 +357,9 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 									<Link
 										target="_self"
 										onClick={toggleMenu}
+										className={styles.link}
 										href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 										aria-label={`${globalContext?.themesOptionsContent?.email}`}
-										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 									>
 										{globalContext?.themesOptionsContent?.email}
 									</Link>
@@ -371,16 +370,17 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 									viewport={{once: true}}
 									className={
 										globalContext?.themesOptionsContent?.emailTwo
-											? "flex items-center justify-center gap-2"
+											? styles.content
 											: "hidden"
 									}
 								>
-									<div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3">
+									<div className={styles.svgWrapper}>
 										<svg
 											width="20"
 											height="20"
-											viewBox="0 0 20 20"
 											fill="none"
+											viewBox="0 0 20 20"
+											className={styles.svg}
 											xmlns="http://www.w3.org/2000/svg"
 										>
 											<path
@@ -395,9 +395,9 @@ const SideMenu: FC<IElements.ISideMenu> = ({menuActive, setMenuActive}) => {
 									<Link
 										target="_self"
 										onClick={toggleMenu}
+										className={styles.link}
 										href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 										aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
-										className="font-medium text-tiny tracking-wide text-black hover:text-yellow-two"
 									>
 										{globalContext?.themesOptionsContent?.emailTwo}
 									</Link>

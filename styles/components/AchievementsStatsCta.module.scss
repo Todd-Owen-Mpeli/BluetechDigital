@@ -1,0 +1,86 @@
+@import "../base/fonts";
+@import "../base/colors";
+
+.achievementsStatsCta {
+	@apply flex flex-col lg:mt-24;
+
+	.container {
+		@apply bg-white relative;
+
+		.content {
+			@apply px-4 py-10 lg:px-0 gap-8 w-full lg:absolute lg:top-[-200px] xl:top-[-150px] right-0 flex-row items-center justify-end;
+
+			.achievements {
+				@apply w-full h-[500px] flex flex-col justify-end xl:shadow-2xl relative xl:p-8 bg-center bg-no-repeat bg-cover;
+
+				.wrapper {
+					@apply p-6 w-[80%] sm:w-[40%] md:w-[60%] lg:w-full xl:shadow-2xl xl:w-[55%] xl:bottom-[20px] xl:left-[20px] lg:absolute flex flex-col items-center justify-center sm:min-h-[22vh] transition-all ease-in-out duration-500;
+
+					.icon {
+						@apply block object-contain object-center w-full h-[50px] lg:h-[60px] mb-6;
+					}
+
+					.title {
+						@apply text-white font-extrabold text-xl lg:text-4xl py-4 2xl:text-5xl text-center tracking-[0.10rem];
+					}
+
+					.paragraph {
+						@apply w-full lg:max-w-[40rem] mt-4 text-center text-white text-base;
+					}
+				}
+			}
+		}
+
+		.optionOne {
+			@apply grid grid-cols-1 md:grid-cols-2 lg:w-[55%] 2xl:w-[60%];
+		}
+
+		.optionTwo {
+			@apply flex lg:w-[35%] 2xl:w-[40%];
+		}
+	}
+
+	.bottomContent {
+		@apply px-4 py-12 bg-center bg-no-repeat bg-cover lg:px-0 min-h-[400px];
+
+		.wrapper {
+			@apply lg:max-w-[1700px] p-0 mx-auto;
+
+			.achievements {
+				@apply flex flex-col items-center justify-between gap-10 px-0 lg:px-4 lg:flex-row;
+
+				.content {
+					@apply w-full flex flex-col items-center justify-between gap-4;
+
+					.paragraph {
+						@apply w-full lg:max-w-[40rem] mt-4 text-center text-white text-base;
+					}
+
+					.title {
+						@apply mb-4 max-w-xl mx-auto lg:mx-0 text-center font-semibold leading-tight lg:text-left text-lg lg:text-3xl text-white;
+					}
+
+					.paragraph {
+						@apply text-white leading-[1.75rem] text-paragraph text-center lg:text-left;
+					}
+
+					.buttonLink {
+						@apply block;
+					}
+				}
+
+				.optionOne {
+					@apply lg:w-[45%] lg:items-start;
+				}
+
+				.optionTwo {
+					@apply lg:w-[55%] lg:items-start;
+				}
+
+				.noOption {
+					@apply lg:w-full lg:flex-row lg:items-center;
+				}
+			}
+		}
+	}
+}

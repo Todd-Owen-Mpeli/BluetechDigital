@@ -9,17 +9,17 @@ import {
 	initialTwo,
 } from "@/animations/animations";
 import {motion} from "framer-motion";
+import {IContact} from "@/types/components";
 import ReCAPTCHA from "react-google-recaptcha";
-import {IElements} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 import {sendContactForm} from "@/lib/contactForm";
 import React, {useState, FC, Fragment} from "react";
 import {useFormik, Formik, Field, Form} from "formik";
 
 // Styling
-import styles from "@/styles/components/ContactForm.module.scss";
+import styles from "@/styles/components/Contact.module.scss";
 
-const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
+const FormikForm: FC<IContact.IForm> = ({formTitle}) => {
 	const globalContext = useGlobalContext();
 
 	// Loading, Send & Error Message States
@@ -151,18 +151,14 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 
 	return (
 		<>
-			<Formik
-				onSubmit={formik?.onSubmit}
-				initialValues={formik?.initialValues}
-				className="w-full lg:w-1/2"
-			>
-				<Form className="lg:max-w-[1700px] mx-auto py-10 md:max-w-xl">
+			<Formik onSubmit={formik?.onSubmit} initialValues={formik?.initialValues}>
+				<Form className={styles.formikFormSection}>
 					{loading ? (
 						<motion.h2
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-lg font-semibold mb-8 text-center text-blue-default"
+							className={styles.sendingMessage}
 						>
 							Sending Message...
 						</motion.h2>
@@ -171,7 +167,7 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-lg font-semibold mb-8 text-center text-yellow-default"
+							className={styles.messageSent}
 						>
 							Message Sent!
 						</motion.h2>
@@ -180,7 +176,7 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="text-lg font-semibold mb-8 text-center text-[#e20031]"
+							className={styles.errorMessage}
 						>
 							Error Message: Something went wrong with sending your message.
 							Please try again.
@@ -190,7 +186,7 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							initial={initialTwo}
 							whileInView={fadeIn}
 							viewport={{once: true}}
-							className="my-3 max-w-xl mx-auto xl:mx-0 mb-8 text-black text-center font-semibold text-xl lg:text-3xl"
+							className={styles.formTitle}
 						>
 							{formTitle}
 						</motion.h2>
@@ -201,103 +197,97 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="flex flex-col gap-4"
+						className={styles.formContent}
 					>
-						<div className="flex flex-col sm:flex-row gap-4">
+						<div className={styles.divWrapper}>
 							<motion.div
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="w-full"
+								className={styles.fieldWrapper}
 							>
 								{formik?.touched?.firstName && formik?.errors?.firstName ? (
 									<div>
-										<p className="py-1 text-left text-tiny text-blue-darker ">
-											{formik?.errors?.firstName}
-										</p>
+										<p className={styles.errors}>{formik?.errors?.firstName}</p>
 									</div>
 								) : null}
 								<Field
 									id="firstName"
 									name="firstName"
 									placeholder="First Name"
+									className={styles.field}
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.firstName}
-									className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 								/>
 							</motion.div>
 							<motion.div
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="w-full"
+								className={styles.fieldWrapper}
 							>
 								{formik?.touched?.lastName && formik?.errors?.lastName ? (
 									<div>
-										<p className="py-1 text-left text-tiny text-blue-darker ">
-											{formik?.errors?.lastName}
-										</p>
+										<p className={styles.errors}>{formik?.errors?.lastName}</p>
 									</div>
 								) : null}
 								<Field
 									id="lastName"
 									name="lastName"
 									placeholder="Last Name"
+									className={styles.field}
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.lastName}
-									className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 								/>
 							</motion.div>
 						</div>
-						<div className="flex flex-col sm:flex-row gap-4">
+						<div className={styles.divWrapper}>
 							<motion.div
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="w-full"
+								className={styles.fieldWrapper}
 							>
 								{formik?.touched?.phoneNumber && formik?.errors?.phoneNumber ? (
 									<div>
-										<p className="py-1 text-left text-tiny text-blue-darker ">
+										<p className={styles.errors}>
 											{formik?.errors?.phoneNumber}
 										</p>
 									</div>
 								) : null}
 								<Field
+									type="text"
 									id="phoneNumber"
 									name="phoneNumber"
-									type="number"
+									className={styles.field}
 									placeholder="Phone Number"
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.phoneNumber}
-									className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 								/>
 							</motion.div>
 							<motion.div
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="w-full"
+								className={styles.fieldWrapper}
 							>
 								{formik?.touched?.subject && formik?.errors?.subject ? (
 									<div>
-										<p className="py-1 text-left text-tiny text-blue-darker ">
-											{formik?.errors?.subject}
-										</p>
+										<p className={styles.errors}>{formik?.errors?.subject}</p>
 									</div>
 								) : null}
 								<Field
+									type="text"
 									id="subject"
 									name="subject"
-									type="text"
 									placeholder="Subject"
+									className={styles.field}
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.subject}
-									className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 								/>
 							</motion.div>
 						</div>
@@ -305,36 +295,34 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="w-full"
+							className={styles.fieldWrapper}
 						>
 							{formik?.touched?.email && formik?.errors?.email ? (
 								<div>
-									<p className="py-1 text-left text-tiny text-blue-darker ">
-										{formik?.errors?.email}
-									</p>
+									<p className={styles.errors}>{formik?.errors?.email}</p>
 								</div>
 							) : null}
 							<Field
 								id="email"
 								name="email"
 								type="email"
+								className={styles.field}
 								placeholder="Email Address"
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.email}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 							/>
 						</motion.div>
 						<motion.div
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="w-full"
+							className={styles.fieldWrapper}
 						>
 							{formik?.touched?.selectedServices &&
 							formik?.errors?.selectedServices ? (
 								<div>
-									<p className="py-1 text-left text-tiny text-blue-darker ">
+									<p className={styles.errors}>
 										{formik?.errors?.selectedServices}
 									</p>
 								</div>
@@ -343,11 +331,11 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 								as="select"
 								id="selectedServices"
 								name="selectedServices"
+								className={styles.field}
 								placeholder="Pick a Service"
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.selectedServices}
-								className="px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker"
 							>
 								<option
 									disabled
@@ -378,12 +366,11 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
+							className={styles.fieldWrapper}
 						>
 							{formik?.touched?.message && formik?.errors?.message ? (
 								<div>
-									<p className="py-1 text-left text-tiny text-blue-darker ">
-										{formik?.errors?.message}
-									</p>
+									<p className={styles.errors}>{formik?.errors?.message}</p>
 								</div>
 							) : null}
 							<textarea
@@ -391,10 +378,10 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 								id="message"
 								name="message"
 								placeholder="Your message"
+								className={styles.textarea}
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.message}
-								className="p-4 w-full h-48  text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker resize-none focus:ring-[1px] focus:ring-blue-darker"
 							/>
 						</motion.div>
 						<motion.div
@@ -415,6 +402,7 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 							/>
 						</motion.div>
 						<motion.button
+							type="submit"
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
@@ -430,17 +418,14 @@ const FormikForm: FC<IElements.IFormikForm> = ({formTitle}) => {
 								reCaptchaResult === null ||
 								reCaptchaResult === undefined
 							}
-							className="w-full text-white disabled:bg-opacity-20 disabled:cursor-not-allowed"
-							type="submit"
+							className={styles.submitButtonWrapper}
 						>
 							<span
 								className={
-									messageSent
-										? `${styles.messageSent}`
-										: `${styles.submitButton}`
+									messageSent ? styles.messageSent : styles.submitButton
 								}
 							>
-								<h3 className="tracking-widest text-white uppercase text-sm">
+								<h3 className={styles.text}>
 									{loading
 										? "Sending Message..."
 										: messageSent

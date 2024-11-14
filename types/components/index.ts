@@ -432,10 +432,14 @@ export namespace IHero {
 	};
 }
 export namespace IContact {
-	export type IForm = {
+	export type IProps = {
 		title: string;
 		formTitle: string;
 		paragraph: string;
+	};
+
+	export type IForm = {
+		formTitle: string;
 	};
 	export type IInfo = {
 		title: string;
@@ -772,9 +776,6 @@ export namespace IElements {
 			ourServicesLinks: ILinks.IOurServicesLinks;
 		};
 	}
-	export type IFormikForm = {
-		formTitle: string;
-	};
 	export type IParagraph = {
 		content: string;
 		className: string;

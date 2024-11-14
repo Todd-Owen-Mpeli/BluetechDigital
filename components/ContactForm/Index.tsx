@@ -8,23 +8,26 @@ import {motion} from "framer-motion";
 import {IContact} from "@/types/components";
 import {useGlobalContext} from "@/context/global";
 
+// Styling
+import styles from "@/styles/components/Contact.module.scss";
+
 // Components
 import Paragraph from "@/components/Elements/Paragraph";
-import FormikForm from "@/components/Elements/FormikForm";
+import FormikForm from "@/components/ContactForm/Card/Form";
 
-const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
+const ContactForm: FC<IContact.IProps> = ({title, formTitle, paragraph}) => {
 	const globalContext = useGlobalContext();
 
 	return (
 		<>
 			<div
-				className="px-4 py-10 bg-cover bg-center bg-no-repeat"
+				className={styles.contactForm}
 				style={{
 					backgroundImage: `url("/svg/background/layeblue-peaks-haikei-white-lightgrey.svg")`,
 				}}
 			>
-				<div className="lg:max-w-[1700px] mx-auto flex flex-col lg:flex-row items-baseline ">
-					<div className="w-full lg:w-1/2 sm:p-6 flex flex-col">
+				<div className={styles.container}>
+					<div className={styles.topSection}>
 						<motion.div
 							initial={initial}
 							variants={stagger}
@@ -36,15 +39,11 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto xl:mx-0 text-black text-center lg:text-left font-semibold leading-tight text-xl lg:text-3xl"
+								className={styles.title}
 							>
 								{title}
 							</motion.h2>
-
-							<Paragraph
-								content={paragraph}
-								className="max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left"
-							/>
+							<Paragraph content={paragraph} className={styles.paragraph} />
 						</motion.div>
 						<motion.div
 							initial={initial}
@@ -53,15 +52,15 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 							viewport={{once: true}}
 							className={
 								globalContext?.themesOptionsContent?.phoneNumber
-									? "flex mb-6 items-center"
+									? styles.phoneNumberWrapper
 									: "hidden"
 							}
 						>
-							<div className="hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10 rounded-full bg-yellow-default">
+							<div className={styles.svgWrapper}>
 								<svg
 									viewBox="0 0 24 24"
 									fill="none"
-									className="w-5 h-5"
+									className={styles.svg}
 									xmlns="http://www.w3.org/2000/svg"
 								>
 									<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -71,14 +70,13 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 										strokeLinejoin="round"
 									></g>
 									<g id="SVGRepo_iconCarrier">
-										{" "}
 										<path
 											d="M14.5 6.5C15.2372 6.64382 15.9689 6.96892 16.5 7.5C17.0311 8.03108 17.3562 8.76284 17.5 9.5M15 3C16.5315 3.17014 17.9097 3.91107 19 5C20.0903 6.08893 20.8279 7.46869 21 9M20.9995 16.4767V19.1864C21.0037 20.2223 20.0723 21.0873 19.0265 20.9929C10.0001 21 3.00006 13.935 3.00713 4.96919C2.91294 3.92895 3.77364 3.00106 4.80817 3.00009H7.52331C7.96253 2.99577 8.38835 3.151 8.72138 3.43684C9.66819 4.24949 10.2772 7.00777 10.0429 8.10428C9.85994 8.96036 8.99696 9.55929 8.41026 10.1448C9.69864 12.4062 11.5747 14.2785 13.8405 15.5644C14.4272 14.9788 15.0274 14.1176 15.8851 13.935C16.9855 13.7008 19.7615 14.3106 20.5709 15.264C20.858 15.6021 21.0105 16.0337 20.9995 16.4767Z"
 											stroke="#ffffff"
 											strokeWidth="1.5"
 											strokeLinecap="round"
 											strokeLinejoin="round"
-										></path>{" "}
+										></path>
 									</g>
 								</svg>
 							</div>
@@ -87,27 +85,27 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="max-w-xl mx-auto sm:mx-0"
+								className={styles.content}
 							>
 								<motion.h2
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl"
+									className={styles.title}
 								>
 									Phone
 								</motion.h2>
 								<Link
-									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
 									target="_self"
+									className={styles.link}
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 									aria-label={`${globalContext?.themesOptionsContent?.phoneNumber}`}
 								>
 									{globalContext?.themesOptionsContent?.phoneNumber}
 								</Link>
 								<Link
-									className="block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
 									target="_self"
+									className={styles.link}
 									href={`tel:${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 									aria-label={`${globalContext?.themesOptionsContent?.phoneNumberTwo}`}
 								>
@@ -122,17 +120,17 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 							viewport={{once: true}}
 							className={
 								globalContext?.themesOptionsContent?.email
-									? "flex mb-6 items-center"
+									? styles.emailWrapper
 									: "hidden"
 							}
 						>
-							<div className="hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10 rounded-full bg-yellow-default">
+							<div className={styles.svgWrapper}>
 								<svg
 									width="20"
 									height="20"
 									fill="none"
 									viewBox="0 0 20 20"
-									className="w-5 h-5"
+									className={styles.svg}
 									xmlns="http://www.w3.org/2000/svg"
 								>
 									<path
@@ -149,35 +147,35 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="max-w-xl mx-auto sm:mx-0"
+								className={styles.content}
 							>
 								<motion.h2
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl"
+									className={styles.title}
 								>
 									Email
 								</motion.h2>
 								<Link
+									target="_self"
 									className={
 										globalContext?.themesOptionsContent?.email
-											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
+											? styles.link
 											: "hidden"
 									}
-									target="_self"
 									href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 									aria-label={`${globalContext?.themesOptionsContent?.email}`}
 								>
 									{globalContext?.themesOptionsContent?.email}
 								</Link>
 								<Link
+									target="_self"
 									className={
 										globalContext?.themesOptionsContent?.email
-											? "block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default"
+											? styles.link
 											: "hidden"
 									}
-									target="_self"
 									href={`mailto:${globalContext?.themesOptionsContent?.emailTwo}`}
 									aria-label={`${globalContext?.themesOptionsContent?.emailTwo}`}
 								>
@@ -192,14 +190,14 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 							viewport={{once: true}}
 							className={
 								globalContext?.themesOptionsContent?.address
-									? "flex items-center"
+									? styles.addressWrapper
 									: "hidden"
 							}
 						>
-							<div className="hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10  rounded-full bg-yellow-default">
+							<div className={styles.svgWrapper}>
 								<svg
 									fill="#000000"
-									className="w-5 h-5"
+									className={styles.svg}
 									viewBox="0 0 512 512"
 									xmlns="http://www.w3.org/2000/svg"
 								>
@@ -210,7 +208,6 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 										strokeLinejoin="round"
 									></g>
 									<g id="SVGRepo_iconCarrier">
-										{" "}
 										<path
 											fill="var(--ci-primary-color, #ffffff)"
 											d="M253.924,127.592a64,64,0,1,0,64,64A64.073,64.073,0,0,0,253.924,127.592Zm0,96a32,32,0,1,1,32-32A32.037,32.037,0,0,1,253.924,223.592Z"
@@ -227,19 +224,19 @@ const ContactForm: FC<IContact.IForm> = ({title, formTitle, paragraph}) => {
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="max-w-xl mx-auto sm:mx-0"
+								className={styles.content}
 							>
 								<motion.h2
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl"
+									className={styles.title}
 								>
 									Address
 								</motion.h2>
 								<Paragraph
+									className={styles.paragraph}
 									content={globalContext?.themesOptionsContent?.address}
-									className="max-w-xl mx-auto xl:mx-0 text-tiny sm:text-base text-black text-center sm:text-left"
 								/>
 							</motion.div>
 						</motion.div>

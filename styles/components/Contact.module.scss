@@ -1,0 +1,234 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.contactForm {
+	@apply px-4 py-10 bg-cover bg-center bg-no-repeat;
+
+	.container {
+		@apply lg:max-w-[1700px] mx-auto flex flex-col lg:flex-row items-baseline;
+
+		.topSection {
+			@apply w-full lg:w-1/2 sm:p-6 flex flex-col;
+
+			.title {
+				@apply my-3 max-w-xl mx-auto xl:mx-0 text-black text-center lg:text-left font-semibold leading-tight text-xl lg:text-3xl;
+			}
+
+			.paragraph {
+				@apply max-w-xl mx-auto xl:mx-0 text-black text-base text-center lg:text-left;
+			}
+
+			.phoneNumberWrapper {
+				@apply flex mb-6 items-center;
+
+				.svgWrapper {
+					@apply hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10 rounded-full bg-yellow-default;
+
+					.svg {
+						@apply w-5 h-5;
+					}
+				}
+
+				.content {
+					@apply max-w-xl mx-auto sm:mx-0;
+
+					.title {
+						@apply mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl;
+					}
+
+					.link {
+						@apply block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default;
+					}
+				}
+			}
+
+			.emailWrapper {
+				@apply flex mb-6 items-center;
+
+				.svgWrapper {
+					@apply hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10 rounded-full bg-yellow-default;
+
+					.svg {
+						@apply w-5 h-5;
+					}
+				}
+
+				.content {
+					@apply max-w-xl mx-auto sm:mx-0;
+
+					.title {
+						@apply mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl;
+					}
+
+					.link {
+						@apply block text-tiny sm:text-base text-black text-center sm:text-left hover:text-blue-default;
+					}
+				}
+			}
+
+			.addressWrapper {
+				@apply flex items-center;
+
+				.svgWrapper {
+					@apply hidden sm:flex flex-shrink-0 mr-5 sm:mr-8 items-center justify-center p-1 w-10 h-10  rounded-full bg-yellow-default;
+
+					.svg {
+						@apply w-5 h-5;
+					}
+				}
+
+				.content {
+					@apply max-w-xl mx-auto sm:mx-0;
+
+					.title {
+						@apply mb-2 text-black text-center sm:text-left font-semibold text-lg lg:text-xl;
+					}
+
+					.paragraph {
+						@apply max-w-xl mx-auto xl:mx-0 text-tiny sm:text-base text-black text-center sm:text-left;
+					}
+				}
+			}
+		}
+
+		.formikFormSection {
+			@apply lg:max-w-[1700px] mx-auto py-10 md:max-w-xl;
+
+			.sendingMessage,
+			.messageSent,
+			.errorMessage {
+				@apply text-lg font-semibold mb-8 text-center text-blue-default;
+			}
+
+			.sendingMessage {
+				@apply text-blue-default;
+			}
+
+			.messageSent {
+				@apply text-yellow-default;
+			}
+
+			.errorMessage {
+				@apply text-[#e20031];
+			}
+
+			.formTitle {
+				@apply my-3 max-w-xl mx-auto xl:mx-0 mb-8 text-black text-center font-semibold text-xl lg:text-3xl;
+			}
+
+			.formContent {
+				@apply flex flex-col gap-4;
+
+				.divWrapper {
+					@apply flex flex-col sm:flex-row gap-4;
+				}
+
+				.fieldWrapper {
+					@apply w-full;
+
+					.errors {
+						@apply py-1 text-left text-tiny text-blue-darker;
+					}
+
+					.field {
+						@apply px-4 py-3 w-full text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker focus:ring-[1px] focus:ring-blue-darker;
+					}
+
+					.textarea {
+						@apply p-4 w-full h-48 text-darkGrey placeholder-darkGrey bg-white bg-opacity-90 outline-none border-[1px] border-darkGrey active:border-blue-darker focus:border-blue-darker resize-none focus:ring-[1px] focus:ring-blue-darker;
+					}
+				}
+
+				.submitButtonWrapper {
+					@apply w-full text-white disabled:bg-opacity-20 disabled:cursor-not-allowed;
+
+					.submitButton,
+					.messageSent {
+						@apply w-fit flex items-center justify-center py-3 px-6 bg-blue-default hover:bg-blue-darker transition-all duration-200 ease-in-out;
+
+						.text {
+							@apply tracking-widest text-white uppercase text-sm;
+						}
+					}
+
+					.submitButton {
+						@apply bg-blue-default hover:bg-blue-darker;
+					}
+
+					.messageSent {
+						@apply bg-yellow-default;
+					}
+				}
+			}
+		}
+	}
+}
+
+.contactInfo {
+	@apply py-10 bg-white lg:px-4 lg:max-w-[1700px] px-0 mx-auto gap-6 flex flex-col lg:flex-row items-center lg:items-start justify-between;
+
+	.topSection {
+		@apply w-full px-4 lg:mb-0 lg:w-1/2;
+
+		.title {
+			@apply lg:max-w-lg mb-6 text-center lg:text-left font-semibold leading-tight text-xl lg:text-3xl text-black;
+		}
+
+		.paragraph {
+			@apply lg:max-w-lg text-center lg:text-left text-black text-paragraph;
+		}
+	}
+
+	.bottomSection {
+		@apply flex flex-col w-full gap-8 px-4 lg:w-1/2;
+
+		.top {
+			.addressTitle {
+				@apply mb-6 text-2xl font-semibold text-center lg:text-left;
+			}
+
+			.content {
+				@apply flex items-center justify-center lg:justify-start gap-2;
+
+				.svgWrapper {
+					@apply flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3;
+
+					.svg {
+						@apply fill-white;
+					}
+				}
+
+				.address {
+					@apply w-full lg:max-w-xl text-center lg:text-left text-black text-paragraph;
+				}
+			}
+		}
+
+		.bottom {
+			.contactsTitle {
+				@apply mb-6 text-2xl font-semibold text-center lg:text-left;
+			}
+
+			.content {
+				@apply flex flex-col items-center lg:items-start gap-3 text-center lg:text-left;
+
+				.emailWrapper {
+					@apply flex items-center justify-center gap-2;
+
+					.svgWrapper {
+						@apply flex items-center justify-center w-8 h-8 rounded-full bg-blue-two sm:mr-3;
+
+						.svg {
+							@apply fill-none;
+						}
+					}
+				}
+
+				.email {
+					@apply font-medium tracking-wide text-black hover:text-yellow-two;
+				}
+			}
+		}
+	}
+}

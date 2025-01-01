@@ -25,7 +25,7 @@ const OurServices: FC<IOurServices> = ({
 			<div
 				className={
 					styles.ourServices +
-					" py-12 sm:py-24 lg:py-20 px-4 bg-lightGreyTwo relative bg-cover bg-no-repeat bg-center"
+					" py-12 sm:py-24 lg:py-20 px-4 bg-lightGreyTwo relative bg-cover bg-no-repeat bg-center overflow-hidden #{!important}"
 				}
 				style={{
 					backgroundImage: `url("/svg/background/stacked-waves-haikei-blue-darkblue.svg")`,

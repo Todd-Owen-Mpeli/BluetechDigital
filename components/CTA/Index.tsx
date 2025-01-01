@@ -18,7 +18,7 @@ const CTA: FC<ICTA.IProps> = ({
 }) => {
 	return (
 		<>
-			<div className="flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:p-10 -m-4">
+			<div className="flex flex-col-reverse lg:flex-row flex-wrap p-4 lg:p-10">
 				<div className="w-full lg:w-5/12 p-4">
 					<Link
 						href={`${buttonLink?.url}`}

@@ -28,6 +28,10 @@ export async function generateMetadata({params}: any): Promise<Metadata> {
 		alternates: {
 			canonical: seo?.canonical,
 		},
+		robots: {
+			follow: true,
+			index: true
+		}
 	};
 }
 
